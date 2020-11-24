@@ -16,6 +16,15 @@ namespace Hospital_Management_Software
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //RegisterRoutes(RouteTable.Routes);
         }
+
+        //void RegisterRoutes(RouteCollection routes)
+        //{
+        //    routes.MapPageRoute("test", "Home", "~/Views/Home/Default.aspx");
+        //    routes.MapPageRoute("test2", "About", "~/Views/Home/About.aspx");
+        //    routes.MapPageRoute("test3", "Contact", "~/Views/Home/Contact.aspx");
+        //}
     }
 }
