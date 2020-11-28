@@ -32,9 +32,10 @@
                 <asp:BoundField DataField="Gender" HeaderText="Gender" />
                 <asp:BoundField DataField="Location" HeaderText="Location" />
                 <asp:BoundField DataField="Date of Birth" HeaderText="Date of Birth" />
-                <asp:TemplateField HeaderText="...">
+                <asp:TemplateField HeaderText="">
                     <ItemTemplate>
                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <i class="fa fa-money" aria-hidden="true"></i>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

@@ -10,6 +10,13 @@
             <div class="col-lg-2">
                 <div class="card mb-3">
                     <div class="shadow rounded-corners">
+                        <div class="input-group">
+                            <asp:TextBox CssClass="bg-light border-0 small form-control" placeholder="Search for ..." ID="TextBox3" runat="server"></asp:TextBox>
+                            <div class="input-group-append">
+                                <asp:HyperLink CssClass="btn btn-primary" ID="HyperLink1" runat="server"><i class="fa fa-search" aria-hidden="true"></i></asp:HyperLink>
+                            </div>
+                        </div>
+                        <br />
                         <asp:GridView AutoGenerateColumns="False" runat="server" ID="GridView1" CssClass="Grid table table-condensed table-hover" AllowPaging="True" PageSize="9">
                             <Columns>
                                 <asp:BoundField DataField="Status" HeaderText="Employees" />
@@ -56,7 +63,7 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label4" runat="server" Text="Reason" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Medical Leave" Enabled="False"></asp:TextBox>
+                                                <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" Enabled="False"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +87,7 @@
                                         </asp:Calendar>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Button style="float:right;" CssClass="btn btn-primary btn-sm" ID="Button1" runat="server" Text="Save" />
+                                        <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm" ID="Button1" runat="server" Text="Save" />
                                     </div>
                                 </form>
                             </div>

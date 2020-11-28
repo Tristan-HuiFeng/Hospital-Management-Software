@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Management\AddContract.aspx" />
     <Content Include="Management\AddEmployee.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -119,6 +120,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Management\AddPayroll.aspx" />
+    <Content Include="Management\Contract.aspx" />
     <Content Include="Management\Employees.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -255,6 +257,13 @@
     <Content Include="Views\layout\Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Management\AddContract.aspx.cs">
+      <DependentUpon>AddContract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\AddContract.aspx.designer.cs">
+      <DependentUpon>AddContract.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\AddEmployee.aspx.cs">
       <DependentUpon>AddEmployee.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -291,6 +300,13 @@
     </Compile>
     <Compile Include="Management\AddPayroll.aspx.designer.cs">
       <DependentUpon>AddPayroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Contract.aspx.cs">
+      <DependentUpon>Contract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\Contract.aspx.designer.cs">
+      <DependentUpon>Contract.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\Employees.aspx.cs">
       <DependentUpon>Employees.aspx</DependentUpon>
