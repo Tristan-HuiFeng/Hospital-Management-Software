@@ -108,6 +108,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Administrator\CreateAccount.aspx" />
+    <Content Include="Administrator\CreateRole.aspx" />
+    <Content Include="Administrator\Main.aspx" />
+    <Content Include="Administrator\ModifyAccount.aspx" />
+    <Content Include="Administrator\ModifyRole.aspx" />
     <Content Include="Management\AddContract.aspx" />
     <Content Include="Management\AddEmployee.aspx" />
     <Content Include="Contact.aspx" />
@@ -118,12 +123,22 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="HealthProfessional\CreateMedicalRecord.aspx" />
+    <Content Include="HealthProfessional\EquipmentServiceRequest.aspx" />
+    <Content Include="HealthProfessional\LabServiceRequest.aspx" />
+    <Content Include="HealthProfessional\MedicalRecord.aspx" />
+    <Content Include="HealthProfessional\Menu.aspx" />
+    <Content Include="HealthProfessional\PatientRecord.aspx" />
+    <Content Include="HealthProfessional\UpdateMedicalRecord.aspx" />
+    <Content Include="Login\StaffLogin.aspx" />
+    <Content Include="src\css\test.css" />
     <Content Include="Default.aspx" />
     <Content Include="Management\AddPayroll.aspx" />
     <Content Include="Management\Contract.aspx" />
     <Content Include="Management\Employees.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Login\staffloginold.aspx" />
     <Content Include="Management\EmployeeSchedule.aspx" />
     <Content Include="Management\ModifyEmployee.aspx" />
     <Content Include="Management\Payrolls.aspx" />
@@ -252,6 +267,7 @@
     <Content Include="Views\EPR\Dashboard.aspx" />
     <Content Include="Views\EPR\UpdateEPR.aspx" />
     <Content Include="Views\MAR\CreateMAR.aspx" />
+    <Content Include="src\css\test2.css" />
     <Content Include="src\css\HRStyleSheet.css" />
     <Content Include="Views\layout\Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
@@ -262,6 +278,41 @@
     <Content Include="Views\layout\Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator\CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\CreateRole.aspx.cs">
+      <DependentUpon>CreateRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\CreateRole.aspx.designer.cs">
+      <DependentUpon>CreateRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\ModifyAccount.aspx.cs">
+      <DependentUpon>ModifyAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\ModifyAccount.aspx.designer.cs">
+      <DependentUpon>ModifyAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\ModifyRole.aspx.cs">
+      <DependentUpon>ModifyRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\ModifyRole.aspx.designer.cs">
+      <DependentUpon>ModifyRole.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\AddContract.aspx.cs">
       <DependentUpon>AddContract.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -323,6 +374,69 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HealthProfessional\CreateMedicalRecord.aspx.cs">
+      <DependentUpon>CreateMedicalRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\CreateMedicalRecord.aspx.designer.cs">
+      <DependentUpon>CreateMedicalRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\EquipmentServiceRequest.aspx.cs">
+      <DependentUpon>EquipmentServiceRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\EquipmentServiceRequest.aspx.designer.cs">
+      <DependentUpon>EquipmentServiceRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\LabServiceRequest.aspx.cs">
+      <DependentUpon>LabServiceRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\LabServiceRequest.aspx.designer.cs">
+      <DependentUpon>LabServiceRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\MedicalRecord.aspx.cs">
+      <DependentUpon>MedicalRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\MedicalRecord.aspx.designer.cs">
+      <DependentUpon>MedicalRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\PatientRecord.aspx.cs">
+      <DependentUpon>PatientRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\PatientRecord.aspx.designer.cs">
+      <DependentUpon>PatientRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\UpdateMedicalRecord.aspx.cs">
+      <DependentUpon>UpdateMedicalRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\UpdateMedicalRecord.aspx.designer.cs">
+      <DependentUpon>UpdateMedicalRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\staffloginold.aspx.cs">
+      <DependentUpon>staffloginold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\staffloginold.aspx.designer.cs">
+      <DependentUpon>staffloginold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\StaffLogin.aspx.cs">
+      <DependentUpon>StaffLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\StaffLogin.aspx.designer.cs">
+      <DependentUpon>StaffLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\EmployeeSchedule.aspx.cs">
       <DependentUpon>EmployeeSchedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,6 +486,19 @@
     </Compile>
     <Compile Include="Views\MAR\CreateMAR.aspx.designer.cs">
       <DependentUpon>CreateMAR.aspx</DependentUpon>
+    <Compile Include="Views\layout\Administrator.Master.cs">
+      <DependentUpon>Administrator.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\layout\Administrator.Master.designer.cs">
+      <DependentUpon>Administrator.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\layout\HealthProfessional.Master.cs">
+      <DependentUpon>HealthProfessional.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\layout\HealthProfessional.Master.designer.cs">
+      <DependentUpon>HealthProfessional.Master</DependentUpon>
     </Compile>
     <Compile Include="Views\layout\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -407,10 +534,17 @@
     </Compile>
     <Compile Include="Views\MAR\UpdateMAR.aspx.designer.cs">
       <DependentUpon>UpdateMAR.aspx</DependentUpon>
+    <Compile Include="Views\layout\Site2.Master.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\layout\Site2.Master.designer.cs">
+      <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ServiceRequest\" />
     <Folder Include="src\img\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
@@ -428,6 +562,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\layout\HealthProfessional.Master" />
+    <Content Include="Views\layout\Site2.Master" />
+    <Content Include="Views\layout\Administrator.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

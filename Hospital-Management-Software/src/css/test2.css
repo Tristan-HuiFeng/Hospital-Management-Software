@@ -1,0 +1,206 @@
+﻿
+
+body {
+    height: 100%;
+}
+
+/* nav */
+.sidenav {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0080ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.sidenav-links {
+    margin-top: 60px;
+}
+
+/*
+#closed-side-nav span {
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: block;
+    transition: 0.3s;
+} */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgba(255,255,255,.70);
+    display: block;
+    transition: 0.3s;
+}
+
+    .sidenav a:hover {
+        color: #F1984D;
+    }
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Login */
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login-container {
+    /*
+    background: #b6ff00;
+    padding: 30px 50px 50px 50px;
+    border-radius: 25px;
+    min-width: 400px;*/
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #e9faff;
+    
+}
+
+.wrap-login {
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 0 rgba(0,0,0,.1);
+    padding: 50px;
+}
+
+.login-title {
+    display: block;
+    font-size: 30px;
+    color: #555;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.input-container{
+    margin-bottom: 20px;
+}
+
+.text-btm{
+    margin-top: 30px;
+    text-align: center;
+}
+
+input[type=text] {
+    
+}
+
+.login-tb {
+    background-color: #FFFFFF;
+    border: none;
+    border-bottom: 2px solid #0DB8DE;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: #ECF0F5;
+    height: 40px;
+    width: 100%;
+}
+
+login-tb:focus {
+    outline: none;
+    box-shadow: 0 0 0;
+}
+
+
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 60px;
+    background-color: #4272d7;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all .4s;
+}
+
+.grid-container {
+    
+}
+
+
+.myGrid {
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+    
+}
+
+tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+tr:nth-child(odd) {
+    background: #FFF;
+}
+
+.myGrid tbody tr th{
+    background: #36304a;
+    color:#ffffff;
+    border: none;
+}
+
+
+.myGrid tbody tr td {
+    border: none;
+    border-bottom: 1px solid #B0B0B0;
+    border-top: 1px solid #B0B0B0;
+}
+
+.myPager, .myPager table tbody {
+    border: none;
+}
+
+.myPager tbody tr td {
+    text-align: right;
+}
+
+/*
+.myGrid td, .myGrid th {
+    border: 1px solid #0DB8DE
+}
+
+.myTable tr th {
+    border: 0px solid #6e7bd9;
+    color: white;
+    background-color: #6e7bd9;
+}
+
+.myTable, .myTable tr td {
+    border: 0px solid #000;
+}*/
+

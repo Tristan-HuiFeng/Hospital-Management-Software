@@ -1,0 +1,187 @@
+﻿
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: #D9D9D9;
+    background-image: url("../img/loginbg.jpg");
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.form-title {
+    color: #F1984D;
+    font-size: 25px;
+}
+
+.vertical-center {
+    width: 100%;
+    margin: 10% auto 10% auto;
+}
+
+.login-container {
+    background: #FFFFFF;
+    padding: 30px 50px 50px 50px;
+    border-radius: 25px;
+    min-width: 400px;
+}
+
+.signup-container {
+    background: #FFFFFF;
+    padding: 30px 50px 50px 50px;
+    border-radius: 25px;
+    min-width: 400px;
+}
+
+.container-1 input, .container-2 input {
+    width: 100%;
+    display: inline-block;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+
+hr {
+    border-width: 4px;
+}
+
+.form-elements {
+    margin-top: 20px;
+}
+
+.form-button {
+    background-color: #F1984D;
+    color: #FFFFFF;
+}
+
+.login-button:hover {
+    background-color: #db8c48;
+    color: #FFFFFF;
+}
+
+.sign-up {
+    text-align: center;
+    color: #6a6b6a;
+}
+
+
+@media(max-width: 991px) {
+
+    .container-1 {
+        max-width: 400px;
+    }
+
+    .container-2 {
+        max-width: 450px;
+    }
+
+    .vertical-center {
+        margin: 5% auto 5% auto;
+    }
+}
+
+@media(max-width: 442px) {
+    .container-1, .container-2 {
+        max-width: 100%;
+    }
+
+        .container-1 input, .container-2 input {
+            width: 100%;
+            display: inline-block;
+            padding: 12px 2px;
+            margin-bottom: 15px;
+        }
+
+    .login-container {
+        border-radius: 0;
+        padding: 10px 30px;
+        min-width: 300px;
+    }
+
+    .signup-container {
+        border-radius: 0;
+        padding: 10px 30px;
+        min-width: 400px;
+    }
+
+    .vertical-center {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-1 {
+        max-width: 450px;
+    }
+
+    .container-2 {
+        max-width: 500px;
+    }
+
+    .vertical-center {
+        margin: 5% auto 10% auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-1 {
+        max-width: 500px;
+    }
+
+    .container-2 {
+        max-width: 650px;
+    }
+
+    .vertical-center {
+        margin: 5% auto 10% auto;
+    }
+}
+
+@media(max-height: 800px) {
+
+    .vertical-center {
+        margin: 2% auto 2% auto;
+    }
+}
+
+.fb {
+    background-color: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background-color: #55ACEE;
+    color: white;
+}
+
+.google {
+    background-color: #4285F4;
+    color: white;
+}
+
+.fa {
+    text-align: left;
+}
+
+#sign-up-link {
+    text-decoration: none;
+    color: #ef5b25;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.sign-up-link-container {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #282828;
+    float: right;
+    line-height: 2.2;
+}
+
+.heading {
+    margin-bottom: 20px;
+}

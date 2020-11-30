@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HealthProfessional.master.cs" Inherits="Hospital_Management_Software.Views.layout.HealthProfessional" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link rel="stylesheet" href="~/src/css/test2.css" type="text/css" />
+</head>
+<body>
+    <div style="display: none" id="side-nav-hp" class="sidenav">
+        <div class="sidenav-links">
+            <a href="#">Home</a>
+            <a href="#">Medical Records</a>
+            <a href="#">Patient Database</a>
+            <a href="#">Equipment Service</a>
+            <a href="#">Lab Service</a>
+            <a href="#">Logout</a>
+        </div>
+        
+    </div>
+    <!-- navigation -->
+    <nav style="z-index:2" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a id="nav-controller" class="navbar-brand" style="cursor: pointer;" onclick="openNav()">&#9776;</a>
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!-- end of navigation -->
+    <form id="form1" runat="server" style="margin-bottom:80px">
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+
+<script>
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+    function openNav() {
+        //document.getElementById("mySidenav").style.width = "250px";
+        //document.getElementById("content").style.marginLeft = "270px";
+        //document.getElementById("closed-side-nav").style.display = "none";
+        document.getElementById("side-nav-hp").style.display = "block";
+        document.getElementById('nav-controller').setAttribute("onClick", "closeNav()");
+        console.log(1);
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        //document.getElementById("mySidenav").style.width = "60px";
+        //document.getElementById("content").style.marginLeft = "80px";
+        //document.getElementById("closed-side-nav").style.display = "block";
+        document.getElementById("side-nav-hp").style.display = "none";
+        document.getElementById('nav-controller').setAttribute("onClick", "openNav()");
+        console.log(2);
+    }
+</script>
+</html>
