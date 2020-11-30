@@ -240,8 +240,13 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Views\EPR\Dashboard.aspx" />
+    <Content Include="Views\EPR\UpdateEPR.aspx" />
+    <Content Include="Views\MAR\CreateMAR.aspx" />
     <Content Include="Views\layout\Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\EPR\RegisterPatient.aspx" />
+    <Content Include="Views\MAR\UpdateMAR.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Views\layout\Site.Mobile.Master" />
@@ -274,6 +279,27 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\EPR\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EPR\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EPR\UpdateEPR.aspx.cs">
+      <DependentUpon>UpdateEPR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EPR\UpdateEPR.aspx.designer.cs">
+      <DependentUpon>UpdateEPR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MAR\CreateMAR.aspx.cs">
+      <DependentUpon>CreateMAR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MAR\CreateMAR.aspx.designer.cs">
+      <DependentUpon>CreateMAR.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\layout\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -295,9 +321,24 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Views\EPR\RegisterPatient.aspx.cs">
+      <DependentUpon>RegisterPatient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EPR\RegisterPatient.aspx.designer.cs">
+      <DependentUpon>RegisterPatient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MAR\UpdateMAR.aspx.cs">
+      <DependentUpon>UpdateMAR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MAR\UpdateMAR.aspx.designer.cs">
+      <DependentUpon>UpdateMAR.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Resources\Media\" />
     <Folder Include="src\css\" />
     <Folder Include="src\img\" />
     <Folder Include="Views\Home\" />
