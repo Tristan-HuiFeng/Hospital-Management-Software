@@ -2,6 +2,7 @@
 body {
     /*padding-top: 50px;
     padding-bottom: 20px; */
+    height: 100%;
 }
 
 /* Wrapping element */
@@ -12,11 +13,12 @@ body {
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
+/*
 input,
 select,
 textarea {
     max-width: 280px;
-}
+}*/
 
 
 /* Responsive: Portrait tablets and up */
