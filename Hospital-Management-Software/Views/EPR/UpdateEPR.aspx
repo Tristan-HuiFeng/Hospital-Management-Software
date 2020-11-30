@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/Site.Master" AutoEventWireup="true" CodeBehind="UpdateEPR.aspx.cs" Inherits="Hospital_Management_Software.Views.EPR.UpdateEPR" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <table style="width: 100%;">
+    <table style="width: 100%;" class="table">
         <tr>
             <td style="width: 185px">Name:</td>
             <td style="width: 198px">

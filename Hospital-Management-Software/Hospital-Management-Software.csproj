@@ -411,8 +411,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Resources\Media\" />
-    <Folder Include="src\css\" />
     <Folder Include="src\img\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>

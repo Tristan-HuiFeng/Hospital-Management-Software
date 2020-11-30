@@ -24,10 +24,7 @@
             <div class="row mx-auto" >
                 <div class="col-sm-12 col-lg-4 mx-auto" style="margin-top:20px">
                     <div class="card">
-                        <img class="card-img-top img-thumbnails img-fluid" style="height:300px; width:300px"
-                            src="" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">title</h5>
                             <p class="card-text"><b>ID: </b> lorem</p>
                             <p class="card-text"><b>Name: </b> lorem</p>
                             <p class="card-text"><b>NRIC: </b> lorem</p>
@@ -50,10 +47,7 @@
                 </div>
                 <div class="col-sm-12 col-lg-4 mx-auto" style="margin-top:20px">
                     <div class="card">
-                        <img class="card-img-top img-thumbnails img-fluid" style="height:300px; width:300px"
-                            src="" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">title</h5>
                             <p class="card-text"><b>ID: </b> lorem</p>
                             <p class="card-text"><b>Name: </b> lorem</p>
                             <p class="card-text"><b>NRIC: </b> lorem</p>
@@ -76,10 +70,7 @@
                 </div>
                 <div class="col-sm-12 col-lg-4 mx-auto" style="margin-top:20px">
                     <div class="card">
-                        <img class="card-img-top img-thumbnails img-fluid" style="height:300px; width:300px"
-                            src="" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">title</h5>
                             <p class="card-text"><b>ID: </b> lorem</p>
                             <p class="card-text"><b>Name: </b> lorem</p>
                             <p class="card-text"><b>NRIC: </b> lorem</p>

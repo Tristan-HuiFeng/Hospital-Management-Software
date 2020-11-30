@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/Site.Master" AutoEventWireup="true" CodeBehind="CreateMAR.aspx.cs" Inherits="Hospital_Management_Software.Views.CreateMAR" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <table style="width:100%;">
+    <table style="width:100%;" class="table">
         <tr>
             <td style="width: 159px">Appointment Date:</td>
             <td>

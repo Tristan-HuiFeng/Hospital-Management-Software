@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/Site.Master" AutoEventWireup="true" CodeBehind="RegisterPatient.aspx.cs" Inherits="Hospital_Management_Software.Views.RegisterPatient" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <table style="width: 100%;">
+    <table style="width: 100%;" class="table">
         <tr>
-            <td style="width: 185px">Name:</td>
+            <td scope="row" style="width: 185px">Name:</td>
             <td style="width: 198px">
                 <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 <br />
@@ -106,7 +106,7 @@
         <tr>
             <td style="width: 185px">&nbsp;</td>
             <td style="width: 198px">
-                <asp:Button ID="Button1" runat="server" Text="Button" />
+                <asp:Button ID="Button1" runat="server" Text="Submit" />
             </td>
             <td style="width: 44px">&nbsp;</td>
             <td style="width: 493px">&nbsp;</td>
