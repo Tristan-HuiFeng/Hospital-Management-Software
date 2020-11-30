@@ -307,6 +307,7 @@
     </Compile>
     <Compile Include="Administrator\ModifyRole.aspx.designer.cs">
       <DependentUpon>ModifyRole.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\AddContract.aspx.cs">
       <DependentUpon>AddContract.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -430,6 +431,7 @@
     </Compile>
     <Compile Include="Login\StaffLogin.aspx.designer.cs">
       <DependentUpon>StaffLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\EmployeeSchedule.aspx.cs">
       <DependentUpon>EmployeeSchedule.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
