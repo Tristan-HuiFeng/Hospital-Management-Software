@@ -1,0 +1,38 @@
+﻿body {
+    width: 100%;
+    /*margin: 5px;*/
+}
+
+.table-condensed tr th {
+    border: 0px solid #6e7bd9;
+    color: white;
+    background-color: #6e7bd9;
+}
+
+.table-condensed, .table-condensed tr td {
+    border: 0px solid #000;
+}
+
+tr:nth-child(even) {
+    background: #f8f7ff
+}
+
+tr:nth-child(odd) {
+    background: #fff;
+}
+
+.container>.row>div {
+    display: flex;
+}
+
+/*Rounded GridView1*/
+.rounded-corners {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.Grid td, .Grid th {
+    border: 1px solid #A1DCF2
+}
