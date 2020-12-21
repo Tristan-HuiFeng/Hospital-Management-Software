@@ -51,13 +51,14 @@
         <div class="grid-container">
             <asp:GridView ID="GridView1" CssClass="myGrid table" runat="server" AutoGenerateColumns="False" AllowPaging="True" PageSize="4">
                 <Columns>
+                    <asp:BoundField DataField="date" HeaderText="Date" ReadOnly="True" />
                     <asp:BoundField DataField="patientFullName" HeaderText="Patient's Name" ReadOnly="True" />
                     <asp:BoundField DataField="doctorFullName" HeaderText="Doctor's Name" ReadOnly="True" />
                     <asp:BoundField DataField="diagnosis" HeaderText="Diagnosis" ReadOnly="True" />
                 </Columns>
                 <PagerStyle HorizontalAlign="Right" CssClass="myPager" />
             </asp:GridView>
-            <p>showing 4 out of 12 enties</p>
+            <p>showing 4 out of 12 entries</p>
         </div>
 
     </div>
