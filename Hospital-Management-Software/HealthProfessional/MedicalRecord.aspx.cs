@@ -14,6 +14,7 @@ namespace Hospital_Management_Software.HealthProfessional
         {
             DataTable dt = new DataTable();
 
+            dt.Columns.Add("date", typeof(string));
             dt.Columns.Add("patientFullName", typeof(string));
             dt.Columns.Add("doctorFullName", typeof(string));
             dt.Columns.Add("diagnosis", typeof(string));
@@ -22,9 +23,10 @@ namespace Hospital_Management_Software.HealthProfessional
             for (int i = 0; i<12; i++)
             {
                 DataRow NewRow = dt.NewRow();
-                NewRow[0] = "Alex Lim";
-                NewRow[1] = "Edward Jenner";
-                NewRow[2] = "Farby Disease";
+                NewRow[0] = "12/12/2000";
+                NewRow[1] = "Alex Lim";
+                NewRow[2] = "Edward Jenner";
+                NewRow[3] = "Farby Disease";
                 dt.Rows.Add(NewRow);
             }
             

@@ -113,6 +113,10 @@
     <Content Include="Administrator\Main.aspx" />
     <Content Include="Administrator\ModifyAccount.aspx" />
     <Content Include="Administrator\ModifyRole.aspx" />
+    <Content Include="App_Data\EDP_DB.mdf" />
+    <Content Include="App_Data\EDP_DB_log.ldf">
+      <DependentUpon>EDP_DB.mdf</DependentUpon>
+    </Content>
     <Content Include="Management\AddContract.aspx" />
     <Content Include="Management\AddEmployee.aspx" />
     <Content Include="Contact.aspx" />
@@ -543,7 +547,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="ServiceRequest\" />
     <Folder Include="src\img\" />
     <Folder Include="Views\Home\" />
