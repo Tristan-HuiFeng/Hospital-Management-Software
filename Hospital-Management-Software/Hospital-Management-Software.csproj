@@ -490,6 +490,7 @@
     </Compile>
     <Compile Include="Views\MAR\CreateMAR.aspx.designer.cs">
       <DependentUpon>CreateMAR.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\layout\Administrator.Master.cs">
       <DependentUpon>Administrator.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -538,6 +539,7 @@
     </Compile>
     <Compile Include="Views\MAR\UpdateMAR.aspx.designer.cs">
       <DependentUpon>UpdateMAR.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\layout\Site2.Master.cs">
       <DependentUpon>Site2.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

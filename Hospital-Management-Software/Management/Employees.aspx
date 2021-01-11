@@ -19,6 +19,8 @@
                     <asp:ListItem>DOB</asp:ListItem>
                 </asp:DropDownList>
             </p>
+            <asp:Button CssClass="btn btn-info btn-sm" ID="Button1" runat="server" Text="+New Record" />
+
         </div>
     </div>
     <br />
