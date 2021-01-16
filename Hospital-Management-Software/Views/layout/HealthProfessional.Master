@@ -12,25 +12,34 @@
     <link rel="stylesheet" href="~/src/css/test2.css" type="text/css" />
 </head>
 <body>
-    <div style="display: none" id="side-nav-hp" class="sidenav">
-        <div class="sidenav-links">
-            <a href="#">Home</a>
-            <a href="#">Medical Records</a>
-            <a href="#">Patient Database</a>
-            <a href="#">Equipment Service</a>
-            <a href="#">Lab Service</a>
-            <a href="#">Logout</a>
+    <nav id="mySideNav" class="sidenav">
+        <!-- open side nav -->
+        <div style="display: none" id="opened-side-nav">
+            <div class="sidenav-links">
+                <a runat="server" href="~/HealthProfessional/Dashboard">Home</a>
+                <a runat="server" href="~/HealthProfessional/MedicalRecord">Medical Records</a>
+                <a runat="server" href="~/HealthProfessional/PatientRecord">Patient Database</a>
+                <a runat="server" href="~/HealthProfessional/EquipmentServiceRequest">Equipment Service</a>
+                <a runat="server" href="~/HealthProfessional/LabServiceRequest">Lab Service</a>
+                <a runat="server" href="#">Logout</a>
+            </div>
         </div>
-        
-    </div>
-    <!-- navigation -->
+         <!-- end of open side nav -->
+
+        <!-- side nav bar when closed -->
+          <div id="closed-side-nav" class ="sidenav">
+            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+          </div>
+         <!-- end of side nav bar when closed -->
+    </nav>
+
+    <!-- navigation --> <!--
     <nav style="z-index:2" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a id="nav-controller" class="navbar-brand" style="cursor: pointer;" onclick="openNav()">&#9776;</a>
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -57,11 +66,14 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-        </div>
-    </nav>
+        </div> 
+        
+    </nav>-->
+    <!-- end of side nav -->
     <!-- end of navigation -->
-    <form id="form1" runat="server" style="margin-bottom:80px">
-        <div>
+    <form id="form1" runat="server">
+        <div id="shadow"></div>
+        <div id="hp-content" style="margin-left:60px">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
@@ -71,21 +83,23 @@
 <script>
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
     function openNav() {
-        //document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("mySideNav").style.width = "250px";
         //document.getElementById("content").style.marginLeft = "270px";
-        //document.getElementById("closed-side-nav").style.display = "none";
-        document.getElementById("side-nav-hp").style.display = "block";
-        document.getElementById('nav-controller').setAttribute("onClick", "closeNav()");
+        document.getElementById("closed-side-nav").style.display = "none";
+        document.getElementById("opened-side-nav").style.display = "block";
+        document.getElementById('shadow').addEventListener('click', closeNav);
+        document.getElementById("shadow").style.display = "block";
         console.log(1);
     }
 
     /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
     function closeNav() {
-        //document.getElementById("mySidenav").style.width = "60px";
+        document.getElementById("mySideNav").style.width = "60px";
         //document.getElementById("content").style.marginLeft = "80px";
-        //document.getElementById("closed-side-nav").style.display = "block";
-        document.getElementById("side-nav-hp").style.display = "none";
-        document.getElementById('nav-controller').setAttribute("onClick", "openNav()");
+        document.getElementById("closed-side-nav").style.display = "block";
+        document.getElementById("opened-side-nav").style.display = "none";
+        document.getElementById("shadow").style.display = "none";
+        //document.getElementById('nav-controller').setAttribute("onClick", "openNav()");
         console.log(2);
     }
 </script>

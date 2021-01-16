@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Hospital_Management_Software.HealthProfessional
 {
-    public partial class menu : System.Web.UI.Page
+    public partial class Dashboard : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using WCF_Service_Library.Entity;
+using System.Data;
 
 namespace WCF_Service_Library
 {
@@ -39,10 +40,17 @@ namespace WCF_Service_Library
         List<RolePermission> GetAllRolePermission();
 
         [OperationContract]
+        List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
+
+        [OperationContract]
         List<MedicalRecord> GetAllMedicalRecord();
 
         [OperationContract]
-        List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
+        DataTable GetMedicalRecordTableView();
+
+     
+
+
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

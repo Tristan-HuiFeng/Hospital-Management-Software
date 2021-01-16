@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace WCF_Service_Library.Entity
 {
-    public class MedicalRecord
+    public class MedicalRecord2
     {
         public int medicalRecordID { get; set; }
         public string bloodPressure { get; set; }
@@ -24,8 +24,8 @@ namespace WCF_Service_Library.Entity
         public int patientID { get; set; }
         public int doctorID { get; set; }
 
-        public MedicalRecord() { }
-        public MedicalRecord(int medicalRecordID, string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis,
+        public MedicalRecord2() { }
+        public MedicalRecord2(int medicalRecordID, string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis,
             string treatment, DateTime consultationDate, string prescriptions, string remarks, int patientID, int doctorID)
         {
             this.medicalRecordID = medicalRecordID;
@@ -43,7 +43,7 @@ namespace WCF_Service_Library.Entity
 
         }
 
-        public List<MedicalRecord> SelectAll()
+        public List<MedicalRecord2> SelectAll()
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -54,7 +54,7 @@ namespace WCF_Service_Library.Entity
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            List<MedicalRecord> medicalRecordList = new List<MedicalRecord>();
+            List<MedicalRecord2> medicalRecordList = new List<MedicalRecord2>();
             int rec_cnt = ds.Tables[0].Rows.Count;
             for (int i = 0; i < rec_cnt; i++)
             {
@@ -72,14 +72,14 @@ namespace WCF_Service_Library.Entity
                 int obj_patientID = Convert.ToInt32(row["Patient_ID"]);
                 int obj_doctorID = Convert.ToInt32(row["Employee_ID"]);
 
-                MedicalRecord obj = new MedicalRecord(obj_medicalRecordID, obj_bloodPressure, obj_respirationDate, obj_bodyTemperature, obj_pulseRate,
+                MedicalRecord2 obj = new MedicalRecord2(obj_medicalRecordID, obj_bloodPressure, obj_respirationDate, obj_bodyTemperature, obj_pulseRate,
                     obj_diagnosis, obj_treatment, obj_consultationDate, obj_presccriptions, obj_remarks, obj_patientID, obj_doctorID);
                 medicalRecordList.Add(obj);
             }
             return medicalRecordList;
         }
 
-        public List<MedicalRecord> SelectByEmployeeID(int employeeID)
+        public List<MedicalRecord2> SelectByEmployeeID(int employeeID)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -91,7 +91,7 @@ namespace WCF_Service_Library.Entity
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            List<MedicalRecord> medicalRecordList = new List<MedicalRecord>();
+            List<MedicalRecord2> medicalRecordList = new List<MedicalRecord2>();
             int rec_cnt = ds.Tables[0].Rows.Count;
 
             for (int i = 0; i < rec_cnt; i++)
@@ -110,7 +110,7 @@ namespace WCF_Service_Library.Entity
                 int obj_patientID = Convert.ToInt32(row["Patient_ID"]);
                 int obj_doctorID = Convert.ToInt32(row["Employee_ID"]);
 
-                MedicalRecord obj = new MedicalRecord(obj_medicalRecordID, obj_bloodPressure, obj_respirationDate, obj_bodyTemperature, obj_pulseRate,
+                MedicalRecord2 obj = new MedicalRecord2(obj_medicalRecordID, obj_bloodPressure, obj_respirationDate, obj_bodyTemperature, obj_pulseRate,
                     obj_diagnosis, obj_treatment, obj_consultationDate, obj_presccriptions, obj_remarks, obj_patientID, obj_doctorID);
                 medicalRecordList.Add(obj);
             }
@@ -119,6 +119,8 @@ namespace WCF_Service_Library.Entity
 
         public DataTable SelectAllTableView()
         {
-           
+            
+        }
+
     }
 }

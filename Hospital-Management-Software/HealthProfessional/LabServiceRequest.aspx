@@ -3,8 +3,9 @@
 <asp:Content ID="LabService_head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="LabService_content" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container">
+    <div class="container" style="margin-top: 40px">
         <h1>Laboratory Service Request</h1>
+        <hr />
         <div>
             <!-- start of doctor info -->
             <div class="row">

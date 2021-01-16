@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital-Management-Software", "Hospital-Management-Software\Hospital-Management-Software.csproj", "{5C34D33F-E3D1-413B-82D9-08678E6DBB94}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8DB70696-5990-4391-A7BC-97B153665857} = {8DB70696-5990-4391-A7BC-97B153665857}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCF_Service_Library", "WCF_Service_Library\WCF_Service_Library.csproj", "{8DB70696-5990-4391-A7BC-97B153665857}"
 EndProject
