@@ -10,10 +10,10 @@ using System.Data.SqlClient;
 
 namespace WCF_Service_Library.Entity
 {
-    class PatientRecord
+    public class PatientRecord
     {
         //No LoginId & pwd => login method == NRIC + 2FA via phone
-        public int patientID { get; set; }
+        public string patientID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string NRIC { get; set; }
@@ -41,9 +41,11 @@ namespace WCF_Service_Library.Entity
            string nationality, string citizenship, 
            string postalcode, string address, 
            string allergies, string medicalhistory, string phonenumber, 
-           string homenumber, string email) 
+           string homenumber, string email,
+           DateTime createdDate, DateTime updatedDate) 
         {
             //Init code
+            this.patientID = patientid;
             this.firstName = firstname;
             this.lastName = lastname;
             this.NRIC = NRIC;
@@ -59,7 +61,42 @@ namespace WCF_Service_Library.Entity
             this.phoneNumber = phonenumber;
             this.homeNumber = homenumber;
             this.email = email;
-            this.createdDate = DateTime.Now;
+            this.createdDate = createdDate;
+            this.updatedDate = updatedDate;
+        }
+
+        public int Insert()
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "INSERT INTO PATIENT (patientid, firstname, lastname, nric, dob, age, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updatedDate) " +
+    "VALUES (@paraPatientID,@paraFirstName, @paraLastName, @paraNRIC, @paraDOB, @paraAge, @parasSex, @paraNationality, @paraCitizenship, @paraPostalcode, @paraAddress, @paraAllergies, @paraMedicalHistory, @paraPhoneNumber, @paraHomeNumber, @paraEmail, @paraCreatedDate, @paraUpdatedDate)";
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+            sqlCmd.Parameters.AddWithValue("@paraPatientID", patientID);
+            sqlCmd.Parameters.AddWithValue("@paraFirstName", firstName);
+            sqlCmd.Parameters.AddWithValue("@paraLastName", lastName);
+            sqlCmd.Parameters.AddWithValue("@paraNRIC", NRIC);
+            sqlCmd.Parameters.AddWithValue("@paraDOB", DOB);
+            sqlCmd.Parameters.AddWithValue("@paraAge", age);
+            sqlCmd.Parameters.AddWithValue("@paraSex", sex);
+            sqlCmd.Parameters.AddWithValue("@paraNationality", nationality);
+            sqlCmd.Parameters.AddWithValue("@paraCitizenship", citizenship);
+            sqlCmd.Parameters.AddWithValue("@paraPostalcode", postalCode);
+            sqlCmd.Parameters.AddWithValue("@paraAddress", address);
+            sqlCmd.Parameters.AddWithValue("@paraMedicalHistory", postalCode);
+            sqlCmd.Parameters.AddWithValue("@paraPhoneNumber", phoneNumber);
+            sqlCmd.Parameters.AddWithValue("@paraHomeNumber", homeNumber);
+            sqlCmd.Parameters.AddWithValue("@paraEmail", phoneNumber);
+            sqlCmd.Parameters.AddWithValue("@paraCreatedDate", createdDate);
+            sqlCmd.Parameters.AddWithValue("@paraUpdatedDate", updatedDate);
+
+            myConn.Open();
+            int result = sqlCmd.ExecuteNonQuery();
+            myConn.Close();
+
+            return result;
         }
 
         public List<PatientRecord> SelectAll()
@@ -73,7 +110,7 @@ namespace WCF_Service_Library.Entity
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            List<PatientRecord> medicalRecordList = new List<PatientRecord>();
+            List<PatientRecord> patientRecordList = new List<PatientRecord>();
             int rec_cnt = ds.Tables[0].Rows.Count;
 
             for (int i = 0; i < rec_cnt; i++)
@@ -86,26 +123,81 @@ namespace WCF_Service_Library.Entity
                 DateTime DOB = Convert.ToDateTime(row["DOB"].ToString());
                 int age = Convert.ToInt32(row["Age"]);
                 string sex = row["Sex"].ToString();
+                string nationality = row["Nationality"].ToString();
+                string citizenship = row["Citizenship"].ToString();
+                string postalCode = row["Postal_Code"].ToString();
+                string address = row["Address"].ToString();
+                string allergies = row["Allergies"].ToString();
+                string medicalHistory = row["Medical_History"].ToString();
+                string phoneNumber = row["Phone_Number"].ToString();
+                string homeNumber = row["Home_Number"].ToString();
+                string email = row["Email"].ToString();
+                DateTime createdDate = Convert.ToDateTime(row["Created_Date"].ToString());
+                DateTime updatedDate = Convert.ToDateTime(row["Update_Date"].ToString());
 
-
-                int obj_medicalRecordID = Convert.ToInt32(row["Medical_Record_ID"]);
-                string obj_bloodPressure = row["Blood_Pressure"].ToString();
-                string obj_respirationDate = row["Respiration_Rate"].ToString();
-                string obj_bodyTemperature = row["Body_Temperature"].ToString();
-                string obj_pulseRate = row["Pulse_Rate"].ToString();
-                string obj_diagnosis = row["Diagnosis"].ToString();
-                string obj_treatment = row["Treatment"].ToString();
-                DateTime obj_consultationDate = Convert.ToDateTime(row["Date"].ToString());
-                string obj_presccriptions = row["Prescriptions"].ToString();
-                string obj_remarks = row["Remarks"].ToString();
-                int obj_patientID = Convert.ToInt32(row["Patient_ID"]);
-                int obj_doctorID = Convert.ToInt32(row["Employee_ID"]);
-
-                MedicalRecord obj = new MedicalRecord(obj_medicalRecordID, obj_bloodPressure, obj_respirationDate, obj_bodyTemperature, obj_pulseRate,
-                    obj_diagnosis, obj_treatment, obj_consultationDate, obj_presccriptions, obj_remarks, obj_patientID, obj_doctorID);
-                medicalRecordList.Add(obj);
+                PatientRecord patient = new PatientRecord(patientID, firstName, lastName,
+                    NRIC, DOB, age, sex, nationality, citizenship,
+                    postalCode, address,
+                    allergies, medicalHistory,
+                    phoneNumber, homeNumber, email,
+                    createdDate, updatedDate
+                    );
+                patientRecordList.Add(patient);
             }
-            return medicalRecordList;
+            return patientRecordList;
+        }
+
+        public PatientRecord SelectPatientByID(string patientID)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "Select * from PATIENT where Patient_ID = @paraPatientID";
+            SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraPatientID", patientID);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            PatientRecord patient = null;
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            if (rec_cnt == 1)
+            {
+                DataRow row = ds.Tables[0].Rows[0];  // Sql command returns only one record
+                string firstName = row["First_Name"].ToString();
+                string lastName = row["Last_Name"].ToString();
+                string NRIC = row["NRIC"].ToString();
+                DateTime DOB = Convert.ToDateTime(row["DOB"].ToString());
+                int age = Convert.ToInt32(row["Age"]);
+                string sex = row["Sex"].ToString();
+                string nationality = row["Nationality"].ToString();
+                string citizenship = row["Citizenship"].ToString();
+                string postalCode = row["Postal_Code"].ToString();
+                string address = row["Address"].ToString();
+                string allergies = row["Allergies"].ToString();
+                string medicalHistory = row["Medical_History"].ToString();
+                string phoneNumber = row["Phone_Number"].ToString();
+                string homeNumber = row["Home_Number"].ToString();
+                string email = row["Email"].ToString();
+                DateTime createdDate = Convert.ToDateTime(row["Created_Date"].ToString());
+                DateTime updatedDate = Convert.ToDateTime(row["Update_Date"].ToString());
+
+                patient = new PatientRecord(patientID, firstName, lastName,
+                    NRIC, DOB, age, sex, nationality, citizenship,
+                    postalCode, address,
+                    allergies, medicalHistory,
+                    phoneNumber, homeNumber, email,
+                    createdDate, updatedDate
+                    );
+            }
+            return patient;
+        }
+
+
+        //additions
+        public int UpdatePatientByID(string patientID)
+        {
+            return 1;
         }
     }
 }

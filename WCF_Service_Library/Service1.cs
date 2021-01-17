@@ -83,6 +83,38 @@ namespace WCF_Service_Library
             return objList;
         }
 
+        public List<PatientRecord> GetAllPatientRecords()
+        {
+            PatientRecord patients = new PatientRecord();
+            return patients.SelectAll();
+        }
+
+        public PatientRecord GetPatientRecordByID(string patientID)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.SelectPatientByID(patientID);
+        }
+
+        public int CreatePatientRecord(
+           string patientid,
+           string firstname, string lastname,
+           string NRIC, DateTime DOB, int age, string sex,
+           string nationality, string citizenship,
+           string postalcode, string address,
+           string allergies, string medicalhistory, string phonenumber,
+           string homenumber, string email,
+           DateTime createdDate, DateTime updateDate)
+        {
+            PatientRecord patient = new PatientRecord(
+                patientid, firstname, lastname, 
+                NRIC, DOB, age, sex, 
+                nationality, citizenship, 
+                postalcode, address, 
+                allergies, medicalhistory, 
+                phonenumber, homenumber, email, 
+                createdDate, updateDate);
+            return patient.Insert();
+        }
 
 
     }
