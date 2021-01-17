@@ -43,6 +43,44 @@ namespace WCF_Service_Library
 
         [OperationContract]
         List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
+
+        // Management
+        [OperationContract]
+        List<Employee> GetAllEmployee();
+
+        [OperationContract]
+        List<Employee> GetEmployeeByName(string name);
+
+        [OperationContract]
+        List<Employee> GetEmployeeSortedByDOB(int order);
+
+        [OperationContract]
+        List<Employee> GetEmployeeSortedByGender(int order);
+
+        [OperationContract]
+        List<Employee> GetEmployeeByNRIC(string nric);
+
+        [OperationContract]
+        int CreateEmployee(string nric, string firstname, string lastname, string email,
+            DateTime dob, char gender, string address, string department,
+            string position, string nationality, string healthdeclaration,
+            string loginid, string password, string jobfunction, string image);
+
+        [OperationContract]
+        int UpdateEmployee(string nric, string firstname, string lastname, string email,
+            DateTime dob, char gender, string address, string department,
+            string position, string nationality, string healthdeclaration,
+            string loginid, string password, string jobfunction, string image);
+
+        [OperationContract]
+        string GetEmployeeID(string nric);
+
+        [OperationContract]
+        int CreateContract(string salary, string benefits, string workingHours, string holidays, string vacation, DateTime create_date, string employeeID);
+
+        [OperationContract]
+        List<ContractRecord> GetContractByEmployeeID(string id);
+
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

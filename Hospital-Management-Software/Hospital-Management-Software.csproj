@@ -55,6 +55,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -117,6 +119,36 @@
     <Content Include="App_Data\EDP_DB_log.ldf">
       <DependentUpon>EDP_DB.mdf</DependentUpon>
     </Content>
+    <None Include="Connected Services\MyDBServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\MyDBServiceReference\configuration.svcinfo" />
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.LabServiceRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Resource.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.RolePermission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.ContractRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\MyDBServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Management\AddContract.aspx" />
     <Content Include="Management\AddEmployee.aspx" />
     <Content Include="Contact.aspx" />
@@ -170,6 +202,26 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.CompositeType.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Employee.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.EquipmentServiceRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.LabServiceRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.MedicalRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Resource.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.RolePermission.datasource" />
+    <None Include="Connected Services\MyDBServiceReference\service.wsdl" />
+    <None Include="Connected Services\MyDBServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyDBServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.Entity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -316,6 +368,11 @@
     </Compile>
     <Compile Include="Administrator\ModifyRole.aspx.designer.cs">
       <DependentUpon>ModifyRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MyDBServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Management\AddContract.aspx.cs">
       <DependentUpon>AddContract.aspx</DependentUpon>
@@ -549,6 +606,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Management\EmployeeImages\" />
+    <Folder Include="Management\HealthDeclaration\" />
     <Folder Include="ServiceRequest\" />
     <Folder Include="src\img\" />
     <Folder Include="Views\Home\" />
@@ -582,6 +641,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WCF_Service_Library\WCF_Service_Library.csproj">
+      <Project>{8DB70696-5990-4391-A7BC-97B153665857}</Project>
+      <Name>WCF_Service_Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MyDBServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

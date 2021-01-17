@@ -83,7 +83,73 @@ namespace WCF_Service_Library
             return objList;
         }
 
+        // Management
+        public List<Employee> GetAllEmployee()
+        {
+            Employee emp = new Employee();
+            return emp.SelectAll();
+        }
 
+        public List<Employee> GetEmployeeByName(string name)
+        {
+            Employee emp = new Employee();
+            return emp.SelectByName(name);
+        }
 
+        public List<Employee> GetEmployeeSortedByDOB(int order)
+        {
+            Employee emp = new Employee();
+            return emp.SelectSortByDOB(order);
+        }
+
+        public List<Employee> GetEmployeeSortedByGender(int order)
+        {
+            Employee emp = new Employee();
+            return emp.SelectSortByGender(order);
+        }
+
+        public List<Employee> GetEmployeeByNRIC(string nric)
+        {
+            Employee emp = new Employee();
+            return emp.SelectByNRIC(nric);
+        }
+
+        public int CreateEmployee(string nric, string firstname, string lastname, string email,
+            DateTime dob, char gender, string address, string department,
+            string position, string nationality, string healthdeclaration,
+            string loginid, string password, string jobfunction, string image)
+        {
+            Employee emp = new Employee(nric, firstname, lastname, email, dob, gender,
+                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+            return emp.Insert();
+        }
+
+        public int UpdateEmployee(string nric, string firstname, string lastname, string email,
+            DateTime dob, char gender, string address, string department,
+            string position, string nationality, string healthdeclaration,
+            string loginid, string password, string jobfunction, string image)
+        {
+            Employee emp = new Employee(nric, firstname, lastname, email, dob, gender,
+                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+            return emp.Update(nric);
+        }
+
+        public string GetEmployeeID(string nric)
+        {
+            Employee emp = new Employee();
+            return emp.GetEmployeeID(nric);
+        }
+
+        public int CreateContract(string salary, string benefits, string workingHours, string holidays, string vacation, DateTime create_date, string employeeID)
+        {
+            ContractRecord cr = new ContractRecord(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
+            return cr.Insert();
+        }
+
+        public List<ContractRecord> GetContractByEmployeeID(string id)
+        {
+            ContractRecord cr = new ContractRecord();
+            return cr.SelectByEmployeeID(id);
+        }
     }
 }
