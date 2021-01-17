@@ -143,12 +143,18 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.ContractRecord.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\MyDBServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="HealthProfessional\Dashboard.aspx" />
+    <Content Include="HealthProfessional\MedicalRecordList.aspx" />
     <Content Include="Management\AddContract.aspx" />
     <Content Include="Management\AddEmployee.aspx" />
     <Content Include="Contact.aspx" />
@@ -162,8 +168,6 @@
     <Content Include="HealthProfessional\CreateMedicalRecord.aspx" />
     <Content Include="HealthProfessional\EquipmentServiceRequest.aspx" />
     <Content Include="HealthProfessional\LabServiceRequest.aspx" />
-    <Content Include="HealthProfessional\MedicalRecord.aspx" />
-    <Content Include="HealthProfessional\Menu.aspx" />
     <Content Include="HealthProfessional\PatientRecord.aspx" />
     <Content Include="HealthProfessional\UpdateMedicalRecord.aspx" />
     <Content Include="Login\StaffLogin.aspx" />
@@ -209,6 +213,7 @@
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.MedicalRecord.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Resource.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.RolePermission.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <None Include="Connected Services\MyDBServiceReference\service.wsdl" />
     <None Include="Connected Services\MyDBServiceReference\service.xsd">
       <SubType>Designer</SubType>
@@ -216,9 +221,9 @@
     <None Include="Connected Services\MyDBServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    </None>
     <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.Entity.xsd">
       <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -374,6 +379,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="HealthProfessional\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\MedicalRecordList.aspx.cs">
+      <DependentUpon>MedicalRecordList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\MedicalRecordList.aspx.designer.cs">
+      <DependentUpon>MedicalRecordList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\AddContract.aspx.cs">
       <DependentUpon>AddContract.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -455,20 +474,6 @@
     </Compile>
     <Compile Include="HealthProfessional\LabServiceRequest.aspx.designer.cs">
       <DependentUpon>LabServiceRequest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="HealthProfessional\MedicalRecord.aspx.cs">
-      <DependentUpon>MedicalRecord.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HealthProfessional\MedicalRecord.aspx.designer.cs">
-      <DependentUpon>MedicalRecord.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="HealthProfessional\Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HealthProfessional\Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="HealthProfessional\PatientRecord.aspx.cs">
       <DependentUpon>PatientRecord.aspx</DependentUpon>

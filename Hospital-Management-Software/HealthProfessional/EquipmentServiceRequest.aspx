@@ -3,8 +3,9 @@
 <asp:Content ID="EquipmentService_head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="EquipmentService_content" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container">
+    <div class="container" style="margin-top: 40px">
         <h1>Equipment Service Request</h1>
+        <hr />
         <div>
             <div class="row">
                 <!-- start of doctor info -->

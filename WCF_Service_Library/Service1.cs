@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using WCF_Service_Library.Entity;
+using System.Data;
 
 namespace WCF_Service_Library
 {
@@ -69,18 +70,17 @@ namespace WCF_Service_Library
             return objList;
         }
 
-        public List<MedicalRecord> GetAllMedicalRecord()
-        {
-            MedicalRecord mr = new MedicalRecord();
-            List<MedicalRecord> objList = mr.SelectAll();
-            return objList;
-        }
-
         public List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID)
         {
             MedicalRecord mr = new MedicalRecord();
             List<MedicalRecord> objList = mr.SelectByEmployeeID(empID);
             return objList;
+        }
+
+        public List<MedicalRecord> GetAllMedicalRecord()
+        {
+            MedicalRecord mr = new MedicalRecord();
+            return mr.SelectAll();
         }
 
         // Management
@@ -107,6 +107,13 @@ namespace WCF_Service_Library
             Employee emp = new Employee();
             return emp.SelectSortByGender(order);
         }
+        public DataTable GetMedicalRecordTableView()
+        {
+            MedicalRecord mr = new MedicalRecord();
+            return mr.SelectAllTableView();
+        }
+
+   
 
         public List<Employee> GetEmployeeByNRIC(string nric)
         {

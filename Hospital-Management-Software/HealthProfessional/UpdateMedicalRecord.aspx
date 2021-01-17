@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/HealthProfessional.Master" AutoEventWireup="true" CodeBehind="UpdateMedicalRecord.aspx.cs" Inherits="Hospital_Management_Software.HealthProfessional.UpdateMedicalRecord" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="MedicalRecordUpdate_head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="MedicalRecordUpdate_content" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container" style="margin-top: 40px">
         <h1>Update Existing Medical Record</h1>
         <hr />

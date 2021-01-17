@@ -1248,6 +1248,17 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetContractByEmployeeIDResponse")]
         System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.ContractRecord[]> GetContractByEmployeeIDAsync(string id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
+        Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
+        System.Data.DataTable GetMedicalRecordTableView();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1435,6 +1446,20 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.ContractRecord[]> GetContractByEmployeeIDAsync(string id) {
             return base.Channel.GetContractByEmployeeIDAsync(id);
+        public Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord() {
+            return base.Channel.GetAllMedicalRecord();
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync() {
+            return base.Channel.GetAllMedicalRecordAsync();
+        }
+        
+        public System.Data.DataTable GetMedicalRecordTableView() {
+            return base.Channel.GetMedicalRecordTableView();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync() {
+            return base.Channel.GetMedicalRecordTableViewAsync();
         }
     }
 }

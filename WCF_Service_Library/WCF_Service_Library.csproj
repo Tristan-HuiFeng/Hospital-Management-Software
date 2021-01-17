@@ -50,6 +50,7 @@
     <Compile Include="Entity\EquipmentServiceRecord.cs" />
     <Compile Include="Entity\LabServiceRecord.cs" />
     <Compile Include="Entity\MedicalRecord.cs" />
+    <Compile Include="Entity\MedicalRecord2.cs" />
     <Compile Include="Entity\Resource.cs" />
     <Compile Include="Entity\Role.cs" />
     <Compile Include="Entity\RolePermission.cs" />

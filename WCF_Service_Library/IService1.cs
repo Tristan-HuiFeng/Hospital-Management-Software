@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using WCF_Service_Library.Entity;
+using System.Data;
 
 namespace WCF_Service_Library
 {
@@ -37,6 +38,9 @@ namespace WCF_Service_Library
 
         [OperationContract]
         List<RolePermission> GetAllRolePermission();
+
+        [OperationContract]
+        List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
 
         [OperationContract]
         List<MedicalRecord> GetAllMedicalRecord();
@@ -80,6 +84,10 @@ namespace WCF_Service_Library
 
         [OperationContract]
         List<ContractRecord> GetContractByEmployeeID(string id);
+        DataTable GetMedicalRecordTableView();
+
+     
+
 
     }
 
