@@ -70,8 +70,10 @@ namespace WCF_Service_Library.Entity
             string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "INSERT INTO PATIENT (patientid, firstname, lastname, nric, dob, age, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updatedDate) " +
-    "VALUES (@paraPatientID,@paraFirstName, @paraLastName, @paraNRIC, @paraDOB, @paraAge, @parasSex, @paraNationality, @paraCitizenship, @paraPostalcode, @paraAddress, @paraAllergies, @paraMedicalHistory, @paraPhoneNumber, @paraHomeNumber, @paraEmail, @paraCreatedDate, @paraUpdatedDate)";
+            string sqlStmt = "SET IDENTITY_INSERT PATIENT ON " +
+                "INSERT INTO PATIENT (Patient_ID, First_Name, Last_Name, NRIC, DOB, Age, Sex, Nationality, Citizenship, Postal_Code, Address, Allergies, Medical_History, Phone_Number, Home_Number, Email, Created_Date, Update_Date) " +
+    "VALUES (@paraPatientID,@paraFirstName, @paraLastName, @paraNRIC, @paraDOB, @paraAge, @paraSex, @paraNationality, @paraCitizenship, @paraPostalcode, @paraAddress, @paraAllergies, @paraMedicalHistory, @paraPhoneNumber, @paraHomeNumber, @paraEmail, @paraCreatedDate, @paraUpdatedDate)" +
+    "SET IDENTITY_INSERT PATIENT OFF ";
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
             sqlCmd.Parameters.AddWithValue("@paraPatientID", patientID);
@@ -85,6 +87,7 @@ namespace WCF_Service_Library.Entity
             sqlCmd.Parameters.AddWithValue("@paraCitizenship", citizenship);
             sqlCmd.Parameters.AddWithValue("@paraPostalcode", postalCode);
             sqlCmd.Parameters.AddWithValue("@paraAddress", address);
+            sqlCmd.Parameters.AddWithValue("@paraAllergies", allergies);
             sqlCmd.Parameters.AddWithValue("@paraMedicalHistory", postalCode);
             sqlCmd.Parameters.AddWithValue("@paraPhoneNumber", phoneNumber);
             sqlCmd.Parameters.AddWithValue("@paraHomeNumber", homeNumber);
@@ -199,5 +202,6 @@ namespace WCF_Service_Library.Entity
         {
             return 1;
         }
+
     }
 }

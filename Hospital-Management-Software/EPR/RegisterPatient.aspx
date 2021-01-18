@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/Site.Master" AutoEventWireup="true" CodeBehind="RegisterPatient.aspx.cs" Inherits="Hospital_Management_Software.Views.RegisterPatient" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <p>
+        <h1>Patient Registration</h1>
+    </p>
+    <p>
+        Please fill in the required fields below. For any field that is non-applicable please put NIL.
+    </p>
     <table style="width: 100%;" class="table">
         <tr>
             <td scope="row" style="width: 185px">Name:</td>
@@ -106,7 +112,7 @@
         <tr>
             <td style="width: 185px">&nbsp;</td>
             <td style="width: 198px">
-                <asp:Button ID="Button1" runat="server" Text="Submit" />
+                <asp:Button ID="btn_Submit" runat="server" Text="Submit" />
             </td>
             <td style="width: 44px">&nbsp;</td>
             <td style="width: 493px">&nbsp;</td>

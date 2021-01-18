@@ -36,5 +36,21 @@ namespace Hospital_Management_Software.Views
             countries.Sort();
             return countries;
         }
+
+        private int ValidateInput()
+        {
+            return 1;
+        }
+
+        protected void btn_Submit_Click(object sender, EventArgs e)
+        {
+            int Error = ValidateInput();
+            if (Error == 0)
+            {
+                ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+
+
+            }
+        }
     }
 }

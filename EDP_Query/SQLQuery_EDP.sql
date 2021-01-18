@@ -1,11 +1,9 @@
 ﻿CREATE TABLE [dbo].[PATIENT] (
-    [Patient_ID]      INT            IDENTITY (1, 1) NOT NULL,
-    [Login_ID]        NVARCHAR (64)  NOT NULL,
-    [Password]        NVARCHAR (64)  NOT NULL,
+    [Patient_ID]      BIGINT            IDENTITY (1, 1) NOT NULL,
     [First_Name]      NVARCHAR (64)  NOT NULL,
     [Last_Name]       NVARCHAR (64)  NOT NULL,
     [NRIC]            NCHAR (9)      NOT NULL,
-    [DOB]             DATE           NOT NULL,
+    [DOB]             DATETIME       NOT NULL,
     [Age]             TINYINT        NOT NULL,
     [Sex]             NCHAR (1)      NOT NULL,
     [Nationality]     NVARCHAR (64)  NOT NULL,
@@ -153,6 +151,14 @@ CREATE TABLE [dbo].[ROLE] (
     PRIMARY KEY CLUSTERED ([Role_ID] ASC)
 );
 
+
+
+CREATE TABLE [dbo].[RESOURCE] (
+    [Resource_ID]   INT          IDENTITY (1, 1) NOT NULL,
+    [Resource_Name] VARCHAR (64) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Resource_ID] ASC)
+);
+
 CREATE TABLE [dbo].[ROLE_PERMISSION] (
     [Resource_ID] INT NOT NULL,
     [Role_ID]     INT NOT NULL,
@@ -163,10 +169,4 @@ CREATE TABLE [dbo].[ROLE_PERMISSION] (
     PRIMARY KEY CLUSTERED ([Role_ID] ASC, [Resource_ID] ASC),
     CONSTRAINT [FK_Recource_ID_Permission] FOREIGN KEY ([Resource_ID]) REFERENCES [dbo].[RESOURCE] ([Resource_ID]),
     CONSTRAINT [FK_Role_ID_Permission] FOREIGN KEY ([Role_ID]) REFERENCES [dbo].[ROLE] ([Role_ID])
-);
-
-CREATE TABLE [dbo].[RESOURCE] (
-    [Resource_ID]   INT          IDENTITY (1, 1) NOT NULL,
-    [Resource_Name] VARCHAR (64) NOT NULL,
-    PRIMARY KEY CLUSTERED ([Resource_ID] ASC)
 );
