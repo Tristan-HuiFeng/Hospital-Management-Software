@@ -25,6 +25,7 @@
                 <div class="col form-group">
                     <asp:Label ID="lb_equipmentName" runat="server" Text="Equipment Name:"></asp:Label>
                     <asp:TextBox ID="tb_equipmentName" class="form-control" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfv_equipmentName" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="tb_equipmentName"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="col form-group">
@@ -33,19 +34,6 @@
                 </div>
             </div>
 
-            <!--
-            <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                </div>
-            </div>-->
             <div class="row">
                 <div class="col form-group">
                     <asp:Label ID="lb_location" runat="server" Text="Location & Room No.:"></asp:Label>

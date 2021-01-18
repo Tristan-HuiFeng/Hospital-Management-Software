@@ -136,10 +136,10 @@
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.RolePermission.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord2.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.tempPatient.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\MyDBServiceReference\Reference.svcmap">
@@ -148,6 +148,7 @@
     </None>
     <Content Include="HealthProfessional\Dashboard.aspx" />
     <Content Include="HealthProfessional\MedicalRecordList.aspx" />
+    <Content Include="HealthProfessional\ViewMedicalRecord.aspx" />
     <Content Include="Management\AddContract.aspx" />
     <Content Include="Management\AddEmployee.aspx" />
     <Content Include="Contact.aspx" />
@@ -164,6 +165,8 @@
     <Content Include="HealthProfessional\PatientRecord.aspx" />
     <Content Include="HealthProfessional\UpdateMedicalRecord.aspx" />
     <Content Include="Login\StaffLogin.aspx" />
+    <Content Include="src\css\login.css" />
+    <Content Include="src\css\staff-main.css" />
     <Content Include="src\css\test.css" />
     <Content Include="Default.aspx" />
     <Content Include="Management\AddPayroll.aspx" />
@@ -317,7 +320,7 @@
     <Content Include="Views\EPR\Dashboard.aspx" />
     <Content Include="Views\EPR\UpdateEPR.aspx" />
     <Content Include="Views\MAR\CreateMAR.aspx" />
-    <Content Include="src\css\test2.css" />
+    <Content Include="src\css\health-professional.css" />
     <Content Include="src\css\HRStyleSheet.css" />
     <Content Include="Views\layout\Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
@@ -381,6 +384,13 @@
     </Compile>
     <Compile Include="HealthProfessional\MedicalRecordList.aspx.designer.cs">
       <DependentUpon>MedicalRecordList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\ViewMedicalRecord.aspx.cs">
+      <DependentUpon>ViewMedicalRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\ViewMedicalRecord.aspx.designer.cs">
+      <DependentUpon>ViewMedicalRecord.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\AddContract.aspx.cs">
       <DependentUpon>AddContract.aspx</DependentUpon>

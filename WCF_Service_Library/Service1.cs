@@ -77,6 +77,12 @@ namespace WCF_Service_Library
             return objList;
         }
 
+        public MedicalRecord GetMedicalRecordByID(int id)
+        {
+            MedicalRecord mr = new MedicalRecord();
+            return mr.SelectByMedicalRecordID(id);
+        }
+
         public List<MedicalRecord> GetAllMedicalRecord()
         {
             MedicalRecord mr = new MedicalRecord();
@@ -89,7 +95,20 @@ namespace WCF_Service_Library
             return mr.SelectAllTableView();
         }
 
-   
+        public tempPatient GetPatientByID(string id)
+        {
+            tempPatient tp = new tempPatient();
+            return tp.SelectPatientById(id);
+        }
+
+
+        public int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, 
+            DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks)
+        {
+            MedicalRecord mr = new MedicalRecord(-1, bloodPressure, respirationRate, bodyTemperature, pulseRate, diagnosis, treatment,
+                consultationDate, patientID, doctorID, prescription, remarks);
+            return mr.Insert();
+        }
 
     }
 }

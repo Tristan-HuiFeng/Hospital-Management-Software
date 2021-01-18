@@ -119,7 +119,20 @@ namespace WCF_Service_Library.Entity
 
         public DataTable SelectAllTableView()
         {
-            
+            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "Select MR.Date, Concat(P.First_Name, ' ', P.Last_Name) patientFullName, Concat(E.First_Name, ' ',E.Last_Name) doctorFullName, MR.Diagnosis " +
+                "from MEDICAL_RECORD AS MR " +
+                "Inner join PATIENT AS P on MR.Patient_ID = P.Patient_ID " +
+                "Inner join EMPLOYEE AS E on MR.Employee_ID = E.Employee_ID ";
+            SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+
+            DataTable dt = new DataTable();
+            dt.TableName = "MedicalRecord";
+            da.Fill(dt);
+
+            return dt;
         }
 
     }

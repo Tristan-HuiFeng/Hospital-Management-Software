@@ -75,9 +75,13 @@
       <xs:element minOccurs="0" name="bodyTemperature" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="consultationDate" type="xs:dateTime" />
       <xs:element minOccurs="0" name="diagnosis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="doctorEmail" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="doctorID" type="xs:int" />
+      <xs:element minOccurs="0" name="doctorName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="medicalRecordID" type="xs:int" />
+      <xs:element minOccurs="0" name="patientContact" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="patientID" type="xs:int" />
+      <xs:element minOccurs="0" name="patientName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="prescriptions" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="pulseRate" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
@@ -86,4 +90,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MedicalRecord" nillable="true" type="tns:MedicalRecord" />
+  <xs:complexType name="tempPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tempPatient" nillable="true" type="tns:tempPatient" />
 </xs:schema>

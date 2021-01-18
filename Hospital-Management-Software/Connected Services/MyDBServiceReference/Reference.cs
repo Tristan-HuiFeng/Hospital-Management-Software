@@ -516,13 +516,25 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         private string diagnosisField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string doctorEmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int doctorIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string doctorNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int medicalRecordIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string patientContactField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int patientIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string patientNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string prescriptionsField;
@@ -602,6 +614,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string doctorEmail {
+            get {
+                return this.doctorEmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.doctorEmailField, value) != true)) {
+                    this.doctorEmailField = value;
+                    this.RaisePropertyChanged("doctorEmail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int doctorID {
             get {
                 return this.doctorIDField;
@@ -610,6 +635,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                 if ((this.doctorIDField.Equals(value) != true)) {
                     this.doctorIDField = value;
                     this.RaisePropertyChanged("doctorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string doctorName {
+            get {
+                return this.doctorNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.doctorNameField, value) != true)) {
+                    this.doctorNameField = value;
+                    this.RaisePropertyChanged("doctorName");
                 }
             }
         }
@@ -628,6 +666,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string patientContact {
+            get {
+                return this.patientContactField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.patientContactField, value) != true)) {
+                    this.patientContactField = value;
+                    this.RaisePropertyChanged("patientContact");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int patientID {
             get {
                 return this.patientIDField;
@@ -636,6 +687,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                 if ((this.patientIDField.Equals(value) != true)) {
                     this.patientIDField = value;
                     this.RaisePropertyChanged("patientID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string patientName {
+            get {
+                return this.patientNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.patientNameField, value) != true)) {
+                    this.patientNameField = value;
+                    this.RaisePropertyChanged("patientName");
                 }
             }
         }
@@ -715,6 +779,83 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="tempPatient", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class tempPatient : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string contactField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string contact {
+            get {
+                return this.contactField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.contactField, value) != true)) {
+                    this.contactField = value;
+                    this.RaisePropertyChanged("contact");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MyDBServiceReference.IService1")]
     public interface IService1 {
@@ -773,6 +914,12 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeIDResponse")]
         System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordByEmployeeIDAsync(int empID);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordByID", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordByIDResponse")]
+        Hospital_Management_Software.MyDBServiceReference.MedicalRecord GetMedicalRecordByID(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordByID", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordByIDResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord> GetMedicalRecordByIDAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
         Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord();
         
@@ -784,6 +931,18 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
         System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientByID", ReplyAction="http://tempuri.org/IService1/GetPatientByIDResponse")]
+        Hospital_Management_Software.MyDBServiceReference.tempPatient GetPatientByID(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientByID", ReplyAction="http://tempuri.org/IService1/GetPatientByIDResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.tempPatient> GetPatientByIDAsync(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMedicalRecord", ReplyAction="http://tempuri.org/IService1/CreateMedicalRecordResponse")]
+        int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMedicalRecord", ReplyAction="http://tempuri.org/IService1/CreateMedicalRecordResponse")]
+        System.Threading.Tasks.Task<int> CreateMedicalRecordAsync(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -885,6 +1044,14 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetAllMedicalRecordByEmployeeIDAsync(empID);
         }
         
+        public Hospital_Management_Software.MyDBServiceReference.MedicalRecord GetMedicalRecordByID(int id) {
+            return base.Channel.GetMedicalRecordByID(id);
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord> GetMedicalRecordByIDAsync(int id) {
+            return base.Channel.GetMedicalRecordByIDAsync(id);
+        }
+        
         public Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord() {
             return base.Channel.GetAllMedicalRecord();
         }
@@ -899,6 +1066,22 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync() {
             return base.Channel.GetMedicalRecordTableViewAsync();
+        }
+        
+        public Hospital_Management_Software.MyDBServiceReference.tempPatient GetPatientByID(string id) {
+            return base.Channel.GetPatientByID(id);
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.tempPatient> GetPatientByIDAsync(string id) {
+            return base.Channel.GetPatientByIDAsync(id);
+        }
+        
+        public int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks) {
+            return base.Channel.CreateMedicalRecord(bloodPressure, respirationRate, bodyTemperature, pulseRate, diagnosis, treatment, consultationDate, doctorID, patientID, prescription, remarks);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateMedicalRecordAsync(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks) {
+            return base.Channel.CreateMedicalRecordAsync(bloodPressure, respirationRate, bodyTemperature, pulseRate, diagnosis, treatment, consultationDate, doctorID, patientID, prescription, remarks);
         }
     }
 }

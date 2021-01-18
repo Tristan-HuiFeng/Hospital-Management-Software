@@ -63,6 +63,12 @@
   <wsdl:message name="IService1_GetAllMedicalRecordByEmployeeID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllMedicalRecordByEmployeeIDResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetMedicalRecordByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalRecordByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMedicalRecordByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMedicalRecordByIDResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetAllMedicalRecord_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllMedicalRecord" />
   </wsdl:message>
@@ -74,6 +80,18 @@
   </wsdl:message>
   <wsdl:message name="IService1_GetMedicalRecordTableView_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetMedicalRecordTableViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatientByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatientByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMedicalRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMedicalRecord" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateMedicalRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMedicalRecordResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
@@ -112,6 +130,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeID" message="tns:IService1_GetAllMedicalRecordByEmployeeID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeIDResponse" message="tns:IService1_GetAllMedicalRecordByEmployeeID_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetMedicalRecordByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMedicalRecordByID" message="tns:IService1_GetMedicalRecordByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMedicalRecordByIDResponse" message="tns:IService1_GetMedicalRecordByID_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetAllMedicalRecord">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecord" message="tns:IService1_GetAllMedicalRecord_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecordResponse" message="tns:IService1_GetAllMedicalRecord_OutputMessage" />
@@ -119,6 +141,14 @@
     <wsdl:operation name="GetMedicalRecordTableView">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMedicalRecordTableView" message="tns:IService1_GetMedicalRecordTableView_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse" message="tns:IService1_GetMedicalRecordTableView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPatientByID" message="tns:IService1_GetPatientByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPatientByIDResponse" message="tns:IService1_GetPatientByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMedicalRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateMedicalRecord" message="tns:IService1_CreateMedicalRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateMedicalRecordResponse" message="tns:IService1_CreateMedicalRecord_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -204,6 +234,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetMedicalRecordByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetMedicalRecordByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetAllMedicalRecord">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAllMedicalRecord" style="document" />
       <wsdl:input>
@@ -215,6 +254,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetMedicalRecordTableView">
       <soap:operation soapAction="http://tempuri.org/IService1/GetMedicalRecordTableView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPatientByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMedicalRecord">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateMedicalRecord" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
