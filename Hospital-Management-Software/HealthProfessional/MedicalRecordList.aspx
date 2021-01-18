@@ -1,10 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/HealthProfessional.Master" AutoEventWireup="true" CodeBehind="MedicalRecord.aspx.cs" Inherits="Hospital_Management_Software.HealthProfessional.MedicalRecord" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/HealthProfessional.Master" AutoEventWireup="true" CodeBehind="MedicalRecordList.aspx.cs" Inherits="Hospital_Management_Software.HealthProfessional.MedicalRecordList" %>
+<asp:Content ID="MedicalRecordList_head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container-fluid" style="padding: 20px;">
+<asp:Content ID="MedicalRecordList_Content" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container-fluid" style="padding: 20px; margin-top: 40px;">
         <h1>Medical Records</h1>
         <hr />
         <div class="form-row align-items-center my-4">
@@ -21,33 +19,10 @@
 
         <div class="row" style="margin-bottom: 40px">
             <div class="col">
-                <asp:Button ID="btn_createMedicalRecord" class="btn btn-primary" runat="server" Text="Create Medical Record" />
+                <asp:Button ID="btn_createMedicalRecord" class="btn btn-primary" runat="server" Text="Create Medical Record" OnClick="btn_createMedicalRecord_Click" />
             </div>
         </div>
-        <!--
-        <div class="table-responsive-xl">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Record Number</th>
-                        <th>Case Type</th>
-                        <th>Patient's name</th>
-                        <th>Doctor's name</th>
-                        <th>Status</th>
-                    </tr>
-
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>0001</td>
-                        <td>Appointment</td>
-                        <td>Ben Dover</td>
-                        <td>Aliexpress</td>
-                        <td>case closed</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> -->
+      
         <div class="grid-container">
             <asp:GridView ID="GridView1" CssClass="myGrid table" runat="server" AutoGenerateColumns="False" AllowPaging="True" PageSize="4">
                 <Columns>

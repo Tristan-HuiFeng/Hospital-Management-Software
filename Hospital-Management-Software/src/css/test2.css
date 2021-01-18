@@ -1,36 +1,33 @@
-﻿
-
-body {
+﻿body {
     height: 100%;
 }
 
 /* nav */
 .sidenav {
     height: 100%;
-    width: 350px;
+    width: 60px;
     position: fixed;
-    z-index: 1;
+    z-index: 300;
     top: 0;
     left: 0;
     background-color: #0080ff;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.1s;
     padding-top: 10px;
     padding-left: 10px;
 }
 
 .sidenav-links {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
-/*
 #closed-side-nav span {
     color: #FFFFFF;
     margin-top: 10px;
     margin-left: 5px;
     display: block;
     transition: 0.3s;
-} */
+} 
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -41,17 +38,24 @@ body {
     transition: 0.3s;
 }
 
-    .sidenav a:hover {
-        color: #F1984D;
-    }
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+.sidenav a:hover {
+    color: #F1984D;
 }
+
+/* end of side nav*/
+
+/* dim background*/
+#shadow {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+/* end of dim background*/
 
 /* Login */
 
@@ -157,7 +161,8 @@ login-tb:focus {
     border-radius: 10px;
     overflow: hidden;
     border-collapse: collapse;
-    
+    margin-left:10px;
+    margin-right:10px;
 }
 
 tr:nth-child(even) {

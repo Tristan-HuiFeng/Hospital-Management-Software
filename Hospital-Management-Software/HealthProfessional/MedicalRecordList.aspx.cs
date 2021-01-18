@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_Management_Software.MyDBServiceReference;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,11 @@ using System.Data;
 
 namespace Hospital_Management_Software.HealthProfessional
 {
-    public partial class MedicalRecord : System.Web.UI.Page
+    public partial class MedicalRecordList : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
             DataTable dt = new DataTable();
 
             dt.Columns.Add("date", typeof(string));
@@ -28,12 +30,29 @@ namespace Hospital_Management_Software.HealthProfessional
                 NewRow[2] = "Edward Jenner";
                 NewRow[3] = "Farby Disease";
                 dt.Rows.Add(NewRow);
-            }
-            
+            }*/
+
+
+            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+
+
+            List<MedicalRecord> eList = new List<MedicalRecord>();
+            eList = client.GetAllMedicalRecord().ToList<MedicalRecord>();
+
+            DataTable dt = client.GetMedicalRecordTableView();
+
             GridView1.DataSource = dt;
             GridView1.DataBind();
+        }
+
+        private void GetMedicalData()
+        {
 
         }
 
+        protected void btn_createMedicalRecord_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateMedicalRecord.aspx");
+        }
     }
 }

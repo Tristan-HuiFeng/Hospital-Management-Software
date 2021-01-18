@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/HealthProfessional.Master" AutoEventWireup="true" CodeBehind="PatientRecord.aspx.cs" Inherits="Hospital_Management_Software.HealthProfessional.PatientRecord" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="PatientRecord_head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="PatientRecord_content" ContentPlaceHolderID="MainContent" runat="server">
     <!-- start of container -->
     <div class="containter-fluid" style="margin-top: 40px">
 

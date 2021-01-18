@@ -119,33 +119,35 @@
     <Content Include="App_Data\EDP_DB_log.ldf">
       <DependentUpon>EDP_DB.mdf</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
-    <Content Include="Connected Services\ServiceReference1\Hospital_Management_Software.ServiceReference1.CompositeType.datasource">
+    <None Include="Connected Services\MyDBServiceReference\configuration91.svcinfo" />
+    <None Include="Connected Services\MyDBServiceReference\configuration.svcinfo" />
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Hospital_Management_Software.ServiceReference1.EquipmentServiceRecord.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Hospital_Management_Software.ServiceReference1.LabServiceRecord.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.LabServiceRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Hospital_Management_Software.ServiceReference1.MedicalRecord.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Resource.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Hospital_Management_Software.ServiceReference1.PatientRecord.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.RolePermission.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Hospital_Management_Software.ServiceReference1.Resource.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord2.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\Hospital_Management_Software.ServiceReference1.RolePermission.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+    <None Include="Connected Services\MyDBServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="HealthProfessional\Dashboard.aspx" />
+    <Content Include="HealthProfessional\MedicalRecordList.aspx" />
     <Content Include="Management\AddContract.aspx" />
     <Content Include="Management\AddEmployee.aspx" />
     <Content Include="Contact.aspx" />
@@ -159,8 +161,6 @@
     <Content Include="HealthProfessional\CreateMedicalRecord.aspx" />
     <Content Include="HealthProfessional\EquipmentServiceRequest.aspx" />
     <Content Include="HealthProfessional\LabServiceRequest.aspx" />
-    <Content Include="HealthProfessional\MedicalRecord.aspx" />
-    <Content Include="HealthProfessional\Menu.aspx" />
     <Content Include="HealthProfessional\PatientRecord.aspx" />
     <Content Include="HealthProfessional\UpdateMedicalRecord.aspx" />
     <Content Include="Login\StaffLogin.aspx" />
@@ -199,17 +199,21 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="Connected Services\ServiceReference1\service.wsdl" />
-    <None Include="Connected Services\ServiceReference1\service.xsd">
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Connected Services\MyDBServiceReference\service.wsdl" />
+    <None Include="Connected Services\MyDBServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\service1.xsd">
+    <None Include="Connected Services\MyDBServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\WCF_Service_Library.Entity.xsd">
+    <None Include="Connected Services\MyDBServiceReference\System.Data.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\WCF_Service_Library.xsd">
+    <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.Entity.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -359,10 +363,24 @@
     <Compile Include="Administrator\ModifyRole.aspx.designer.cs">
       <DependentUpon>ModifyRole.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+    <Compile Include="Connected Services\MyDBServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HealthProfessional\MedicalRecordList.aspx.cs">
+      <DependentUpon>MedicalRecordList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HealthProfessional\MedicalRecordList.aspx.designer.cs">
+      <DependentUpon>MedicalRecordList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\AddContract.aspx.cs">
       <DependentUpon>AddContract.aspx</DependentUpon>
@@ -445,20 +463,6 @@
     </Compile>
     <Compile Include="HealthProfessional\LabServiceRequest.aspx.designer.cs">
       <DependentUpon>LabServiceRequest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="HealthProfessional\MedicalRecord.aspx.cs">
-      <DependentUpon>MedicalRecord.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HealthProfessional\MedicalRecord.aspx.designer.cs">
-      <DependentUpon>MedicalRecord.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="HealthProfessional\Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HealthProfessional\Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="HealthProfessional\PatientRecord.aspx.cs">
       <DependentUpon>PatientRecord.aspx</DependentUpon>
@@ -634,7 +638,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\MyDBServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

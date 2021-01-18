@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/layout/HealthProfessional.Master" AutoEventWireup="true" CodeBehind="CreateMedicalRecord.aspx.cs" Inherits="Hospital_Management_Software.HealthProfessional.CreateMedicalRecord" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="MedicalRecordCreate_head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="MedicalRecordCreate_content" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="container" style="margin-top: 40px">
         <h1>Create New Medical Record</h1>

@@ -11,7 +11,7 @@ namespace Hospital_Management_Software.HealthProfessional
 {
 
 
-    public partial class MedicalRecord
+    public partial class MedicalRecordList
     {
 
         /// <summary>
