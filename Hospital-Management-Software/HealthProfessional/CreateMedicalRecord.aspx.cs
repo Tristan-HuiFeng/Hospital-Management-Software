@@ -48,6 +48,8 @@ namespace Hospital_Management_Software.HealthProfessional
 
         protected void btn_createRecord_Click(object sender, EventArgs e)
         {
+            Page.Validate("PatientValidation");
+            Page.Validate("TreatmentValidation");
             if (Page.IsValid)
             {
                 MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
@@ -55,7 +57,7 @@ namespace Hospital_Management_Software.HealthProfessional
 
                 int patient_id;
                 int doctor_id = Convert.ToInt32(1);
-                debugging.Text = tb_patientID.Text;
+                //debugging.Text = tb_patientID.Text;
                 bool success = int.TryParse(tb_patientID.Text, out patient_id);
                 
                 
@@ -74,6 +76,8 @@ namespace Hospital_Management_Software.HealthProfessional
                 }
                 else
                 {
+
+                    Response.Redirect("MedicalRecordList.aspx");
                     int result = client.CreateMedicalRecord(tb_bloodPressure.Text, tb_respirationRate.Text, tb_temperature.Text, tb_pulseRate.Text, tb_diagnosis.Text,
                     tb_treatment.Text, DateTime.Now, doctor_id, patient_id, tb_presecription.Text, tb_remarks.Text);
 

@@ -24,7 +24,7 @@
         </div>
       
         <div class="grid-container">
-            <asp:GridView ID="gv_MedicalRecordList" CssClass="myGrid table" runat="server" AutoGenerateColumns="False" AllowPaging="True" PageSize="4" OnSelectedIndexChanged="gv_MedicalRecordList_SelectedIndexChanged">
+            <asp:GridView ID="gv_MedicalRecordList" CssClass="myGrid table" runat="server" AutoGenerateColumns="False" AllowPaging="True" PageSize="4" OnSelectedIndexChanged="gv_MedicalRecordList_SelectedIndexChanged" OnPageIndexChanging="gv_MedicalRecordList_PageIndexChanging">
                 <Columns>
                     <asp:BoundField DataField="date" HeaderText="Date" ReadOnly="True" />
                     <asp:BoundField DataField="Medical_Record_ID" HeaderText="Medical Record ID" ReadOnly="True" />

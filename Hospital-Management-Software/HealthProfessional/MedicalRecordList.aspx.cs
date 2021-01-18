@@ -57,5 +57,14 @@ namespace Hospital_Management_Software.HealthProfessional
             Session["Medical_Record_ID"] = row.Cells[1].Text;
             Response.Redirect("ViewMedicalRecord.aspx");
         }
+
+        protected void gv_MedicalRecordList_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+
+            gv_MedicalRecordList.DataSource = client.GetMedicalRecordTableView();
+            gv_MedicalRecordList.PageIndex = e.NewPageIndex;
+            gv_MedicalRecordList.DataBind();
+        }
     }
 }

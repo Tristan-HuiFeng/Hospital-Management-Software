@@ -24,6 +24,15 @@ namespace Hospital_Management_Software.HealthProfessional
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary_medicalRecord;
 
         /// <summary>
+        /// ValidationSummary_medicalRecord2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary_medicalRecord2;
+
+        /// <summary>
         /// debugging control.
         /// </summary>
         /// <remarks>

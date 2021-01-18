@@ -7,8 +7,9 @@
     
     <div class="container" style="margin-top: 40px; margin-bottom: 40px;">
 
-        <asp:ValidationSummary CssClass="alert alert-danger" ValidationGroup="TreatmentValidation" ID="ValidationSummary_medicalRecord" runat="server" />
-        <asp:Label ID="debugging" runat="server" Text="Label" ForeColor="Green"></asp:Label>
+        <asp:ValidationSummary CssClass="alert alert-danger" ValidationGroup="PatientValidation" ID="ValidationSummary_medicalRecord" runat="server" />
+        <asp:ValidationSummary CssClass="alert alert-danger" ValidationGroup="TreatmentValidation" ID="ValidationSummary_medicalRecord2" runat="server" />
+        <!--<asp:Label ID="debugging" runat="server" Text="Label" ForeColor="Green"></asp:Label>-->
 
         <h1>Create New Medical Record</h1>
         <hr />
@@ -47,7 +48,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                       <!--<asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator_Patient" runat="server" ErrorMessage="Please search for your patient" ControlToValidate="tb_patientID"></asp:RequiredFieldValidator>-->
+                       <asp:RequiredFieldValidator CssClass="text-danger" ID="RequiredFieldValidator_Patient" ValidationGroup="PatientValidation" runat="server" ErrorMessage="Please search for your patient" ControlToValidate="tb_patientID"></asp:RequiredFieldValidator>
                     </div>
                 </div>
             </div>
@@ -140,9 +141,25 @@
             </div>
             <!-- end of treatment -->
 
-            <asp:Button ID="btn_createRecord" class="btn btn-primary" runat="server" Text="Create Record" ValidationGroup="TreatmentValidation" OnClick="btn_createRecord_Click" />
+            <asp:Button ID="btn_createRecord" class="btn btn-primary" runat="server" Text="Create Record" OnClick="btn_createRecord_Click" OnClientClick="validate_patient()" />
         </div>
         <!-- end of input container -->
     </div>
     <!-- end of all -->
+
+    <script>
+        function validate_patient() {
+            var t1 = Page_ClientValidate("PatientValidation");
+
+            if (t1) {
+                Page_ClientValidate("TreatmentValidation");
+            }
+            //var t2 = Page_ClientValidate("child");
+
+            //if (!t1 || !t2) return false;
+
+            //return true;
+        }
+    </script>
 </asp:Content>
+

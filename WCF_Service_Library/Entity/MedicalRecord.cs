@@ -182,11 +182,11 @@ namespace WCF_Service_Library.Entity
             string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "Select Convert(varchar, MR.Date, 103) date, Medical_Record_ID, Concat(P.First_Name, ' ', P.Last_Name) patientFullName, Concat(E.First_Name, ' ',E.Last_Name) doctorFullName, MR.Diagnosis " +
+            string sqlStmt = "Select Convert(varchar, MR.Date, 100) date, Medical_Record_ID, Concat(P.First_Name, ' ', P.Last_Name) patientFullName, Concat(E.First_Name, ' ',E.Last_Name) doctorFullName, MR.Diagnosis " +
                 "from MEDICAL_RECORD AS MR " +
                 "Inner join PATIENT AS P on MR.Patient_ID = P.Patient_ID " +
                 "Inner join EMPLOYEE AS E on MR.Employee_ID = E.Employee_ID " +
-                "Order by date";
+                "Order by MR.Date DESC";
             SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
 
             DataTable dt = new DataTable();

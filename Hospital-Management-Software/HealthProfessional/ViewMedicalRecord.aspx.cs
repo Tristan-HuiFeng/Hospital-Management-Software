@@ -25,7 +25,8 @@ namespace Hospital_Management_Software.HealthProfessional
 
                     lb_medicalRecordID.Text = medicalRecord.medicalRecordID.ToString();
                     lb_date.Text = medicalRecord.consultationDate.ToString();
-                    lb_patientContact.Text = medicalRecord.patientID.ToString();
+                    lb_patientContact.Text = medicalRecord.patientContact.ToString();
+                    lb_patientName.Text = medicalRecord.patientName.ToString();
                     lb_doctorName.Text = medicalRecord.doctorName.ToString();
                     lb_doctorEmail.Text = medicalRecord.doctorEmail.ToString();
                     lb_bloodPressure.Text = medicalRecord.bloodPressure.ToString();
