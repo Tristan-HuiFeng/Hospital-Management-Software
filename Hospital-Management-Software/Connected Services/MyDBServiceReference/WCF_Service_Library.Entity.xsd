@@ -86,4 +86,33 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MedicalRecord" nillable="true" type="tns:MedicalRecord" />
+  <xs:complexType name="ArrayOfPatientRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientRecord" nillable="true" type="tns:PatientRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientRecord" nillable="true" type="tns:ArrayOfPatientRecord" />
+  <xs:complexType name="PatientRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NRIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="age" type="xs:int" />
+      <xs:element minOccurs="0" name="allergies" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="citizenship" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="homeNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="medicalHistory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="patientID" type="xs:int" />
+      <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="postalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="updatedDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientRecord" nillable="true" type="tns:PatientRecord" />
 </xs:schema>

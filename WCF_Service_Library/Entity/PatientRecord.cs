@@ -13,7 +13,7 @@ namespace WCF_Service_Library.Entity
     public class PatientRecord
     {
         //No LoginId & pwd => login method == NRIC + 2FA via phone
-        public string patientID { get; set; }
+        public int patientID { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string NRIC { get; set; }
@@ -35,7 +35,7 @@ namespace WCF_Service_Library.Entity
        public PatientRecord() { }
 
         public PatientRecord(
-           string patientid,
+           int patientid,
            string firstname, string lastname, 
            string NRIC, DateTime DOB, int age, string sex, 
            string nationality, string citizenship, 
@@ -99,6 +99,7 @@ namespace WCF_Service_Library.Entity
             int result = sqlCmd.ExecuteNonQuery();
             myConn.Close();
 
+
             return result;
         }
 
@@ -119,7 +120,7 @@ namespace WCF_Service_Library.Entity
             for (int i = 0; i < rec_cnt; i++)
             {
                 DataRow row = ds.Tables[0].Rows[i];
-                string patientID = row["Patient_ID"].ToString();
+                int patientID = (int)row["Patient_ID"];
                 string firstName = row["First_Name"].ToString();
                 string lastName = row["Last_Name"].ToString();
                 string NRIC = row["NRIC"].ToString();
@@ -150,7 +151,7 @@ namespace WCF_Service_Library.Entity
             return patientRecordList;
         }
 
-        public PatientRecord SelectPatientByID(string patientID)
+        public PatientRecord SelectPatientByID(int patientID)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);

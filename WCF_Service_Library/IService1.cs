@@ -45,25 +45,25 @@ namespace WCF_Service_Library
         [OperationContract]
         List<MedicalRecord> GetAllMedicalRecord();
 
-        [OperationContract]
-        List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
+        //[OperationContract]
+        //List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
 
         [OperationContract]
         List<PatientRecord> GetAllPatientRecords();
 
         [OperationContract]
-        PatientRecord GetPatientRecordByID(string patientID);
+        PatientRecord GetPatientRecordByID(int patientID);
 
         [OperationContract]
         int CreatePatientRecord(
-           string patientid, string firstname, string lastname,
+           int patientid, string firstname, string lastname,
            string NRIC, DateTime DOB, int age, string sex,
            string nationality, string citizenship,
            string postalcode, string address,
            string allergies, string medicalhistory, string phonenumber,
            string homenumber, string email,
            DateTime createdDate, DateTime updateDate);
-        DataTable GetMedicalRecordTableView();
+        //DataTable GetMedicalRecordTableView();
 
      
 

@@ -89,14 +89,14 @@ namespace WCF_Service_Library
             return patients.SelectAll();
         }
 
-        public PatientRecord GetPatientRecordByID(string patientID)
+        public PatientRecord GetPatientRecordByID(int patientID)
         {
             PatientRecord patient = new PatientRecord();
             return patient.SelectPatientByID(patientID);
         }
 
         public int CreatePatientRecord(
-           string patientid,
+           int patientid,
            string firstname, string lastname,
            string NRIC, DateTime DOB, int age, string sex,
            string nationality, string citizenship,
@@ -106,19 +106,22 @@ namespace WCF_Service_Library
            DateTime createdDate, DateTime updateDate)
         {
             PatientRecord patient = new PatientRecord(
-                patientid, firstname, lastname, 
-                NRIC, DOB, age, sex, 
-                nationality, citizenship, 
-                postalcode, address, 
-                allergies, medicalhistory, 
-                phonenumber, homenumber, email, 
+                patientid, firstname, lastname,
+                NRIC, DOB, age, sex,
+                nationality, citizenship,
+                postalcode, address,
+                allergies, medicalhistory,
+                phonenumber, homenumber, email,
                 createdDate, updateDate);
             return patient.Insert();
-        public DataTable GetMedicalRecordTableView()
-        {
-            MedicalRecord mr = new MedicalRecord();
-            return mr.SelectAllTableView();
+
         }
+
+        //public DataTable GetMedicalRecordTableView()
+        //{
+        //    MedicalRecord mr = new MedicalRecord();
+        //   return mr.SelectAllTableView();
+        
 
    
 

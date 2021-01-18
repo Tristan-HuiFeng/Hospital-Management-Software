@@ -39,10 +39,10 @@ namespace Hospital_Management_Software.HealthProfessional
             List<MedicalRecord> eList = new List<MedicalRecord>();
             eList = client.GetAllMedicalRecord().ToList<MedicalRecord>();
 
-            DataTable dt = client.GetMedicalRecordTableView();
+            //DataTable dt = client.GetMedicalRecordTableView();
 
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
         }
 
         private void GetMedicalData()

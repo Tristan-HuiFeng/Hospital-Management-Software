@@ -130,16 +130,16 @@
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.LabServiceRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.PatientRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Resource.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.RolePermission.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord2.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\MyDBServiceReference\Reference.svcmap">
@@ -205,9 +205,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MyDBServiceReference\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\MyDBServiceReference\System.Data.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.Entity.xsd">
