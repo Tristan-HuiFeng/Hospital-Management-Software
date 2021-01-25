@@ -12,29 +12,6 @@ namespace Hospital_Management_Software.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddl_nationality.DataSource = CountryList();
-            ddl_nationality.DataBind();
-        }
-
-        public static List<string> CountryList()
-        {
-            //Creating List
-            List<String> countries = new List<string>();
-
-            // Getting the specific cultureInof from CultureInfo Class
-            CultureInfo[] getCultureInfo = CultureInfo.GetCultures(CultureTypes.SpecificCultures);
-            foreach( CultureInfo getCulture in getCultureInfo)
-            {
-                RegionInfo GetRegionInfo = new RegionInfo(getCulture.LCID);
-                //add each country name into arraylist
-                if (!(countries.Contains(GetRegionInfo.EnglishName)))
-                {
-                    countries.Add(GetRegionInfo.EnglishName);
-                }
-            }
-            // sorting array by using sort method
-            countries.Sort();
-            return countries;
         }
 
         private int ValidateInput()
@@ -57,7 +34,14 @@ namespace Hospital_Management_Software.Views
                 DateTime updatedDate = createdDate;
 
                 MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-                int result = client.CreatePatientRecord(patientID,tb_FirstName.Text, tb_LastName.Text, tb_NRIC.Text, dob,age,rad_Sex.SelectedValue,ddl_nationality.SelectedValue, ddl_citizenship.SelectedValue, tb_PostalCode.Text, tb_Address.Text, tb_Allergies.Text, tb_MedicalConditon.Text, tb_phoneNumber.Text, tb_homeNumber.Text, tb_email.Text, createdDate, updatedDate);
+                int result = client.CreatePatientRecord(
+                    patientID,tb_FirstName.Text, tb_LastName.Text, tb_NRIC.Text,
+                    dob,age,rad_Sex.SelectedValue,
+                    ddl_nationality.SelectedValue, ddl_citizenship.SelectedValue, 
+                    tb_PostalCode.Text, tb_Address.Text, 
+                    tb_Allergies.Text, tb_MedicalConditon.Text, 
+                    tb_phoneNumber.Text, tb_homeNumber.Text, tb_email.Text, 
+                    createdDate, updatedDate);
                 if (result == 1)
                 {
                     Response.Redirect("Dashboard");

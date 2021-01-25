@@ -198,8 +198,14 @@ namespace WCF_Service_Library.Entity
         }
 
 
-        //additions
-        public int UpdatePatientByID(string patientID)
+        //todo
+        public int UpdatePatientByID(int patientID)
+        {
+            return 1;
+        }
+
+        //todo
+        public int Delete(int patientID)
         {
             return 1;
         }
