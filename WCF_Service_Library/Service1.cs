@@ -107,11 +107,12 @@ namespace WCF_Service_Library
             Employee emp = new Employee();
             return emp.SelectSortByGender(order);
         }
-        public DataTable GetMedicalRecordTableView()
-        {
-            MedicalRecord mr = new MedicalRecord();
-            return mr.SelectAllTableView();
-        }
+
+        //public DataTable GetMedicalRecordTableView()
+        //{
+        //    MedicalRecord mr = new MedicalRecord();
+        //    return mr.SelectAllTableView();
+        //}
 
    
 

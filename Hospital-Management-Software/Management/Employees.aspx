@@ -30,7 +30,6 @@
                 <asp:Button CssClass="btn btn-primary mr-1" ID="btnResetFilter" runat="server" Text="Reset" OnClick="btnResetFilter_Click"/>
             </p>
             <asp:HyperLink CssClass="btn btn-info" ID="HyperLink1" runat="server" NavigateUrl="~/Management/AddEmployee.aspx">+New Record</asp:HyperLink>
-            <asp:Button CssClass="btn btn-info btn-sm" ID="Button1" runat="server" Text="+New Record" />
 
         </div>
     </div>

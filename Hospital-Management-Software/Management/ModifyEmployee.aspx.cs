@@ -73,28 +73,73 @@ namespace Hospital_Management_Software
             string password = "";
             string jobfunction = "";
 
-            if (uploadMedical.HasFile)
-            {
-                try
-                {
-                    string filename = Path.GetFileName(uploadMedical.FileName);
-                    uploadMedical.SaveAs(Server.MapPath("~/Management/HealthDeclaration/") + filename);
-                    healthdeclaration = "~/Management/HealthDeclaration/" + filename;
-                }
-                catch (Exception ex)
-                {
+            string[] validFileTypes = { "pdf" };
+            string ext = System.IO.Path.GetExtension(uploadMedical.PostedFile.FileName);
+            bool isValidFile = false;
 
+            if (ext.Length < 1)
+            {
+                isValidFile = true;
+            }
+            else
+            {
+                for (int i = 0; i < validFileTypes.Length; i++)
+                {
+                    if (ext == "." + validFileTypes[i])
+                    {
+                        isValidFile = true;
+                        break;
+                    }
+                }
+
+                if (!isValidFile)
+                {
+                    Label12.ForeColor = System.Drawing.Color.Red;
+                    Label12.Text = "Invalid File. Please upload a File with extension " +
+                                   string.Join(",", validFileTypes);
+                }
+                else
+                {
+                    Label12.ForeColor = System.Drawing.Color.Green;
+                    Label12.Text = "File uploaded successfully.";
                 }
             }
 
-            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-            System.Diagnostics.Debug.WriteLine("save button");
-            System.Diagnostics.Debug.WriteLine(healthdeclaration);
-            System.Diagnostics.Debug.WriteLine("save button");
-            int cnt = client.UpdateEmployee(nric, firstname, lastname, email, dob, gender,
-                        address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, EmployeeImage);
+            bool textboxValid = true;
+            if (String.IsNullOrEmpty(tbNric.Text) || String.IsNullOrEmpty(tbEmail.Text) || String.IsNullOrEmpty(tbFname.Text) ||
+                    String.IsNullOrEmpty(tbLname.Text) || String.IsNullOrEmpty(tbDOB.Text) || String.IsNullOrEmpty(tbAddress.Text) ||
+                    String.IsNullOrEmpty(tbDepartment.Text) || String.IsNullOrEmpty(tbPosition.Text) || String.IsNullOrEmpty(tbNationality.Text))
+            {
+                textboxValid = false;
+                Label12.Text = "Please make sure no fields are empty!";
+            }
 
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect", "alert('Employee Saved!'); window.location='" + Request.ApplicationPath + "Management/Employees.aspx';", true);
+            if (isValidFile && textboxValid)
+            {
+                if (uploadMedical.HasFile)
+                {
+                    try
+                    {
+                        string filename = Path.GetFileName(uploadMedical.FileName);
+                        uploadMedical.SaveAs(Server.MapPath("~/Management/HealthDeclaration/") + filename);
+                        healthdeclaration = "~/Management/HealthDeclaration/" + filename;
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                }
+
+                MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+                System.Diagnostics.Debug.WriteLine("save button");
+                System.Diagnostics.Debug.WriteLine(healthdeclaration);
+                System.Diagnostics.Debug.WriteLine("save button");
+                int cnt = client.UpdateEmployee(nric, firstname, lastname, email, dob, gender,
+                            address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, EmployeeImage);
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect", "alert('Employee Saved!'); window.location='" + Request.ApplicationPath + "Management/Employees.aspx';", true);
+            }
+            
 
         }
 
@@ -111,7 +156,38 @@ namespace Hospital_Management_Software
 
         protected void btnChangePhoto_Click(object sender, EventArgs e)
         {
-            if (uploadPhoto.HasFile)
+            string[] validFileTypes = { "png", "jpeg" };
+            string ext = System.IO.Path.GetExtension(uploadPhoto.PostedFile.FileName);
+            bool isValidFile = false;
+
+            if (ext.Length < 1)
+            {
+                isValidFile = true;
+            }
+            else
+            {
+                for (int i = 0; i < validFileTypes.Length; i++)
+                {
+                    if (ext == "." + validFileTypes[i])
+                    {
+                        isValidFile = true;
+                        break;
+                    }
+                }
+
+                if (!isValidFile)
+                {
+                    Label13.ForeColor = System.Drawing.Color.Red;
+                    Label13.Text = "Invalid File. Please upload a File with extension " +
+                                   string.Join(",", validFileTypes);
+                }
+                else
+                {
+                    Label13.ForeColor = System.Drawing.Color.Green;
+                    Label13.Text = "File uploaded successfully.";
+                }
+            }
+            if (uploadPhoto.HasFile && isValidFile)
             {
                 try
                 {

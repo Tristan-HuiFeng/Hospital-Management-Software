@@ -89,6 +89,7 @@
                                     <div class="form-group">
                                         <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm" ID="btnCreateContract" runat="server" Text="Create" OnClick="btnCreateContract_Click" />
                                         <asp:Button CausesValidation="false" UseSubmitBehavior="false" Style="float:right;" CssClass="btn btn-secondary btn-sm mr-1" ID="btnBack" runat="server" Text="Cancel" OnClick="btnBack_Click"/>                                                                        
+                                        <asp:Label ID="Label5" runat="server" Font-Bold="True"></asp:Label>                                        
                                     </div>
                                 </form>
                             </div>

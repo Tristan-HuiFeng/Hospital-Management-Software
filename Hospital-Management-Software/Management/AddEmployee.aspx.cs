@@ -18,7 +18,39 @@ namespace Hospital_Management_Software
 
         protected void btnAddPhoto_Click(object sender, EventArgs e)
         {
-            if (FileUpload1.HasFile)
+            string[] validFileTypes = { "png",  "jpeg" };
+            string ext = System.IO.Path.GetExtension(FileUpload1.PostedFile.FileName);
+            bool isValidFile = false;
+
+            if (ext.Length < 1)
+            {
+                isValidFile = true;
+            }
+            else
+            {
+                for (int i = 0; i < validFileTypes.Length; i++)
+                {
+                    if (ext == "." + validFileTypes[i])
+                    {
+                        isValidFile = true;
+                        break;
+                    }
+                }
+
+                if (!isValidFile)
+                {
+                    Label13.ForeColor = System.Drawing.Color.Red;
+                    Label13.Text = "Invalid File. Please upload a File with extension " +
+                                   string.Join(",", validFileTypes);
+                }
+                else
+                {
+                    Label13.ForeColor = System.Drawing.Color.Green;
+                    Label13.Text = "File uploaded successfully.";
+                }
+            }
+
+            if (FileUpload1.HasFile && isValidFile)
             {
                 try
                 {
@@ -36,7 +68,57 @@ namespace Hospital_Management_Software
 
         protected void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
+            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+            bool nricDoesNotExist = false;
+            if (client.GetEmployeeByNRIC(tbNric.Text).ToList().Count < 1)
+            {
+                nricDoesNotExist = true;
+            } else
+            {
+                Label12.Text = "NRIC already exist!";
+            }
+
+            string[] validFileTypes = { "pdf" };
+            string ext = System.IO.Path.GetExtension(uploadMedical.PostedFile.FileName);
+            bool isValidFile = false;
+
+            if (ext.Length < 1)
+            {
+                isValidFile = true;
+            } else
+            {
+                for (int i = 0; i < validFileTypes.Length; i++)
+                {
+                    if (ext == "." + validFileTypes[i])
+                    {
+                        isValidFile = true;
+                        break;
+                    }
+                }
+
+                if (!isValidFile)
+                {
+                    Label12.ForeColor = System.Drawing.Color.Red;
+                    Label12.Text = "Invalid File. Please upload a File with extension " +
+                                   string.Join(",", validFileTypes);
+                }
+                else
+                {
+                    Label12.ForeColor = System.Drawing.Color.Green;
+                    Label12.Text = "File uploaded successfully.";
+                }
+            }
+
+            bool textboxValid = true;
+            if (String.IsNullOrEmpty(tbNric.Text) || String.IsNullOrEmpty(tbEmail.Text) || String.IsNullOrEmpty(tbFname.Text) ||
+                    String.IsNullOrEmpty(tbLname.Text) || String.IsNullOrEmpty(tbDOB.Text) || String.IsNullOrEmpty(tbAddress.Text) ||
+                    String.IsNullOrEmpty(tbDepartment.Text) || String.IsNullOrEmpty(tbPosition.Text) || String.IsNullOrEmpty(tbNationality.Text))
+            {
+                textboxValid = false;
+                Label12.Text = "Please make sure no fields are empty!";
+            }
+
+            if (Page.IsValid && isValidFile && textboxValid && nricDoesNotExist)
             {
                 string nric = tbNric.Text;
                 string firstname = tbFname.Text;
@@ -67,7 +149,7 @@ namespace Hospital_Management_Software
                     }
                 }
 
-                MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+                //MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
                 //System.Diagnostics.Debug.WriteLine(EmployeeImage);
                 int cnt = client.CreateEmployee(nric, firstname, lastname, email, dob, gender,
                             address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, EmployeeImage);

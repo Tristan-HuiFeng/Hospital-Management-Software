@@ -117,8 +117,10 @@ namespace WCF_Service_Library.Entity
             return medicalRecordList;
         }
 
-        public DataTable SelectAllTableView()
-        {
-           
+        //public DataTable SelectAllTableView()
+        //{
+
+
+        //}
     }
 }

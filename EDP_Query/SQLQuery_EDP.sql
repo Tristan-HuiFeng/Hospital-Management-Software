@@ -58,9 +58,10 @@ CREATE TABLE [dbo].[EMPLOYEE] (
     [Position]           NVARCHAR (64)  NOT NULL,
     [Nationality]        NVARCHAR (64)  NOT NULL,
     [Health_Declaration] NVARCHAR (MAX) NULL,
-    [Login_ID]           NVARCHAR (64)  NOT NULL,
-    [Password]           NVARCHAR (64)  NOT NULL,
-    [Job_Function]       NVARCHAR (64)  NOT NULL,
+    [Login_ID]           NVARCHAR (64)  NULL,
+    [Password]           NVARCHAR (64)  NULL,
+    [Job_Function]       NVARCHAR (64)  NULL,
+    [Profile_Image]      NVARCHAR (64)  NULL,
     PRIMARY KEY CLUSTERED ([Employee_ID] ASC)
 );
 
@@ -126,6 +127,7 @@ CREATE TABLE [dbo].[CONTRACT] (
     [Contract_ID] INT           IDENTITY (1, 1) NOT NULL,
     [Salary]      MONEY         NOT NULL,
     [Benefits]    NVARCHAR (64) NOT NULL,
+    [Working_Hours] NVARCHAR(64) NOT NULL,
     [Holidays]    NVARCHAR (64) NOT NULL,
     [Vacation]    NVARCHAR (64) NOT NULL,
     [Create_Date] DATETIME      NOT NULL,
@@ -153,6 +155,12 @@ CREATE TABLE [dbo].[ROLE] (
     PRIMARY KEY CLUSTERED ([Role_ID] ASC)
 );
 
+CREATE TABLE [dbo].[RESOURCE] (
+    [Resource_ID]   INT          IDENTITY (1, 1) NOT NULL,
+    [Resource_Name] VARCHAR (64) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Resource_ID] ASC)
+);
+
 CREATE TABLE [dbo].[ROLE_PERMISSION] (
     [Resource_ID] INT NOT NULL,
     [Role_ID]     INT NOT NULL,
@@ -161,12 +169,6 @@ CREATE TABLE [dbo].[ROLE_PERMISSION] (
     [Edit]        BIT NOT NULL,
     [Delete]      BIT NOT NULL,
     PRIMARY KEY CLUSTERED ([Role_ID] ASC, [Resource_ID] ASC),
-    CONSTRAINT [FK_Recource_ID_Permission] FOREIGN KEY ([Resource_ID]) REFERENCES [dbo].[RESOURCE] ([Resource_ID]),
+    CONSTRAINT [FK_Resource_ID_Permission] FOREIGN KEY ([Resource_ID]) REFERENCES [dbo].[RESOURCE] ([Resource_ID]),
     CONSTRAINT [FK_Role_ID_Permission] FOREIGN KEY ([Role_ID]) REFERENCES [dbo].[ROLE] ([Role_ID])
-);
-
-CREATE TABLE [dbo].[RESOURCE] (
-    [Resource_ID]   INT          IDENTITY (1, 1) NOT NULL,
-    [Resource_Name] VARCHAR (64) NOT NULL,
-    PRIMARY KEY CLUSTERED ([Resource_ID] ASC)
 );

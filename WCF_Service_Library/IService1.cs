@@ -45,9 +45,6 @@ namespace WCF_Service_Library
         [OperationContract]
         List<MedicalRecord> GetAllMedicalRecord();
 
-        [OperationContract]
-        List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
-
         // Management
         [OperationContract]
         List<Employee> GetAllEmployee();
@@ -84,7 +81,9 @@ namespace WCF_Service_Library
 
         [OperationContract]
         List<ContractRecord> GetContractByEmployeeID(string id);
-        DataTable GetMedicalRecordTableView();
+
+        //[OperationContract]
+        //DataTable GetMedicalRecordTableView();
 
      
 

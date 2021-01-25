@@ -13,6 +13,8 @@
                             <asp:FileUpload  ID="uploadPhoto" runat="server" Style="overflow: hidden;" Width="70%"/>
                             <br />
                             <asp:Button CssClass="btn btn-primary btn-sm" ID="btnChangePhoto" runat="server" Text="Change Photo" Width="70%" OnClick="btnChangePhoto_Click"/>
+                            <br />
+                            <asp:Label ID="Label13" runat="server" Text="" Font-Bold="True"></asp:Label>
                         </div>
                     </div>
                 </div>
@@ -110,6 +112,7 @@
                                     <div class="form-group">
                                         <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mr-1" ID="btnSave" runat="server" Text="Save Employee" OnClick="btnSave_Click" />
                                         <asp:Button CausesValidation="false" UseSubmitBehavior="false" Style="float:right;" CssClass="btn btn-secondary btn-sm mr-1" ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click"/>
+                                        <asp:Label ID="Label12" runat="server" Text="" Font-Bold="True"></asp:Label>                                    
                                     </div>
                                 </form>
                             </div>

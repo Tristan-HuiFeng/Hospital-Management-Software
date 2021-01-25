@@ -54,8 +54,20 @@ namespace Hospital_Management_Software.Management
             }
             //System.Diagnostics.Debug.WriteLine(employeeID);
 
-            client.CreateContract(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect", "alert('Contract Created!'); window.location='" + Request.ApplicationPath + "Management/Employees.aspx';", true);
+            bool textboxValid = true;
+            if (String.IsNullOrEmpty(tbEmployee.Text) || String.IsNullOrEmpty(tbDepartment.Text) || String.IsNullOrEmpty(tbPosition.Text) ||
+                    String.IsNullOrEmpty(tbWorkingHours.Text) || String.IsNullOrEmpty(tbSalary.Text) || String.IsNullOrEmpty(tbVacation.Text) ||
+                    String.IsNullOrEmpty(tbHolidays.Text))
+            {
+                textboxValid = false;
+                Label5.Text = "Please make sure no fields are empty!";
+            }
+
+            if (textboxValid)
+            {
+                client.CreateContract(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect", "alert('Contract Created!'); window.location='" + Request.ApplicationPath + "Management/Employees.aspx';", true);
+            }
 
 
         }
