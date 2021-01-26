@@ -773,6 +773,9 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         private string postalCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string recordDisabledField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string sexField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -997,6 +1000,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string recordDisabled {
+            get {
+                return this.recordDisabledField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.recordDisabledField, value) != true)) {
+                    this.recordDisabledField = value;
+                    this.RaisePropertyChanged("recordDisabled");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string sex {
             get {
                 return this.sexField;
@@ -1127,7 +1143,8 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                     string homenumber, 
                     string email, 
                     System.DateTime createdDate, 
-                    System.DateTime updateDate);
+                    System.DateTime updateDate, 
+                    string recordDisabled);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatientRecord", ReplyAction="http://tempuri.org/IService1/CreatePatientRecordResponse")]
         System.Threading.Tasks.Task<int> CreatePatientRecordAsync(
@@ -1148,7 +1165,14 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                     string homenumber, 
                     string email, 
                     System.DateTime createdDate, 
-                    System.DateTime updateDate);
+                    System.DateTime updateDate, 
+                    string recordDisabled);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DisablePatientByID", ReplyAction="http://tempuri.org/IService1/DisablePatientByIDResponse")]
+        int DisablePatientByID(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DisablePatientByID", ReplyAction="http://tempuri.org/IService1/DisablePatientByIDResponse")]
+        System.Threading.Tasks.Task<int> DisablePatientByIDAsync(int patientID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1292,8 +1316,9 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                     string homenumber, 
                     string email, 
                     System.DateTime createdDate, 
-                    System.DateTime updateDate) {
-            return base.Channel.CreatePatientRecord(patientid, firstname, lastname, NRIC, DOB, age, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updateDate);
+                    System.DateTime updateDate, 
+                    string recordDisabled) {
+            return base.Channel.CreatePatientRecord(patientid, firstname, lastname, NRIC, DOB, age, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updateDate, recordDisabled);
         }
         
         public System.Threading.Tasks.Task<int> CreatePatientRecordAsync(
@@ -1314,8 +1339,17 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                     string homenumber, 
                     string email, 
                     System.DateTime createdDate, 
-                    System.DateTime updateDate) {
-            return base.Channel.CreatePatientRecordAsync(patientid, firstname, lastname, NRIC, DOB, age, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updateDate);
+                    System.DateTime updateDate, 
+                    string recordDisabled) {
+            return base.Channel.CreatePatientRecordAsync(patientid, firstname, lastname, NRIC, DOB, age, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updateDate, recordDisabled);
+        }
+        
+        public int DisablePatientByID(int patientID) {
+            return base.Channel.DisablePatientByID(patientID);
+        }
+        
+        public System.Threading.Tasks.Task<int> DisablePatientByIDAsync(int patientID) {
+            return base.Channel.DisablePatientByIDAsync(patientID);
         }
     }
 }

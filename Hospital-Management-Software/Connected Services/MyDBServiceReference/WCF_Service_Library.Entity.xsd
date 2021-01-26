@@ -110,6 +110,7 @@
       <xs:element minOccurs="0" name="patientID" type="xs:int" />
       <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="postalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="recordDisabled" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="updatedDate" type="xs:dateTime" />
     </xs:sequence>

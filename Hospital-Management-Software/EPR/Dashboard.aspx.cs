@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Diagnostics;
 
 namespace Hospital_Management_Software.Views.EPR
 {
@@ -17,24 +18,32 @@ namespace Hospital_Management_Software.Views.EPR
 
         private void RefreshGridView()
         {
-            List<PatientRecord> eList = new List<PatientRecord>();
+            List<PatientRecord> patientList = new List<PatientRecord>();
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-            eList = client.GetAllPatientRecords().ToList<PatientRecord>();
+            patientList = client.GetAllPatientRecords().ToList<PatientRecord>();
 
             // using gridview to bind to the list of employee objects
             GV_patients.Visible = true;
-            GV_patients.DataSource = eList;
+            GV_patients.DataSource = patientList;
             GV_patients.DataBind();
         }
 
-        
-
-        protected void GV_patients_RowDeleting(object sender, EventArgs e)
+        protected void btn_RegisterPatient_Click(object sender, EventArgs e)
         {
-            GridViewRow row = GV_patients.SelectedRow;
-            // The first cell (index 0) contains the TD Account.
-            Session["SSTDAcNo"] = row.Cells[0].Text;
-            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+            Debug.WriteLine("Reached - Registering Patient");
+            Response.Redirect("RegisterPatient");
+        }
+
+        protected void GV_patients_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "Disable") {
+                Debug.WriteLine("Reached - Disabling Patient");
+                GridViewRow row = GV_patients.Rows[Convert.ToInt32(e.CommandArgument)]; //Get selected row
+                int patientID = Convert.ToInt32(row.Cells[0].Text); //Get patientID
+                MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();//Init DB Client
+                client.DisablePatientByID(patientID);
+
+            }
 
         }
     }

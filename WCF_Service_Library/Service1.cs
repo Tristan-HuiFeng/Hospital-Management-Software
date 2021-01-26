@@ -95,6 +95,12 @@ namespace WCF_Service_Library
             return patient.SelectPatientByID(patientID);
         }
 
+        public int DisablePatientByID(int patientID)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.DisablePatientByID(patientID);
+        }
+
         public int CreatePatientRecord(
            int patientid,
            string firstname, string lastname,
@@ -103,7 +109,7 @@ namespace WCF_Service_Library
            string postalcode, string address,
            string allergies, string medicalhistory, string phonenumber,
            string homenumber, string email,
-           DateTime createdDate, DateTime updateDate)
+           DateTime createdDate, DateTime updateDate, string recordDisabled)
         {
             PatientRecord patient = new PatientRecord(
                 patientid, firstname, lastname,
@@ -112,18 +118,8 @@ namespace WCF_Service_Library
                 postalcode, address,
                 allergies, medicalhistory,
                 phonenumber, homenumber, email,
-                createdDate, updateDate);
+                createdDate, updateDate, recordDisabled);
             return patient.Insert();
-
         }
-
-        //public DataTable GetMedicalRecordTableView()
-        //{
-        //    MedicalRecord mr = new MedicalRecord();
-        //   return mr.SelectAllTableView();
-        
-
-   
-
     }
 }

@@ -45,9 +45,6 @@ namespace WCF_Service_Library
         [OperationContract]
         List<MedicalRecord> GetAllMedicalRecord();
 
-        //[OperationContract]
-        //List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
-
         [OperationContract]
         List<PatientRecord> GetAllPatientRecords();
 
@@ -62,11 +59,11 @@ namespace WCF_Service_Library
            string postalcode, string address,
            string allergies, string medicalhistory, string phonenumber,
            string homenumber, string email,
-           DateTime createdDate, DateTime updateDate);
-        //DataTable GetMedicalRecordTableView();
+           DateTime createdDate, DateTime updateDate,
+           string recordDisabled);
 
-     
-
+        [OperationContract]
+        int DisablePatientByID(int patientID);
 
     }
 

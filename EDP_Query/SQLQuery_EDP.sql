@@ -17,6 +17,7 @@
     [Email]           NVARCHAR (32)  NOT NULL,
     [Created_Date]    DATETIME       NOT NULL,
     [Update_Date]     DATETIME       NOT NULL,
+    [Record_Disabled] NVARCHAR(10) NOT NULL, 
     PRIMARY KEY CLUSTERED ([Patient_ID] ASC)
 );
 

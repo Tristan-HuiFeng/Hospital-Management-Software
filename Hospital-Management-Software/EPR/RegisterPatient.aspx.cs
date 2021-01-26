@@ -32,6 +32,7 @@ namespace Hospital_Management_Software.Views
                 int age = Convert.ToInt32(tb_age.Text);
                 DateTime createdDate = DateTime.Now;
                 DateTime updatedDate = createdDate;
+                string recordDisabled = "false";
 
                 MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
                 int result = client.CreatePatientRecord(
@@ -41,7 +42,7 @@ namespace Hospital_Management_Software.Views
                     tb_PostalCode.Text, tb_Address.Text, 
                     tb_Allergies.Text, tb_MedicalConditon.Text, 
                     tb_phoneNumber.Text, tb_homeNumber.Text, tb_email.Text, 
-                    createdDate, updatedDate);
+                    createdDate, updatedDate, recordDisabled);
                 if (result == 1)
                 {
                     Response.Redirect("Dashboard");

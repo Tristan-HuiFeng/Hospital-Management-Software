@@ -31,6 +31,7 @@ namespace WCF_Service_Library.Entity
         public string email { get; set; }
         public DateTime createdDate { get; set; }
         public DateTime updatedDate { get; set; }
+        public string recordDisabled { get; set; }
 
        public PatientRecord() { }
 
@@ -42,9 +43,10 @@ namespace WCF_Service_Library.Entity
            string postalcode, string address, 
            string allergies, string medicalhistory, string phonenumber, 
            string homenumber, string email,
-           DateTime createdDate, DateTime updatedDate) 
+           DateTime createdDate, DateTime updatedDate,
+           string recordDisabled) 
         {
-            //Init code
+            //personal infos
             this.patientID = patientid;
             this.firstName = firstname;
             this.lastName = lastname;
@@ -52,6 +54,7 @@ namespace WCF_Service_Library.Entity
             this.DOB = DOB;
             this.age = age;
             this.sex = sex;
+            //contacts
             this.nationality = nationality;
             this.citizenship = citizenship;
             this.postalCode = postalcode;
@@ -61,8 +64,11 @@ namespace WCF_Service_Library.Entity
             this.phoneNumber = phonenumber;
             this.homeNumber = homenumber;
             this.email = email;
+            //date creation
             this.createdDate = createdDate;
             this.updatedDate = updatedDate;
+            //disabled indicator
+            this.recordDisabled = recordDisabled;
         }
 
         public int Insert()
@@ -71,9 +77,9 @@ namespace WCF_Service_Library.Entity
             SqlConnection myConn = new SqlConnection(DBConnect);
 
             string sqlStmt = "SET IDENTITY_INSERT PATIENT ON " +
-                "INSERT INTO PATIENT (Patient_ID, First_Name, Last_Name, NRIC, DOB, Age, Sex, Nationality, Citizenship, Postal_Code, Address, Allergies, Medical_History, Phone_Number, Home_Number, Email, Created_Date, Update_Date) " +
-    "VALUES (@paraPatientID,@paraFirstName, @paraLastName, @paraNRIC, @paraDOB, @paraAge, @paraSex, @paraNationality, @paraCitizenship, @paraPostalcode, @paraAddress, @paraAllergies, @paraMedicalHistory, @paraPhoneNumber, @paraHomeNumber, @paraEmail, @paraCreatedDate, @paraUpdatedDate)" +
-    "SET IDENTITY_INSERT PATIENT OFF ";
+                "INSERT INTO PATIENT (Patient_ID, First_Name, Last_Name, NRIC, DOB, Age, Sex, Nationality, Citizenship, Postal_Code, Address, Allergies, Medical_History, Phone_Number, Home_Number, Email, Created_Date, Update_Date, Record_Disabled) " +
+                "VALUES (@paraPatientID,@paraFirstName, @paraLastName, @paraNRIC, @paraDOB, @paraAge, @paraSex, @paraNationality, @paraCitizenship, @paraPostalcode, @paraAddress, @paraAllergies, @paraMedicalHistory, @paraPhoneNumber, @paraHomeNumber, @paraEmail, @paraCreatedDate, @paraUpdatedDate, @paraRecordDisabled)" +
+                "SET IDENTITY_INSERT PATIENT OFF ";
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
             sqlCmd.Parameters.AddWithValue("@paraPatientID", patientID);
@@ -94,6 +100,7 @@ namespace WCF_Service_Library.Entity
             sqlCmd.Parameters.AddWithValue("@paraEmail", phoneNumber);
             sqlCmd.Parameters.AddWithValue("@paraCreatedDate", createdDate);
             sqlCmd.Parameters.AddWithValue("@paraUpdatedDate", updatedDate);
+            sqlCmd.Parameters.AddWithValue("@paraRecordDisabled", recordDisabled);
 
             myConn.Open();
             int result = sqlCmd.ExecuteNonQuery();
@@ -138,13 +145,15 @@ namespace WCF_Service_Library.Entity
                 string email = row["Email"].ToString();
                 DateTime createdDate = Convert.ToDateTime(row["Created_Date"].ToString());
                 DateTime updatedDate = Convert.ToDateTime(row["Update_Date"].ToString());
+                string recordDisabled = row["Record_Disabled"].ToString();
 
                 PatientRecord patient = new PatientRecord(patientID, firstName, lastName,
                     NRIC, DOB, age, sex, nationality, citizenship,
                     postalCode, address,
                     allergies, medicalHistory,
                     phoneNumber, homeNumber, email,
-                    createdDate, updatedDate
+                    createdDate, updatedDate,
+                    recordDisabled
                     );
                 patientRecordList.Add(patient);
             }
@@ -185,13 +194,16 @@ namespace WCF_Service_Library.Entity
                 string email = row["Email"].ToString();
                 DateTime createdDate = Convert.ToDateTime(row["Created_Date"].ToString());
                 DateTime updatedDate = Convert.ToDateTime(row["Update_Date"].ToString());
+                string recordDisabled = row["Record_Disabled"].ToString();
+
 
                 patient = new PatientRecord(patientID, firstName, lastName,
                     NRIC, DOB, age, sex, nationality, citizenship,
                     postalCode, address,
                     allergies, medicalHistory,
                     phoneNumber, homeNumber, email,
-                    createdDate, updatedDate
+                    createdDate, updatedDate,
+                    recordDisabled
                     );
             }
             return patient;
@@ -205,9 +217,21 @@ namespace WCF_Service_Library.Entity
         }
 
         //todo
-        public int Delete(int patientID)
+        public int DisablePatientByID(int patientID)
         {
-            return 1;
+           string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+           SqlConnection myConn = new SqlConnection(DBConnect);
+           string sqlStmt = "UPDATE PATIENT " +
+                "SET Record_Disabled = 'true' " +
+                "WHERE Patient_ID = @paraPatientID;";
+           SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+           sqlCmd.Parameters.AddWithValue("@paraPatientID", patientID);
+
+           myConn.Open();
+           int result = sqlCmd.ExecuteNonQuery();
+           myConn.Close();
+
+           return result;
         }
 
     }
