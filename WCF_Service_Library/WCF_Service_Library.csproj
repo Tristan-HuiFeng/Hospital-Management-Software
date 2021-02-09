@@ -48,6 +48,7 @@
     <Compile Include="Entity\ContractRecord.cs" />
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Entity\EquipmentServiceRecord.cs" />
+    <Compile Include="Entity\Feedback.cs" />
     <Compile Include="Entity\LabServiceRecord.cs" />
     <Compile Include="Entity\MedicalRecord.cs" />
     <Compile Include="Entity\MedicalRecord2.cs" />

@@ -207,6 +207,22 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMedicalRecord", ReplyAction="http://tempuri.org/IService1/CreateMedicalRecordResponse")]
         System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.CreateMedicalRecordResponse> CreateMedicalRecordAsync(Hospital_Management_Software.MyDBServiceReference.CreateMedicalRecordRequest request);
+        
+        // CODEGEN: Parameter 'GetAllFeedbackResult' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlArrayAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackResponse GetAllFeedback(Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackResponse> GetAllFeedbackAsync(Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackRequest request);
+        
+        // CODEGEN: Parameter 'name' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        Hospital_Management_Software.MyDBServiceReference.CreateFeedbackResponse CreateFeedback(Hospital_Management_Software.MyDBServiceReference.CreateFeedbackRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.CreateFeedbackResponse> CreateFeedbackAsync(Hospital_Management_Software.MyDBServiceReference.CreateFeedbackRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -291,6 +307,80 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             set {
                 this.stringValueField = value;
                 this.RaisePropertyChanged("StringValue");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    public partial class FeedbackList : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string emailField;
+        
+        private string feedbackField;
+        
+        private string nameField;
+        
+        private string subjectField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=0)]
+        public string Email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("Email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=1)]
+        public string Feedback {
+            get {
+                return this.feedbackField;
+            }
+            set {
+                this.feedbackField = value;
+                this.RaisePropertyChanged("Feedback");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=2)]
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+                this.RaisePropertyChanged("Name");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true, Order=3)]
+        public string Subject {
+            get {
+                return this.subjectField;
+            }
+            set {
+                this.subjectField = value;
+                this.RaisePropertyChanged("Subject");
             }
         }
         
@@ -2568,6 +2658,85 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllFeedback", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetAllFeedbackRequest {
+        
+        public GetAllFeedbackRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAllFeedbackResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class GetAllFeedbackResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+        public Hospital_Management_Software.MyDBServiceReference.FeedbackList[] GetAllFeedbackResult;
+        
+        public GetAllFeedbackResponse() {
+        }
+        
+        public GetAllFeedbackResponse(Hospital_Management_Software.MyDBServiceReference.FeedbackList[] GetAllFeedbackResult) {
+            this.GetAllFeedbackResult = GetAllFeedbackResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateFeedback", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class CreateFeedbackRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string name;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string email;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string subject;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string feedback;
+        
+        public CreateFeedbackRequest() {
+        }
+        
+        public CreateFeedbackRequest(string name, string email, string subject, string feedback) {
+            this.name = name;
+            this.email = email;
+            this.subject = subject;
+            this.feedback = feedback;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CreateFeedbackResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class CreateFeedbackResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int CreateFeedbackResult;
+        
+        public CreateFeedbackResponse() {
+        }
+        
+        public CreateFeedbackResponse(int CreateFeedbackResult) {
+            this.CreateFeedbackResult = CreateFeedbackResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface IService1Channel : Hospital_Management_Software.MyDBServiceReference.IService1, System.ServiceModel.IClientChannel {
     }
@@ -3223,6 +3392,56 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             inValue.prescription = prescription;
             inValue.remarks = remarks;
             return ((Hospital_Management_Software.MyDBServiceReference.IService1)(this)).CreateMedicalRecordAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackResponse Hospital_Management_Software.MyDBServiceReference.IService1.GetAllFeedback(Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackRequest request) {
+            return base.Channel.GetAllFeedback(request);
+        }
+        
+        public Hospital_Management_Software.MyDBServiceReference.FeedbackList[] GetAllFeedback() {
+            Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackRequest inValue = new Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackRequest();
+            Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackResponse retVal = ((Hospital_Management_Software.MyDBServiceReference.IService1)(this)).GetAllFeedback(inValue);
+            return retVal.GetAllFeedbackResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackResponse> Hospital_Management_Software.MyDBServiceReference.IService1.GetAllFeedbackAsync(Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackRequest request) {
+            return base.Channel.GetAllFeedbackAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackResponse> GetAllFeedbackAsync() {
+            Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackRequest inValue = new Hospital_Management_Software.MyDBServiceReference.GetAllFeedbackRequest();
+            return ((Hospital_Management_Software.MyDBServiceReference.IService1)(this)).GetAllFeedbackAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        Hospital_Management_Software.MyDBServiceReference.CreateFeedbackResponse Hospital_Management_Software.MyDBServiceReference.IService1.CreateFeedback(Hospital_Management_Software.MyDBServiceReference.CreateFeedbackRequest request) {
+            return base.Channel.CreateFeedback(request);
+        }
+        
+        public int CreateFeedback(string name, string email, string subject, string feedback) {
+            Hospital_Management_Software.MyDBServiceReference.CreateFeedbackRequest inValue = new Hospital_Management_Software.MyDBServiceReference.CreateFeedbackRequest();
+            inValue.name = name;
+            inValue.email = email;
+            inValue.subject = subject;
+            inValue.feedback = feedback;
+            Hospital_Management_Software.MyDBServiceReference.CreateFeedbackResponse retVal = ((Hospital_Management_Software.MyDBServiceReference.IService1)(this)).CreateFeedback(inValue);
+            return retVal.CreateFeedbackResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.CreateFeedbackResponse> Hospital_Management_Software.MyDBServiceReference.IService1.CreateFeedbackAsync(Hospital_Management_Software.MyDBServiceReference.CreateFeedbackRequest request) {
+            return base.Channel.CreateFeedbackAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.CreateFeedbackResponse> CreateFeedbackAsync(string name, string email, string subject, string feedback) {
+            Hospital_Management_Software.MyDBServiceReference.CreateFeedbackRequest inValue = new Hospital_Management_Software.MyDBServiceReference.CreateFeedbackRequest();
+            inValue.name = name;
+            inValue.email = email;
+            inValue.subject = subject;
+            inValue.feedback = feedback;
+            return ((Hospital_Management_Software.MyDBServiceReference.IService1)(this)).CreateFeedbackAsync(inValue);
         }
     }
 }

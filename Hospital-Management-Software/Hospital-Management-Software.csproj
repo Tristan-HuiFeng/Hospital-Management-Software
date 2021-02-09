@@ -58,6 +58,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -155,6 +156,10 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Customer\allFeedback.aspx" />
+    <Content Include="Customer\allFeedbackAdmin.aspx" />
+    <Content Include="Customer\feedback.aspx" />
+    <Content Include="Customer\success.aspx" />
     <Content Include="HealthProfessional\Dashboard.aspx" />
     <Content Include="HealthProfessional\MedicalRecordList.aspx" />
     <Content Include="HealthProfessional\ViewMedicalRecord.aspx" />
@@ -174,6 +179,7 @@
     <Content Include="HealthProfessional\PatientRecord.aspx" />
     <Content Include="HealthProfessional\UpdateMedicalRecord.aspx" />
     <Content Include="Login\StaffLogin.aspx" />
+    <Content Include="src\css\css1.css" />
     <Content Include="src\css\login.css" />
     <Content Include="src\css\staff-main.css" />
     <Content Include="src\css\test.css" />
@@ -387,6 +393,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Customer\allFeedback.aspx.cs">
+      <DependentUpon>allFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\allFeedback.aspx.designer.cs">
+      <DependentUpon>allFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\allFeedbackAdmin.aspx.cs">
+      <DependentUpon>allFeedbackAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\allFeedbackAdmin.aspx.designer.cs">
+      <DependentUpon>allFeedbackAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\success.aspx.cs">
+      <DependentUpon>success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\success.aspx.designer.cs">
+      <DependentUpon>success.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HealthProfessional\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -561,6 +595,13 @@
     <Compile Include="Views\EPR\UpdateEPR.aspx.designer.cs">
       <DependentUpon>UpdateEPR.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\layout\Customer.Master.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\layout\Customer.Master.designer.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+    </Compile>
     <Compile Include="Views\MAR\CreateMAR.aspx.cs">
       <DependentUpon>CreateMAR.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -649,6 +690,7 @@
     <Content Include="Views\layout\HealthProfessional.Master" />
     <Content Include="Views\layout\Site2.Master" />
     <Content Include="Views\layout\Administrator.Master" />
+    <Content Include="Views\layout\Customer.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

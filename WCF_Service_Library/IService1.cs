@@ -100,9 +100,13 @@ namespace WCF_Service_Library
         int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, 
             string treatment, DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
 
+        /* Matt */
+        [OperationContract]
+        List<FeedbackList> GetAllFeedback();
 
-
-
+        [OperationContract]
+        int CreateFeedback(string name, string email, string subject, string feedback);
+        /* Matt */
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

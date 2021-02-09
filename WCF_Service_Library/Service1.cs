@@ -182,5 +182,19 @@ namespace WCF_Service_Library
             ContractRecord cr = new ContractRecord();
             return cr.SelectByEmployeeID(id);
         }
+
+        /* Matt */
+        public List<FeedbackList> GetAllFeedback()
+        {
+            FeedbackList emp = new FeedbackList();
+            return emp.GetAllFeedback();
+        }
+
+        public int CreateFeedback(string name, string email, string subject, string feedback)
+        {
+            FeedbackList emp = new FeedbackList(name, email, subject, feedback);
+            return emp.Insert();
+        }
+        /* Matt */
     }
 }
