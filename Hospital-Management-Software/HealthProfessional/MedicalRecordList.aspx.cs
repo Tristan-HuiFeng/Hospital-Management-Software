@@ -40,7 +40,7 @@ namespace Hospital_Management_Software.HealthProfessional
         {
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
 
-            DataTable dt = client.GetMedicalRecordTableView();
+            //DataTable dt = client.GetMedicalRecordTableView;
 
             gv_MedicalRecordList.DataSource = dt;
             gv_MedicalRecordList.DataBind();

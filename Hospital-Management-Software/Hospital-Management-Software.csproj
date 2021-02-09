@@ -124,10 +124,16 @@
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Employee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.LabServiceRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Resource.datasource">
@@ -137,6 +143,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
+    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.ContractRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.tempPatient.datasource">
@@ -202,18 +209,22 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.CompositeType.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Employee.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.EquipmentServiceRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.LabServiceRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.MedicalRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Resource.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.RolePermission.datasource" />
     <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
-    <None Include="Connected Services\MyDBServiceReference\service.wsdl" />
-    <None Include="Connected Services\MyDBServiceReference\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Connected Services\MyDBServiceReference\service1.wsdl" />
     <None Include="Connected Services\MyDBServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MyDBServiceReference\System.Data.xsd">
+    <None Include="Connected Services\MyDBServiceReference\service2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.Entity.xsd">
+    <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.Entity1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.xsd">
@@ -610,6 +621,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Management\EmployeeImages\" />
+    <Folder Include="Management\HealthDeclaration\" />
     <Folder Include="ServiceRequest\" />
     <Folder Include="src\img\" />
     <Folder Include="Views\Home\" />
@@ -646,6 +659,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WCF_Service_Library\WCF_Service_Library.csproj">
+      <Project>{8DB70696-5990-4391-A7BC-97B153665857}</Project>
+      <Name>WCF_Service_Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\MyDBServiceReference\" />

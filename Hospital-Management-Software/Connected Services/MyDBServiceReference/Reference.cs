@@ -784,6 +784,9 @@ namespace Hospital_Management_Software.MyDBServiceReference {
     [System.Runtime.Serialization.DataContractAttribute(Name="tempPatient", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
     [System.SerializableAttribute()]
     public partial class tempPatient : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    [System.Runtime.Serialization.DataContractAttribute(Name="Employee", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class Employee : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -796,6 +799,49 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string nameField;
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DOBField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DepartmentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private char GenderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HealthDeclarationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ImageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JobFunctionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoginIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NationalityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NricField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PositionField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -816,6 +862,311 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                 if ((object.ReferenceEquals(this.contactField, value) != true)) {
                     this.contactField = value;
                     this.RaisePropertyChanged("contact");
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DOB {
+            get {
+                return this.DOBField;
+            }
+            set {
+                if ((this.DOBField.Equals(value) != true)) {
+                    this.DOBField = value;
+                    this.RaisePropertyChanged("DOB");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Department {
+            get {
+                return this.DepartmentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DepartmentField, value) != true)) {
+                    this.DepartmentField = value;
+                    this.RaisePropertyChanged("Department");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public char Gender {
+            get {
+                return this.GenderField;
+            }
+            set {
+                if ((this.GenderField.Equals(value) != true)) {
+                    this.GenderField = value;
+                    this.RaisePropertyChanged("Gender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HealthDeclaration {
+            get {
+                return this.HealthDeclarationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HealthDeclarationField, value) != true)) {
+                    this.HealthDeclarationField = value;
+                    this.RaisePropertyChanged("HealthDeclaration");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Image {
+            get {
+                return this.ImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string JobFunction {
+            get {
+                return this.JobFunctionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JobFunctionField, value) != true)) {
+                    this.JobFunctionField = value;
+                    this.RaisePropertyChanged("JobFunction");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LoginID {
+            get {
+                return this.LoginIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoginIDField, value) != true)) {
+                    this.LoginIDField = value;
+                    this.RaisePropertyChanged("LoginID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nationality {
+            get {
+                return this.NationalityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NationalityField, value) != true)) {
+                    this.NationalityField = value;
+                    this.RaisePropertyChanged("Nationality");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nric {
+            get {
+                return this.NricField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NricField, value) != true)) {
+                    this.NricField = value;
+                    this.RaisePropertyChanged("Nric");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Position {
+            get {
+                return this.PositionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PositionField, value) != true)) {
+                    this.PositionField = value;
+                    this.RaisePropertyChanged("Position");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ContractRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class ContractRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string benefitsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime create_dateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string employeeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string holidaysField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string salaryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vacationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string workingHoursField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string benefits {
+            get {
+                return this.benefitsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.benefitsField, value) != true)) {
+                    this.benefitsField = value;
+                    this.RaisePropertyChanged("benefits");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime create_date {
+            get {
+                return this.create_dateField;
+            }
+            set {
+                if ((this.create_dateField.Equals(value) != true)) {
+                    this.create_dateField = value;
+                    this.RaisePropertyChanged("create_date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string employeeID {
+            get {
+                return this.employeeIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.employeeIDField, value) != true)) {
+                    this.employeeIDField = value;
+                    this.RaisePropertyChanged("employeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string holidays {
+            get {
+                return this.holidaysField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.holidaysField, value) != true)) {
+                    this.holidaysField = value;
+                    this.RaisePropertyChanged("holidays");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string salary {
+            get {
+                return this.salaryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salaryField, value) != true)) {
+                    this.salaryField = value;
+                    this.RaisePropertyChanged("salary");
                 }
             }
         }
@@ -829,6 +1180,14 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                 if ((this.idField.Equals(value) != true)) {
                     this.idField = value;
                     this.RaisePropertyChanged("id");
+        public string vacation {
+            get {
+                return this.vacationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vacationField, value) != true)) {
+                    this.vacationField = value;
+                    this.RaisePropertyChanged("vacation");
                 }
             }
         }
@@ -842,6 +1201,14 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                 if ((object.ReferenceEquals(this.nameField, value) != true)) {
                     this.nameField = value;
                     this.RaisePropertyChanged("name");
+        public string workingHours {
+            get {
+                return this.workingHoursField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.workingHoursField, value) != true)) {
+                    this.workingHoursField = value;
+                    this.RaisePropertyChanged("workingHours");
                 }
             }
         }
@@ -908,6 +1275,12 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllRolePermission", ReplyAction="http://tempuri.org/IService1/GetAllRolePermissionResponse")]
         System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.RolePermission[]> GetAllRolePermissionAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
+        Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeIDResponse")]
         Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecordByEmployeeID(int empID);
         
@@ -922,12 +1295,35 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
         Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllEmployee", ReplyAction="http://tempuri.org/IService1/GetAllEmployeeResponse")]
+        Hospital_Management_Software.MyDBServiceReference.Employee[] GetAllEmployee();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllEmployee", ReplyAction="http://tempuri.org/IService1/GetAllEmployeeResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetAllEmployeeAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
-        System.Data.DataTable GetMedicalRecordTableView();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByName", ReplyAction="http://tempuri.org/IService1/GetEmployeeByNameResponse")]
+        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByName(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByName", ReplyAction="http://tempuri.org/IService1/GetEmployeeByNameResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByNameAsync(string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeSortedByDOB", ReplyAction="http://tempuri.org/IService1/GetEmployeeSortedByDOBResponse")]
+        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeSortedByDOB(int order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeSortedByDOB", ReplyAction="http://tempuri.org/IService1/GetEmployeeSortedByDOBResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeSortedByDOBAsync(int order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeSortedByGender", ReplyAction="http://tempuri.org/IService1/GetEmployeeSortedByGenderResponse")]
+        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeSortedByGender(int order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeSortedByGender", ReplyAction="http://tempuri.org/IService1/GetEmployeeSortedByGenderResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeSortedByGenderAsync(int order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByNRIC", ReplyAction="http://tempuri.org/IService1/GetEmployeeByNRICResponse")]
+        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByNRIC(string nric);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByNRIC", ReplyAction="http://tempuri.org/IService1/GetEmployeeByNRICResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByNRICAsync(string nric);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
         System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync();
@@ -943,6 +1339,35 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMedicalRecord", ReplyAction="http://tempuri.org/IService1/CreateMedicalRecordResponse")]
         System.Threading.Tasks.Task<int> CreateMedicalRecordAsync(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateEmployee", ReplyAction="http://tempuri.org/IService1/CreateEmployeeResponse")]
+        int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateEmployee", ReplyAction="http://tempuri.org/IService1/CreateEmployeeResponse")]
+        System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateEmployee", ReplyAction="http://tempuri.org/IService1/UpdateEmployeeResponse")]
+        int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateEmployee", ReplyAction="http://tempuri.org/IService1/UpdateEmployeeResponse")]
+        System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeID", ReplyAction="http://tempuri.org/IService1/GetEmployeeIDResponse")]
+        string GetEmployeeID(string nric);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeID", ReplyAction="http://tempuri.org/IService1/GetEmployeeIDResponse")]
+        System.Threading.Tasks.Task<string> GetEmployeeIDAsync(string nric);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateContract", ReplyAction="http://tempuri.org/IService1/CreateContractResponse")]
+        int CreateContract(string salary, string benefits, string workingHours, string holidays, string vacation, System.DateTime create_date, string employeeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateContract", ReplyAction="http://tempuri.org/IService1/CreateContractResponse")]
+        System.Threading.Tasks.Task<int> CreateContractAsync(string salary, string benefits, string workingHours, string holidays, string vacation, System.DateTime create_date, string employeeID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetContractByEmployeeIDResponse")]
+        Hospital_Management_Software.MyDBServiceReference.ContractRecord[] GetContractByEmployeeID(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetContractByEmployeeIDResponse")]
+        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.ContractRecord[]> GetContractByEmployeeIDAsync(string id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1036,6 +1461,14 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetAllRolePermissionAsync();
         }
         
+        public Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord() {
+            return base.Channel.GetAllMedicalRecord();
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync() {
+            return base.Channel.GetAllMedicalRecordAsync();
+        }
+        
         public Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecordByEmployeeID(int empID) {
             return base.Channel.GetAllMedicalRecordByEmployeeID(empID);
         }
@@ -1054,18 +1487,84 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord() {
             return base.Channel.GetAllMedicalRecord();
+        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetAllEmployee() {
+            return base.Channel.GetAllEmployee();
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync() {
-            return base.Channel.GetAllMedicalRecordAsync();
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetAllEmployeeAsync() {
+            return base.Channel.GetAllEmployeeAsync();
         }
         
-        public System.Data.DataTable GetMedicalRecordTableView() {
-            return base.Channel.GetMedicalRecordTableView();
+        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByName(string name) {
+            return base.Channel.GetEmployeeByName(name);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync() {
-            return base.Channel.GetMedicalRecordTableViewAsync();
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByNameAsync(string name) {
+            return base.Channel.GetEmployeeByNameAsync(name);
+        }
+        
+        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeSortedByDOB(int order) {
+            return base.Channel.GetEmployeeSortedByDOB(order);
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeSortedByDOBAsync(int order) {
+            return base.Channel.GetEmployeeSortedByDOBAsync(order);
+        }
+        
+        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeSortedByGender(int order) {
+            return base.Channel.GetEmployeeSortedByGender(order);
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeSortedByGenderAsync(int order) {
+            return base.Channel.GetEmployeeSortedByGenderAsync(order);
+        }
+        
+        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByNRIC(string nric) {
+            return base.Channel.GetEmployeeByNRIC(nric);
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByNRICAsync(string nric) {
+            return base.Channel.GetEmployeeByNRICAsync(nric);
+        }
+        
+        public int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
+            return base.Channel.CreateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
+            return base.Channel.CreateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+        }
+        
+        public int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
+            return base.Channel.UpdateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+        }
+        
+        public System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
+            return base.Channel.UpdateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+        }
+        
+        public string GetEmployeeID(string nric) {
+            return base.Channel.GetEmployeeID(nric);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetEmployeeIDAsync(string nric) {
+            return base.Channel.GetEmployeeIDAsync(nric);
+        }
+        
+        public int CreateContract(string salary, string benefits, string workingHours, string holidays, string vacation, System.DateTime create_date, string employeeID) {
+            return base.Channel.CreateContract(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateContractAsync(string salary, string benefits, string workingHours, string holidays, string vacation, System.DateTime create_date, string employeeID) {
+            return base.Channel.CreateContractAsync(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
+        }
+        
+        public Hospital_Management_Software.MyDBServiceReference.ContractRecord[] GetContractByEmployeeID(string id) {
+            return base.Channel.GetContractByEmployeeID(id);
+        }
+        
+        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.ContractRecord[]> GetContractByEmployeeIDAsync(string id) {
+            return base.Channel.GetContractByEmployeeIDAsync(id);
         }
         
         public Hospital_Management_Software.MyDBServiceReference.tempPatient GetPatientByID(string id) {
