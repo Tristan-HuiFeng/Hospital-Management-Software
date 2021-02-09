@@ -30,6 +30,9 @@ namespace WCF_Service_Library
             return composite;
         }
 
+        /* Start of Health Professional's stuffs */
+        /* Start of Hui Feng's code */
+
         public EquipmentServiceRecord GetEquipmentServiceRecordById(int id)
         {
             EquipmentServiceRecord esr = new EquipmentServiceRecord();
@@ -88,6 +91,13 @@ namespace WCF_Service_Library
             MedicalRecord mr = new MedicalRecord();
             return mr.SelectAll();
         }
+        public DataTable GetMedicalRecordTableView()
+        {
+            MedicalRecord mr = new MedicalRecord();
+            return mr.SelectAllTableView();
+        }
+        /* Health Professional's stuffs */
+        /* End of Hui Feng's code */
 
         // Management
         public List<Employee> GetAllEmployee()
@@ -106,6 +116,12 @@ namespace WCF_Service_Library
         {
             Employee emp = new Employee();
             return emp.SelectSortByDOB(order);
+        }
+
+        public List<Employee> GetEmployeeSortedByGender(int order)
+        {
+            Employee emp = new Employee();
+            return emp.SelectSortByGender(order);
         }
 
         public tempPatient GetPatientByID(string id)

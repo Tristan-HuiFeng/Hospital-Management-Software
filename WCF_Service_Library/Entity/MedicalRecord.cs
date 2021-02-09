@@ -179,7 +179,7 @@ namespace WCF_Service_Library.Entity
 
         public DataTable SelectAllTableView()
         {
-            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            string DBConnect = ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
             string sqlStmt = "Select Convert(varchar, MR.Date, 100) date, Medical_Record_ID, Concat(P.First_Name, ' ', P.Last_Name) patientFullName, Concat(E.First_Name, ' ',E.Last_Name) doctorFullName, MR.Diagnosis " +
