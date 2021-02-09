@@ -19,7 +19,8 @@ namespace WCF_Service_Library
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        // TODO: Add your service operations heres
+        /* Start of Health Professional's stuffs */
+        /* Start of Hui Feng's code */
 
         [OperationContract]
         EquipmentServiceRecord GetEquipmentServiceRecordById(int id);
@@ -44,6 +45,11 @@ namespace WCF_Service_Library
 
         [OperationContract]
         List<MedicalRecord> GetAllMedicalRecord();
+        
+        [OperationContract]
+        DataTable GetMedicalRecordTableView();
+        /* Health Professional's stuffs */
+        /* End of Hui Feng's code */
 
         // Management
         [OperationContract]
@@ -82,8 +88,7 @@ namespace WCF_Service_Library
         [OperationContract]
         List<ContractRecord> GetContractByEmployeeID(string id);
 
-        //[OperationContract]
-        //DataTable GetMedicalRecordTableView();
+        
 
      
 
