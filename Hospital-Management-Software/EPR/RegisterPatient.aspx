@@ -6,58 +6,72 @@
     <p>
         Please fill in the required fields below. For any field that is non-applicable please put NIL.
     </p>
+        <p>
+            <asp:Label ID="err_gen" runat="server" Visible="False"></asp:Label>
+    </p>
     <table style="width: 100%;" class="table">
         <tr>
-            <td scope="row" class="auto-style2">First name:</td>
-            <td style="width: 198px">
+            <td scope="row" class="auto-style3">First name:</td>
+            <td class="auto-style4">
                 <asp:TextBox ID="tb_FirstName" runat="server"></asp:TextBox>
                 <br />
-            </td>
-            <td class="auto-style1">Last name:</td>
-            <td style="width: 493px">
-                <asp:TextBox ID="tb_LastName" runat="server"></asp:TextBox>
-                </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style2">NRIC:</td>
-            <td style="width: 198px">
-                <asp:TextBox ID="tb_NRIC" runat="server" CssClass="mt-0" ></asp:TextBox>
+                <asp:Label ID="err_fName" runat="server" Enabled="False"></asp:Label>
                 <br />
             </td>
-            <td class="auto-style1">&nbsp;</td>
-            <td style="width: 493px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style26">Last name:</td>
+            <td class="auto-style6">
+                <asp:TextBox ID="tb_LastName" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_lName" runat="server" Enabled="False"></asp:Label>
+                </td>
+            <td class="auto-style7"></td>
         </tr>
         <tr>
-            <td class="auto-style2">Date of Birth:</td>
-            <td style="width: 198px">
+            <td class="auto-style18">NRIC:</td>
+            <td class="auto-style19">
+                <asp:TextBox ID="tb_NRIC" runat="server" CssClass="mt-0" ></asp:TextBox>
+                <br />
+                <asp:Label ID="err_NRIC" runat="server" Enabled="False"></asp:Label>
+                <br />
+            </td>
+            <td class="auto-style27"></td>
+            <td class="auto-style20"></td>
+            <td class="auto-style21"></td>
+        </tr>
+        <tr>
+            <td class="auto-style3">Date of Birth:</td>
+            <td class="auto-style4">
                 <asp:TextBox ID="tb_DOB" runat="server" TextMode="Date" ></asp:TextBox>
+                <br />
+                <asp:Label ID="err_DOB" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">Age:</td>
-            <td style="width: 493px">
-                <asp:TextBox ID="tb_age" runat="server"></asp:TextBox>
+            <td class="auto-style26">Age:</td>
+            <td class="auto-style6">
+                <asp:TextBox ID="tb_age" runat="server" ReadOnly="True"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_Age" runat="server"></asp:Label>
             </td>
-            <td>
-                &nbsp;</td>
+            <td class="auto-style7">
+                </td>
         </tr>
         <tr>
-            <td class="auto-style2">Sex:</td>
-            <td style="width: 198px">
-                <asp:RadioButtonList ID="rad_Sex" runat="server" RepeatDirection="Horizontal">
+            <td class="auto-style3">Sex:</td>
+            <td class="auto-style4">
+                <asp:RadioButtonList ID="rad_Sex" runat="server" RepeatDirection="Horizontal" CssClass="auto-style8">
                     <asp:ListItem Value="M">Male</asp:ListItem>
                     <asp:ListItem Value="F">Female</asp:ListItem>
                 </asp:RadioButtonList>
+                <asp:Label ID="err_sex" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">&nbsp;</td>
-            <td style="width: 493px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style26"></td>
+            <td class="auto-style6"></td>
+            <td class="auto-style7"></td>
         </tr>
         <tr>
-            <td class="auto-style2">Nationality:</td>
-            <td style="width: 198px">
+            <td class="auto-style18">Nationality:</td>
+            <td class="auto-style19">
                 <asp:DropDownList ID="ddl_nationality" runat="server">
-                    <asp:listitem value="false" Selected="True">--Select a country--</asp:listitem>
+                    <asp:listitem value="select" Selected="True">--Select a country--</asp:listitem>
 
                     <asp:listitem value="af">afghanistan</asp:listitem>
 
@@ -535,81 +549,99 @@
 
                     <asp:ListItem Value="ZW">Zimbabwe</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <asp:Label ID="err_country" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">&nbsp;</td>
-            <td style="width: 493px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style27"></td>
+            <td class="auto-style20"></td>
+            <td class="auto-style21"></td>
         </tr>
         <tr>
-            <td class="auto-style2">Citizenship:</td>
-            <td style="width: 198px">
+            <td class="auto-style18">Citizenship:</td>
+            <td class="auto-style19">
                 <asp:DropDownList ID="ddl_citizenship" runat="server">
-                    <asp:ListItem>--Select--</asp:ListItem>
+                    <asp:ListItem Selected="True" Value="select">--Select--</asp:ListItem>
                     <asp:ListItem Value="Sg">Singaporean</asp:ListItem>
                     <asp:ListItem Value="sg-pr">Singapore-PR</asp:ListItem>
                     <asp:ListItem Value="other">Others</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <asp:Label ID="err_citizenship" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">&nbsp;</td>
-            <td style="width: 493px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style27"></td>
+            <td class="auto-style20"></td>
+            <td class="auto-style21"></td>
         </tr>
         <tr>
-            <td class="auto-style2">Postal Code:</td>
-            <td style="width: 198px">
+            <td class="auto-style3">Postal Code:</td>
+            <td class="auto-style4">
                 <asp:TextBox ID="tb_PostalCode" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_postalCode" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">Address:</td>
-            <td style="width: 493px">
+            <td class="auto-style26">Address:</td>
+            <td class="auto-style6">
                 <asp:TextBox ID="tb_Address" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_Address" runat="server" Visible="False"></asp:Label>
             </td>
-            <td>
-                &nbsp;</td>
+            <td class="auto-style7">
+                </td>
         </tr>
         <tr>
-            <td class="auto-style2">Allergies:</td>
-            <td style="width: 198px">
-                <asp:TextBox ID="tb_Allergies" runat="server"></asp:TextBox>
+            <td class="auto-style22">Allergies:</td>
+            <td class="auto-style23">
+                <asp:TextBox ID="tb_Allergies" runat="server" TextMode="MultiLine"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_Allergies" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">&nbsp;</td>
-            <td style="width: 493px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style28"></td>
+            <td class="auto-style24"></td>
+            <td class="auto-style25"></td>
         </tr>
         <tr>
-            <td class="auto-style2">Medical conditions:</td>
-            <td style="width: 198px">
-                <asp:TextBox ID="tb_MedicalConditon" runat="server"></asp:TextBox>
+            <td class="auto-style22">Medical conditions:</td>
+            <td class="auto-style23">
+                <asp:TextBox ID="tb_MedicalConditon" runat="server" TextMode="MultiLine"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_medicalCondition" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">&nbsp;</td>
-            <td style="width: 493px">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style28"></td>
+            <td class="auto-style24"></td>
+            <td class="auto-style25"></td>
         </tr>
         <tr>
-            <td class="auto-style2">Phone number:</td>
-            <td style="width: 198px">
+            <td class="auto-style3">Phone number:</td>
+            <td class="auto-style4">
                 <asp:TextBox ID="tb_phoneNumber" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_phoneNumber" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">Home number</td>
-            <td style="width: 493px">
+            <td class="auto-style26">Home number</td>
+            <td class="auto-style6">
                 <asp:TextBox ID="tb_homeNumber" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_homeNumber" runat="server" Visible="False"></asp:Label>
             </td>
-            <td>&nbsp;</td>
+            <td class="auto-style7"></td>
         </tr>
         <tr>
             <td class="auto-style2">Email:</td>
-            <td style="width: 198px">
+            <td class="auto-style17">
                 <asp:TextBox ID="tb_email" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="err_Email" runat="server" Visible="False"></asp:Label>
             </td>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style29">&nbsp;</td>
             <td style="width: 493px">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td style="width: 198px">
+            <td class="auto-style17">
                 <asp:Button ID="btn_Submit" runat="server" Text="Submit" OnClick="btn_Submit_Click" />
             </td>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style29">&nbsp;</td>
             <td style="width: 493px">&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -617,11 +649,74 @@
 </asp:Content>
 <asp:Content ID="Content2" runat="server" contentplaceholderid="head">
     <style type="text/css">
-        .auto-style1 {
-            width: 262px;
-        }
         .auto-style2 {
-            width: 320px;
+            width: 180px;
+        }
+        .auto-style3 {
+            width: 180px;
+            height: 30px;
+        }
+        .auto-style4 {
+            width: 300px;
+            height: 30px;
+        }
+        .auto-style6 {
+            width: 493px;
+            height: 30px;
+        }
+        .auto-style7 {
+            height: 30px;
+        }
+        .auto-style8 {
+            margin-left: 0px;
+        }
+        .auto-style17 {
+            width: 300px;
+        }
+        .auto-style18 {
+            width: 180px;
+            height: 29px;
+        }
+        .auto-style19 {
+            width: 300px;
+            height: 29px;
+        }
+        .auto-style20 {
+            width: 493px;
+            height: 29px;
+        }
+        .auto-style21 {
+            height: 29px;
+        }
+        .auto-style22 {
+            width: 180px;
+            height: 50px;
+        }
+        .auto-style23 {
+            width: 300px;
+            height: 50px;
+        }
+        .auto-style24 {
+            width: 493px;
+            height: 50px;
+        }
+        .auto-style25 {
+            height: 50px;
+        }
+        .auto-style26 {
+            width: 120px;
+            height: 30px;
+        }
+        .auto-style27 {
+            width: 120px;
+            height: 29px;
+        }
+        .auto-style28 {
+            width: 120px;
+            height: 50px;
+        }
+        .auto-style29 {
+            width: 120px;
         }
     </style>
 </asp:Content>

@@ -54,7 +54,7 @@ namespace WCF_Service_Library
         [OperationContract]
         int CreatePatientRecord(
            int patientid, string firstname, string lastname,
-           string NRIC, DateTime DOB, int age, string sex,
+           string NRIC, DateTime DOB, string sex,
            string nationality, string citizenship,
            string postalcode, string address,
            string allergies, string medicalhistory, string phonenumber,
@@ -64,6 +64,16 @@ namespace WCF_Service_Library
 
         [OperationContract]
         int DisablePatientByID(int patientID);
+
+        [OperationContract]
+        int UpdatePatientByID(
+            int patientID, string fname, string lname,
+            string nric, string sex, DateTime dob,
+            string nationality, string citizenship,
+            string postalCode, string address, string allergies,
+            string medicalHistory,
+            string phoneNumber, string homeNumber,
+            string email, DateTime update_date);
 
     }
 

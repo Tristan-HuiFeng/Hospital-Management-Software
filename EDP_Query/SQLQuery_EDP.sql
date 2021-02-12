@@ -1,10 +1,9 @@
 ﻿CREATE TABLE [dbo].[PATIENT] (
-    [Patient_ID]      BIGINT            IDENTITY (1, 1) NOT NULL,
+    [Patient_ID]      INT            IDENTITY (1, 1) NOT NULL,
     [First_Name]      NVARCHAR (64)  NOT NULL,
     [Last_Name]       NVARCHAR (64)  NOT NULL,
     [NRIC]            NCHAR (9)      NOT NULL,
     [DOB]             DATETIME       NOT NULL,
-    [Age]             TINYINT        NOT NULL,
     [Sex]             NCHAR (1)      NOT NULL,
     [Nationality]     NVARCHAR (64)  NOT NULL,
     [Citizenship]     NVARCHAR (64)  NOT NULL,
@@ -17,7 +16,7 @@
     [Email]           NVARCHAR (32)  NOT NULL,
     [Created_Date]    DATETIME       NOT NULL,
     [Update_Date]     DATETIME       NOT NULL,
-    [Record_Disabled] NVARCHAR(10) NOT NULL, 
+    [Record_Disabled] NVARCHAR (10)  NOT NULL,
     PRIMARY KEY CLUSTERED ([Patient_ID] ASC)
 );
 

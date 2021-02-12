@@ -13,6 +13,11 @@ namespace Hospital_Management_Software.Views.EPR
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["SuccessPatientMsg"] != null)
+            {
+                lb_genMsg.Visible = true;
+                lb_genMsg.Text = Session["SuccessPatientMsg"].ToString();
+            }
             RefreshGridView();
         }
 
@@ -36,13 +41,22 @@ namespace Hospital_Management_Software.Views.EPR
 
         protected void GV_patients_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            if(e.CommandName == "Disable") {
+            if(e.CommandName == "Disable") 
+            {
                 Debug.WriteLine("Reached - Disabling Patient");
                 GridViewRow row = GV_patients.Rows[Convert.ToInt32(e.CommandArgument)]; //Get selected row
                 int patientID = Convert.ToInt32(row.Cells[0].Text); //Get patientID
                 MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();//Init DB Client
                 client.DisablePatientByID(patientID);
 
+            }
+            if (e.CommandName == "EditRecord")
+            {
+                Debug.WriteLine("Reached - Editing Patient");
+                GridViewRow row = GV_patients.Rows[Convert.ToInt32(e.CommandArgument)]; //Get selected row
+                int patientID = Convert.ToInt32(row.Cells[0].Text); //Get patientID
+                Session["patientID"] = patientID;
+                Response.Redirect("UpdateEPR", false);
             }
 
         }

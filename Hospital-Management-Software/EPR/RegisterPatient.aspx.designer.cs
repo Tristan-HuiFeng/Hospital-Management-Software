@@ -15,6 +15,15 @@ namespace Hospital_Management_Software.Views
     {
 
         /// <summary>
+        /// err_gen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_gen;
+
+        /// <summary>
         /// tb_FirstName control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace Hospital_Management_Software.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_FirstName;
+
+        /// <summary>
+        /// err_fName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_fName;
 
         /// <summary>
         /// tb_LastName control.
@@ -33,6 +51,15 @@ namespace Hospital_Management_Software.Views
         protected global::System.Web.UI.WebControls.TextBox tb_LastName;
 
         /// <summary>
+        /// err_lName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_lName;
+
+        /// <summary>
         /// tb_NRIC control.
         /// </summary>
         /// <remarks>
@@ -40,6 +67,15 @@ namespace Hospital_Management_Software.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_NRIC;
+
+        /// <summary>
+        /// err_NRIC control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_NRIC;
 
         /// <summary>
         /// tb_DOB control.
@@ -51,6 +87,15 @@ namespace Hospital_Management_Software.Views
         protected global::System.Web.UI.WebControls.TextBox tb_DOB;
 
         /// <summary>
+        /// err_DOB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_DOB;
+
+        /// <summary>
         /// tb_age control.
         /// </summary>
         /// <remarks>
@@ -58,6 +103,15 @@ namespace Hospital_Management_Software.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_age;
+
+        /// <summary>
+        /// err_Age control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_Age;
 
         /// <summary>
         /// rad_Sex control.
@@ -69,6 +123,15 @@ namespace Hospital_Management_Software.Views
         protected global::System.Web.UI.WebControls.RadioButtonList rad_Sex;
 
         /// <summary>
+        /// err_sex control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_sex;
+
+        /// <summary>
         /// ddl_nationality control.
         /// </summary>
         /// <remarks>
@@ -76,6 +139,15 @@ namespace Hospital_Management_Software.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_nationality;
+
+        /// <summary>
+        /// err_country control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_country;
 
         /// <summary>
         /// ddl_citizenship control.
@@ -87,6 +159,15 @@ namespace Hospital_Management_Software.Views
         protected global::System.Web.UI.WebControls.DropDownList ddl_citizenship;
 
         /// <summary>
+        /// err_citizenship control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_citizenship;
+
+        /// <summary>
         /// tb_PostalCode control.
         /// </summary>
         /// <remarks>
@@ -94,6 +175,15 @@ namespace Hospital_Management_Software.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_PostalCode;
+
+        /// <summary>
+        /// err_postalCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_postalCode;
 
         /// <summary>
         /// tb_Address control.
@@ -105,6 +195,15 @@ namespace Hospital_Management_Software.Views
         protected global::System.Web.UI.WebControls.TextBox tb_Address;
 
         /// <summary>
+        /// err_Address control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_Address;
+
+        /// <summary>
         /// tb_Allergies control.
         /// </summary>
         /// <remarks>
@@ -112,6 +211,15 @@ namespace Hospital_Management_Software.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_Allergies;
+
+        /// <summary>
+        /// err_Allergies control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_Allergies;
 
         /// <summary>
         /// tb_MedicalConditon control.
@@ -123,6 +231,15 @@ namespace Hospital_Management_Software.Views
         protected global::System.Web.UI.WebControls.TextBox tb_MedicalConditon;
 
         /// <summary>
+        /// err_medicalCondition control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_medicalCondition;
+
+        /// <summary>
         /// tb_phoneNumber control.
         /// </summary>
         /// <remarks>
@@ -130,6 +247,15 @@ namespace Hospital_Management_Software.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_phoneNumber;
+
+        /// <summary>
+        /// err_phoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_phoneNumber;
 
         /// <summary>
         /// tb_homeNumber control.
@@ -141,6 +267,15 @@ namespace Hospital_Management_Software.Views
         protected global::System.Web.UI.WebControls.TextBox tb_homeNumber;
 
         /// <summary>
+        /// err_homeNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_homeNumber;
+
+        /// <summary>
         /// tb_email control.
         /// </summary>
         /// <remarks>
@@ -148,6 +283,15 @@ namespace Hospital_Management_Software.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tb_email;
+
+        /// <summary>
+        /// err_Email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_Email;
 
         /// <summary>
         /// btn_Submit control.

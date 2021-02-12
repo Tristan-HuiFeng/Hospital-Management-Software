@@ -97,7 +97,6 @@
       <xs:element minOccurs="0" name="DOB" type="xs:dateTime" />
       <xs:element minOccurs="0" name="NRIC" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="age" type="xs:int" />
       <xs:element minOccurs="0" name="allergies" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="citizenship" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />

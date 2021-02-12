@@ -104,7 +104,7 @@ namespace WCF_Service_Library
         public int CreatePatientRecord(
            int patientid,
            string firstname, string lastname,
-           string NRIC, DateTime DOB, int age, string sex,
+           string NRIC, DateTime DOB, string sex,
            string nationality, string citizenship,
            string postalcode, string address,
            string allergies, string medicalhistory, string phonenumber,
@@ -113,13 +113,26 @@ namespace WCF_Service_Library
         {
             PatientRecord patient = new PatientRecord(
                 patientid, firstname, lastname,
-                NRIC, DOB, age, sex,
+                NRIC, DOB, sex,
                 nationality, citizenship,
                 postalcode, address,
                 allergies, medicalhistory,
                 phonenumber, homenumber, email,
                 createdDate, updateDate, recordDisabled);
             return patient.Insert();
+        }
+
+        public int UpdatePatientByID(
+            int patientID, string fname, string lname,
+            string nric, string sex, DateTime dob,
+            string nationality, string citizenship,
+            string postalCode, string address, string allergies,
+            string medicalHistory,
+            string phoneNumber, string homeNumber,
+            string email, DateTime update_date)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.UpdatePatientByID(patientID,fname,lname,nric,sex,dob,nationality,citizenship,postalCode,address,allergies, medicalHistory,phoneNumber,homeNumber,email, update_date);
         }
     }
 }
