@@ -9,7 +9,8 @@
     </asp:ContentPlaceHolder>
 
     <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <link rel="stylesheet" href="~/src/css/test2.css" type="text/css" />
+    <link rel="stylesheet" href="~/src/css/staff-main.css" type="text/css" />
+    <link rel="stylesheet" href="~/src/css/health-professional.css" type="text/css" />
 </head>
 <body>
     <nav id="mySideNav" class="sidenav">
@@ -17,7 +18,7 @@
         <div style="display: none" id="opened-side-nav">
             <div class="sidenav-links">
                 <a runat="server" href="~/HealthProfessional/Dashboard">Home</a>
-                <a runat="server" href="~/HealthProfessional/MedicalRecord">Medical Records</a>
+                <a runat="server" href="~/HealthProfessional/MedicalRecordList">Medical Records</a>
                 <a runat="server" href="~/HealthProfessional/PatientRecord">Patient Database</a>
                 <a runat="server" href="~/HealthProfessional/EquipmentServiceRequest">Equipment Service</a>
                 <a runat="server" href="~/HealthProfessional/LabServiceRequest">Lab Service</a>
@@ -71,7 +72,7 @@
     </nav>-->
     <!-- end of side nav -->
     <!-- end of navigation -->
-    <form id="form1" runat="server">
+    <form id="hp_form" runat="server">
         <div id="shadow"></div>
         <div id="hp-content" style="margin-left:60px">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">

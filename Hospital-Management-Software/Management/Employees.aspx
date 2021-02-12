@@ -5,39 +5,49 @@
 
     <div class="card shadow-sm p-3 mb-5 bg-white rounded" style="width: 40%;">
         <div class="card-body">
-            <div class="input-group">
-                <asp:TextBox CssClass="bg-light border-0 small form-control" placeholder="Search for ..." ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:Panel ID="Panel1" runat="server" DefaultButton="btnSearch">
+                <div class="input-group">
+                <asp:TextBox CssClass="bg-light border-0 small form-control" placeholder="Search for ..." ID="tbSearch" runat="server"></asp:TextBox>
                 <div class="input-group-append">
-                    <asp:HyperLink CssClass="btn btn-primary" ID="HyperLink1" runat="server"><i class="fa fa-search" aria-hidden="true"></i></asp:HyperLink>
+                    <asp:LinkButton CssClass="btn btn-primary" ID="btnSearch" runat="server" OnClick="btnSearch_Click"><i class="fa fa-search" aria-hidden="true"></i></asp:LinkButton>
                 </div>
             </div>
+            </asp:Panel>
             <br />
             <p class="card-text">
-                <asp:DropDownList CssClass="btn btn-primary" ID="DropDownList1" runat="server">
-                    <asp:ListItem Selected="True" hidden="true">+2 Filters</asp:ListItem>
+                <asp:DropDownList CssClass="btn btn-primary" ID="ddlFilter" runat="server">
+                    <asp:ListItem Selected="True" hidden="true">Filters</asp:ListItem>
                     <asp:ListItem>Gender</asp:ListItem>
                     <asp:ListItem>DOB</asp:ListItem>
                 </asp:DropDownList>
+
+                <asp:DropDownList CssClass="btn btn-primary" ID="ddlOrder" runat="server">
+                    <asp:ListItem>ASC</asp:ListItem>
+                    <asp:ListItem>DESC</asp:ListItem>
+                </asp:DropDownList>
+
+                <asp:LinkButton CssClass="btn btn-primary" ID="btnFilter" runat="server" OnClick="btnFilter_Click"><i class="fa fa-arrow-right" aria-hidden="true"></i></asp:LinkButton>
+                <asp:Button CssClass="btn btn-primary mr-1" ID="btnResetFilter" runat="server" Text="Reset" OnClick="btnResetFilter_Click"/>
             </p>
-            <asp:Button CssClass="btn btn-info btn-sm" ID="Button1" runat="server" Text="+New Record" />
+            <asp:HyperLink CssClass="btn btn-info" ID="HyperLink1" runat="server" NavigateUrl="~/Management/AddEmployee.aspx">+New Record</asp:HyperLink>
 
         </div>
     </div>
     <br />
     <div class="shadow rounded-corners">
-        <asp:GridView AutoGenerateColumns="False" runat="server" ID="GridView1" HorizontalAlign="Center" CssClass="Grid table table-condensed table-hover" AllowPaging="True" PageSize="5">
+        <asp:GridView AutoGenerateColumns="false" runat="server" ID="GridView1" HorizontalAlign="Center" CssClass="Grid table table-condensed table-hover" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">
             <Columns>
-                <asp:BoundField DataField="Status" HeaderText="Status" />
-                <asp:BoundField DataField="First Name" HeaderText="First Name" />
-                <asp:BoundField DataField="Last Name" HeaderText="Last Name" />
-                <asp:BoundField DataField="E-Mail" HeaderText="E-Mail" />
+                <asp:BoundField DataField="Nric" HeaderText="NRIC" />
+                <asp:BoundField DataField="FirstName" HeaderText="First Name" />
+                <asp:BoundField DataField="LastName" HeaderText="Last Name" />
+                <asp:BoundField DataField="Email" HeaderText="E-Mail" />
+                <asp:BoundField DataField="DOB" HeaderText="Birth Date" DataFormatString="{0:d}" HtmlEncode="false"/>
                 <asp:BoundField DataField="Gender" HeaderText="Gender" />
-                <asp:BoundField DataField="Location" HeaderText="Location" />
-                <asp:BoundField DataField="Date of Birth" HeaderText="Date of Birth" />
-                <asp:TemplateField HeaderText="">
+                <asp:TemplateField HeaderText="Edit | Contract">
                     <ItemTemplate>
-                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <asp:LinkButton CssClass="btn m-0 p-0" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Eval("Nric") %>'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></asp:LinkButton>
+                        <asp:LinkButton CssClass="btn m-0 p-0" ID="btnContract" runat="server" OnClick="btnContract_Click" CommandArgument='<%#Eval("Nric") %>'><i class="fa fa-file" aria-hidden="true"></i></asp:LinkButton>                        
+                        <%--<i class="fa fa-money" aria-hidden="true"></i>--%>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

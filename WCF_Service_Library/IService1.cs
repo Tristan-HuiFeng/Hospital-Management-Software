@@ -19,7 +19,8 @@ namespace WCF_Service_Library
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        // TODO: Add your service operations heres
+        /* Start of Health Professional's stuffs */
+        /* Start of Hui Feng's code */
 
         [OperationContract]
         EquipmentServiceRecord GetEquipmentServiceRecordById(int id);
@@ -43,7 +44,7 @@ namespace WCF_Service_Library
         List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
 
         [OperationContract]
-        List<MedicalRecord> GetAllMedicalRecord();
+        MedicalRecord GetMedicalRecordByID(int id);
 
         [OperationContract]
         List<PatientRecord> GetAllPatientRecords();
@@ -61,6 +62,60 @@ namespace WCF_Service_Library
            string homenumber, string email,
            DateTime createdDate, DateTime updateDate,
            string recordDisabled);
+        List<MedicalRecord> GetAllMedicalRecord();
+        
+        [OperationContract]
+        DataTable GetMedicalRecordTableView();
+        /* Health Professional's stuffs */
+        /* End of Hui Feng's code */
+
+        // Management
+        [OperationContract]
+        List<Employee> GetAllEmployee();
+
+        [OperationContract]
+        List<Employee> GetEmployeeByName(string name);
+
+        [OperationContract]
+        List<Employee> GetEmployeeSortedByDOB(int order);
+
+        [OperationContract]
+        List<Employee> GetEmployeeSortedByGender(int order);
+
+        [OperationContract]
+        List<Employee> GetEmployeeByNRIC(string nric);
+
+        [OperationContract]
+        int CreateEmployee(string nric, string firstname, string lastname, string email,
+            DateTime dob, char gender, string address, string department,
+            string position, string nationality, string healthdeclaration,
+            string loginid, string password, string jobfunction, string image);
+
+        [OperationContract]
+        int UpdateEmployee(string nric, string firstname, string lastname, string email,
+            DateTime dob, char gender, string address, string department,
+            string position, string nationality, string healthdeclaration,
+            string loginid, string password, string jobfunction, string image);
+
+        [OperationContract]
+        string GetEmployeeID(string nric);
+
+        [OperationContract]
+        int CreateContract(string salary, string benefits, string workingHours, string holidays, string vacation, DateTime create_date, string employeeID);
+
+        [OperationContract]
+        List<ContractRecord> GetContractByEmployeeID(string id);
+
+        
+
+        [OperationContract]
+        tempPatient GetPatientByID(string id);
+
+        [OperationContract]
+        int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, 
+            string treatment, DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
+
+
 
         [OperationContract]
         int DisablePatientByID(int patientID);

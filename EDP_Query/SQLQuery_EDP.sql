@@ -34,13 +34,9 @@ CREATE TABLE [dbo].[MEDICAL_APPOINTMENT_RECORD] (
 CREATE TABLE [dbo].[FEEDBACK] (
     [Feedback_ID]     INT           IDENTITY (1, 1) NOT NULL,
     [Feedback]        VARCHAR (MAX) NOT NULL,
+	[Subject]        VARCHAR (MAX) 	NOT NULL,
     [Name]            VARCHAR (64)  NULL,
-    [Email]           NVARCHAR (32) NULL,
-    [Mobile Number]   VARCHAR (64)  NULL,
-    [Further_Contact] BIT           NULL,
-    [Patient_ID]      INT           NULL,
-    PRIMARY KEY CLUSTERED ([Feedback_ID] ASC),
-    CONSTRAINT [FK_Patient_ID_Feedback] FOREIGN KEY ([Patient_ID]) REFERENCES [dbo].[PATIENT] ([Patient_ID])
+    [Email]           NVARCHAR (32) NULL
 );
 
 CREATE TABLE [dbo].[EMPLOYEE] (
@@ -56,9 +52,10 @@ CREATE TABLE [dbo].[EMPLOYEE] (
     [Position]           NVARCHAR (64)  NOT NULL,
     [Nationality]        NVARCHAR (64)  NOT NULL,
     [Health_Declaration] NVARCHAR (MAX) NULL,
-    [Login_ID]           NVARCHAR (64)  NOT NULL,
-    [Password]           NVARCHAR (64)  NOT NULL,
-    [Job_Function]       NVARCHAR (64)  NOT NULL,
+    [Login_ID]           NVARCHAR (64)  NULL,
+    [Password]           NVARCHAR (64)  NULL,
+    [Job_Function]       NVARCHAR (64)  NULL,
+    [Profile_Image]      NVARCHAR (64)  NULL,
     PRIMARY KEY CLUSTERED ([Employee_ID] ASC)
 );
 
@@ -71,8 +68,8 @@ CREATE TABLE [dbo].[MEDICAL_RECORD] (
     [Diagnosis]         NVARCHAR (MAX) NOT NULL,
     [Treatment]         NVARCHAR (MAX) NOT NULL,
     [Date]              DATETIME       NOT NULL,
-    [Prescriptions]     NVARCHAR (MAX) NOT NULL,
-    [Remarks]           NVARCHAR (MAX) NOT NULL,
+    [Prescriptions]     NVARCHAR (MAX) NULL,
+    [Remarks]           NVARCHAR (MAX) NULL,
     [Patient_ID]        INT            NOT NULL,
     [Employee_ID]       INT            NOT NULL,
     PRIMARY KEY CLUSTERED ([Medical_Record_ID] ASC),
@@ -124,6 +121,7 @@ CREATE TABLE [dbo].[CONTRACT] (
     [Contract_ID] INT           IDENTITY (1, 1) NOT NULL,
     [Salary]      MONEY         NOT NULL,
     [Benefits]    NVARCHAR (64) NOT NULL,
+    [Working_Hours] NVARCHAR(64) NOT NULL,
     [Holidays]    NVARCHAR (64) NOT NULL,
     [Vacation]    NVARCHAR (64) NOT NULL,
     [Create_Date] DATETIME      NOT NULL,
@@ -151,8 +149,6 @@ CREATE TABLE [dbo].[ROLE] (
     PRIMARY KEY CLUSTERED ([Role_ID] ASC)
 );
 
-
-
 CREATE TABLE [dbo].[RESOURCE] (
     [Resource_ID]   INT          IDENTITY (1, 1) NOT NULL,
     [Resource_Name] VARCHAR (64) NOT NULL,
@@ -167,6 +163,6 @@ CREATE TABLE [dbo].[ROLE_PERMISSION] (
     [Edit]        BIT NOT NULL,
     [Delete]      BIT NOT NULL,
     PRIMARY KEY CLUSTERED ([Role_ID] ASC, [Resource_ID] ASC),
-    CONSTRAINT [FK_Recource_ID_Permission] FOREIGN KEY ([Resource_ID]) REFERENCES [dbo].[RESOURCE] ([Resource_ID]),
+    CONSTRAINT [FK_Resource_ID_Permission] FOREIGN KEY ([Resource_ID]) REFERENCES [dbo].[RESOURCE] ([Resource_ID]),
     CONSTRAINT [FK_Role_ID_Permission] FOREIGN KEY ([Role_ID]) REFERENCES [dbo].[ROLE] ([Role_ID])
 );

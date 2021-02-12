@@ -51,12 +51,12 @@ namespace Hospital_Management_Software.HealthProfessional
         protected global::System.Web.UI.WebControls.Button btn_createMedicalRecord;
 
         /// <summary>
-        /// GridView1 control.
+        /// gv_MedicalRecordList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gv_MedicalRecordList;
     }
 }

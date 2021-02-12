@@ -124,6 +124,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetMedicalRecordByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMedicalRecordByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetMedicalRecordByIDResult" nillable="true" type="q10:MedicalRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAllMedicalRecord">
     <xs:complexType>
       <xs:sequence />
@@ -132,7 +146,7 @@
   <xs:element name="GetAllMedicalRecordResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllMedicalRecordResult" nillable="true" type="q10:ArrayOfMedicalRecord" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllMedicalRecordResult" nillable="true" type="q11:ArrayOfMedicalRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -233,6 +247,44 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="UpdatePatientByIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPatientByIDResult" nillable="true" type="q12:tempPatient" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMedicalRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bloodPressure" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="respirationRate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bodyTemperature" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pulseRate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="diagnosis" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="treatment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="consultationDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="doctorID" type="xs:int" />
+        <xs:element minOccurs="0" name="patientID" type="xs:int" />
+        <xs:element minOccurs="0" name="prescription" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMedicalRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateMedicalRecordResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
