@@ -15,33 +15,6 @@ namespace Hospital_Management_Software.HealthProfessional
     {
 
         /// <summary>
-        /// ValidationSummary_medicalRecord control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary_medicalRecord;
-
-        /// <summary>
-        /// ValidationSummary_medicalRecord2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary_medicalRecord2;
-
-        /// <summary>
-        /// debugging control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label debugging;
-
-        /// <summary>
         /// lb_doctorName control.
         /// </summary>
         /// <remarks>
@@ -105,274 +78,166 @@ namespace Hospital_Management_Software.HealthProfessional
         protected global::System.Web.UI.WebControls.Button btn_searchPatient;
 
         /// <summary>
-        /// RequiredFieldValidator_Patient control.
+        /// lb_patientFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator_Patient;
+        protected global::System.Web.UI.WebControls.Label lb_patientFirstName;
 
         /// <summary>
-        /// lb_patientID control.
+        /// tb_patientFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_patientID;
+        protected global::System.Web.UI.WebControls.TextBox tb_patientFirstName;
 
         /// <summary>
-        /// tb_patientID control.
+        /// lb_patientLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_patientID;
+        protected global::System.Web.UI.WebControls.Label lb_patientLastName;
 
         /// <summary>
-        /// lb_patientName control.
+        /// tb_patientLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_patientName;
+        protected global::System.Web.UI.WebControls.TextBox tb_patientLastName;
 
         /// <summary>
-        /// tb_patientName control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_patientName;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// lb_patientContact control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_patientContact;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// tb_patientContact control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_patientContact;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// lb_bloodPressure control.
+        /// TextBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_bloodPressure;
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// tb_bloodPressure control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_bloodPressure;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// rfv_bloodPressure control.
+        /// TextBox3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_bloodPressure;
+        protected global::System.Web.UI.WebControls.TextBox TextBox3;
 
         /// <summary>
-        /// lb_respirationRate control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_respirationRate;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// tb_respirationRate control.
+        /// TextBox4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_respirationRate;
+        protected global::System.Web.UI.WebControls.TextBox TextBox4;
 
         /// <summary>
-        /// rfv_respirationRate control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_respirationRate;
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// rfv_respirationRate2 control.
+        /// TextBox5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rfv_respirationRate2;
+        protected global::System.Web.UI.WebControls.TextBox TextBox5;
 
         /// <summary>
-        /// lb_temperature control.
+        /// Label6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_temperature;
+        protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// tb_temperature control.
+        /// TextBox6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_temperature;
+        protected global::System.Web.UI.WebControls.TextBox TextBox6;
 
         /// <summary>
-        /// rfv_temperature control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_temperature;
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// rfv_temperature2 control.
+        /// TextBox7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rfv_temperature2;
-
-        /// <summary>
-        /// lb_pulseRate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_pulseRate;
-
-        /// <summary>
-        /// tb_pulseRate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_pulseRate;
-
-        /// <summary>
-        /// rfv_pulseRate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_pulseRate;
-
-        /// <summary>
-        /// rfv_pulseRate2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rfv_pulseRate2;
-
-        /// <summary>
-        /// lb_diagnosis control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_diagnosis;
-
-        /// <summary>
-        /// tb_diagnosis control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_diagnosis;
-
-        /// <summary>
-        /// rfv_diagnosis control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_diagnosis;
-
-        /// <summary>
-        /// lb_treatment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_treatment;
-
-        /// <summary>
-        /// tb_treatment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_treatment;
-
-        /// <summary>
-        /// rfv_treatment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_treatment;
-
-        /// <summary>
-        /// lb_presecription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_presecription;
-
-        /// <summary>
-        /// tb_presecription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_presecription;
+        protected global::System.Web.UI.WebControls.TextBox TextBox7;
 
         /// <summary>
         /// lb_remarks control.
@@ -393,12 +258,12 @@ namespace Hospital_Management_Software.HealthProfessional
         protected global::System.Web.UI.WebControls.TextBox tb_remarks;
 
         /// <summary>
-        /// btn_createRecord control.
+        /// btn_sbumit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_createRecord;
+        protected global::System.Web.UI.WebControls.Button btn_sbumit;
     }
 }

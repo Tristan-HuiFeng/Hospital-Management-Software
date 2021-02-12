@@ -33,38 +33,26 @@ namespace Hospital_Management_Software.HealthProfessional
             }*/
 
 
-            GetMedicalData();
+            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+
+
+            List<MedicalRecord> eList = new List<MedicalRecord>();
+            eList = client.GetAllMedicalRecord().ToList<MedicalRecord>();
+
+            //DataTable dt = client.GetMedicalRecordTableView();
+
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
         }
 
         private void GetMedicalData()
         {
-            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
 
-            //DataTable dt = client.GetMedicalRecordTableView();
-
-            gv_MedicalRecordList.DataSource = dt;
-            gv_MedicalRecordList.DataBind();
         }
 
         protected void btn_createMedicalRecord_Click(object sender, EventArgs e)
         {
             Response.Redirect("CreateMedicalRecord.aspx");
-        }
-
-        protected void gv_MedicalRecordList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            GridViewRow row = gv_MedicalRecordList.SelectedRow;
-            Session["Medical_Record_ID"] = row.Cells[1].Text;
-            Response.Redirect("ViewMedicalRecord.aspx");
-        }
-
-        protected void gv_MedicalRecordList_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-
-            gv_MedicalRecordList.DataSource = client.GetMedicalRecordTableView();
-            gv_MedicalRecordList.PageIndex = e.NewPageIndex;
-            gv_MedicalRecordList.DataBind();
         }
     }
 }

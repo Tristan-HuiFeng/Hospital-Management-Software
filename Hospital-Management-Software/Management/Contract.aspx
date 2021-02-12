@@ -21,17 +21,17 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbEmployeeID" runat="server" Text="A001"></asp:Label>
+                                                <asp:Label ID="Label2" runat="server" Text="A001"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <asp:Label ID="Label5" runat="server" Text="Contract Date" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label5" runat="server" Text="Date Join" Font-Bold="True"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbDate" runat="server" Text="01-05-2010"></asp:Label>
+                                                <asp:Label ID="Label10" runat="server" Text="01-05-2010"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -43,7 +43,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbEmployeeName" runat="server" Text="John Smith"></asp:Label>
+                                                <asp:Label ID="Label16" runat="server" Text="John Smith"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-2">
@@ -53,7 +53,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbDepartment" runat="server" Text="Finance"></asp:Label>
+                                                <asp:Label ID="Label18" runat="server" Text="Finance"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -65,7 +65,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbEmail" runat="server" Text="existing@employee.com"></asp:Label>
+                                                <asp:Label ID="Label20" runat="server" Text="existing@employee.com"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-2">
@@ -75,7 +75,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbPosition" runat="server" Text="Accountanat"></asp:Label>
+                                                <asp:Label ID="Label22" runat="server" Text="Accountant"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbWorkingHours" runat="server" Text="10:00 to 18:00"></asp:Label>
+                                                <asp:Label ID="Label4" runat="server" Text="10:00 to 18:00"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-2">
@@ -98,7 +98,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbLocation" runat="server" Text="On-site(Office) or Remote"></asp:Label>
+                                                <asp:Label ID="Label7" runat="server" Text="On-site(Office) or Remote"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +110,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbSalary" runat="server" Text="$2500"></asp:Label>
+                                                <asp:Label ID="Label35" runat="server" Text="$2500"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-2">
@@ -145,60 +145,36 @@
                                     <div class="form-row">
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <asp:Label ID="Label9" runat="server" Text="Child care" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label9" runat="server" Text="Medical" Font-Bold="True"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbChildCare" runat="server" Text="No"></asp:Label>
+                                                <asp:Label ID="Label13" runat="server" Text="Yes"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <asp:Label ID="Label12" runat="server" Text="Dental Insurance" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label12" runat="server" Text="Insurance" Font-Bold="True"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbDentalInsurance" runat="server" Text="No"></asp:Label>
+                                                <asp:Label ID="Label14" runat="server" Text="Yes"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <asp:Label ID="Label36" runat="server" Text="Health Insurance" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label15" runat="server" Text="Dental Care" Font-Bold="True"></asp:Label>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <asp:Label ID="lbHealthInsurance" runat="server" Text="No"></asp:Label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="auto-style1">
-                                            <div class="form-group">
-                                                <asp:Label ID="Label2" runat="server" Text="Pension" Font-Bold="True"></asp:Label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <asp:Label ID="lbPension" runat="server" Text="No"></asp:Label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="col-md-2">
-                                            <div class="form-group">
-                                                <asp:Label ID="Label7" runat="server" Text="Vision Care" Font-Bold="True"></asp:Label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <asp:Label ID="lbVisionCare" runat="server" Text="No"></asp:Label>
+                                                <asp:Label ID="Label36" runat="server" Text="No"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -217,7 +193,7 @@
                                     <div class="form-row">
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <asp:Label ID="lbHolidays" runat="server" Text="June of every year" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label24" runat="server" Text="June of every year" Font-Bold="True"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -232,7 +208,7 @@
                                     <div class="form-row">
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <asp:Label ID="lbVacation" runat="server" Text="14 Days" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label28" runat="server" Text="14 Days" Font-Bold="True"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -253,10 +229,9 @@
                                     </div>
                                     <hr />
                                     <div class="form-group">
-                                        <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="btnRenew" runat="server" Text="Renew" OnClick="btnRenew_Click" />
-                                        <asp:Button Style="float: right;" OnClientClick="javascript:window.print();" CssClass="btn btn-primary btn-sm mx-2" ID="Button3" runat="server" Text="Print" />
-                                        <%--<asp:Button Style="float: right;" CssClass="btn btn-danger btn-sm mx-2" ID="Button1" runat="server" Text="Terminate" />--%>
-                                        <asp:Button CausesValidation="false" UseSubmitBehavior="false" Style="float:right;" CssClass="btn btn-secondary btn-sm mx-2" ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click"/>                                    
+                                        <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="Button2" runat="server" Text="Renew" />
+                                        <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="Button3" runat="server" Text="Print" />
+                                        <asp:Button Style="float: right;" CssClass="btn btn-danger btn-sm mx-2" ID="Button1" runat="server" Text="Terminate" />
                                     </div>
                                 </form>
                             </div>
@@ -267,19 +242,3 @@
         </div>
     </div>
 </asp:Content>
-<asp:Content ID="Content2" runat="server" contentplaceholderid="head">
-    <style type="text/css">
-        .auto-style1 {
-            position: relative;
-            width: 100%;
-            -ms-flex: 0 0 16.666667%;
-            flex: 0 0 16.666667%;
-            max-width: 16.666667%;
-            left: 0px;
-            top: 0px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-    </style>
-</asp:Content>
-

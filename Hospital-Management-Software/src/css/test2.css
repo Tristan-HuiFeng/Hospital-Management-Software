@@ -2,6 +2,60 @@
     height: 100%;
 }
 
+/* nav */
+.sidenav {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    z-index: 300;
+    top: 0;
+    left: 0;
+    background-color: #0080ff;
+    overflow-x: hidden;
+    transition: 0.1s;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.sidenav-links {
+    margin-top: 20px;
+}
+
+#closed-side-nav span {
+    color: #FFFFFF;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: block;
+    transition: 0.3s;
+} 
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgba(255,255,255,.70);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #F1984D;
+}
+
+/* end of side nav*/
+
+/* dim background*/
+#shadow {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+/* end of dim background*/
 
 /* Login */
 
@@ -139,24 +193,6 @@ tr:nth-child(odd) {
 .myPager tbody tr td {
     text-align: right;
 }
-
-.record-label {
-    color:#DC298D;
-    font-weight:bold;
-
-}
-
-.record-label2 {
-    color: #06abeb;
-    font-weight: bold;
-}
-
-.hr-style {
-    border: 1px solid #212070;
-    /*max-width: 300px;*/
-    margin-left: 0;
-}
-
 
 /*
 .myGrid td, .myGrid th {

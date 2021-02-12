@@ -24,13 +24,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// lbEmployeeID control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbEmployeeID;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
         /// Label5 control.
@@ -42,13 +42,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// lbDate control.
+        /// Label10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbDate;
+        protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
         /// Label11 control.
@@ -60,13 +60,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
-        /// lbEmployeeName control.
+        /// Label16 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbEmployeeName;
+        protected global::System.Web.UI.WebControls.Label Label16;
 
         /// <summary>
         /// Label17 control.
@@ -78,13 +78,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label17;
 
         /// <summary>
-        /// lbDepartment control.
+        /// Label18 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbDepartment;
+        protected global::System.Web.UI.WebControls.Label Label18;
 
         /// <summary>
         /// Label19 control.
@@ -96,13 +96,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label19;
 
         /// <summary>
-        /// lbEmail control.
+        /// Label20 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbEmail;
+        protected global::System.Web.UI.WebControls.Label Label20;
 
         /// <summary>
         /// Label21 control.
@@ -114,13 +114,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label21;
 
         /// <summary>
-        /// lbPosition control.
+        /// Label22 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbPosition;
+        protected global::System.Web.UI.WebControls.Label Label22;
 
         /// <summary>
         /// Label3 control.
@@ -132,13 +132,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// lbWorkingHours control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbWorkingHours;
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
         /// Label6 control.
@@ -150,13 +150,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// lbLocation control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbLocation;
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
         /// Label34 control.
@@ -168,13 +168,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label34;
 
         /// <summary>
-        /// lbSalary control.
+        /// Label35 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbSalary;
+        protected global::System.Web.UI.WebControls.Label Label35;
 
         /// <summary>
         /// Label8 control.
@@ -195,13 +195,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
-        /// lbChildCare control.
+        /// Label13 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbChildCare;
+        protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
         /// Label12 control.
@@ -213,13 +213,22 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
-        /// lbDentalInsurance control.
+        /// Label14 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbDentalInsurance;
+        protected global::System.Web.UI.WebControls.Label Label14;
+
+        /// <summary>
+        /// Label15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
         /// Label36 control.
@@ -231,51 +240,6 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label36;
 
         /// <summary>
-        /// lbHealthInsurance control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbHealthInsurance;
-
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-
-        /// <summary>
-        /// lbPension control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbPension;
-
-        /// <summary>
-        /// Label7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
-
-        /// <summary>
-        /// lbVisionCare control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbVisionCare;
-
-        /// <summary>
         /// Label23 control.
         /// </summary>
         /// <remarks>
@@ -285,13 +249,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label23;
 
         /// <summary>
-        /// lbHolidays control.
+        /// Label24 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbHolidays;
+        protected global::System.Web.UI.WebControls.Label Label24;
 
         /// <summary>
         /// Label25 control.
@@ -303,13 +267,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label25;
 
         /// <summary>
-        /// lbVacation control.
+        /// Label28 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbVacation;
+        protected global::System.Web.UI.WebControls.Label Label28;
 
         /// <summary>
         /// Label26 control.
@@ -330,13 +294,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label27;
 
         /// <summary>
-        /// btnRenew control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRenew;
+        protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
         /// Button3 control.
@@ -348,12 +312,12 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Button Button3;
 
         /// <summary>
-        /// btnBack control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBack;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

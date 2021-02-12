@@ -62,12 +62,6 @@
   <wsdl:message name="IService1_GetAllMedicalRecordByEmployeeID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllMedicalRecordByEmployeeIDResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetMedicalRecordByID_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetMedicalRecordByID" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetMedicalRecordByID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetMedicalRecordByIDResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_GetAllMedicalRecord_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllMedicalRecord" />
   </wsdl:message>
@@ -103,78 +97,6 @@
   </wsdl:message>
   <wsdl:message name="IService1_UpdatePatientByID_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePatientByIDResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetAllEmployee_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllEmployee" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetAllEmployee_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllEmployeeResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeByName_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeByName" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeByName_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeByNameResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeSortedByDOB_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeSortedByDOB" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeSortedByDOB_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeSortedByDOBResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeSortedByGender_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeSortedByGender" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeSortedByGender_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeSortedByGenderResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeByNRIC_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeByNRIC" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeByNRIC_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeByNRICResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_CreateEmployee_InputMessage">
-    <wsdl:part name="parameters" element="tns:CreateEmployee" />
-  </wsdl:message>
-  <wsdl:message name="IService1_CreateEmployee_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CreateEmployeeResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_UpdateEmployee_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateEmployee" />
-  </wsdl:message>
-  <wsdl:message name="IService1_UpdateEmployee_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdateEmployeeResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeID_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeID" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetEmployeeID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetEmployeeIDResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_CreateContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:CreateContract" />
-  </wsdl:message>
-  <wsdl:message name="IService1_CreateContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CreateContractResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetContractByEmployeeID_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetContractByEmployeeID" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetContractByEmployeeID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetContractByEmployeeIDResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetPatientByID_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPatientByID" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetPatientByID_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPatientByIDResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_CreateMedicalRecord_InputMessage">
-    <wsdl:part name="parameters" element="tns:CreateMedicalRecord" />
-  </wsdl:message>
-  <wsdl:message name="IService1_CreateMedicalRecord_OutputMessage">
-    <wsdl:part name="parameters" element="tns:CreateMedicalRecordResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
@@ -213,10 +135,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeID" message="tns:IService1_GetAllMedicalRecordByEmployeeID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeIDResponse" message="tns:IService1_GetAllMedicalRecordByEmployeeID_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetMedicalRecordByID">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMedicalRecordByID" message="tns:IService1_GetMedicalRecordByID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMedicalRecordByIDResponse" message="tns:IService1_GetMedicalRecordByID_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetAllMedicalRecord">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecord" message="tns:IService1_GetAllMedicalRecord_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecordResponse" message="tns:IService1_GetAllMedicalRecord_OutputMessage" />
@@ -240,54 +158,6 @@
     <wsdl:operation name="UpdatePatientByID">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePatientByID" message="tns:IService1_UpdatePatientByID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePatientByIDResponse" message="tns:IService1_UpdatePatientByID_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetAllEmployee">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllEmployee" message="tns:IService1_GetAllEmployee_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllEmployeeResponse" message="tns:IService1_GetAllEmployee_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeByName">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmployeeByName" message="tns:IService1_GetEmployeeByName_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmployeeByNameResponse" message="tns:IService1_GetEmployeeByName_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeSortedByDOB">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmployeeSortedByDOB" message="tns:IService1_GetEmployeeSortedByDOB_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmployeeSortedByDOBResponse" message="tns:IService1_GetEmployeeSortedByDOB_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeSortedByGender">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmployeeSortedByGender" message="tns:IService1_GetEmployeeSortedByGender_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmployeeSortedByGenderResponse" message="tns:IService1_GetEmployeeSortedByGender_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeByNRIC">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmployeeByNRIC" message="tns:IService1_GetEmployeeByNRIC_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmployeeByNRICResponse" message="tns:IService1_GetEmployeeByNRIC_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CreateEmployee">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateEmployee" message="tns:IService1_CreateEmployee_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateEmployeeResponse" message="tns:IService1_CreateEmployee_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdateEmployee">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateEmployee" message="tns:IService1_UpdateEmployee_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateEmployeeResponse" message="tns:IService1_UpdateEmployee_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeID">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmployeeID" message="tns:IService1_GetEmployeeID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmployeeIDResponse" message="tns:IService1_GetEmployeeID_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CreateContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateContract" message="tns:IService1_CreateContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateContractResponse" message="tns:IService1_CreateContract_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetContractByEmployeeID">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetContractByEmployeeID" message="tns:IService1_GetContractByEmployeeID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetContractByEmployeeIDResponse" message="tns:IService1_GetContractByEmployeeID_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetPatientByID">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPatientByID" message="tns:IService1_GetPatientByID_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPatientByIDResponse" message="tns:IService1_GetPatientByID_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="CreateMedicalRecord">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateMedicalRecord" message="tns:IService1_CreateMedicalRecord_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateMedicalRecordResponse" message="tns:IService1_CreateMedicalRecord_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -373,15 +243,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetMedicalRecordByID">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetMedicalRecordByID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetAllMedicalRecord">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAllMedicalRecord" style="document" />
       <wsdl:input>
@@ -429,114 +290,6 @@
     </wsdl:operation>
     <wsdl:operation name="UpdatePatientByID">
       <soap:operation soapAction="http://tempuri.org/IService1/UpdatePatientByID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetAllEmployee">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetAllEmployee" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeByName">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetEmployeeByName" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeSortedByDOB">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetEmployeeSortedByDOB" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeSortedByGender">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetEmployeeSortedByGender" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeByNRIC">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetEmployeeByNRIC" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CreateEmployee">
-      <soap:operation soapAction="http://tempuri.org/IService1/CreateEmployee" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdateEmployee">
-      <soap:operation soapAction="http://tempuri.org/IService1/UpdateEmployee" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetEmployeeID">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetEmployeeID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CreateContract">
-      <soap:operation soapAction="http://tempuri.org/IService1/CreateContract" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetContractByEmployeeID">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetContractByEmployeeID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPatientByID">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetPatientByID" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CreateMedicalRecord">
-      <soap:operation soapAction="http://tempuri.org/IService1/CreateMedicalRecord" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

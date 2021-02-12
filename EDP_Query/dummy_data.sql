@@ -7,28 +7,28 @@ INSERT dbo.EMPLOYEE
 VALUES ('T0000001D', 'Lance', 'Stroll', 'lancestroll@gmail.com', '19970101', 'M', '456 Street, Singapore', 'HR', 'Workplace Safety', 'Canadian', 'None', 'lancelot', '123', 'HR');
 
 INSERT dbo.CONTRACT
-VALUES(4000, 'Free Healthcare', '14 Days Available', 'Every Year June', '20201010', 1);
+VALUES(4000, 'Free Healthcare', '14 Days Available', 'Every Year June', '20201010', 1)
 
 INSERT dbo.CONTRACT
-VALUES(3000, 'Free Healthcare, Discount On Items', '7 Days Available', 'Not Applicable', '20201011', 2);
+VALUES(3000, 'Free Healthcare, Discount On Items', '7 Days Available', 'Not Applicable', '20201011', 2)
 
 INSERT dbo.BANK_DETAIL
-VALUES('OCBC', '654-123456', 'Pierre Gasly', 1);
+VALUES('OCBC', '654-123456', 'Pierre Gasly', 1)
 
 INSERT dbo.BANK_DETAIL
-VALUES('DBS', '654-789123', 'Lance Stroll', 2);
+VALUES('DBS', '654-789123', 'Lance Stroll', 2)
 
 INSERT dbo.PAYROLL
-VALUES(4000, 500, NULL, '20200505', 1, 1);
+VALUES(4000, 500, NULL, '20200505', 1, 1)
 
 INSERT dbo.PAYROLL
-VALUES(3000, 500, '20200506', '20200505', 1, 2);
+VALUES(3000, 500, '20200506', '20200505', 1, 2)
 
 INSERT dbo.ATTENDANCE
-VALUES(1, '11/11/2020', 'Came to work', 'Not Applicable');
+VALUES(1, '11/11/2020', 'Came to work', 'Not Applicable')
 
 INSERT dbo.ATTENDANCE
-VALUES(2, '11/11/2020', 'Did not come', 'Was Sick');
+VALUES(2, '11/11/2020', 'Did not come', 'Was Sick')
 
 /* End of HR */
 
@@ -42,18 +42,18 @@ VALUES('Jasmine', 'Lim', 'S9876543D', '19980228', 'F', 'Singaporean', 'Permenant
 
 /* start of Feedback */
 INSERT [dbo].[FEEDBACK]
-VALUES ('Good service!', 'review', 'John Chua', 'johnchua@gmail.com');
+VALUES ('Good service!', 'John Chua', 'johnchua@gmail.com', '91234567', 0, 1)
 
 INSERT [dbo].[FEEDBACK]
-VALUES ('Lousy service! I faced a long waiting time.', 'complain', 'Jamine Lim', 'jasminelim@gmail.com');
+VALUES ('Lousy service! I faced a long waiting time.', 'Jamine Lim', 'jasminelim@gmail.com', '82345671', 0, 2)
 /* end of Feedback */
 
 /* start of Feedback */
 INSERT [dbo].[MEDICAL_APPOINTMENT_RECORD]
-VALUES ('12:35:00', '20201120', NULL, 'Room 501', 1);
+VALUES ('12:35:00', '20201120', NULL, 'Room 501', 1)
 
 INSERT [dbo].[MEDICAL_APPOINTMENT_RECORD]
-VALUES ('16:30:00', '20201221', NULL, 'Room 301', 2);
+VALUES ('16:30:00', '20201221', NULL, 'Room 301', 2)
 /* end of Feedback */
 
 /* start of Doctor */
