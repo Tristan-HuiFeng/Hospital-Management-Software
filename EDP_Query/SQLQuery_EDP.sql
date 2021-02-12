@@ -33,13 +33,9 @@ CREATE TABLE [dbo].[MEDICAL_APPOINTMENT_RECORD] (
 CREATE TABLE [dbo].[FEEDBACK] (
     [Feedback_ID]     INT           IDENTITY (1, 1) NOT NULL,
     [Feedback]        VARCHAR (MAX) NOT NULL,
+	[Subject]        VARCHAR (MAX) 	NOT NULL,
     [Name]            VARCHAR (64)  NULL,
-    [Email]           NVARCHAR (32) NULL,
-    [Mobile Number]   VARCHAR (64)  NULL,
-    [Further_Contact] BIT           NULL,
-    [Patient_ID]      INT           NULL,
-    PRIMARY KEY CLUSTERED ([Feedback_ID] ASC),
-    CONSTRAINT [FK_Patient_ID_Feedback] FOREIGN KEY ([Patient_ID]) REFERENCES [dbo].[PATIENT] ([Patient_ID])
+    [Email]           NVARCHAR (32) NULL
 );
 
 CREATE TABLE [dbo].[EMPLOYEE] (
