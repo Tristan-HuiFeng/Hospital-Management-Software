@@ -18,18 +18,39 @@ namespace Hospital_Management_Software.Views.EPR
                 lb_genMsg.Visible = true;
                 lb_genMsg.Text = Session["SuccessPatientMsg"].ToString();
             }
-            RefreshGridView();
+            GridViewDisplayAll();
         }
 
-        private void RefreshGridView()
+        private void GridViewDisplayAll()
         {
             List<PatientRecord> patientList = new List<PatientRecord>();
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
             patientList = client.GetAllPatientRecords().ToList<PatientRecord>();
+            
 
             // using gridview to bind to the list of employee objects
             GV_patients.Visible = true;
             GV_patients.DataSource = patientList;
+            GV_patients.DataBind();
+        }
+
+        private void GridViewDisplayNoDisabled()
+        {
+            List<PatientRecord> patientList = new List<PatientRecord>();
+            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+            patientList = client.GetAllPatientRecords().ToList<PatientRecord>();
+            List<PatientRecord> patientListDisplay = new List<PatientRecord>();
+            foreach(PatientRecord i in patientList){
+                if(i.recordDisabled != "true")
+                {
+                    patientListDisplay.Add(i);
+                }
+            }
+
+
+            // using gridview to bind to the list of employee objects
+            GV_patients.Visible = true;
+            GV_patients.DataSource = patientListDisplay;
             GV_patients.DataBind();
         }
 
@@ -48,7 +69,6 @@ namespace Hospital_Management_Software.Views.EPR
                 int patientID = Convert.ToInt32(row.Cells[0].Text); //Get patientID
                 MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();//Init DB Client
                 client.DisablePatientByID(patientID);
-
             }
             if (e.CommandName == "EditRecord")
             {
@@ -58,6 +78,11 @@ namespace Hospital_Management_Software.Views.EPR
                 Session["patientID"] = patientID;
                 Response.Redirect("UpdateEPR", false);
             }
+
+        }
+
+        protected void cb_disabeVisible_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
