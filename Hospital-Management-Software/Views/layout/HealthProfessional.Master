@@ -22,7 +22,7 @@
                 <a runat="server" href="~/HealthProfessional/PatientRecord">Patient Database</a>
                 <a runat="server" href="~/HealthProfessional/EquipmentServiceRequest">Equipment Service</a>
                 <a runat="server" href="~/HealthProfessional/LabServiceRequest">Lab Service</a>
-                <a runat="server" href="#">Logout</a>
+                <a runat="server" href="~/Login/Logout">Logout</a>
             </div>
         </div>
          <!-- end of open side nav -->

@@ -33,6 +33,7 @@
 
         </div>
     </div>
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     <br />
     <div class="shadow rounded-corners">
         <asp:GridView AutoGenerateColumns="false" runat="server" ID="GridView1" HorizontalAlign="Center" CssClass="Grid table table-condensed table-hover" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">

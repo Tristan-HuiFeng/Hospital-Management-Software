@@ -35,12 +35,6 @@ namespace WCF_Service_Library
         List<LabServiceRecord> GetLabServiceRecordByEmployeeID(int empID);
 
         [OperationContract]
-        List<Resource> GetAllResource();
-
-        [OperationContract]
-        List<RolePermission> GetAllRolePermission();
-
-        [OperationContract]
         List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID);
 
         [OperationContract]
@@ -51,7 +45,52 @@ namespace WCF_Service_Library
         
         [OperationContract]
         DataTable GetMedicalRecordTableView();
+
+        [OperationContract]
+        string[] GetAccountInformation(string LoginID);
+
+        [OperationContract]
+        DataTable GetRoleUserListTableView(string role_id);
+
+        [OperationContract]
+        List<Role> GetRoleList();
+
+        [OperationContract]
+        List<Role> GetRoleList2();
+
+        [OperationContract]
+        DataTable GetRoleList_TableView();
+
+        [OperationContract]
+        Role GetRoleByID(string roleID);
+
+        [OperationContract]
+        UserAccount GetUserAccountByID(string user_id);
+
+        [OperationContract]
+        void updateUserAccStatus(string userID, bool isDisabled);
+
+        [OperationContract]
+        DataTable GetNoAccUserList_TableView();
+
+        [OperationContract]
+        string[] creationDetailsByEmpID(string emp_id);
+
+        [OperationContract]
+        void updateAccountCreationDetails(string asp_id, string emp_id);
+
         /* Health Professional's stuffs */
+
+        /*
+        [OperationContract]
+        List<Resource> GetAllResource();
+
+        [OperationContract]
+        List<RolePermission> GetAllRolePermission();
+        
+        [OperationContract]
+        void updateRoleStatus(string roleID, bool isDisabled);*/
+
         /* End of Hui Feng's code */
 
         // Management

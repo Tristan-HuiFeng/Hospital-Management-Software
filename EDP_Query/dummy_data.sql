@@ -1,10 +1,10 @@
 ﻿
 /* Start of HR */
 INSERT dbo.EMPLOYEE
-VALUES ('T0000000D', 'Pierre', 'Gasly', 'pierregasly@gmail.com', '19940101', 'M', '123 Street, Singapore', 'HR', 'HR Manager', 'French', 'None', 'pierregasly', '123', 'HR');
+VALUES ('T0000000D', 'Pierre', 'Gasly', 'pierregasly@gmail.com', '19940101', 'M', '123 Street, Singapore', 'HR', 'HR Manager', 'French', 'None', NULL, 'HR', NULL);
 
 INSERT dbo.EMPLOYEE
-VALUES ('T0000001D', 'Lance', 'Stroll', 'lancestroll@gmail.com', '19970101', 'M', '456 Street, Singapore', 'HR', 'Workplace Safety', 'Canadian', 'None', 'lancelot', '123', 'HR');
+VALUES ('T0000001D', 'Lance', 'Stroll', 'lancestroll@gmail.com', '19970101', 'M', '456 Street, Singapore', 'HR', 'Workplace Safety', 'Canadian', 'None', NULL, 'HR', NULL);
 
 INSERT dbo.CONTRACT
 VALUES(4000, 'Free Healthcare', '14 Days Available', 'Every Year June', '20201010', 1);

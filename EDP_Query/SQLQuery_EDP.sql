@@ -51,8 +51,7 @@ CREATE TABLE [dbo].[EMPLOYEE] (
     [Position]           NVARCHAR (64)  NOT NULL,
     [Nationality]        NVARCHAR (64)  NOT NULL,
     [Health_Declaration] NVARCHAR (MAX) NULL,
-    [Login_ID]           NVARCHAR (64)  NULL,
-    [Password]           NVARCHAR (64)  NULL,
+    [ASPNET_ID]          nvarchar(128)  NULL,
     [Job_Function]       NVARCHAR (64)  NULL,
     [Profile_Image]      NVARCHAR (64)  NULL,
     PRIMARY KEY CLUSTERED ([Employee_ID] ASC)

@@ -32,8 +32,25 @@ namespace Hospital_Management_Software.HealthProfessional
                 dt.Rows.Add(NewRow);
             }*/
 
+            Response.AppendHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+            Response.AppendHeader("Pragma", "no-cache"); // HTTP 1.0.
+            Response.AppendHeader("Expires", "0"); // Proxies.
 
-            GetMedicalData();
+            bool auth = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+
+            if (!auth)
+            {
+                Response.Redirect("~/Login/StaffLogin.aspx");
+            }
+            else if (!System.Web.HttpContext.Current.User.IsInRole("Doctor"))
+            {
+                Response.Redirect("~/ErrorPage/UnauthorisedAccess.aspx");
+            }
+            else
+            {
+                GetMedicalData();
+            }
+
         }
 
         private void GetMedicalData()

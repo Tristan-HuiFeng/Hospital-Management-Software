@@ -59,20 +59,6 @@ namespace WCF_Service_Library
             return objList;
         }
 
-        public List<Resource> GetAllResource()
-        {
-            Resource resource = new Resource();
-            List<Resource> objList = resource.SelectAll();
-            return objList;
-        }
-
-        public List<RolePermission> GetAllRolePermission()
-        {
-            RolePermission rp = new RolePermission();
-            List<RolePermission> objList = rp.SelectAll();
-            return objList;
-        }
-
         public List<MedicalRecord> GetAllMedicalRecordByEmployeeID(int empID)
         {
             MedicalRecord mr = new MedicalRecord();
@@ -96,7 +82,105 @@ namespace WCF_Service_Library
             MedicalRecord mr = new MedicalRecord();
             return mr.SelectAllTableView();
         }
+
+        public string[] GetAccountInformation(string LoginID)
+        {
+            UserAccount ua = new UserAccount();
+            return ua.getAccountInfromation(LoginID);
+        }
+
+        public DataTable GetRoleUserListTableView(string role_id)
+        {
+
+            UserAccount ua = new UserAccount();
+            return ua.SelectAllRoleListTableView(role_id);
+
+        }
+
+        public List<Role> GetRoleList()
+        {
+
+            Role rl = new Role();
+            return rl.SelectAll();
+
+        }
+
+        public List<Role> GetRoleList2()
+        {
+
+            Role rl = new Role();
+            return rl.SelectAll();
+
+        }
+
+
+        public DataTable GetRoleList_TableView()
+        {
+
+            Role rl = new Role();
+            return rl.SelectAllRoleTableView();
+
+        }
+
+        public Role GetRoleByID(string roleID)
+        {
+            Role rl = new Role();
+            return rl.SelectRoleById(roleID);
+        }
+
+        public UserAccount GetUserAccountByID(string user_id)
+        {
+            UserAccount ua = new UserAccount();
+            return ua.getAccountInfromationByID(user_id);
+        }
+
+        public void updateUserAccStatus(string userID, bool isDisabled)
+        {
+            UserAccount ua = new UserAccount();
+            ua.updateUserAccountStatusById(userID, isDisabled);
+        }
+
+        public DataTable GetNoAccUserList_TableView()
+        {
+            UserAccount ua = new UserAccount();
+            return ua.selectAllNoAccountUser();
+        }
+
+        public string[] creationDetailsByEmpID(string emp_id)
+        {
+            UserAccount ua = new UserAccount();
+            return ua.getAccountCreationDetails(emp_id);
+        }
+
+        public void updateAccountCreationDetails(string asp_id, string emp_id)
+        {
+            UserAccount ua = new UserAccount();
+            ua.updateAccountCreationDetails(asp_id, emp_id);
+        }
+
         /* Health Professional's stuffs */
+
+        /*
+          public List<Resource> GetAllResource()
+          {
+              Resource resource = new Resource();
+              List<Resource> objList = resource.SelectAll();
+              return objList;
+          }
+
+          public List<RolePermission> GetAllRolePermission()
+          {
+              RolePermission rp = new RolePermission();
+              List<RolePermission> objList = rp.SelectAll();
+              return objList;
+          }
+          public void updateRoleStatus(string roleID, bool isDisabled)
+            {
+                Role rl = new Role();
+                rl.updateRoleStatusById(roleID, isDisabled);
+            }
+         */
+
         /* End of Hui Feng's code */
 
         // Management
@@ -131,7 +215,7 @@ namespace WCF_Service_Library
         }
 
 
-        public int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, 
+        public int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment,
             DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks)
         {
             MedicalRecord mr = new MedicalRecord(-1, bloodPressure, respirationRate, bodyTemperature, pulseRate, diagnosis, treatment,

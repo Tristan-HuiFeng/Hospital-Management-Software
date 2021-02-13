@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="EquipmentServiceRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+      <xs:element minOccurs="0" name="location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="serialNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EquipmentServiceRecord" nillable="true" type="tns:EquipmentServiceRecord" />
+  <xs:complexType name="ArrayOfEquipmentServiceRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EquipmentServiceRecord" nillable="true" type="tns:EquipmentServiceRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEquipmentServiceRecord" nillable="true" type="tns:ArrayOfEquipmentServiceRecord" />
+  <xs:complexType name="LabServiceRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+      <xs:element minOccurs="0" name="priority" type="xs:int" />
+      <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="testRequired" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LabServiceRecord" nillable="true" type="tns:LabServiceRecord" />
+  <xs:complexType name="ArrayOfLabServiceRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LabServiceRecord" nillable="true" type="tns:LabServiceRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLabServiceRecord" nillable="true" type="tns:ArrayOfLabServiceRecord" />
+  <xs:complexType name="ArrayOfMedicalRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MedicalRecord" nillable="true" type="tns:MedicalRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMedicalRecord" nillable="true" type="tns:ArrayOfMedicalRecord" />
+  <xs:complexType name="MedicalRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bloodPressure" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bodyTemperature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="consultationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="diagnosis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="doctorEmail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="doctorID" type="xs:int" />
+      <xs:element minOccurs="0" name="doctorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="medicalRecordID" type="xs:int" />
+      <xs:element minOccurs="0" name="patientContact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="patientID" type="xs:int" />
+      <xs:element minOccurs="0" name="patientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="prescriptions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pulseRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="respirationRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="treatment" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MedicalRecord" nillable="true" type="tns:MedicalRecord" />
+  <xs:complexType name="ArrayOfRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Role" nillable="true" type="tns:Role" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRole" nillable="true" type="tns:ArrayOfRole" />
+  <xs:complexType name="Role">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Role" nillable="true" type="tns:Role" />
+  <xs:complexType name="UserAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="role_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="role_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserAccount" nillable="true" type="tns:UserAccount" />
+  <xs:complexType name="ArrayOfEmployee">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Employee" nillable="true" type="tns:Employee" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmployee" nillable="true" type="tns:ArrayOfEmployee" />
+  <xs:complexType name="Employee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" type="ser:char" />
+      <xs:element minOccurs="0" name="HealthDeclaration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JobFunction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nric" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Employee" nillable="true" type="tns:Employee" />
+  <xs:complexType name="ArrayOfContractRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContractRecord" nillable="true" type="tns:ContractRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContractRecord" nillable="true" type="tns:ArrayOfContractRecord" />
+  <xs:complexType name="ContractRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="benefits" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="create_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="employeeID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="holidays" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="salary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vacation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="workingHours" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContractRecord" nillable="true" type="tns:ContractRecord" />
+  <xs:complexType name="tempPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="tempPatient" nillable="true" type="tns:tempPatient" />
+  <xs:complexType name="ArrayOfFeedbackList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FeedbackList" nillable="true" type="tns:FeedbackList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFeedbackList" nillable="true" type="tns:ArrayOfFeedbackList" />
+  <xs:complexType name="FeedbackList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Feedback" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FeedbackList" nillable="true" type="tns:FeedbackList" />
+</xs:schema>

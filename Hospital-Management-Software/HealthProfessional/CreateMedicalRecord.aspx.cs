@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using WCF_Service_Library.Entity;
 
 namespace Hospital_Management_Software.HealthProfessional
 {
@@ -17,6 +18,21 @@ namespace Hospital_Management_Software.HealthProfessional
             //tb_patientName.Attributes["disabled"] = "disabled";
             //tb_patientID.Attributes["disabled"] = "disabled";
             //tb_patientContact.Attributes["disabled"] = "disabled";
+
+            Response.AppendHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
+            Response.AppendHeader("Pragma", "no-cache"); // HTTP 1.0.
+            Response.AppendHeader("Expires", "0"); // Proxies.
+
+            bool auth = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+
+            if (!auth)
+            {
+                Response.Redirect("~/Login/StaffLogin.aspx");
+            }
+            else if (!System.Web.HttpContext.Current.User.IsInRole("Doctor"))
+            {
+                Response.Redirect("~/ErrorPage/UnauthorisedAccess.aspx");
+            }
         }
 
         protected void btn_searchPatient_Click(object sender, EventArgs e)
