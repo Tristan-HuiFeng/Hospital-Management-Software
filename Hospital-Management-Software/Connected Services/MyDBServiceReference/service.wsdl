@@ -7,6 +7,7 @@
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" />
       <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_GetData_InputMessage">
@@ -45,18 +46,6 @@
   <wsdl:message name="IService1_GetLabServiceRecordByEmployeeID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetLabServiceRecordByEmployeeIDResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetAllResource_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllResource" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetAllResource_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllResourceResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetAllRolePermission_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllRolePermission" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetAllRolePermission_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllRolePermissionResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_GetAllMedicalRecordByEmployeeID_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllMedicalRecordByEmployeeID" />
   </wsdl:message>
@@ -80,6 +69,72 @@
   </wsdl:message>
   <wsdl:message name="IService1_GetMedicalRecordTableView_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetMedicalRecordTableViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountInformation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAccountInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleUserListTableView_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleUserListTableView" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleUserListTableView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleUserListTableViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleList2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleList2" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleList2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleList2Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleList_TableView_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleList_TableView" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleList_TableView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleList_TableViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRoleByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserAccountByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccountByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetUserAccountByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccountByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateUserAccStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUserAccStatus" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateUserAccStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateUserAccStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNoAccUserList_TableView_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoAccUserList_TableView" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNoAccUserList_TableView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNoAccUserList_TableViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_creationDetailsByEmpID_InputMessage">
+    <wsdl:part name="parameters" element="tns:creationDetailsByEmpID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_creationDetailsByEmpID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:creationDetailsByEmpIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateAccountCreationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateAccountCreationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_updateAccountCreationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateAccountCreationDetailsResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_GetAllEmployee_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEmployee" />
@@ -178,14 +233,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLabServiceRecordByEmployeeID" message="tns:IService1_GetLabServiceRecordByEmployeeID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLabServiceRecordByEmployeeIDResponse" message="tns:IService1_GetLabServiceRecordByEmployeeID_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetAllResource">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllResource" message="tns:IService1_GetAllResource_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllResourceResponse" message="tns:IService1_GetAllResource_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetAllRolePermission">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllRolePermission" message="tns:IService1_GetAllRolePermission_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllRolePermissionResponse" message="tns:IService1_GetAllRolePermission_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetAllMedicalRecordByEmployeeID">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeID" message="tns:IService1_GetAllMedicalRecordByEmployeeID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeIDResponse" message="tns:IService1_GetAllMedicalRecordByEmployeeID_OutputMessage" />
@@ -201,6 +248,50 @@
     <wsdl:operation name="GetMedicalRecordTableView">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetMedicalRecordTableView" message="tns:IService1_GetMedicalRecordTableView_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse" message="tns:IService1_GetMedicalRecordTableView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAccountInformation" message="tns:IService1_GetAccountInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAccountInformationResponse" message="tns:IService1_GetAccountInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleUserListTableView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRoleUserListTableView" message="tns:IService1_GetRoleUserListTableView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRoleUserListTableViewResponse" message="tns:IService1_GetRoleUserListTableView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRoleList" message="tns:IService1_GetRoleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRoleListResponse" message="tns:IService1_GetRoleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRoleList2" message="tns:IService1_GetRoleList2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRoleList2Response" message="tns:IService1_GetRoleList2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList_TableView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRoleList_TableView" message="tns:IService1_GetRoleList_TableView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRoleList_TableViewResponse" message="tns:IService1_GetRoleList_TableView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRoleByID" message="tns:IService1_GetRoleByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRoleByIDResponse" message="tns:IService1_GetRoleByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetUserAccountByID" message="tns:IService1_GetUserAccountByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetUserAccountByIDResponse" message="tns:IService1_GetUserAccountByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUserAccStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateUserAccStatus" message="tns:IService1_updateUserAccStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateUserAccStatusResponse" message="tns:IService1_updateUserAccStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNoAccUserList_TableView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNoAccUserList_TableView" message="tns:IService1_GetNoAccUserList_TableView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNoAccUserList_TableViewResponse" message="tns:IService1_GetNoAccUserList_TableView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="creationDetailsByEmpID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/creationDetailsByEmpID" message="tns:IService1_creationDetailsByEmpID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/creationDetailsByEmpIDResponse" message="tns:IService1_creationDetailsByEmpID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAccountCreationDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateAccountCreationDetails" message="tns:IService1_updateAccountCreationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateAccountCreationDetailsResponse" message="tns:IService1_updateAccountCreationDetails_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllEmployee">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllEmployee" message="tns:IService1_GetAllEmployee_InputMessage" />
@@ -307,24 +398,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetAllResource">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetAllResource" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetAllRolePermission">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetAllRolePermission" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetAllMedicalRecordByEmployeeID">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeID" style="document" />
       <wsdl:input>
@@ -354,6 +427,105 @@
     </wsdl:operation>
     <wsdl:operation name="GetMedicalRecordTableView">
       <soap:operation soapAction="http://tempuri.org/IService1/GetMedicalRecordTableView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountInformation">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAccountInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleUserListTableView">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRoleUserListTableView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRoleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList2">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRoleList2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleList_TableView">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRoleList_TableView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRoleByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetUserAccountByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUserAccStatus">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateUserAccStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNoAccUserList_TableView">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNoAccUserList_TableView" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="creationDetailsByEmpID">
+      <soap:operation soapAction="http://tempuri.org/IService1/creationDetailsByEmpID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAccountCreationDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/updateAccountCreationDetails" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

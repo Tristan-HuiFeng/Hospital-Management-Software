@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="94e64a14-318a-4368-ab3e-b748d00f9d2b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="34990cac-4400-4389-b456-a328021ddfa7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -13,7 +13,7 @@
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
-    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
     <ReferencedAssemblies />
     <ReferencedDataContractTypes />
     <ServiceContractMappings />
@@ -22,12 +22,13 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="cbfcb65f-6153-48dc-a018-ad2cae6ab9c2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="20624aa5-b321-4989-9560-8394418f24c9" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="07c4d0f2-3636-4003-82c2-4ad2eaf1f3d6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="WCF_Service_Library.xsd" MetadataType="Schema" ID="c388b793-21a3-4624-9d5e-f281eb95d80d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="WCF_Service_Library.Entity1.xsd" MetadataType="Schema" ID="740bed27-7d93-4dd0-a5ed-2300a8909a9b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="System.Data1.xsd" MetadataType="Schema" ID="a2825c51-0edf-4be8-99d7-140dcae00410" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="8d822f74-53e6-4144-96e6-f604793417f3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f0a311ab-64bc-482e-9cd1-312dcc2bd6d2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="21229d34-eed0-463f-a344-f81ce9618144" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="WCF_Service_Library.xsd" MetadataType="Schema" ID="a062cd2d-fa2a-4cd9-bc5d-53f9209d54bb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="WCF_Service_Library.Entity.xsd" MetadataType="Schema" ID="feeb44ec-a1a2-42ee-9683-abbf355613a6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="4e2bf5ae-b5d3-4a12-88a0-d31dbf2c51b8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="b9efe727-a7d0-49cc-8db6-0d9de8f88792" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

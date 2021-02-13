@@ -7,13 +7,65 @@
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link rel="stylesheet" href="~/src/css/staff-main.css" type="text/css" />
+    <link rel="stylesheet" href="~/src/css/health-professional.css" type="text/css" />
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    <nav id="mySideNav" class="sidenav">
+        <!-- open side nav -->
+        <div style="display: none" id="opened-side-nav">
+            <div class="sidenav-links">
+                <a runat="server" href="#">Home</a>
+                <a runat="server" href="~/Administrator/Role">Role Management</a>
+                <a runat="server" href="~/Administrator/UserList">User Management</a>
+                <a runat="server" href="~/Administrator/NoAccountList">Account Creation</a>
+                <a runat="server" href="~/Login/Logout">Logout</a>
+            </div>
+        </div>
+         <!-- end of open side nav -->
+
+        <!-- side nav bar when closed -->
+          <div id="closed-side-nav" class ="sidenav">
+            <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+          </div>
+         <!-- end of side nav bar when closed -->
+    </nav>
+
+   
+    <!-- end of side nav -->
+    <!-- end of navigation -->
+    <form id="hp_form" runat="server">
+        <div id="shadow"></div>
+        <div id="hp-content" style="margin-left:60px">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
 </body>
+
+<script>
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+    function openNav() {
+        document.getElementById("mySideNav").style.width = "250px";
+        //document.getElementById("content").style.marginLeft = "270px";
+        document.getElementById("closed-side-nav").style.display = "none";
+        document.getElementById("opened-side-nav").style.display = "block";
+        document.getElementById('shadow').addEventListener('click', closeNav);
+        document.getElementById("shadow").style.display = "block";
+        console.log(1);
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySideNav").style.width = "60px";
+        //document.getElementById("content").style.marginLeft = "80px";
+        document.getElementById("closed-side-nav").style.display = "block";
+        document.getElementById("opened-side-nav").style.display = "none";
+        document.getElementById("shadow").style.display = "none";
+        //document.getElementById('nav-controller').setAttribute("onClick", "openNav()");
+        console.log(2);
+    }
+</script>
 </html>

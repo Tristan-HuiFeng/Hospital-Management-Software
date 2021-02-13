@@ -193,7 +193,7 @@ namespace WCF_Service_Library.Entity
                 string lastname = row["Last_Name"].ToString();
                 string email = row["Email"].ToString();
                 DateTime dob = Convert.ToDateTime(row["DOB"]);
-                char gender = Convert.ToChar(row["Sex"].ToString());
+                char gender = row["Sex"].ToString()[0];
                 string address = row["Address"].ToString();
                 string department = row["Department"].ToString();
                 string position = row["Position"].ToString();
@@ -408,5 +408,8 @@ namespace WCF_Service_Library.Entity
             }
             return empList;
         }
+
+       
+
     }
 }

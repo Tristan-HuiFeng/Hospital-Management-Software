@@ -49,7 +49,40 @@
     <Reference Include="AspNet.ScriptManager.bootstrap, Version=4.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AspNet.ScriptManager.bootstrap.4.5.2\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -111,53 +144,28 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Administrator\CreateAccount.aspx" />
-    <Content Include="Administrator\CreateRole.aspx" />
-    <Content Include="Administrator\Main.aspx" />
-    <Content Include="Administrator\ModifyAccount.aspx" />
-    <Content Include="Administrator\ModifyRole.aspx" />
+    <Content Include="Administrator\NoAccountList.aspx" />
+    <Content Include="Administrator\Role.aspx" />
+    <Content Include="Administrator\UserRoleList.aspx" />
+    <Content Include="Administrator\UserAccountInformation.aspx" />
+    <Content Include="Administrator\UserList.aspx" />
     <Content Include="App_Data\EDP_DB.mdf" />
     <Content Include="App_Data\EDP_DB_log.ldf">
       <DependentUpon>EDP_DB.mdf</DependentUpon>
     </Content>
     <None Include="Connected Services\MyDBServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\MyDBServiceReference\configuration.svcinfo" />
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Employee.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.LabServiceRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Resource.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.RolePermission.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.ContractRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.tempPatient.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\MyDBServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="ErrorPage\BasicError.aspx" />
+    <Content Include="ErrorPage\PageNotFound.aspx" />
+    <Content Include="ErrorPage\UnauthorisedAccess.aspx" />
     <Content Include="HealthProfessional\Dashboard.aspx" />
     <Content Include="HealthProfessional\MedicalRecordList.aspx" />
     <Content Include="HealthProfessional\ViewMedicalRecord.aspx" />
+    <Content Include="Login\Logout.aspx" />
     <Content Include="Management\AddContract.aspx" />
     <Content Include="Management\AddEmployee.aspx" />
     <Content Include="Contact.aspx" />
@@ -174,6 +182,7 @@
     <Content Include="HealthProfessional\PatientRecord.aspx" />
     <Content Include="HealthProfessional\UpdateMedicalRecord.aspx" />
     <Content Include="Login\StaffLogin.aspx" />
+    <Content Include="MasterControl.aspx" />
     <Content Include="src\css\login.css" />
     <Content Include="src\css\staff-main.css" />
     <Content Include="src\css\test.css" />
@@ -183,7 +192,6 @@
     <Content Include="Management\Employees.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Login\staffloginold.aspx" />
     <Content Include="Management\EmployeeSchedule.aspx" />
     <Content Include="Management\ModifyEmployee.aspx" />
     <Content Include="Management\Payrolls.aspx" />
@@ -219,22 +227,29 @@
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Resource.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.RolePermission.datasource" />
     <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Connected Services\MyDBServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\MyDBServiceReference\service.wsdl" />
+    <None Include="Connected Services\MyDBServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\MyDBServiceReference\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MyDBServiceReference\service2.xsd">
+    <None Include="Connected Services\MyDBServiceReference\System.Data.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\MyDBServiceReference\System.Data1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.Entity1.xsd">
+    <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.Entity.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.UserAccount.datasource" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -342,7 +357,6 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\EPR\RegisterPatient.aspx" />
     <Content Include="Views\MAR\UpdateMAR.aspx" />
-    <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Views\layout\Site.Mobile.Master" />
   </ItemGroup>
@@ -354,38 +368,66 @@
     <Compile Include="Administrator\CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administrator\CreateRole.aspx.cs">
-      <DependentUpon>CreateRole.aspx</DependentUpon>
+    <Compile Include="Administrator\NoAccountList.aspx.cs">
+      <DependentUpon>NoAccountList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrator\CreateRole.aspx.designer.cs">
-      <DependentUpon>CreateRole.aspx</DependentUpon>
+    <Compile Include="Administrator\NoAccountList.aspx.designer.cs">
+      <DependentUpon>NoAccountList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administrator\Main.aspx.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="Administrator\Role.aspx.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrator\Main.aspx.designer.cs">
-      <DependentUpon>Main.aspx</DependentUpon>
+    <Compile Include="Administrator\Role.aspx.designer.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administrator\ModifyAccount.aspx.cs">
-      <DependentUpon>ModifyAccount.aspx</DependentUpon>
+    <Compile Include="Administrator\UserRoleList.aspx.cs">
+      <DependentUpon>UserRoleList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrator\ModifyAccount.aspx.designer.cs">
-      <DependentUpon>ModifyAccount.aspx</DependentUpon>
+    <Compile Include="Administrator\UserRoleList.aspx.designer.cs">
+      <DependentUpon>UserRoleList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administrator\ModifyRole.aspx.cs">
-      <DependentUpon>ModifyRole.aspx</DependentUpon>
+    <Compile Include="Administrator\UserAccountInformation.aspx.cs">
+      <DependentUpon>UserAccountInformation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrator\ModifyRole.aspx.designer.cs">
-      <DependentUpon>ModifyRole.aspx</DependentUpon>
+    <Compile Include="Administrator\UserAccountInformation.aspx.designer.cs">
+      <DependentUpon>UserAccountInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrator\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\MyDBServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage\BasicError.aspx.cs">
+      <DependentUpon>BasicError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage\BasicError.aspx.designer.cs">
+      <DependentUpon>BasicError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage\PageNotFound.aspx.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage\PageNotFound.aspx.designer.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage\UnauthorisedAccess.aspx.cs">
+      <DependentUpon>UnauthorisedAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage\UnauthorisedAccess.aspx.designer.cs">
+      <DependentUpon>UnauthorisedAccess.aspx</DependentUpon>
     </Compile>
     <Compile Include="HealthProfessional\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -407,6 +449,13 @@
     </Compile>
     <Compile Include="HealthProfessional\ViewMedicalRecord.aspx.designer.cs">
       <DependentUpon>ViewMedicalRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\AddContract.aspx.cs">
       <DependentUpon>AddContract.aspx</DependentUpon>
@@ -504,13 +553,6 @@
     <Compile Include="HealthProfessional\UpdateMedicalRecord.aspx.designer.cs">
       <DependentUpon>UpdateMedicalRecord.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login\staffloginold.aspx.cs">
-      <DependentUpon>staffloginold.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login\staffloginold.aspx.designer.cs">
-      <DependentUpon>staffloginold.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login\StaffLogin.aspx.cs">
       <DependentUpon>StaffLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -546,7 +588,15 @@
     <Compile Include="Management\ProcessPayroll.aspx.designer.cs">
       <DependentUpon>ProcessPayroll.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MasterControl.aspx.cs">
+      <DependentUpon>MasterControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterControl.aspx.designer.cs">
+      <DependentUpon>MasterControl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup1.cs" />
     <Compile Include="Views\EPR\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -560,6 +610,13 @@
     </Compile>
     <Compile Include="Views\EPR\UpdateEPR.aspx.designer.cs">
       <DependentUpon>UpdateEPR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\layout\Site_No_Footer.Master.cs">
+      <DependentUpon>Site_No_Footer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\layout\Site_No_Footer.Master.designer.cs">
+      <DependentUpon>Site_No_Footer.Master</DependentUpon>
     </Compile>
     <Compile Include="Views\MAR\CreateMAR.aspx.cs">
       <DependentUpon>CreateMAR.aspx</DependentUpon>
@@ -649,6 +706,8 @@
     <Content Include="Views\layout\HealthProfessional.Master" />
     <Content Include="Views\layout\Site2.Master" />
     <Content Include="Views\layout\Administrator.Master" />
+    <Content Include="Views\layout\Site_No_Footer.Master" />
+    <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

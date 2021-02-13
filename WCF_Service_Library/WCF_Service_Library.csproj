@@ -51,10 +51,9 @@
     <Compile Include="Entity\LabServiceRecord.cs" />
     <Compile Include="Entity\MedicalRecord.cs" />
     <Compile Include="Entity\MedicalRecord2.cs" />
-    <Compile Include="Entity\Resource.cs" />
     <Compile Include="Entity\Role.cs" />
-    <Compile Include="Entity\RolePermission.cs" />
     <Compile Include="Entity\tempPatient.cs" />
+    <Compile Include="Entity\UserAccount.cs" />
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service1.cs" />

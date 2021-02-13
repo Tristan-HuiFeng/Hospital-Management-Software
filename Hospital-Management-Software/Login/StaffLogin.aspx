@@ -1,22 +1,31 @@
-﻿<%@ Page Title="Staff Login" Language="C#" MasterPageFile="~/Views/layout/Site2.Master" AutoEventWireup="true" CodeBehind="StaffLogin.aspx.cs" Inherits="Hospital_Management_Software.Login.StaffLogin" %>
+﻿<%@ Page Title="Staff Login" Language="C#" MasterPageFile="~/Views/layout/Site_No_Footer.Master" AutoEventWireup="true" CodeBehind="StaffLogin.aspx.cs" Inherits="Hospital_Management_Software.Login.StaffLogin" %>
 
 <asp:Content ID="Header1" ContentPlaceHolderID="head" runat="server">
-     <link rel="stylesheet" href="../src/css/test2.css" type="text/css" />
+     <link rel="stylesheet" href="../src/css/login.css" type="text/css" />
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
+    
+   
+
     <div class="limiter">
+        <div class="container">
+            <asp:Label ID="lb_loginError" class="alert alert-danger container" style="margin-top:100px;position:fixed;" runat="server" Text="Label"></asp:Label>
+            <asp:PlaceHolder runat="server" ID="LoginStatus">
+         </asp:PlaceHolder>
+        </div>
+        
         <div class="login-container">
             <div class="wrap-login">
                 <p class="login-title">Staff Login</p>
                 <div class="input-container">
                     <p>Login ID: </p>
-                    <asp:TextBox class="login-tb" ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox spellcheck="false" class="login-tb" ID="tb_loginID" style="color:#000000" runat="server"></asp:TextBox>
                     <p>Password: </p>
-                    <asp:TextBox class="login-tb" ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox class="login-tb" ID="tb_password" style="color:#000000" runat="server" TextMode="Password"></asp:TextBox>
                 </div>
-                <asp:Button class="login-btn" ID="btn_SignIn" runat="server" Text="Login" />
+                <asp:Button class="login-btn" ID="btn_SignIn" runat="server" Text="Login" OnClick="btn_SignIn_Click" />
                 <div class="text-btm">
                     <asp:Label ID="Label1" runat="server" Text="Label">Forgot Password?</asp:Label>
                 </div>
@@ -26,7 +35,6 @@
             
         </div>
     </div>
-
 
     <!--
     <section style="overflow: hidden;">
