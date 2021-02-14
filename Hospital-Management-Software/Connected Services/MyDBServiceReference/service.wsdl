@@ -148,6 +148,12 @@
   <wsdl:message name="IService1_GetEmpIDByAccID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetEmpIDByAccIDResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetEmailList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmailList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailListResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetAllEmployee_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEmployee" />
   </wsdl:message>
@@ -249,6 +255,53 @@
   </wsdl:message>
   <wsdl:message name="IService1_UpdatePatientByID_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePatientByIDResponse" />
+  <wsdl:message name="IService1_CreateBankRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBankRecord" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateBankRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBankRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBankRecordByEmployeeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankRecordByEmployeeID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBankRecordByEmployeeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankRecordByEmployeeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreatePayroll_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePayroll" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreatePayroll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePayrollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBankDetailID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankDetailID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBankDetailID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankDetailIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPayroll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPayroll" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPayroll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPayrollResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPayrollByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayrollByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPayrollByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayrollByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProcessPayrollByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessPayrollByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProcessPayrollByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessPayrollByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPayrollBetweenDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayrollBetweenDate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPayrollBetweenDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPayrollBetweenDateResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
@@ -343,6 +396,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmpIDByAccID" message="tns:IService1_GetEmpIDByAccID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmpIDByAccIDResponse" message="tns:IService1_GetEmpIDByAccID_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetEmailList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmailList" message="tns:IService1_GetEmailList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmailListResponse" message="tns:IService1_GetEmailList_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetAllEmployee">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllEmployee" message="tns:IService1_GetAllEmployee_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllEmployeeResponse" message="tns:IService1_GetAllEmployee_OutputMessage" />
@@ -410,6 +467,37 @@
     <wsdl:operation name="UpdatePatientByID">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePatientByID" message="tns:IService1_UpdatePatientByID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePatientByIDResponse" message="tns:IService1_UpdatePatientByID_OutputMessage" />
+    <wsdl:operation name="CreateBankRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateBankRecord" message="tns:IService1_CreateBankRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateBankRecordResponse" message="tns:IService1_CreateBankRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankRecordByEmployeeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBankRecordByEmployeeID" message="tns:IService1_GetBankRecordByEmployeeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBankRecordByEmployeeIDResponse" message="tns:IService1_GetBankRecordByEmployeeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayroll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreatePayroll" message="tns:IService1_CreatePayroll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreatePayrollResponse" message="tns:IService1_CreatePayroll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankDetailID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBankDetailID" message="tns:IService1_GetBankDetailID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBankDetailIDResponse" message="tns:IService1_GetBankDetailID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPayroll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllPayroll" message="tns:IService1_GetAllPayroll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllPayrollResponse" message="tns:IService1_GetAllPayroll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayrollByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPayrollByID" message="tns:IService1_GetPayrollByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPayrollByIDResponse" message="tns:IService1_GetPayrollByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPayrollByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ProcessPayrollByID" message="tns:IService1_ProcessPayrollByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ProcessPayrollByIDResponse" message="tns:IService1_ProcessPayrollByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPayrollBetweenDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPayrollBetweenDate" message="tns:IService1_GetPayrollBetweenDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPayrollBetweenDateResponse" message="tns:IService1_GetPayrollBetweenDate_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -621,6 +709,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetEmailList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEmailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetAllEmployee">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAllEmployee" style="document" />
       <wsdl:input>
@@ -731,6 +828,9 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllPatientRecords">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAllPatientRecords" style="document" />
+
+    <wsdl:operation name="CreateBankRecord">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateBankRecord" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -740,6 +840,9 @@
     </wsdl:operation>
     <wsdl:operation name="GetPatientRecordByID">
       <soap:operation soapAction="http://tempuri.org/IService1/GetPatientRecordByID" style="document" />
+
+    <wsdl:operation name="GetBankRecordByEmployeeID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBankRecordByEmployeeID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -749,6 +852,10 @@
     </wsdl:operation>
     <wsdl:operation name="CreatePatientRecord">
       <soap:operation soapAction="http://tempuri.org/IService1/CreatePatientRecord" style="document" />
+
+    <wsdl:operation name="CreatePayroll">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreatePayroll" style="document" />
+
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -758,6 +865,10 @@
     </wsdl:operation>
     <wsdl:operation name="DisablePatientByID">
       <soap:operation soapAction="http://tempuri.org/IService1/DisablePatientByID" style="document" />
+
+    <wsdl:operation name="GetBankDetailID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBankDetailID" style="document" />
+
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -767,6 +878,35 @@
     </wsdl:operation>
     <wsdl:operation name="UpdatePatientByID">
       <soap:operation soapAction="http://tempuri.org/IService1/UpdatePatientByID" style="document" />
+    <wsdl:operation name="GetAllPayroll">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllPayroll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayrollByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPayrollByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessPayrollByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/ProcessPayrollByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPayrollBetweenDate">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPayrollBetweenDate" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

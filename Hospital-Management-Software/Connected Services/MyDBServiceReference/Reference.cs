@@ -11,6 +11,1577 @@
 namespace Hospital_Management_Software.MyDBServiceReference {
     
     
+    using System.Runtime.Serialization;
+    using System;
+    
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library")]
+    [System.SerializableAttribute()]
+    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool BoolValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StringValueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool BoolValue {
+            get {
+                return this.BoolValueField;
+            }
+            set {
+                if ((this.BoolValueField.Equals(value) != true)) {
+                    this.BoolValueField = value;
+                    this.RaisePropertyChanged("BoolValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StringValue {
+            get {
+                return this.StringValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
+                    this.StringValueField = value;
+                    this.RaisePropertyChanged("StringValue");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EquipmentServiceRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class EquipmentServiceRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int employeeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string locationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string serialNumberField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descriptionField, value) != true)) {
+                    this.descriptionField = value;
+                    this.RaisePropertyChanged("description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int employeeID {
+            get {
+                return this.employeeIDField;
+            }
+            set {
+                if ((this.employeeIDField.Equals(value) != true)) {
+                    this.employeeIDField = value;
+                    this.RaisePropertyChanged("employeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string location {
+            get {
+                return this.locationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.locationField, value) != true)) {
+                    this.locationField = value;
+                    this.RaisePropertyChanged("location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string serialNumber {
+            get {
+                return this.serialNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.serialNumberField, value) != true)) {
+                    this.serialNumberField = value;
+                    this.RaisePropertyChanged("serialNumber");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LabServiceRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class LabServiceRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int employeeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int priorityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string remarksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string testRequiredField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int employeeID {
+            get {
+                return this.employeeIDField;
+            }
+            set {
+                if ((this.employeeIDField.Equals(value) != true)) {
+                    this.employeeIDField = value;
+                    this.RaisePropertyChanged("employeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int priority {
+            get {
+                return this.priorityField;
+            }
+            set {
+                if ((this.priorityField.Equals(value) != true)) {
+                    this.priorityField = value;
+                    this.RaisePropertyChanged("priority");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string remarks {
+            get {
+                return this.remarksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.remarksField, value) != true)) {
+                    this.remarksField = value;
+                    this.RaisePropertyChanged("remarks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string testRequired {
+            get {
+                return this.testRequiredField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.testRequiredField, value) != true)) {
+                    this.testRequiredField = value;
+                    this.RaisePropertyChanged("testRequired");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Resource", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class Resource : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RolePermission", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class RolePermission : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool addField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool deleteField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool editField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int resourceIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int roleIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool viewField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool add {
+            get {
+                return this.addField;
+            }
+            set {
+                if ((this.addField.Equals(value) != true)) {
+                    this.addField = value;
+                    this.RaisePropertyChanged("add");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool delete {
+            get {
+                return this.deleteField;
+            }
+            set {
+                if ((this.deleteField.Equals(value) != true)) {
+                    this.deleteField = value;
+                    this.RaisePropertyChanged("delete");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool edit {
+            get {
+                return this.editField;
+            }
+            set {
+                if ((this.editField.Equals(value) != true)) {
+                    this.editField = value;
+                    this.RaisePropertyChanged("edit");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int resourceID {
+            get {
+                return this.resourceIDField;
+            }
+            set {
+                if ((this.resourceIDField.Equals(value) != true)) {
+                    this.resourceIDField = value;
+                    this.RaisePropertyChanged("resourceID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int roleID {
+            get {
+                return this.roleIDField;
+            }
+            set {
+                if ((this.roleIDField.Equals(value) != true)) {
+                    this.roleIDField = value;
+                    this.RaisePropertyChanged("roleID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool view {
+            get {
+                return this.viewField;
+            }
+            set {
+                if ((this.viewField.Equals(value) != true)) {
+                    this.viewField = value;
+                    this.RaisePropertyChanged("view");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MedicalRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class MedicalRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bloodPressureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bodyTemperatureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime consultationDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string diagnosisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string doctorEmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int doctorIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string doctorNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int medicalRecordIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string patientContactField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int patientIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string patientNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string prescriptionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pulseRateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string remarksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string respirationRateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string treatmentField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bloodPressure {
+            get {
+                return this.bloodPressureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bloodPressureField, value) != true)) {
+                    this.bloodPressureField = value;
+                    this.RaisePropertyChanged("bloodPressure");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bodyTemperature {
+            get {
+                return this.bodyTemperatureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bodyTemperatureField, value) != true)) {
+                    this.bodyTemperatureField = value;
+                    this.RaisePropertyChanged("bodyTemperature");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime consultationDate {
+            get {
+                return this.consultationDateField;
+            }
+            set {
+                if ((this.consultationDateField.Equals(value) != true)) {
+                    this.consultationDateField = value;
+                    this.RaisePropertyChanged("consultationDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string diagnosis {
+            get {
+                return this.diagnosisField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.diagnosisField, value) != true)) {
+                    this.diagnosisField = value;
+                    this.RaisePropertyChanged("diagnosis");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string doctorEmail {
+            get {
+                return this.doctorEmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.doctorEmailField, value) != true)) {
+                    this.doctorEmailField = value;
+                    this.RaisePropertyChanged("doctorEmail");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int doctorID {
+            get {
+                return this.doctorIDField;
+            }
+            set {
+                if ((this.doctorIDField.Equals(value) != true)) {
+                    this.doctorIDField = value;
+                    this.RaisePropertyChanged("doctorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string doctorName {
+            get {
+                return this.doctorNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.doctorNameField, value) != true)) {
+                    this.doctorNameField = value;
+                    this.RaisePropertyChanged("doctorName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int medicalRecordID {
+            get {
+                return this.medicalRecordIDField;
+            }
+            set {
+                if ((this.medicalRecordIDField.Equals(value) != true)) {
+                    this.medicalRecordIDField = value;
+                    this.RaisePropertyChanged("medicalRecordID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string patientContact {
+            get {
+                return this.patientContactField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.patientContactField, value) != true)) {
+                    this.patientContactField = value;
+                    this.RaisePropertyChanged("patientContact");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int patientID {
+            get {
+                return this.patientIDField;
+            }
+            set {
+                if ((this.patientIDField.Equals(value) != true)) {
+                    this.patientIDField = value;
+                    this.RaisePropertyChanged("patientID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string patientName {
+            get {
+                return this.patientNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.patientNameField, value) != true)) {
+                    this.patientNameField = value;
+                    this.RaisePropertyChanged("patientName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string prescriptions {
+            get {
+                return this.prescriptionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.prescriptionsField, value) != true)) {
+                    this.prescriptionsField = value;
+                    this.RaisePropertyChanged("prescriptions");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pulseRate {
+            get {
+                return this.pulseRateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pulseRateField, value) != true)) {
+                    this.pulseRateField = value;
+                    this.RaisePropertyChanged("pulseRate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string remarks {
+            get {
+                return this.remarksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.remarksField, value) != true)) {
+                    this.remarksField = value;
+                    this.RaisePropertyChanged("remarks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string respirationRate {
+            get {
+                return this.respirationRateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.respirationRateField, value) != true)) {
+                    this.respirationRateField = value;
+                    this.RaisePropertyChanged("respirationRate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string treatment {
+            get {
+                return this.treatmentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.treatmentField, value) != true)) {
+                    this.treatmentField = value;
+                    this.RaisePropertyChanged("treatment");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Employee", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class Employee : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DOBField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DepartmentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EmailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private char GenderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HealthDeclarationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ImageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JobFunctionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LastNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoginIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NationalityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NricField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PositionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime DOB {
+            get {
+                return this.DOBField;
+            }
+            set {
+                if ((this.DOBField.Equals(value) != true)) {
+                    this.DOBField = value;
+                    this.RaisePropertyChanged("DOB");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Department {
+            get {
+                return this.DepartmentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DepartmentField, value) != true)) {
+                    this.DepartmentField = value;
+                    this.RaisePropertyChanged("Department");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email {
+            get {
+                return this.EmailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
+                    this.EmailField = value;
+                    this.RaisePropertyChanged("Email");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FirstName {
+            get {
+                return this.FirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public char Gender {
+            get {
+                return this.GenderField;
+            }
+            set {
+                if ((this.GenderField.Equals(value) != true)) {
+                    this.GenderField = value;
+                    this.RaisePropertyChanged("Gender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HealthDeclaration {
+            get {
+                return this.HealthDeclarationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HealthDeclarationField, value) != true)) {
+                    this.HealthDeclarationField = value;
+                    this.RaisePropertyChanged("HealthDeclaration");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Image {
+            get {
+                return this.ImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string JobFunction {
+            get {
+                return this.JobFunctionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JobFunctionField, value) != true)) {
+                    this.JobFunctionField = value;
+                    this.RaisePropertyChanged("JobFunction");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LastName {
+            get {
+                return this.LastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
+                    this.LastNameField = value;
+                    this.RaisePropertyChanged("LastName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LoginID {
+            get {
+                return this.LoginIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoginIDField, value) != true)) {
+                    this.LoginIDField = value;
+                    this.RaisePropertyChanged("LoginID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nationality {
+            get {
+                return this.NationalityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NationalityField, value) != true)) {
+                    this.NationalityField = value;
+                    this.RaisePropertyChanged("Nationality");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nric {
+            get {
+                return this.NricField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NricField, value) != true)) {
+                    this.NricField = value;
+                    this.RaisePropertyChanged("Nric");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Position {
+            get {
+                return this.PositionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PositionField, value) != true)) {
+                    this.PositionField = value;
+                    this.RaisePropertyChanged("Position");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ContractRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class ContractRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string benefitsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime create_dateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string employeeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string holidaysField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string salaryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string signatureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string vacationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string workingHoursField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string benefits {
+            get {
+                return this.benefitsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.benefitsField, value) != true)) {
+                    this.benefitsField = value;
+                    this.RaisePropertyChanged("benefits");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime create_date {
+            get {
+                return this.create_dateField;
+            }
+            set {
+                if ((this.create_dateField.Equals(value) != true)) {
+                    this.create_dateField = value;
+                    this.RaisePropertyChanged("create_date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string employeeID {
+            get {
+                return this.employeeIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.employeeIDField, value) != true)) {
+                    this.employeeIDField = value;
+                    this.RaisePropertyChanged("employeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string holidays {
+            get {
+                return this.holidaysField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.holidaysField, value) != true)) {
+                    this.holidaysField = value;
+                    this.RaisePropertyChanged("holidays");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string salary {
+            get {
+                return this.salaryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.salaryField, value) != true)) {
+                    this.salaryField = value;
+                    this.RaisePropertyChanged("salary");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string signature {
+            get {
+                return this.signatureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.signatureField, value) != true)) {
+                    this.signatureField = value;
+                    this.RaisePropertyChanged("signature");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string vacation {
+            get {
+                return this.vacationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.vacationField, value) != true)) {
+                    this.vacationField = value;
+                    this.RaisePropertyChanged("vacation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string workingHours {
+            get {
+                return this.workingHoursField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.workingHoursField, value) != true)) {
+                    this.workingHoursField = value;
+                    this.RaisePropertyChanged("workingHours");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="tempPatient", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class tempPatient : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string contactField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string contact {
+            get {
+                return this.contactField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.contactField, value) != true)) {
+                    this.contactField = value;
+                    this.RaisePropertyChanged("contact");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BankRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class BankRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bankAccountNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bankHolderNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bankNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int employeeIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bankAccountNumber {
+            get {
+                return this.bankAccountNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bankAccountNumberField, value) != true)) {
+                    this.bankAccountNumberField = value;
+                    this.RaisePropertyChanged("bankAccountNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bankHolderName {
+            get {
+                return this.bankHolderNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bankHolderNameField, value) != true)) {
+                    this.bankHolderNameField = value;
+                    this.RaisePropertyChanged("bankHolderName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bankName {
+            get {
+                return this.bankNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bankNameField, value) != true)) {
+                    this.bankNameField = value;
+                    this.RaisePropertyChanged("bankName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int employeeID {
+            get {
+                return this.employeeIDField;
+            }
+            set {
+                if ((this.employeeIDField.Equals(value) != true)) {
+                    this.employeeIDField = value;
+                    this.RaisePropertyChanged("employeeID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PayrollRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
+    [System.SerializableAttribute()]
+    public partial class PayrollRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int bankDetailIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal bonusAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime createdDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int employeeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string employeeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string employeePositionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string overtimeDetailsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string processedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string processedDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal salaryField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int bankDetailID {
+            get {
+                return this.bankDetailIDField;
+            }
+            set {
+                if ((this.bankDetailIDField.Equals(value) != true)) {
+                    this.bankDetailIDField = value;
+                    this.RaisePropertyChanged("bankDetailID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal bonusAmount {
+            get {
+                return this.bonusAmountField;
+            }
+            set {
+                if ((this.bonusAmountField.Equals(value) != true)) {
+                    this.bonusAmountField = value;
+                    this.RaisePropertyChanged("bonusAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime createdDate {
+            get {
+                return this.createdDateField;
+            }
+            set {
+                if ((this.createdDateField.Equals(value) != true)) {
+                    this.createdDateField = value;
+                    this.RaisePropertyChanged("createdDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int employeeID {
+            get {
+                return this.employeeIDField;
+            }
+            set {
+                if ((this.employeeIDField.Equals(value) != true)) {
+                    this.employeeIDField = value;
+                    this.RaisePropertyChanged("employeeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string employeeName {
+            get {
+                return this.employeeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.employeeNameField, value) != true)) {
+                    this.employeeNameField = value;
+                    this.RaisePropertyChanged("employeeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string employeePosition {
+            get {
+                return this.employeePositionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.employeePositionField, value) != true)) {
+                    this.employeePositionField = value;
+                    this.RaisePropertyChanged("employeePosition");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.idField, value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string overtimeDetails {
+            get {
+                return this.overtimeDetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.overtimeDetailsField, value) != true)) {
+                    this.overtimeDetailsField = value;
+                    this.RaisePropertyChanged("overtimeDetails");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string processed {
+            get {
+                return this.processedField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.processedField, value) != true)) {
+                    this.processedField = value;
+                    this.RaisePropertyChanged("processed");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string processedDate {
+            get {
+                return this.processedDateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.processedDateField, value) != true)) {
+                    this.processedDateField = value;
+                    this.RaisePropertyChanged("processedDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal salary {
+            get {
+                return this.salaryField;
+            }
+            set {
+                if ((this.salaryField.Equals(value) != true)) {
+                    this.salaryField = value;
+                    this.RaisePropertyChanged("salary");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MyDBServiceReference.IService1")]
     public interface IService1 {
@@ -152,6 +1723,12 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmpIDByAccID", ReplyAction="http://tempuri.org/IService1/GetEmpIDByAccIDResponse")]
         System.Threading.Tasks.Task<int> GetEmpIDByAccIDAsync(string accID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmailList", ReplyAction="http://tempuri.org/IService1/GetEmailListResponse")]
+        System.Data.DataTable GetEmailList(string target);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmailList", ReplyAction="http://tempuri.org/IService1/GetEmailListResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> GetEmailListAsync(string target);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllEmployee", ReplyAction="http://tempuri.org/IService1/GetAllEmployeeResponse")]
         WCF_Service_Library.Entity.Employee[] GetAllEmployee();
@@ -533,6 +2110,14 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public System.Threading.Tasks.Task<int> GetEmpIDByAccIDAsync(string accID) {
             return base.Channel.GetEmpIDByAccIDAsync(accID);
+        }
+        
+        public System.Data.DataTable GetEmailList(string target) {
+            return base.Channel.GetEmailList(target);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> GetEmailListAsync(string target) {
+            return base.Channel.GetEmailListAsync(target);
         }
         
         public WCF_Service_Library.Entity.Employee[] GetAllEmployee() {

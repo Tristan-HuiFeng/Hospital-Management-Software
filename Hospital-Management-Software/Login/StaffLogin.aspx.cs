@@ -136,7 +136,7 @@ namespace Hospital_Management_Software.Login
         private bool userDisabled(string user_id)
         {
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-            UserAccount myUserAccount = client.GetUserAccountByID(user_id);
+           UserAccount myUserAccount = client.GetUserAccountByID(user_id);
 
 
             if (myUserAccount.status == "Active")
