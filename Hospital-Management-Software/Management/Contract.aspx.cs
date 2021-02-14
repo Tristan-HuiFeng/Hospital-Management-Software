@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WCF_Service_Library.Entity;
+//using WCF_Service_Library.Entity;
 
 namespace Hospital_Management_Software.Management
 {
@@ -37,6 +37,14 @@ namespace Hospital_Management_Software.Management
                     lbSalary.Text = crList[index].salary;
                     lbVacation.Text = crList[index].vacation;
                     lbHolidays.Text = crList[index].holidays;
+
+                    if (crList[index].signature != "")
+                    {
+                        imgSignature.ImageUrl = crList[index].signature;
+                    } else
+                    {
+                        Label4.Text += " (NOT SIGNED YET)";
+                    }
 
                     string benefits = crList[index].benefits;
                     string[] _benefits = benefits.Split(',');

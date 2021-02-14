@@ -251,6 +251,20 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <asp:Label ID="Label4" runat="server" Text="Signature by Employee" Font-Bold="True"></asp:Label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <asp:Image ID="imgSignature" runat="server" Height="100px" Width="200px" />
+                                            </div>
+                                        </div>
+                                    </div>
                                     <hr />
                                     <div class="form-group">
                                         <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="btnRenew" runat="server" Text="Renew" OnClick="btnRenew_Click" />

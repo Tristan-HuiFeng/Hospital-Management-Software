@@ -256,6 +256,54 @@
   <wsdl:message name="IService1_GetPayrollBetweenDate_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPayrollBetweenDateResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetBankRecordByBankID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankRecordByBankID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetBankRecordByBankID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankRecordByBankIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetSignatureByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetSignatureByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetSignatureByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetSignatureByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetContractByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetContractByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmployeeByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmployeeByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateAttendance_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAttendance" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateAttendance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAttendanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAttendanceByIDWithDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceByIDWithDate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAttendanceByIDWithDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttendanceByIDWithDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateByIDWithDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateByIDWithDate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateByIDWithDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateByIDWithDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectByASPNETID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectByASPNETID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectByASPNETID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectByASPNETIDResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -420,6 +468,38 @@
     <wsdl:operation name="GetPayrollBetweenDate">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPayrollBetweenDate" message="tns:IService1_GetPayrollBetweenDate_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPayrollBetweenDateResponse" message="tns:IService1_GetPayrollBetweenDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankRecordByBankID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetBankRecordByBankID" message="tns:IService1_GetBankRecordByBankID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetBankRecordByBankIDResponse" message="tns:IService1_GetBankRecordByBankID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSignatureByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetSignatureByID" message="tns:IService1_SetSignatureByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetSignatureByIDResponse" message="tns:IService1_SetSignatureByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContractByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetContractByID" message="tns:IService1_GetContractByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetContractByIDResponse" message="tns:IService1_GetContractByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmployeeByID" message="tns:IService1_GetEmployeeByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmployeeByIDResponse" message="tns:IService1_GetEmployeeByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAttendance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateAttendance" message="tns:IService1_CreateAttendance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateAttendanceResponse" message="tns:IService1_CreateAttendance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceByIDWithDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAttendanceByIDWithDate" message="tns:IService1_GetAttendanceByIDWithDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAttendanceByIDWithDateResponse" message="tns:IService1_GetAttendanceByIDWithDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateByIDWithDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateByIDWithDate" message="tns:IService1_UpdateByIDWithDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateByIDWithDateResponse" message="tns:IService1_UpdateByIDWithDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectByASPNETID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectByASPNETID" message="tns:IService1_SelectByASPNETID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectByASPNETIDResponse" message="tns:IService1_SelectByASPNETID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -786,6 +866,78 @@
     </wsdl:operation>
     <wsdl:operation name="GetPayrollBetweenDate">
       <soap:operation soapAction="http://tempuri.org/IService1/GetPayrollBetweenDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankRecordByBankID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBankRecordByBankID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSignatureByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetSignatureByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContractByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetContractByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEmployeeByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAttendance">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateAttendance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAttendanceByIDWithDate">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAttendanceByIDWithDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateByIDWithDate">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateByIDWithDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectByASPNETID">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectByASPNETID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

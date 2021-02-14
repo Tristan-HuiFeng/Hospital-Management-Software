@@ -152,7 +152,7 @@ namespace Hospital_Management_Software
                 //MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
                 //System.Diagnostics.Debug.WriteLine(EmployeeImage);
                 int cnt = client.CreateEmployee(nric, firstname, lastname, email, dob, gender,
-                            address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, EmployeeImage);
+                            address, department, position, nationality, healthdeclaration, /*loginid, password, */jobfunction, EmployeeImage);
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect", "alert('Employee Created!'); window.location='" + Request.ApplicationPath + "Management/Employees.aspx';", true);
 

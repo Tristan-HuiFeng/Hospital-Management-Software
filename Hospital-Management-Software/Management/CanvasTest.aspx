@@ -259,7 +259,7 @@
                                     <div class="form-row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <asp:Label ID="Label4" runat="server" Text="Signature" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label4" runat="server" Text="Signature by Employee" Font-Bold="True"></asp:Label>
                                             </div>
                                         </div>
                                     </div>

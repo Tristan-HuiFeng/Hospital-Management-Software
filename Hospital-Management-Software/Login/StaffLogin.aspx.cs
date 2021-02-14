@@ -67,7 +67,7 @@ namespace Hospital_Management_Software.Login
                     var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                     var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
-                    authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity)
+                    authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
                     if (User.IsInRole("Doctor"))
                     {
@@ -121,7 +121,7 @@ namespace Hospital_Management_Software.Login
         private bool userDisabled(string user_id)
         {
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-            UserAccount myUserAccount = client.GetUserAccountByID(user_id);
+            Hospital_Management_Software.MyDBServiceReference.UserAccount myUserAccount = client.GetUserAccountByID(user_id);
 
 
             if (myUserAccount.status == "Active")

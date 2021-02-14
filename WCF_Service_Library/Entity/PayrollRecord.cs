@@ -94,7 +94,7 @@ namespace WCF_Service_Library.Entity
 
             //Step 2 -  Create a DataAdapter object to retrieve data from the database table
             //string sqlStmt = "Select * from PAYROLL";
-            string sqlStmt = "select pr.*, employee.First_Name, employee.Last_Name, employee.Position from payroll as pr inner join employee on pr.Employee_ID = employee.Employee_ID;";
+            string sqlStmt = "select pr.*, employee.First_Name, employee.Last_Name, employee.Position from payroll as pr inner join employee on pr.Employee_ID = employee.Employee_ID order by Created_Date desc;";
             SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
 
             //Step 3 -  Create a DataSet to store the data to be retrieved
@@ -236,5 +236,46 @@ namespace WCF_Service_Library.Entity
             }
             return prList;
         }
+
+        //public List<PayrollRecord> SelectByID(string _id)
+        //{
+        //    //Step 1 -  Define a connection to the database by getting
+        //    //          the connection string from App.config
+        //    string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+        //    SqlConnection myConn = new SqlConnection(DBConnect);
+
+        //    //Step 2 -  Create a DataAdapter object to retrieve data from the database table
+        //    string sqlStmt = "select pr.*, employee.First_Name, employee.Last_Name, employee.Position from payroll as pr inner join employee on pr.Employee_ID = employee.Employee_ID where pr.Payroll_ID = @paraID;";
+        //    SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+        //    da.SelectCommand.Parameters.AddWithValue("@paraID", _id);
+
+        //    //Step 3 -  Create a DataSet to store the data to be retrieved
+        //    DataSet ds = new DataSet();
+
+        //    //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+        //    da.Fill(ds);
+
+        //    //Step 5 -  Read data from DataSet to List
+        //    List<PayrollRecord> prList = new List<PayrollRecord>();
+        //    int rec_cnt = ds.Tables[0].Rows.Count;
+        //    for (int i = 0; i < rec_cnt; i++)
+        //    {
+        //        DataRow row = ds.Tables[0].Rows[i];  // Sql command returns only one record
+        //        string id = row["Payroll_ID"].ToString();
+        //        decimal salary = Convert.ToDecimal(row["Salary"]);
+        //        decimal bonusAmount = Convert.ToDecimal(row["Bonus_Amount"]);
+        //        string processedDate = row["Processed_Date"].ToString();
+        //        DateTime createdDate = Convert.ToDateTime(row["Created_Date"]);
+        //        int employeeID = Convert.ToInt32(row["Employee_ID"]);
+        //        int bankDetailID = Convert.ToInt32(row["Bank_Detail_ID"]);
+        //        string processed = row["Processed"].ToString();
+        //        string overtimeDetails = row["Overtime_Details"].ToString();
+        //        string employeeName = row["First_Name"].ToString() + " " + row["Last_Name"].ToString();
+        //        string employeePosition = row["Position"].ToString();
+        //        PayrollRecord obj = new PayrollRecord(id, salary, bonusAmount, processedDate, createdDate, employeeID, bankDetailID, processed, overtimeDetails, employeeName, employeePosition);
+        //        prList.Add(obj);
+        //    }
+        //    return prList;
+        //}
     }
 }

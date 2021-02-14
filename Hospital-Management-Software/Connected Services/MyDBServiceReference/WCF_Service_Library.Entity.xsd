@@ -104,10 +104,8 @@
       <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JobFunction" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Nric" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
@@ -124,6 +122,7 @@
       <xs:element minOccurs="0" name="create_date" type="xs:dateTime" />
       <xs:element minOccurs="0" name="employeeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="holidays" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="salary" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="signature" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="vacation" nillable="true" type="xs:string" />
@@ -176,4 +175,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PayrollRecord" nillable="true" type="tns:PayrollRecord" />
+  <xs:complexType name="ArrayOfAttendanceRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttendanceRecord" nillable="true" type="tns:AttendanceRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttendanceRecord" nillable="true" type="tns:ArrayOfAttendanceRecord" />
+  <xs:complexType name="AttendanceRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="empID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AttendanceRecord" nillable="true" type="tns:AttendanceRecord" />
 </xs:schema>

@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
-using WCF_Service_Library.Entity;
+//using WCF_Service_Library.Entity;
 
 namespace Hospital_Management_Software.HealthProfessional
 {

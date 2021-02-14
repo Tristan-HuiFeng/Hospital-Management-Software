@@ -17,15 +17,16 @@
                 <asp:TextBox CssClass="bg-light border-0 small form-control" placeholder="From-Date" ID="tbSecondDate" runat="server" TextMode="Date"></asp:TextBox>
             </div>
             <asp:Button CssClass="btn btn-primary mr-1" ID="btnFilter" runat="server" Text="Filter" OnClick="btnFilter_Click"/>
+            <asp:HyperLink CssClass="btn btn-info" ID="HyperLink1" runat="server" NavigateUrl="~/Management/AddPayroll.aspx">+New Payroll</asp:HyperLink>
             <br />
             <br />
-            <p class="card-text">
+            <%--<p class="card-text">
                 <asp:DropDownList CssClass="btn btn-primary" ID="DropDownList1" runat="server">
                     <asp:ListItem Selected="True" hidden="true">+2 Filters</asp:ListItem>
                     <asp:ListItem>Gender</asp:ListItem>
                     <asp:ListItem>DOB</asp:ListItem>
                 </asp:DropDownList>
-            </p>
+            </p>--%>
         </div>
     </div>
     <br />

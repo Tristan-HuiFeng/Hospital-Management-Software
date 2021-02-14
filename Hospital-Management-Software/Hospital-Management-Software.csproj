@@ -56,13 +56,13 @@
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -155,39 +155,6 @@
     </Content>
     <None Include="Connected Services\MyDBServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\MyDBServiceReference\configuration.svcinfo" />
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.BankRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.ContractRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Employee.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.LabServiceRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.PayrollRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Resource.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.RolePermission.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.tempPatient.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\MyDBServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -215,6 +182,7 @@
     <Content Include="HealthProfessional\PatientRecord.aspx" />
     <Content Include="HealthProfessional\UpdateMedicalRecord.aspx" />
     <Content Include="Login\StaffLogin.aspx" />
+    <Content Include="Management\ViewContracts.aspx" />
     <Content Include="MasterControl.aspx" />
     <Content Include="Management\CanvasTest.aspx" />
     <Content Include="src\css\login.css" />
@@ -261,12 +229,17 @@
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Resource.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.RolePermission.datasource" />
     <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
-    <None Include="Connected Services\MyDBServiceReference\Arrays.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.BankRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.UserAccount.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PayrollRecord.datasource" />
+    <None Include="Connected Services\MyDBServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\MyDBServiceReference\service.wsdl" />
     <None Include="Connected Services\MyDBServiceReference\service.xsd">
       <SubType>Designer</SubType>
@@ -283,11 +256,6 @@
     <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.UserAccount.datasource" />
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PayrollRecord.datasource" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -632,6 +600,13 @@
     </Compile>
     <Compile Include="Management\ProcessPayroll.aspx.designer.cs">
       <DependentUpon>ProcessPayroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ViewContracts.aspx.cs">
+      <DependentUpon>ViewContracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\ViewContracts.aspx.designer.cs">
+      <DependentUpon>ViewContracts.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterControl.aspx.cs">
       <DependentUpon>MasterControl.aspx</DependentUpon>

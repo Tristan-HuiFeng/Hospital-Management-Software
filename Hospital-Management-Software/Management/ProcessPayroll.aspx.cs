@@ -31,10 +31,22 @@ namespace Hospital_Management_Software.Management
                     decimal baseSalary = Convert.ToDecimal(prList[0].salary) - (Convert.ToDecimal(otDetails[0]) * Convert.ToDecimal(otDetails[1]));
                     lbMonthSalary.Text = baseSalary.ToString();
                     lbBonus.Text = prList[0].bonusAmount.ToString();
-                    lbEmployerCPF.Text = (Convert.ToDouble(prList[0].salary) * 0.83).ToString();
+                    lbEmployerCPF.Text = (Convert.ToDouble(prList[0].salary) * 0.17).ToString();
                     lbOvertimeDetails.Text = $"OT({otDetails[0]} Hrs x ${otDetails[1]})";
                     lbOvertimePay.Text = (Convert.ToDecimal(otDetails[0]) * Convert.ToDecimal(otDetails[1])).ToString();
                     lbTotalWages.Text = (prList[0].salary + prList[0].bonusAmount).ToString();
+
+                    List<BankRecord> brList = new List<BankRecord>();
+                    brList = client.GetBankRecordByBankID(prList[0].bankDetailID).ToList<BankRecord>();
+                    lbBankName.Text = brList[0].bankName;
+                    lbBankNumber.Text = brList[0].bankAccountNumber;
+
+                    if (prList[0].processed != "No")
+                    {
+                        btnProcess.Enabled = false;
+                        btnCancel.Enabled = false;
+                        btnBack.Text = "Back";
+                    }
                 }
             }
         }
@@ -43,6 +55,18 @@ namespace Hospital_Management_Software.Management
         {
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
             if (_id != "") { client.ProcessPayrollByID(_id, "Completed"); }
+            Response.Redirect("Payrolls", false);
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+            if (_id != "") { client.ProcessPayrollByID(_id, "Cancelled"); }
+            Response.Redirect("Payrolls", false);
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
             Response.Redirect("Payrolls", false);
         }
     }

@@ -80,6 +80,16 @@
                                                 <asp:Label ID="lbMonthSalary" runat="server" Text="2209.09"></asp:Label>
                                             </div>
                                         </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <asp:Label ID="Label4" runat="server" Text="Bank Name" Font-Bold="True"></asp:Label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <asp:Label ID="lbBankName" runat="server" Text="<Insert Bank Name>"></asp:Label>
+                                            </div>
+                                        </div>
                                     </div>
                                      <div class="form-row">
                                         <div class="col-md-2">
@@ -90,6 +100,16 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <asp:Label ID="lbBonus" runat="server" Text="-"></asp:Label>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-2">
+                                            <div class="form-group">
+                                                <asp:Label ID="Label6" runat="server" Text="Bank Number" Font-Bold="True"></asp:Label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <asp:Label ID="lbBankNumber" runat="server" Text="<Insert Bank Number>"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -143,9 +163,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="Button2" runat="server" Text="Decide Later" />
-                                        <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="Button3" runat="server" Text="Email" />
+                                        <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="btnBack" runat="server" Text="Decide Later" OnClick="btnBack_Click" />
                                         <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="btnProcess" runat="server" Text="Process" OnClick="btnProcess_Click" />
+                                        <asp:Button Style="float: right;" CssClass="btn btn-danger btn-sm mx-2" ID="btnCancel" runat="server" Text="Cancel Payroll" OnClick="btnCancel_Click" />
                                     </div>
                                 </form>
                             </div>
