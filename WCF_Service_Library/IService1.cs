@@ -79,6 +79,12 @@ namespace WCF_Service_Library
         [OperationContract]
         void updateAccountCreationDetails(string asp_id, string emp_id);
 
+        [OperationContract]
+        DataTable getAccountList();
+
+        [OperationContract]
+        int GetEmpIDByAccID(string accID);
+
         /* Health Professional's stuffs */
 
         /*

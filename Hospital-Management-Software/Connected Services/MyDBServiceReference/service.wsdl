@@ -136,6 +136,18 @@
   <wsdl:message name="IService1_updateAccountCreationDetails_OutputMessage">
     <wsdl:part name="parameters" element="tns:updateAccountCreationDetailsResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getAccountList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAccountList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAccountListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmpIDByAccID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpIDByAccID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmpIDByAccID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmpIDByAccIDResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetAllEmployee_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEmployee" />
   </wsdl:message>
@@ -292,6 +304,14 @@
     <wsdl:operation name="updateAccountCreationDetails">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateAccountCreationDetails" message="tns:IService1_updateAccountCreationDetails_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/updateAccountCreationDetailsResponse" message="tns:IService1_updateAccountCreationDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAccountList" message="tns:IService1_getAccountList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAccountListResponse" message="tns:IService1_getAccountList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpIDByAccID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmpIDByAccID" message="tns:IService1_GetEmpIDByAccID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmpIDByAccIDResponse" message="tns:IService1_GetEmpIDByAccID_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllEmployee">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllEmployee" message="tns:IService1_GetAllEmployee_InputMessage" />
@@ -526,6 +546,24 @@
     </wsdl:operation>
     <wsdl:operation name="updateAccountCreationDetails">
       <soap:operation soapAction="http://tempuri.org/IService1/updateAccountCreationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountList">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAccountList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpIDByAccID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEmpIDByAccID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
