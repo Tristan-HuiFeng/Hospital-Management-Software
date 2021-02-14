@@ -1803,6 +1803,24 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updateAccountCreationDetails", ReplyAction="http://tempuri.org/IService1/updateAccountCreationDetailsResponse")]
         System.Threading.Tasks.Task updateAccountCreationDetailsAsync(string asp_id, string emp_id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAccountList", ReplyAction="http://tempuri.org/IService1/getAccountListResponse")]
+        System.Data.DataTable getAccountList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAccountList", ReplyAction="http://tempuri.org/IService1/getAccountListResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> getAccountListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmpIDByAccID", ReplyAction="http://tempuri.org/IService1/GetEmpIDByAccIDResponse")]
+        int GetEmpIDByAccID(string accID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmpIDByAccID", ReplyAction="http://tempuri.org/IService1/GetEmpIDByAccIDResponse")]
+        System.Threading.Tasks.Task<int> GetEmpIDByAccIDAsync(string accID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmailList", ReplyAction="http://tempuri.org/IService1/GetEmailListResponse")]
+        System.Data.DataTable GetEmailList(string target);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmailList", ReplyAction="http://tempuri.org/IService1/GetEmailListResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> GetEmailListAsync(string target);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllEmployee", ReplyAction="http://tempuri.org/IService1/GetAllEmployeeResponse")]
         Hospital_Management_Software.MyDBServiceReference.Employee[] GetAllEmployee();
         
@@ -2167,7 +2185,31 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.updateAccountCreationDetailsAsync(asp_id, emp_id);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetAllEmployee() {
+        public System.Data.DataTable getAccountList() {
+            return base.Channel.getAccountList();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> getAccountListAsync() {
+            return base.Channel.getAccountListAsync();
+        }
+        
+        public int GetEmpIDByAccID(string accID) {
+            return base.Channel.GetEmpIDByAccID(accID);
+        }
+        
+        public System.Threading.Tasks.Task<int> GetEmpIDByAccIDAsync(string accID) {
+            return base.Channel.GetEmpIDByAccIDAsync(accID);
+        }
+        
+        public System.Data.DataTable GetEmailList(string target) {
+            return base.Channel.GetEmailList(target);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> GetEmailListAsync(string target) {
+            return base.Channel.GetEmailListAsync(target);
+        }
+        
+        public WCF_Service_Library.Entity.Employee[] GetAllEmployee() {
             return base.Channel.GetAllEmployee();
         }
         

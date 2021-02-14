@@ -19,26 +19,33 @@ namespace Hospital_Management_Software.Login
             var userStore = new UserStore<IdentityUser>();
             var userManager = new UserManager<IdentityUser>(userStore);
 
-           
+                       
             if ((System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                if (User.IsInRole("Doctor"))
+                var user = userManager.FindById(User.Identity.GetUserId());
+
+                if (userManager.IsInRole(user.Id, "Doctor") || userManager.IsInRole(user.Id, "Superadmin"))
                 {
+                    //lb_loginError.Text = "1";
                     Response.Redirect("~/HealthProfessional/MedicalRecordList.aspx");
                 }
-                else if (User.IsInRole("HR"))
+                else if (userManager.IsInRole(user.Id, "HR"))
                 {
+                    //lb_loginError.Text = "2";
                     Response.Redirect("~/Management/Employees.aspx");
                 }
-                else if (User.IsInRole("Administrator"))
+                else if (userManager.IsInRole(user.Id, "Administrator"))
                 {
+                    //lb_loginError.Text = "3";
                     Response.Redirect("~/Administrator/Role.aspx");
                 }
                 else
                 {
-                    Response.Redirect("~/HealthProfessional/Dashboard.aspx");
+                    lb_loginError.Text = "nothing";
+                    //Session["error"] = "No roles assigned or role have no permission to access any resource";
+                    Response.Redirect("~/ErrorPage/NoRoleError.aspx");
                 }
-               
+
             }
 
         }
@@ -67,23 +74,31 @@ namespace Hospital_Management_Software.Login
                     var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
                     var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
+                    var roleStore = new RoleStore<IdentityRole>();
+                    var roleManager = new RoleManager<IdentityRole>(roleStore);
+
                     authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
-                    if (User.IsInRole("Doctor"))
+                    if (userManager.IsInRole(user.Id, "Doctor") || userManager.IsInRole(user.Id, "Superadmin"))
                     {
+                        //lb_loginError.Text = "1";
                         Response.Redirect("~/HealthProfessional/MedicalRecordList.aspx");
                     }
-                    else if (User.IsInRole("HR"))
+                    else if (userManager.IsInRole(user.Id, "HR"))
                     {
+                        //lb_loginError.Text = "2";
                         Response.Redirect("~/Management/Employees.aspx");
                     }
-                    else if (User.IsInRole("Administrator"))
+                    else if (userManager.IsInRole(user.Id, "Administrator"))
                     {
+                        //lb_loginError.Text = "3";
                         Response.Redirect("~/Administrator/Role.aspx");
                     }
                     else
                     {
-                        Response.Redirect("~/HealthProfessional/Dashboard.aspx");
+                        lb_loginError.Text = "nothing";
+                        //Session["error"] = "No roles assigned or role have no permission to access any resource";
+                        Response.Redirect("~/ErrorPage/NoRoleError.aspx");
                     }
                 }
               
@@ -122,6 +137,7 @@ namespace Hospital_Management_Software.Login
         {
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
             Hospital_Management_Software.MyDBServiceReference.UserAccount myUserAccount = client.GetUserAccountByID(user_id);
+            UserAccount myUserAccount = client.GetUserAccountByID(user_id);
 
 
             if (myUserAccount.status == "Active")

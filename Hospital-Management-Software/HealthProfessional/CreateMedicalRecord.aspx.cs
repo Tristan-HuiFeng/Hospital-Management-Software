@@ -7,6 +7,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 //using WCF_Service_Library.Entity;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Hospital_Management_Software.HealthProfessional
 {
@@ -33,6 +35,8 @@ namespace Hospital_Management_Software.HealthProfessional
             {
                 Response.Redirect("~/ErrorPage/UnauthorisedAccess.aspx");
             }
+
+
         }
 
         protected void btn_searchPatient_Click(object sender, EventArgs e)
@@ -72,7 +76,12 @@ namespace Hospital_Management_Software.HealthProfessional
                 
 
                 int patient_id;
-                int doctor_id = Convert.ToInt32(1);
+                //int doctor_id = Convert.ToInt32(1);
+
+                var userStore = new UserStore<IdentityUser>();
+                var userManager = new UserManager<IdentityUser>(userStore);
+
+                int doctor_id = client.GetEmpIDByAccID(userManager.FindByName(System.Web.HttpContext.Current.User.Identity.Name).Id);
                 //debugging.Text = tb_patientID.Text;
                 bool success = int.TryParse(tb_patientID.Text, out patient_id);
                 

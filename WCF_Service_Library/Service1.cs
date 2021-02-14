@@ -93,7 +93,7 @@ namespace WCF_Service_Library
         {
 
             UserAccount ua = new UserAccount();
-            return ua.SelectAllRoleListTableView(role_id);
+            return ua.SelectRoleListTableViewByRoleID(role_id);
 
         }
 
@@ -158,6 +158,30 @@ namespace WCF_Service_Library
             ua.updateAccountCreationDetails(asp_id, emp_id);
         }
 
+        public DataTable getAccountList()
+        {
+            UserAccount ua = new UserAccount();
+            return ua.SelectAllUserListTableView();
+        }
+
+        public tempPatient GetPatientByID(string id)
+        {
+            tempPatient tp = new tempPatient();
+            return tp.SelectPatientById(id);
+        }
+
+        public int GetEmpIDByAccID(string accID)
+        {
+            UserAccount ua = new UserAccount();
+            return ua.getEmpIDusingAccID(accID);
+        }
+
+        public DataTable GetEmailList(string target)
+        {
+            tempPatient pa = new tempPatient();
+            return pa.getEmailList(target);
+        }
+
         /* Health Professional's stuffs */
 
         /*
@@ -180,6 +204,7 @@ namespace WCF_Service_Library
                 rl.updateRoleStatusById(roleID, isDisabled);
             }
          */
+
 
         /* End of Hui Feng's code */
 
@@ -206,12 +231,6 @@ namespace WCF_Service_Library
         {
             Employee emp = new Employee();
             return emp.SelectSortByGender(order);
-        }
-
-        public tempPatient GetPatientByID(string id)
-        {
-            tempPatient tp = new tempPatient();
-            return tp.SelectPatientById(id);
         }
 
 

@@ -129,7 +129,7 @@ namespace WCF_Service_Library.Entity
             return myUserAccount;
         }
 
-        public DataTable SelectAllRoleListTableView(string role_id)
+        public DataTable SelectRoleListTableViewByRoleID(string role_id)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -147,6 +147,27 @@ namespace WCF_Service_Library.Entity
 
             DataTable dt = new DataTable();
             dt.TableName = "UserRoleList";
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        public DataTable SelectAllUserListTableView()
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "Select ANU.Id AS AccountID, concat(EMP.First_Name, ' ', EMP.Last_Name) Name, ANR.Name AS Role, EMP.Department AS Department " +
+                "from AspNetUsers AS ANU " +
+                "Inner join AspNetUserRoles AS ANUR on ANUR.UserId = ANU.Id " +
+                "Inner join EMPLOYEE AS EMP on EMP.ASPNET_ID = ANU.Id " +
+                "Inner join AspNetRoles AS ANR on ANR.Id = ANUR.RoleId " +
+                "Order by EMP.Employee_ID";
+
+            SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+
+            DataTable dt = new DataTable();
+            dt.TableName = "UserList";
             da.Fill(dt);
 
             return dt;
@@ -282,6 +303,44 @@ namespace WCF_Service_Library.Entity
                 }
             }
 
+        }
+
+        public int getEmpIDusingAccID(string account_id)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+
+            using (SqlConnection myConn = new SqlConnection(DBConnect))
+            {
+                string sqlstmt = "Select Employee_ID " +
+                   "from EMPLOYEE " +
+                   "where ASPNET_ID = @paraID";
+
+                using (SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn))
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@paraID", Convert.ToInt32(account_id));
+
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    int rec_cnt = ds.Tables[0].Rows.Count;
+                    int emp_id = -1;
+
+                    if (rec_cnt == 1)
+                    {
+
+                        DataRow row = ds.Tables[0].Rows[0];
+
+                        emp_id = Convert.ToInt32(row["Employee_ID"]);
+
+
+                    }
+
+                    return emp_id;
+
+                }
+
+
+
+            }
         }
 
         // HF end
