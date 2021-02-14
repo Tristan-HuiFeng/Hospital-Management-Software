@@ -20,7 +20,7 @@
         <div class="container" style="margin-bottom: 40px">
 
             <div class="mt-2 my-2 row">
-                <asp:Label class="record-label col-3" ID="Label1" runat="server" Text="Change Role:"></asp:Label>
+                <asp:Label class="record-label col-3" style="margin-top:auto;margin-bottom:auto;" ID="Label1" runat="server" Text="Change Role:"></asp:Label>
                 <div class="col-6">
                     <asp:DropDownList ID="ddl_roleList" CssClass="mr-3 form-control" runat="server"></asp:DropDownList>
                    
@@ -32,9 +32,9 @@
             </div>
 
             <div class="mt-2 my-2 row">
-                <asp:Label CssClass="record-label col-3" ID="Label12" runat="server" Text="Account Status:&nbsp"></asp:Label>
+                <asp:Label CssClass="record-label col-3" style="margin-top:auto;margin-bottom:auto;" ID="Label12" runat="server" Text="Account Status:&nbsp"></asp:Label>
                 <div class="col-6">
-                    <asp:Label ID="lb_status" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lb_status" runat="server" style="margin:auto;" Text="{}"></asp:Label>
                    
                 </div>
                 <div class="col-3">
@@ -84,6 +84,22 @@
             <div class="row my-3">
                 <asp:Label CssClass="record-label" ID="Label8" runat="server" Text="Department:&nbsp"></asp:Label>
                 <asp:Label ID="lb_department" runat="server" Text=""></asp:Label>
+            </div>
+
+            <hr />
+            <div class="row d-flex flex-row bd-highlight mb-3">
+                <div class="form-group p-2 bd-highlight">
+                    <asp:Label ID="lb_password" runat="server" Text="New Password:"></asp:Label>
+                    <asp:TextBox ID="tb_password" class="form-control" runat="server" TextMode="Password"></asp:TextBox>
+                </div>
+
+                <div class="form-group p-2 bd-highlight align-self-end">
+                    <asp:Button ID="btn_changePassword" class="btn btn-primary" runat="server" Text="Change Password" OnClick="btn_changePassword_Click" />
+                </div>
+                <div class="form-group p-2 bd-highlight align-self-end">
+                    <asp:Label ID="lb_passwordResult" runat="server" Text="Label"></asp:Label>
+                </div>
+
             </div>
 
 

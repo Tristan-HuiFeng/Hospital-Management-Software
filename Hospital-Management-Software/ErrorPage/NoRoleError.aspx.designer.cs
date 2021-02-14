@@ -11,7 +11,16 @@ namespace Hospital_Management_Software.ErrorPage
 {
 
 
-    public partial class BasicError1
+    public partial class BasicError
     {
+
+        /// <summary>
+        /// lb_debugger control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lb_debugger;
     }
 }

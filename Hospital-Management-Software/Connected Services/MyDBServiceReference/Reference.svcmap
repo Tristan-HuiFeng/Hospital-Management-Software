@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0b56d39e-6c59-485c-a04c-72377da03f39" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -61,6 +62,8 @@
     <MetadataFile FileName="WCF_Service_Library.xsd" MetadataType="Schema" ID="691a178c-e7ff-413e-85eb-14613eccc217" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
     <MetadataFile FileName="WCF_Service_Library.Entity.xsd" MetadataType="Schema" ID="f81afb25-6250-4950-9a17-2d425fc19a5f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
     <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="7fc9a7ba-d515-4a75-ab17-6b6c4caa7b93" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="4e4f5c85-8a44-46c8-a3c5-2a44051663ef" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
