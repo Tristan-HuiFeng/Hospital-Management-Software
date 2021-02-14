@@ -15,13 +15,13 @@ namespace Hospital_Management_Software
     {
 
         /// <summary>
-        /// TextBox1 control.
+        /// tbFirstDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox tbFirstDate;
 
         /// <summary>
         /// Label1 control.
@@ -33,13 +33,22 @@ namespace Hospital_Management_Software
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// TextBox3 control.
+        /// tbSecondDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox tbSecondDate;
+
+        /// <summary>
+        /// btnFilter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFilter;
 
         /// <summary>
         /// DropDownList1 control.

@@ -125,6 +125,7 @@
       <xs:element minOccurs="0" name="employeeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="holidays" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="salary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="signature" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="vacation" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="workingHours" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -139,4 +140,41 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="tempPatient" nillable="true" type="tns:tempPatient" />
+  <xs:complexType name="ArrayOfBankRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankRecord" nillable="true" type="tns:BankRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBankRecord" nillable="true" type="tns:ArrayOfBankRecord" />
+  <xs:complexType name="BankRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bankHolderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankRecord" nillable="true" type="tns:BankRecord" />
+  <xs:complexType name="ArrayOfPayrollRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PayrollRecord" nillable="true" type="tns:PayrollRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayrollRecord" nillable="true" type="tns:ArrayOfPayrollRecord" />
+  <xs:complexType name="PayrollRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankDetailID" type="xs:int" />
+      <xs:element minOccurs="0" name="bonusAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+      <xs:element minOccurs="0" name="employeeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="employeePosition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="overtimeDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="processed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="processedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="salary" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayrollRecord" nillable="true" type="tns:PayrollRecord" />
 </xs:schema>
