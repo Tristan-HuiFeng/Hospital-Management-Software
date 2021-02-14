@@ -176,6 +176,12 @@ namespace WCF_Service_Library
             return ua.getEmpIDusingAccID(accID);
         }
 
+        public DataTable GetEmailList(string target)
+        {
+            tempPatient pa = new tempPatient();
+            return pa.getEmailList(target);
+        }
+
         /* Health Professional's stuffs */
 
         /*

@@ -148,6 +148,12 @@
   <wsdl:message name="IService1_GetEmpIDByAccID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetEmpIDByAccIDResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetEmailList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetEmailList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailListResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetAllEmployee_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEmployee" />
   </wsdl:message>
@@ -312,6 +318,10 @@
     <wsdl:operation name="GetEmpIDByAccID">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmpIDByAccID" message="tns:IService1_GetEmpIDByAccID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmpIDByAccIDResponse" message="tns:IService1_GetEmpIDByAccID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetEmailList" message="tns:IService1_GetEmailList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetEmailListResponse" message="tns:IService1_GetEmailList_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllEmployee">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllEmployee" message="tns:IService1_GetAllEmployee_InputMessage" />
@@ -564,6 +574,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetEmpIDByAccID">
       <soap:operation soapAction="http://tempuri.org/IService1/GetEmpIDByAccID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailList">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetEmailList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

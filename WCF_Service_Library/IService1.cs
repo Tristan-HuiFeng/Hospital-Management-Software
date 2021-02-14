@@ -85,6 +85,9 @@ namespace WCF_Service_Library
         [OperationContract]
         int GetEmpIDByAccID(string accID);
 
+        [OperationContract]
+        DataTable GetEmailList(string target);
+
         /* Health Professional's stuffs */
 
         /*

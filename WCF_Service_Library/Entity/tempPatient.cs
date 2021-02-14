@@ -15,6 +15,8 @@ namespace WCF_Service_Library.Entity
         public int id { get; set; }
         public string contact { get; set; }
 
+        public string email { get; set; }
+
         public tempPatient()
         {
 
@@ -25,6 +27,33 @@ namespace WCF_Service_Library.Entity
             this.name = name;
             this.contact = contact;
             this.id = id;
+
+        }
+
+        public DataTable getEmailList(string target)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt;
+
+            if (target == "1")
+            {
+                sqlStmt = "Select Email, Concat(First_Name, ' ',Last_Name) Name from PATIENT";
+
+            }
+            else
+            {
+                sqlStmt = "Select Email, Concat(First_Name, ' ',Last_Name) Name from Employee";
+
+            }
+
+            SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+            DataTable dt = new DataTable();
+            dt.TableName = "MedicalRecord";
+            da.Fill(dt);
+
+            return dt;
 
         }
 

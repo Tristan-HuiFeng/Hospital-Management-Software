@@ -153,6 +153,12 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmpIDByAccID", ReplyAction="http://tempuri.org/IService1/GetEmpIDByAccIDResponse")]
         System.Threading.Tasks.Task<int> GetEmpIDByAccIDAsync(string accID);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmailList", ReplyAction="http://tempuri.org/IService1/GetEmailListResponse")]
+        System.Data.DataTable GetEmailList(string target);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmailList", ReplyAction="http://tempuri.org/IService1/GetEmailListResponse")]
+        System.Threading.Tasks.Task<System.Data.DataTable> GetEmailListAsync(string target);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllEmployee", ReplyAction="http://tempuri.org/IService1/GetAllEmployeeResponse")]
         WCF_Service_Library.Entity.Employee[] GetAllEmployee();
         
@@ -435,6 +441,14 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public System.Threading.Tasks.Task<int> GetEmpIDByAccIDAsync(string accID) {
             return base.Channel.GetEmpIDByAccIDAsync(accID);
+        }
+        
+        public System.Data.DataTable GetEmailList(string target) {
+            return base.Channel.GetEmailList(target);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataTable> GetEmailListAsync(string target) {
+            return base.Channel.GetEmailListAsync(target);
         }
         
         public WCF_Service_Library.Entity.Employee[] GetAllEmployee() {
