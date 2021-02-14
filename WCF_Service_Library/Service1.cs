@@ -257,7 +257,8 @@ namespace WCF_Service_Library
 
         public int CreateContract(string salary, string benefits, string workingHours, string holidays, string vacation, DateTime create_date, string employeeID)
         {
-            ContractRecord cr = new ContractRecord(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
+            string signature = "";
+            ContractRecord cr = new ContractRecord(salary, benefits, workingHours, holidays, vacation, create_date, employeeID, signature);
             return cr.Insert();
         }
 
@@ -265,6 +266,54 @@ namespace WCF_Service_Library
         {
             ContractRecord cr = new ContractRecord();
             return cr.SelectByEmployeeID(id);
+        }
+
+        public int CreateBankRecord(string bankName, string bankAccountNumber, string bankHolderName, int employeeID)
+        {
+            BankRecord br = new BankRecord(bankName, bankAccountNumber, bankHolderName, employeeID);
+            return br.Insert();
+        }
+
+        public List<BankRecord> GetBankRecordByEmployeeID(int employeeID)
+        {
+            BankRecord br = new BankRecord();
+            return br.SelectByEmployeeID(employeeID);
+        }
+
+        public int CreatePayroll(decimal salary, decimal bonusAmount, string processedDate, DateTime createdDate, int employeeID, int bankDetailID, string processed, string overtimeDetails)
+        {
+            PayrollRecord pr = new PayrollRecord(salary, bonusAmount, processedDate, createdDate, employeeID, bankDetailID, processed, overtimeDetails);
+            return pr.Insert();
+        }
+
+        public string GetBankDetailID(string id)
+        {
+            BankRecord br = new BankRecord();
+            return br.GetBankDetailID(id);
+        }
+
+        public List<PayrollRecord> GetAllPayroll()
+        {
+            PayrollRecord pr = new PayrollRecord();
+            return pr.SelectAll();
+        }
+
+        public List<PayrollRecord> GetPayrollByID(string id)
+        {
+            PayrollRecord pr = new PayrollRecord();
+            return pr.SelectByID(id);
+        }
+
+        public int ProcessPayrollByID(string id, string process)
+        {
+            PayrollRecord pr = new PayrollRecord();
+            return pr.ProcessPayrollByID(id, process);
+        }
+
+        public List<PayrollRecord> GetPayrollBetweenDate(string firstDate, string secondDate)
+        {
+            PayrollRecord pr = new PayrollRecord();
+            return pr.SelectPayrollBetweenDate(firstDate, secondDate);
         }
     }
 }

@@ -18,10 +18,11 @@ namespace WCF_Service_Library.Entity
         public string vacation { get; set; }
         public DateTime create_date { get; set; }
         public string employeeID { get; set; }
+        public string signature { get; set; }
 
         public ContractRecord() { }
 
-        public ContractRecord(string salary, string benefits, string workingHours, string holidays, string vacation, DateTime create_date, string employeeID)
+        public ContractRecord(string salary, string benefits, string workingHours, string holidays, string vacation, DateTime create_date, string employeeID, string signature)
         {
             this.salary = salary;
             this.benefits = benefits;
@@ -30,6 +31,7 @@ namespace WCF_Service_Library.Entity
             this.vacation = vacation;
             this.create_date = create_date;
             this.employeeID = employeeID;
+            this.signature = signature;
         }
 
         public int Insert()
@@ -41,7 +43,7 @@ namespace WCF_Service_Library.Entity
 
             // Step 2 - Create a SqlCommand object to add record with INSERT statement
             string sqlStmt = "INSERT INTO Contract " +
-                "VALUES (@paraSalary, @paraBenefits, @paraWorkingHours, @paraHolidays, @paraVacation, @paraCreateDate, @paraEmployeeID)";
+                "VALUES (@paraSalary, @paraBenefits, @paraWorkingHours, @paraHolidays, @paraVacation, @paraCreateDate, @paraEmployeeID, @paraSignature)";
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
             // Step 3 : Add each parameterised variable with value
@@ -52,6 +54,7 @@ namespace WCF_Service_Library.Entity
             sqlCmd.Parameters.AddWithValue("@paraVacation", vacation);
             sqlCmd.Parameters.AddWithValue("@paraCreateDate", create_date);
             sqlCmd.Parameters.AddWithValue("@paraEmployeeID", employeeID);
+            sqlCmd.Parameters.AddWithValue("@paraSignature", DBNull.Value);
 
             // Step 4 Open connection the execute NonQuery of sql command   
             myConn.Open();
@@ -94,8 +97,9 @@ namespace WCF_Service_Library.Entity
                 string vacation = row["vacation"].ToString();
                 DateTime create_date = Convert.ToDateTime(row["Create_Date"]);
                 string employeeID = row["Employee_ID"].ToString();
+                string signature = row["Signature"].ToString();
 
-                ContractRecord obj = new ContractRecord(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
+                ContractRecord obj = new ContractRecord(salary, benefits, workingHours, holidays, vacation, create_date, employeeID, signature);
                 conList.Add(obj);
             }
             return conList;
