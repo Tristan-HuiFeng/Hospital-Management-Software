@@ -110,6 +110,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="403.html" />
+    <Content Include="404.html" />
     <Content Include="About.aspx" />
     <Content Include="Administrator\CreateAccount.aspx" />
     <Content Include="Administrator\CreateRole.aspx" />
@@ -159,7 +161,11 @@
     <Content Include="Customer\allFeedback.aspx" />
     <Content Include="Customer\allFeedbackAdmin.aspx" />
     <Content Include="Customer\feedback.aspx" />
+    <Content Include="Customer\homepage.aspx" />
+    <Content Include="Customer\login.aspx" />
+    <Content Include="Customer\makeAppointment.aspx" />
     <Content Include="Customer\success.aspx" />
+    <Content Include="Customer\verification.aspx" />
     <Content Include="HealthProfessional\Dashboard.aspx" />
     <Content Include="HealthProfessional\MedicalRecordList.aspx" />
     <Content Include="HealthProfessional\ViewMedicalRecord.aspx" />
@@ -414,12 +420,40 @@
     <Compile Include="Customer\feedback.aspx.designer.cs">
       <DependentUpon>feedback.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\makeAppointment.aspx.cs">
+      <DependentUpon>makeAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\makeAppointment.aspx.designer.cs">
+      <DependentUpon>makeAppointment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Customer\success.aspx.cs">
       <DependentUpon>success.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Customer\success.aspx.designer.cs">
       <DependentUpon>success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\verification.aspx.cs">
+      <DependentUpon>verification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\verification.aspx.designer.cs">
+      <DependentUpon>verification.aspx</DependentUpon>
     </Compile>
     <Compile Include="HealthProfessional\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>

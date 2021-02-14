@@ -33,12 +33,12 @@ namespace WCF_Service_Library.Entity
         {
             //Step 1 -  Define a connection to the database by getting
             //          the connection string from App.config
-            string DBConnect = ConfigurationManager.ConnectionStrings["EDP_DB"].ConnectionString;
-            SqlConnection myConn = new SqlConnection(DBConnect);
+            // string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=C:\Users\roygo\source\repos\Hospital-Management-Software\Hospital-Management-Software\App_Data\EDP_DB.mdf;Initial Catalog=MyDB;Integrated Security=True");
 
             // Step 2 - Create a SqlCommand object to add record with INSERT statement
-            string sqlStmt = "INSERT INTO Feedback (name, email, subject, feedback) " +
-                "VALUES (@paraName,@paraEmail, @paraSubject, @paraFeedback)";
+            string sqlStmt = "INSERT INTO FEEDBACK (name, email, subject, feedback, dateCreated) " +
+                "VALUES (@paraName,@paraEmail, @paraSubject, @paraFeedback, @paraDateTime)";
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
             // Step 3 : Add each parameterised variable with value
@@ -46,6 +46,7 @@ namespace WCF_Service_Library.Entity
             sqlCmd.Parameters.AddWithValue("@paraEmail", Email);
             sqlCmd.Parameters.AddWithValue("@paraSubject", Subject);
             sqlCmd.Parameters.AddWithValue("@paraFeedback", Feedback);
+            sqlCmd.Parameters.AddWithValue("@paraDateTime", DateTime.Now);
 
             // Step 4 Open connection the execute NonQuery of sql command   
             myConn.Open();
@@ -61,11 +62,11 @@ namespace WCF_Service_Library.Entity
         {
             //Step 1 -  Define a connection to the database by getting
             //          the connection string from App.config
-            string DBConnect = ConfigurationManager.ConnectionStrings["EDP_DB"].ConnectionString;
+            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
             //Step 2 -  Create a DataAdapter object to retrieve data from the database table
-            string sqlStmt = "Select * from Feedback";
+            string sqlStmt = "Select * from FEEDBACK";
             SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
 
             //Step 3 -  Create a DataSet to store the data to be retrieved

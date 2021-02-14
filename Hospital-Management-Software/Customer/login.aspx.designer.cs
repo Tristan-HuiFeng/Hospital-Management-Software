@@ -11,44 +11,62 @@ namespace Hospital_Management_Software.Customer
 {
 
 
-    public partial class feedback
+    public partial class login
     {
 
         /// <summary>
-        /// tbSubject control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbSubject;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// tbFeedback control.
+        /// tb_nric control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFeedback;
+        protected global::System.Web.UI.WebControls.TextBox tb_nric;
 
         /// <summary>
-        /// tbName control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbName;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// tbEmail control.
+        /// tb_dob control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbEmail;
+        protected global::System.Web.UI.WebControls.TextBox tb_dob;
+
+        /// <summary>
+        /// lblVerification control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVerification;
+
+        /// <summary>
+        /// lbllbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbllbl;
 
         /// <summary>
         /// chkPublic control.
@@ -60,21 +78,21 @@ namespace Hospital_Management_Software.Customer
         protected global::System.Web.UI.WebControls.CheckBox chkPublic;
 
         /// <summary>
-        /// errorMsg control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label errorMsg;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
 
         /// <summary>
-        /// Cancel control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Cancel;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
     }
 }
