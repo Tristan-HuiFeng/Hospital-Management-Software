@@ -7,65 +7,74 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital_Management_Software.Administrator
+namespace Hospital_Management_Software.Views.EPR
 {
 
 
-    public partial class UserList
+    public partial class Dashboard
     {
 
         /// <summary>
-        /// lb_debugger control.
+        /// lb_genMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_debugger;
+        protected global::System.Web.UI.WebControls.Label lb_genMsg;
 
         /// <summary>
-        /// lb_search control.
+        /// lb_searchPatient control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_search;
+        protected global::System.Web.UI.WebControls.Label lb_searchPatient;
 
         /// <summary>
-        /// tb_search control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_search;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// Label1 control.
+        /// btn_searchPatient control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Button btn_searchPatient;
 
         /// <summary>
-        /// ddl_sort control.
+        /// cb_disabeVisible control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_sort;
+        protected global::System.Web.UI.WebControls.CheckBox cb_disabeVisible;
 
         /// <summary>
-        /// gv_userList control.
+        /// btn_RegisterPatient control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_userList;
+        protected global::System.Web.UI.WebControls.Button btn_RegisterPatient;
+
+        /// <summary>
+        /// GV_patients control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GV_patients;
     }
 }

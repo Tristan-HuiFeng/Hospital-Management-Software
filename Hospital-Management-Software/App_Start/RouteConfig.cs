@@ -11,7 +11,8 @@ namespace Hospital_Management_Software
         public static void RegisterRoutes(RouteCollection routes)
         {
             var settings = new FriendlyUrlSettings();
-            settings.AutoRedirectMode = RedirectMode.Permanent;
+            settings.AutoRedirectMode = RedirectMode.Off;
+            //settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
         }
     }

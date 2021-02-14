@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Hospital_Management_Software.ErrorPage
 {
-    public partial class BasicError : System.Web.UI.Page
+    public partial class BasicError1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

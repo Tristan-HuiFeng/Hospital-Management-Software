@@ -7,227 +7,299 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital_Management_Software.Administrator
+namespace Hospital_Management_Software.Views.EPR
 {
 
 
-    public partial class UserAccountInformation
+    public partial class UpdateEPR
     {
 
         /// <summary>
-        /// lb_message control.
+        /// lb_genMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_message;
+        protected global::System.Web.UI.WebControls.Label lb_genMsg;
 
         /// <summary>
-        /// lb_debugger control.
+        /// tb_FirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_debugger;
+        protected global::System.Web.UI.WebControls.TextBox tb_FirstName;
 
         /// <summary>
-        /// Label1 control.
+        /// err_fName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label err_fName;
 
         /// <summary>
-        /// ddl_roleList control.
+        /// tb_LastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_roleList;
+        protected global::System.Web.UI.WebControls.TextBox tb_LastName;
 
         /// <summary>
-        /// btn_changeRole control.
+        /// err_lName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_changeRole;
+        protected global::System.Web.UI.WebControls.Label err_lName;
 
         /// <summary>
-        /// Label12 control.
+        /// tb_NRIC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.TextBox tb_NRIC;
 
         /// <summary>
-        /// lb_status control.
+        /// err_NRIC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_status;
+        protected global::System.Web.UI.WebControls.Label err_NRIC;
 
         /// <summary>
-        /// btn_toggleStatus control.
+        /// tb_DOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_toggleStatus;
+        protected global::System.Web.UI.WebControls.TextBox tb_DOB;
 
         /// <summary>
-        /// Label2 control.
+        /// err_DOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label err_DOB;
 
         /// <summary>
-        /// lb_roleID control.
+        /// tb_age control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_roleID;
+        protected global::System.Web.UI.WebControls.TextBox tb_age;
 
         /// <summary>
-        /// Label3 control.
+        /// err_Age control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label err_Age;
 
         /// <summary>
-        /// lb_roleName control.
+        /// rad_Sex control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_roleName;
+        protected global::System.Web.UI.WebControls.RadioButtonList rad_Sex;
 
         /// <summary>
-        /// Label4 control.
+        /// err_sex control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label err_sex;
 
         /// <summary>
-        /// lb_userID control.
+        /// ddl_nationality control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_userID;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_nationality;
 
         /// <summary>
-        /// Label10 control.
+        /// err_country control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label err_country;
 
         /// <summary>
-        /// lb_userName control.
+        /// ddl_citizenship control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_userName;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_citizenship;
 
         /// <summary>
-        /// Label6 control.
+        /// err_citizenship control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label err_citizenship;
 
         /// <summary>
-        /// lb_position control.
+        /// tb_PostalCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_position;
+        protected global::System.Web.UI.WebControls.TextBox tb_PostalCode;
 
         /// <summary>
-        /// Label8 control.
+        /// err_postalCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label err_postalCode;
 
         /// <summary>
-        /// lb_department control.
+        /// tb_Address control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_department;
+        protected global::System.Web.UI.WebControls.TextBox tb_Address;
 
         /// <summary>
-        /// lb_password control.
+        /// err_Address control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_password;
+        protected global::System.Web.UI.WebControls.Label err_Address;
 
         /// <summary>
-        /// tb_password control.
+        /// tb_Allergies control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_password;
+        protected global::System.Web.UI.WebControls.TextBox tb_Allergies;
 
         /// <summary>
-        /// btn_changePassword control.
+        /// err_Allergies control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_changePassword;
+        protected global::System.Web.UI.WebControls.Label err_Allergies;
 
         /// <summary>
-        /// lb_passwordResult control.
+        /// tb_MedicalConditon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_passwordResult;
+        protected global::System.Web.UI.WebControls.TextBox tb_MedicalConditon;
+
+        /// <summary>
+        /// err_medicalCondition control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_medicalCondition;
+
+        /// <summary>
+        /// tb_phoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_phoneNumber;
+
+        /// <summary>
+        /// err_phoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_phoneNumber;
+
+        /// <summary>
+        /// tb_homeNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_homeNumber;
+
+        /// <summary>
+        /// err_homeNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_homeNumber;
+
+        /// <summary>
+        /// tb_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tb_email;
+
+        /// <summary>
+        /// err_Email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err_Email;
+
+        /// <summary>
+        /// btn_Submit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Submit;
     }
 }

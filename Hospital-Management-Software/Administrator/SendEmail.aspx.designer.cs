@@ -7,119 +7,101 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital_Management_Software.Views.EPR
+namespace Hospital_Management_Software.Administrator
 {
 
 
-    public partial class UpdateEPR
+    public partial class SendEmail
     {
 
         /// <summary>
-        /// TextBox1 control.
+        /// lb_message control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.Label lb_message;
 
         /// <summary>
-        /// TextBox2 control.
+        /// lb_debugger control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.Label lb_debugger;
 
         /// <summary>
-        /// tb_DOB control.
+        /// ddl_emailTarget control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tb_DOB;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_emailTarget;
 
         /// <summary>
-        /// TextBox4 control.
+        /// lb_emailSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.Label lb_emailSubject;
 
         /// <summary>
-        /// RadioButtonList1 control.
+        /// tb_emailSubject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.TextBox tb_emailSubject;
 
         /// <summary>
-        /// ddl_nationality control.
+        /// tfv_subject control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_nationality;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator tfv_subject;
 
         /// <summary>
-        /// ddl_nationality0 control.
+        /// lb_emailBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_nationality0;
+        protected global::System.Web.UI.WebControls.Label lb_emailBody;
 
         /// <summary>
-        /// TextBox5 control.
+        /// tb_emailBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox tb_emailBody;
 
         /// <summary>
-        /// TextBox6 control.
+        /// rfv_emailBody control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_emailBody;
 
         /// <summary>
-        /// TextBox7 control.
+        /// btn_sendEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
-
-        /// <summary>
-        /// TextBox8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
-
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btn_sendEmail;
     }
 }

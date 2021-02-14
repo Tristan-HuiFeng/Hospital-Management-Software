@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using WCF_Service_Library.Entity;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Drawing;
 
 namespace Hospital_Management_Software.Administrator
 {
@@ -57,6 +58,7 @@ namespace Hospital_Management_Software.Administrator
 
                     lb_debugger.Visible = false;
                     lb_message.Visible = false;
+                    lb_passwordResult.Visible = false;
                     string user_id = Request.QueryString["UserId"];
                     if (user_id != null)
                     {
@@ -199,8 +201,27 @@ namespace Hospital_Management_Software.Administrator
 
         }
 
+        protected void btn_changePassword_Click(object sender, EventArgs e)
+        {
+            var userStore = new UserStore<IdentityUser>();
+            var manager = new UserManager<IdentityUser>(userStore);
 
+            var currentUser = manager.FindById(lb_userID.Text);
+            manager.RemovePassword(lb_userID.Text);
+            IdentityResult changePasswordResult = manager.AddPassword(lb_userID.Text, HttpUtility.HtmlEncode(tb_password.Text));
 
-
+            if (changePasswordResult.Succeeded)
+            {
+                lb_passwordResult.Visible = true;
+                lb_passwordResult.Text = "Password has been changed";
+                lb_passwordResult.ForeColor = Color.Green;
+            }
+            else
+            {
+                lb_passwordResult.Visible = true;
+                lb_passwordResult.Text = changePasswordResult.Errors.ToString();
+                lb_passwordResult.ForeColor = Color.Red;
+            }
+        }
     }
 }

@@ -24,13 +24,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// TextBox1 control.
+        /// tbEmployeeName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox tbEmployeeName;
 
         /// <summary>
         /// Label2 control.
@@ -42,49 +42,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// TextBox2 control.
+        /// tbNric control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
-
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-
-        /// <summary>
-        /// TextBox3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
-
-        /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-
-        /// <summary>
-        /// TextBox4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox tbNric;
 
         /// <summary>
         /// Label6 control.
@@ -96,31 +60,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// TextBox6 control.
+        /// tbBankName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
-
-        /// <summary>
-        /// Label7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
-
-        /// <summary>
-        /// TextBox7 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox tbBankName;
 
         /// <summary>
         /// Label12 control.
@@ -132,13 +78,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
-        /// TextBox11 control.
+        /// tbAccountNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox tbAccountNumber;
 
         /// <summary>
         /// Label13 control.
@@ -150,13 +96,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
-        /// TextBox12 control.
+        /// tbAccountHolderName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox tbAccountHolderName;
 
         /// <summary>
         /// Label14 control.
@@ -168,13 +114,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label14;
 
         /// <summary>
-        /// TextBox13 control.
+        /// tbSalary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox tbSalary;
 
         /// <summary>
         /// Label15 control.
@@ -186,13 +132,31 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
-        /// TextBox14 control.
+        /// tbBonus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox14;
+        protected global::System.Web.UI.WebControls.TextBox tbBonus;
+
+        /// <summary>
+        /// btnAuto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAuto;
+
+        /// <summary>
+        /// lbAutoMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbAutoMsg;
 
         /// <summary>
         /// Label8 control.
@@ -204,13 +168,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
-        /// TextBox8 control.
+        /// tbOtHours control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox tbOtHours;
 
         /// <summary>
         /// Label9 control.
@@ -222,13 +186,13 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
-        /// TextBox9 control.
+        /// tbOtMoneyAmount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox tbOtMoneyAmount;
 
         /// <summary>
         /// Button2 control.
@@ -240,12 +204,12 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
-        /// Button1 control.
+        /// btnCreate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnCreate;
     }
 }

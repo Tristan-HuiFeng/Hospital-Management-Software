@@ -45,6 +45,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\BankRecord.cs" />
     <Compile Include="Entity\ContractRecord.cs" />
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Entity\EquipmentServiceRecord.cs" />
@@ -52,6 +53,9 @@
     <Compile Include="Entity\LabServiceRecord.cs" />
     <Compile Include="Entity\MedicalRecord.cs" />
     <Compile Include="Entity\MedicalRecord2.cs" />
+    <Compile Include="Entity\PatientRecord.cs" />
+    <Compile Include="Entity\PayrollRecord.cs" />
+    <Compile Include="Entity\Resource.cs" />
     <Compile Include="Entity\Role.cs" />
     <Compile Include="Entity\tempPatient.cs" />
     <Compile Include="Entity\UserAccount.cs" />
