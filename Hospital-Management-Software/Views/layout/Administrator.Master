@@ -21,6 +21,8 @@
                 <a runat="server" href="~/Administrator/Role">Role Management</a>
                 <a runat="server" href="~/Administrator/UserList">User Management</a>
                 <a runat="server" href="~/Administrator/NoAccountList">Account Creation</a>
+                <a runat="server" href="~/Administrator/SendEmail">Announcement</a>
+                <a runat="server" href="~/Management/ViewContracts">View Contract</a>
                 <a runat="server" href="~/Login/Logout">Logout</a>
             </div>
         </div>
