@@ -255,6 +255,7 @@
   </wsdl:message>
   <wsdl:message name="IService1_UpdatePatientByID_OutputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePatientByIDResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_CreateBankRecord_InputMessage">
     <wsdl:part name="parameters" element="tns:CreateBankRecord" />
   </wsdl:message>
@@ -467,6 +468,7 @@
     <wsdl:operation name="UpdatePatientByID">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePatientByID" message="tns:IService1_UpdatePatientByID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePatientByIDResponse" message="tns:IService1_UpdatePatientByID_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="CreateBankRecord">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateBankRecord" message="tns:IService1_CreateBankRecord_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateBankRecordResponse" message="tns:IService1_CreateBankRecord_OutputMessage" />
@@ -828,9 +830,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllPatientRecords">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAllPatientRecords" style="document" />
-
-    <wsdl:operation name="CreateBankRecord">
-      <soap:operation soapAction="http://tempuri.org/IService1/CreateBankRecord" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -840,9 +839,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetPatientRecordByID">
       <soap:operation soapAction="http://tempuri.org/IService1/GetPatientRecordByID" style="document" />
-
-    <wsdl:operation name="GetBankRecordByEmployeeID">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetBankRecordByEmployeeID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -852,10 +848,6 @@
     </wsdl:operation>
     <wsdl:operation name="CreatePatientRecord">
       <soap:operation soapAction="http://tempuri.org/IService1/CreatePatientRecord" style="document" />
-
-    <wsdl:operation name="CreatePayroll">
-      <soap:operation soapAction="http://tempuri.org/IService1/CreatePayroll" style="document" />
-
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -865,10 +857,6 @@
     </wsdl:operation>
     <wsdl:operation name="DisablePatientByID">
       <soap:operation soapAction="http://tempuri.org/IService1/DisablePatientByID" style="document" />
-
-    <wsdl:operation name="GetBankDetailID">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetBankDetailID" style="document" />
-
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -878,6 +866,49 @@
     </wsdl:operation>
     <wsdl:operation name="UpdatePatientByID">
       <soap:operation soapAction="http://tempuri.org/IService1/UpdatePatientByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBankRecord">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateBankRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankRecordByEmployeeID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBankRecordByEmployeeID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePayroll">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreatePayroll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankDetailID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetBankDetailID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="GetAllPayroll">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAllPayroll" style="document" />
       <wsdl:input>

@@ -404,7 +404,7 @@
   <xs:element name="GetAllEmployeeResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllEmployeeResult" nillable="true" type="q12:ArrayOfEmployee" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllEmployeeResult" nillable="true" type="q16:ArrayOfEmployee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -418,7 +418,7 @@
   <xs:element name="GetEmployeeByNameResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeByNameResult" nillable="true" type="q13:ArrayOfEmployee" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeByNameResult" nillable="true" type="q17:ArrayOfEmployee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -432,7 +432,7 @@
   <xs:element name="GetEmployeeSortedByDOBResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeSortedByDOBResult" nillable="true" type="q14:ArrayOfEmployee" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeSortedByDOBResult" nillable="true" type="q18:ArrayOfEmployee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -446,7 +446,7 @@
   <xs:element name="GetEmployeeSortedByGenderResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeSortedByGenderResult" nillable="true" type="q15:ArrayOfEmployee" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeSortedByGenderResult" nillable="true" type="q19:ArrayOfEmployee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -460,7 +460,7 @@
   <xs:element name="GetEmployeeByNRICResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeByNRICResult" nillable="true" type="q16:ArrayOfEmployee" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeByNRICResult" nillable="true" type="q20:ArrayOfEmployee" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -472,7 +472,7 @@
         <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
-        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="gender" type="q17:char" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="gender" type="q21:char" />
         <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="department" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
@@ -500,7 +500,7 @@
         <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
-        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="gender" type="q18:char" />
+        <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="gender" type="q22:char" />
         <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="department" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
@@ -564,7 +564,7 @@
   <xs:element name="GetContractByEmployeeIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetContractByEmployeeIDResult" nillable="true" type="q19:ArrayOfContractRecord" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetContractByEmployeeIDResult" nillable="true" type="q23:ArrayOfContractRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -578,7 +578,7 @@
   <xs:element name="GetPatientByIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPatientByIDResult" nillable="true" type="q20:tempPatient" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPatientByIDResult" nillable="true" type="q24:tempPatient" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -703,6 +703,9 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="UpdatePatientByIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="CreateBankRecord">
     <xs:complexType>
       <xs:sequence>
@@ -730,7 +733,7 @@
   <xs:element name="GetBankRecordByEmployeeIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetBankRecordByEmployeeIDResult" nillable="true" type="q21:ArrayOfBankRecord" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetBankRecordByEmployeeIDResult" nillable="true" type="q27:ArrayOfBankRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -777,7 +780,7 @@
   <xs:element name="GetAllPayrollResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllPayrollResult" nillable="true" type="q22:ArrayOfPayrollRecord" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllPayrollResult" nillable="true" type="q28:ArrayOfPayrollRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -791,7 +794,7 @@
   <xs:element name="GetPayrollByIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollByIDResult" nillable="true" type="q23:ArrayOfPayrollRecord" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollByIDResult" nillable="true" type="q29:ArrayOfPayrollRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -821,7 +824,7 @@
   <xs:element name="GetPayrollBetweenDateResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollBetweenDateResult" nillable="true" type="q24:ArrayOfPayrollRecord" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollBetweenDateResult" nillable="true" type="q30:ArrayOfPayrollRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

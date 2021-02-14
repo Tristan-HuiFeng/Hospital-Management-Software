@@ -231,39 +231,6 @@
     </Content>
     <None Include="Connected Services\MyDBServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\MyDBServiceReference\configuration.svcinfo" />
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.BankRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.ContractRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Employee.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.LabServiceRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.MedicalRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.PayrollRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.Resource.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.RolePermission.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\MyDBServiceReference\Hospital_Management_Software.MyDBServiceReference.tempPatient.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\MyDBServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -342,12 +309,18 @@
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.UserAccount.datasource" />
-    <None Include="Connected Services\MyDBServiceReference\Arrays.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.BankRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PatientRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.UserAccount.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PayrollRecord.datasource" />
+    <None Include="Connected Services\MyDBServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\MyDBServiceReference\service.wsdl" />
     <None Include="Connected Services\MyDBServiceReference\service.xsd">
       <SubType>Designer</SubType>
@@ -364,14 +337,6 @@
     <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PatientRecord.datasource" />
-
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.UserAccount.datasource" />
-    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PayrollRecord.datasource" />
-
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

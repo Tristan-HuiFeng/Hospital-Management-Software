@@ -140,7 +140,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="tempPatient" nillable="true" type="tns:tempPatient" />
-
   <xs:complexType name="ArrayOfPatientRecord">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientRecord" nillable="true" type="tns:PatientRecord" />
@@ -170,7 +169,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PatientRecord" nillable="true" type="tns:PatientRecord" />
-
   <xs:complexType name="ArrayOfBankRecord">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="BankRecord" nillable="true" type="tns:BankRecord" />
