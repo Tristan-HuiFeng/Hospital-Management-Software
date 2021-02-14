@@ -279,5 +279,60 @@ namespace WCF_Service_Library
             ContractRecord cr = new ContractRecord();
             return cr.SelectByEmployeeID(id);
         }
+
+        //PR start
+        public List<PatientRecord> GetAllPatientRecords()
+        {
+            PatientRecord patients = new PatientRecord();
+            return patients.SelectAll();
+        }
+
+        public PatientRecord GetPatientRecordByID(int patientID)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.SelectPatientByID(patientID);
+        }
+
+        public int DisablePatientByID(int patientID)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.DisablePatientByID(patientID);
+        }
+
+        public int CreatePatientRecord(
+           int patientid,
+           string firstname, string lastname,
+           string NRIC, DateTime DOB, string sex,
+           string nationality, string citizenship,
+           string postalcode, string address,
+           string allergies, string medicalhistory, string phonenumber,
+           string homenumber, string email,
+           DateTime createdDate, DateTime updateDate, string recordDisabled)
+        {
+            PatientRecord patient = new PatientRecord(
+                patientid, firstname, lastname,
+                NRIC, DOB, sex,
+                nationality, citizenship,
+                postalcode, address,
+                allergies, medicalhistory,
+                phonenumber, homenumber, email,
+                createdDate, updateDate, recordDisabled);
+            return patient.Insert();
+        }
+
+        public int UpdatePatientByID(
+            int patientID, string fname, string lname,
+            string nric, string sex, DateTime dob,
+            string nationality, string citizenship,
+            string postalCode, string address, string allergies,
+            string medicalHistory,
+            string phoneNumber, string homeNumber,
+            string email, DateTime update_date)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.UpdatePatientByID(patientID, fname, lname, nric, sex, dob, nationality, citizenship, postalCode, address, allergies, medicalHistory, phoneNumber, homeNumber, email, update_date);
+        }
+
+        //PR ends
     }
 }

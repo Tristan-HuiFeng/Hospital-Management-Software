@@ -580,4 +580,104 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllPatientRecords">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPatientRecordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllPatientRecordsResult" nillable="true" type="q25:ArrayOfPatientRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientRecordByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientRecordByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPatientRecordByIDResult" nillable="true" type="q26:PatientRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePatientRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientid" type="xs:int" />
+        <xs:element minOccurs="0" name="firstname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lastname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NRIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DOB" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="citizenship" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postalcode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="allergies" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="medicalhistory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phonenumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homenumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="updateDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="recordDisabled" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePatientRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePatientRecordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisablePatientByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DisablePatientByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DisablePatientByIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePatientByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientID" type="xs:int" />
+        <xs:element minOccurs="0" name="fname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nric" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dob" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="citizenship" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="postalCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="allergies" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="medicalHistory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="homeNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="update_date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePatientByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePatientByIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

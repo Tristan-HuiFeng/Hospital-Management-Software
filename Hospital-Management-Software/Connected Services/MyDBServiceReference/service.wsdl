@@ -220,6 +220,36 @@
   <wsdl:message name="IService1_CreateMedicalRecord_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateMedicalRecordResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetAllPatientRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPatientRecords" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPatientRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPatientRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatientRecordByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientRecordByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPatientRecordByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientRecordByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreatePatientRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePatientRecord" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreatePatientRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePatientRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DisablePatientByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisablePatientByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DisablePatientByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisablePatientByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePatientByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientByID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdatePatientByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePatientByIDResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -360,6 +390,26 @@
     <wsdl:operation name="CreateMedicalRecord">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateMedicalRecord" message="tns:IService1_CreateMedicalRecord_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateMedicalRecordResponse" message="tns:IService1_CreateMedicalRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatientRecords">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllPatientRecords" message="tns:IService1_GetAllPatientRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllPatientRecordsResponse" message="tns:IService1_GetAllPatientRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientRecordByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPatientRecordByID" message="tns:IService1_GetPatientRecordByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPatientRecordByIDResponse" message="tns:IService1_GetPatientRecordByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePatientRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreatePatientRecord" message="tns:IService1_CreatePatientRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreatePatientRecordResponse" message="tns:IService1_CreatePatientRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisablePatientByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DisablePatientByID" message="tns:IService1_DisablePatientByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DisablePatientByIDResponse" message="tns:IService1_DisablePatientByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatientByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdatePatientByID" message="tns:IService1_UpdatePatientByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatePatientByIDResponse" message="tns:IService1_UpdatePatientByID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -672,6 +722,51 @@
     </wsdl:operation>
     <wsdl:operation name="CreateMedicalRecord">
       <soap:operation soapAction="http://tempuri.org/IService1/CreateMedicalRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPatientRecords">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllPatientRecords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientRecordByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPatientRecordByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePatientRecord">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreatePatientRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisablePatientByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/DisablePatientByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePatientByID">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdatePatientByID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

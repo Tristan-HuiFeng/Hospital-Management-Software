@@ -145,9 +145,37 @@ namespace WCF_Service_Library
         int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, 
             string treatment, DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
 
+        //PatientRecord start
+        [OperationContract]
+        List<PatientRecord> GetAllPatientRecords();
 
+        [OperationContract]
+        PatientRecord GetPatientRecordByID(int patientID);
 
+        [OperationContract]
+        int CreatePatientRecord(
+           int patientid, string firstname, string lastname,
+           string NRIC, DateTime DOB, string sex,
+           string nationality, string citizenship,
+           string postalcode, string address,
+           string allergies, string medicalhistory, string phonenumber,
+           string homenumber, string email,
+           DateTime createdDate, DateTime updateDate,
+           string recordDisabled);
 
+        [OperationContract]
+        int DisablePatientByID(int patientID);
+
+        [OperationContract]
+        int UpdatePatientByID(
+            int patientID, string fname, string lname,
+            string nric, string sex, DateTime dob,
+            string nationality, string citizenship,
+            string postalCode, string address, string allergies,
+            string medicalHistory,
+            string phoneNumber, string homeNumber,
+            string email, DateTime update_date);
+        //PR ends
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

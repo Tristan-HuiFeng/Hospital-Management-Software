@@ -224,6 +224,104 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMedicalRecord", ReplyAction="http://tempuri.org/IService1/CreateMedicalRecordResponse")]
         System.Threading.Tasks.Task<int> CreateMedicalRecordAsync(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllPatientRecords", ReplyAction="http://tempuri.org/IService1/GetAllPatientRecordsResponse")]
+        WCF_Service_Library.Entity.PatientRecord[] GetAllPatientRecords();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllPatientRecords", ReplyAction="http://tempuri.org/IService1/GetAllPatientRecordsResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.PatientRecord[]> GetAllPatientRecordsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientRecordByID", ReplyAction="http://tempuri.org/IService1/GetPatientRecordByIDResponse")]
+        WCF_Service_Library.Entity.PatientRecord GetPatientRecordByID(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientRecordByID", ReplyAction="http://tempuri.org/IService1/GetPatientRecordByIDResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.PatientRecord> GetPatientRecordByIDAsync(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatientRecord", ReplyAction="http://tempuri.org/IService1/CreatePatientRecordResponse")]
+        int CreatePatientRecord(
+                    int patientid, 
+                    string firstname, 
+                    string lastname, 
+                    string NRIC, 
+                    System.DateTime DOB, 
+                    string sex, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalcode, 
+                    string address, 
+                    string allergies, 
+                    string medicalhistory, 
+                    string phonenumber, 
+                    string homenumber, 
+                    string email, 
+                    System.DateTime createdDate, 
+                    System.DateTime updateDate, 
+                    string recordDisabled);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatientRecord", ReplyAction="http://tempuri.org/IService1/CreatePatientRecordResponse")]
+        System.Threading.Tasks.Task<int> CreatePatientRecordAsync(
+                    int patientid, 
+                    string firstname, 
+                    string lastname, 
+                    string NRIC, 
+                    System.DateTime DOB, 
+                    string sex, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalcode, 
+                    string address, 
+                    string allergies, 
+                    string medicalhistory, 
+                    string phonenumber, 
+                    string homenumber, 
+                    string email, 
+                    System.DateTime createdDate, 
+                    System.DateTime updateDate, 
+                    string recordDisabled);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DisablePatientByID", ReplyAction="http://tempuri.org/IService1/DisablePatientByIDResponse")]
+        int DisablePatientByID(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DisablePatientByID", ReplyAction="http://tempuri.org/IService1/DisablePatientByIDResponse")]
+        System.Threading.Tasks.Task<int> DisablePatientByIDAsync(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePatientByID", ReplyAction="http://tempuri.org/IService1/UpdatePatientByIDResponse")]
+        int UpdatePatientByID(
+                    int patientID, 
+                    string fname, 
+                    string lname, 
+                    string nric, 
+                    string sex, 
+                    System.DateTime dob, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalCode, 
+                    string address, 
+                    string allergies, 
+                    string medicalHistory, 
+                    string phoneNumber, 
+                    string homeNumber, 
+                    string email, 
+                    System.DateTime update_date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePatientByID", ReplyAction="http://tempuri.org/IService1/UpdatePatientByIDResponse")]
+        System.Threading.Tasks.Task<int> UpdatePatientByIDAsync(
+                    int patientID, 
+                    string fname, 
+                    string lname, 
+                    string nric, 
+                    string sex, 
+                    System.DateTime dob, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalCode, 
+                    string address, 
+                    string allergies, 
+                    string medicalHistory, 
+                    string phoneNumber, 
+                    string homeNumber, 
+                    string email, 
+                    System.DateTime update_date);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -531,6 +629,114 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public System.Threading.Tasks.Task<int> CreateMedicalRecordAsync(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks) {
             return base.Channel.CreateMedicalRecordAsync(bloodPressure, respirationRate, bodyTemperature, pulseRate, diagnosis, treatment, consultationDate, doctorID, patientID, prescription, remarks);
+        }
+        
+        public WCF_Service_Library.Entity.PatientRecord[] GetAllPatientRecords() {
+            return base.Channel.GetAllPatientRecords();
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PatientRecord[]> GetAllPatientRecordsAsync() {
+            return base.Channel.GetAllPatientRecordsAsync();
+        }
+        
+        public WCF_Service_Library.Entity.PatientRecord GetPatientRecordByID(int patientID) {
+            return base.Channel.GetPatientRecordByID(patientID);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PatientRecord> GetPatientRecordByIDAsync(int patientID) {
+            return base.Channel.GetPatientRecordByIDAsync(patientID);
+        }
+        
+        public int CreatePatientRecord(
+                    int patientid, 
+                    string firstname, 
+                    string lastname, 
+                    string NRIC, 
+                    System.DateTime DOB, 
+                    string sex, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalcode, 
+                    string address, 
+                    string allergies, 
+                    string medicalhistory, 
+                    string phonenumber, 
+                    string homenumber, 
+                    string email, 
+                    System.DateTime createdDate, 
+                    System.DateTime updateDate, 
+                    string recordDisabled) {
+            return base.Channel.CreatePatientRecord(patientid, firstname, lastname, NRIC, DOB, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updateDate, recordDisabled);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreatePatientRecordAsync(
+                    int patientid, 
+                    string firstname, 
+                    string lastname, 
+                    string NRIC, 
+                    System.DateTime DOB, 
+                    string sex, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalcode, 
+                    string address, 
+                    string allergies, 
+                    string medicalhistory, 
+                    string phonenumber, 
+                    string homenumber, 
+                    string email, 
+                    System.DateTime createdDate, 
+                    System.DateTime updateDate, 
+                    string recordDisabled) {
+            return base.Channel.CreatePatientRecordAsync(patientid, firstname, lastname, NRIC, DOB, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updateDate, recordDisabled);
+        }
+        
+        public int DisablePatientByID(int patientID) {
+            return base.Channel.DisablePatientByID(patientID);
+        }
+        
+        public System.Threading.Tasks.Task<int> DisablePatientByIDAsync(int patientID) {
+            return base.Channel.DisablePatientByIDAsync(patientID);
+        }
+        
+        public int UpdatePatientByID(
+                    int patientID, 
+                    string fname, 
+                    string lname, 
+                    string nric, 
+                    string sex, 
+                    System.DateTime dob, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalCode, 
+                    string address, 
+                    string allergies, 
+                    string medicalHistory, 
+                    string phoneNumber, 
+                    string homeNumber, 
+                    string email, 
+                    System.DateTime update_date) {
+            return base.Channel.UpdatePatientByID(patientID, fname, lname, nric, sex, dob, nationality, citizenship, postalCode, address, allergies, medicalHistory, phoneNumber, homeNumber, email, update_date);
+        }
+        
+        public System.Threading.Tasks.Task<int> UpdatePatientByIDAsync(
+                    int patientID, 
+                    string fname, 
+                    string lname, 
+                    string nric, 
+                    string sex, 
+                    System.DateTime dob, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalCode, 
+                    string address, 
+                    string allergies, 
+                    string medicalHistory, 
+                    string phoneNumber, 
+                    string homeNumber, 
+                    string email, 
+                    System.DateTime update_date) {
+            return base.Channel.UpdatePatientByIDAsync(patientID, fname, lname, nric, sex, dob, nationality, citizenship, postalCode, address, allergies, medicalHistory, phoneNumber, homeNumber, email, update_date);
         }
     }
 }

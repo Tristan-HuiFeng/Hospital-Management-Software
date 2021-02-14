@@ -51,6 +51,7 @@
     <Compile Include="Entity\LabServiceRecord.cs" />
     <Compile Include="Entity\MedicalRecord.cs" />
     <Compile Include="Entity\MedicalRecord2.cs" />
+    <Compile Include="Entity\PatientRecord.cs" />
     <Compile Include="Entity\Role.cs" />
     <Compile Include="Entity\tempPatient.cs" />
     <Compile Include="Entity\UserAccount.cs" />
