@@ -364,11 +364,14 @@
     <None Include="Connected Services\MyDBServiceReference\WCF_Service_Library.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PatientRecord.datasource" />
+
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.UserAccount.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PayrollRecord.datasource" />
+
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -467,15 +470,15 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Views\EPR\Dashboard.aspx" />
-    <Content Include="Views\EPR\UpdateEPR.aspx" />
-    <Content Include="Views\MAR\CreateMAR.aspx" />
+    <Content Include="EPR\Dashboard.aspx" />
+    <Content Include="EPR\UpdateEPR.aspx" />
+    <Content Include="MAR\CreateMAR.aspx" />
     <Content Include="src\css\health-professional.css" />
     <Content Include="src\css\HRStyleSheet.css" />
     <Content Include="Views\layout\Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Views\EPR\RegisterPatient.aspx" />
-    <Content Include="Views\MAR\UpdateMAR.aspx" />
+    <Content Include="EPR\RegisterPatient.aspx" />
+    <Content Include="MAR\UpdateMAR.aspx" />
     <Content Include="Bundle.config" />
     <Content Include="Views\layout\Site.Mobile.Master" />
   </ItemGroup>
@@ -738,18 +741,18 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup1.cs" />
-    <Compile Include="Views\EPR\Dashboard.aspx.cs">
+    <Compile Include="EPR\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\EPR\Dashboard.aspx.designer.cs">
+    <Compile Include="EPR\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\EPR\UpdateEPR.aspx.cs">
+    <Compile Include="EPR\UpdateEPR.aspx.cs">
       <DependentUpon>UpdateEPR.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\EPR\UpdateEPR.aspx.designer.cs">
+    <Compile Include="EPR\UpdateEPR.aspx.designer.cs">
       <DependentUpon>UpdateEPR.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\layout\Site_No_Footer.Master.cs">
@@ -759,11 +762,11 @@
     <Compile Include="Views\layout\Site_No_Footer.Master.designer.cs">
       <DependentUpon>Site_No_Footer.Master</DependentUpon>
     </Compile>
-    <Compile Include="Views\MAR\CreateMAR.aspx.cs">
+    <Compile Include="MAR\CreateMAR.aspx.cs">
       <DependentUpon>CreateMAR.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\MAR\CreateMAR.aspx.designer.cs">
+    <Compile Include="MAR\CreateMAR.aspx.designer.cs">
       <DependentUpon>CreateMAR.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\layout\Administrator.Master.cs">
@@ -801,18 +804,18 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Views\EPR\RegisterPatient.aspx.cs">
+    <Compile Include="EPR\RegisterPatient.aspx.cs">
       <DependentUpon>RegisterPatient.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\EPR\RegisterPatient.aspx.designer.cs">
+    <Compile Include="EPR\RegisterPatient.aspx.designer.cs">
       <DependentUpon>RegisterPatient.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\MAR\UpdateMAR.aspx.cs">
+    <Compile Include="MAR\UpdateMAR.aspx.cs">
       <DependentUpon>UpdateMAR.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\MAR\UpdateMAR.aspx.designer.cs">
+    <Compile Include="MAR\UpdateMAR.aspx.designer.cs">
       <DependentUpon>UpdateMAR.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\layout\Site2.Master.cs">
