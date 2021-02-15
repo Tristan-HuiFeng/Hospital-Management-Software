@@ -44,7 +44,7 @@ namespace WCF_Service_Library
         List<MedicalRecord> GetAllMedicalRecord();
         
         [OperationContract]
-        DataTable GetMedicalRecordTableView();
+        DataTable GetMedicalRecordTableView(int acc_id);
 
         [OperationContract]
         string[] GetAccountInformation(string LoginID);
