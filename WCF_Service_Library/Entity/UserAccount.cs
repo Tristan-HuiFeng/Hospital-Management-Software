@@ -317,7 +317,7 @@ namespace WCF_Service_Library.Entity
 
                 using (SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn))
                 {
-                    da.SelectCommand.Parameters.AddWithValue("@paraID", account_id);
+                    da.SelectCommand.Parameters.AddWithValue("@paraID", Convert.ToInt32(account_id));
 
                     DataSet ds = new DataSet();
                     da.Fill(ds);

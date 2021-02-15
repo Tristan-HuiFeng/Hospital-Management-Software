@@ -70,10 +70,10 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<WCF_Service_Library.Entity.MedicalRecord[]> GetAllMedicalRecordAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
-        System.Data.DataTable GetMedicalRecordTableView(int acc_id);
+        System.Data.DataTable GetMedicalRecordTableView();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
-        System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync(int acc_id);
+        System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAccountInformation", ReplyAction="http://tempuri.org/IService1/GetAccountInformationResponse")]
         string[] GetAccountInformation(string LoginID);
@@ -489,12 +489,12 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetAllMedicalRecordAsync();
         }
         
-        public System.Data.DataTable GetMedicalRecordTableView(int acc_id) {
-            return base.Channel.GetMedicalRecordTableView(acc_id);
+        public System.Data.DataTable GetMedicalRecordTableView() {
+            return base.Channel.GetMedicalRecordTableView();
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync(int acc_id) {
-            return base.Channel.GetMedicalRecordTableViewAsync(acc_id);
+        public System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync() {
+            return base.Channel.GetMedicalRecordTableViewAsync();
         }
         
         public string[] GetAccountInformation(string LoginID) {
