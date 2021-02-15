@@ -82,8 +82,8 @@ namespace Hospital_Management_Software.Administrator
         {
 
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-            List<WCF_Service_Library.Entity.Role> myRoleList = new List<WCF_Service_Library.Entity.Role>();
-            myRoleList = client.GetRoleList2().ToList<WCF_Service_Library.Entity.Role>();
+            List<Role> myRoleList = new List<Role>();
+            myRoleList = client.GetRoleList2().ToList<Role>();
 
             foreach (var tempRole in myRoleList)
             {

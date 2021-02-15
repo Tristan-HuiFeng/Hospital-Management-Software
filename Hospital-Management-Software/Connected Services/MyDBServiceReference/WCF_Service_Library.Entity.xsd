@@ -206,19 +206,4 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PayrollRecord" nillable="true" type="tns:PayrollRecord" />
-  <xs:complexType name="ArrayOfFeedbackList">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="FeedbackList" nillable="true" type="tns:FeedbackList" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfFeedbackList" nillable="true" type="tns:ArrayOfFeedbackList" />
-  <xs:complexType name="FeedbackList">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Feedback" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="FeedbackList" nillable="true" type="tns:FeedbackList" />
 </xs:schema>

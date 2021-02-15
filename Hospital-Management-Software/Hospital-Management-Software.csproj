@@ -270,6 +270,7 @@
     <Content Include="HealthProfessional\PatientRecord.aspx" />
     <Content Include="HealthProfessional\UpdateMedicalRecord.aspx" />
     <Content Include="Login\StaffLogin.aspx" />
+    <Content Include="Management\ViewContracts.aspx" />
     <Content Include="MasterControl.aspx" />
     <Content Include="Management\CanvasTest.aspx" />
     <Content Include="src\css\login.css" />
@@ -770,6 +771,13 @@
     </Compile>
     <Compile Include="Management\ProcessPayroll.aspx.designer.cs">
       <DependentUpon>ProcessPayroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ViewContracts.aspx.cs">
+      <DependentUpon>ViewContracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\ViewContracts.aspx.designer.cs">
+      <DependentUpon>ViewContracts.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterControl.aspx.cs">
       <DependentUpon>MasterControl.aspx</DependentUpon>

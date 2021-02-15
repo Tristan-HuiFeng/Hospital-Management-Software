@@ -348,24 +348,6 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Image imgSignature;
 
         /// <summary>
-        /// btnRenew control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRenew;
-
-        /// <summary>
-        /// Button3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-
-        /// <summary>
         /// btnBack control.
         /// </summary>
         /// <remarks>

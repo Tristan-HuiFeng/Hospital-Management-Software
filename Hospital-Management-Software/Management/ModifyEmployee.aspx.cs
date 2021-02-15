@@ -136,7 +136,7 @@ namespace Hospital_Management_Software
                 System.Diagnostics.Debug.WriteLine(healthdeclaration);
                 System.Diagnostics.Debug.WriteLine("save button");
                 int cnt = client.UpdateEmployee(nric, firstname, lastname, email, dob, gender,
-                            address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, EmployeeImage);
+                            address, department, position, nationality, healthdeclaration, /*loginid, password, */jobfunction, EmployeeImage);
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect", "alert('Employee Saved!'); window.location='" + Request.ApplicationPath + "Management/Employees.aspx';", true);
             }

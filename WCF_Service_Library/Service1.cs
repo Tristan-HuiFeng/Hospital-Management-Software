@@ -251,20 +251,20 @@ namespace WCF_Service_Library
         public int CreateEmployee(string nric, string firstname, string lastname, string email,
             DateTime dob, char gender, string address, string department,
             string position, string nationality, string healthdeclaration,
-            string loginid, string password, string jobfunction, string image)
+            /*string loginid, string password, */string jobfunction, string image)
         {
             Employee emp = new Employee(nric, firstname, lastname, email, dob, gender,
-                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+                    address, department, position, nationality, healthdeclaration, /*loginid, password, */jobfunction, image);
             return emp.Insert();
         }
 
         public int UpdateEmployee(string nric, string firstname, string lastname, string email,
             DateTime dob, char gender, string address, string department,
             string position, string nationality, string healthdeclaration,
-            string loginid, string password, string jobfunction, string image)
+            /*string loginid, string password, */string jobfunction, string image)
         {
             Employee emp = new Employee(nric, firstname, lastname, email, dob, gender,
-                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+                    address, department, position, nationality, healthdeclaration, /*loginid, password, */jobfunction, image);
             return emp.Update(nric);
         }
 
@@ -389,6 +389,53 @@ namespace WCF_Service_Library
             return pr.SelectPayrollBetweenDate(firstDate, secondDate);
         }
 
+        public List<BankRecord> GetBankRecordByBankID(int id)
+        {
+            BankRecord br = new BankRecord();
+            return br.SelectByBankID(id);
+        }
+
+        public List<ContractRecord> GetContractByID(string _id)
+        {
+            ContractRecord cr = new ContractRecord();
+            return cr.SelectByID(_id);
+        }
+
+        public int SetSignatureByID(string id, string signature)
+        {
+            ContractRecord cr = new ContractRecord();
+            return cr.SetSignatureByID(id, signature);
+        }
+
+        public List<Employee> GetEmployeeByID(string id)
+        {
+            Employee e = new Employee();
+            return e.SelectByID(id);
+        }
+
+        public int CreateAttendance(string id, string date, string status, string reason)
+        {
+            AttendanceRecord ar = new AttendanceRecord(id, date, status, reason);
+            return ar.Insert();
+        }
+
+        public List<AttendanceRecord> GetAttendanceByIDWithDate(string id, DateTime date)
+        {
+            AttendanceRecord ar = new AttendanceRecord();
+            return ar.SelectByIDWithDate(id, date);
+        }
+
+        public int UpdateByIDWithDate(string id, DateTime _date, string status, string reason)
+        {
+            AttendanceRecord ar = new AttendanceRecord();
+            return ar.UpdateByIDWithDate(id, _date, status, reason);
+        }
+
+        public List<Employee> SelectByASPNETID(string id)
+        {
+            Employee e = new Employee();
+            return e.SelectByASPNETID(id);
+        }
         /* Matt */
         public List<FeedbackList> GetAllFeedback()
         {

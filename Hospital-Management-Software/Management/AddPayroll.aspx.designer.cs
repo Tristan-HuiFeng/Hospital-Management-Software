@@ -15,6 +15,15 @@ namespace Hospital_Management_Software.Management
     {
 
         /// <summary>
+        /// lbErrors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbErrors;
+
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace Hospital_Management_Software.Management
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbBankName;
+
+        /// <summary>
+        /// cbNewBank control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox cbNewBank;
 
         /// <summary>
         /// Label12 control.
@@ -193,15 +211,6 @@ namespace Hospital_Management_Software.Management
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbOtMoneyAmount;
-
-        /// <summary>
-        /// Button2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
         /// btnCreate control.

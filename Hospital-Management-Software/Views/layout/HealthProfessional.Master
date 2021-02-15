@@ -22,7 +22,7 @@
                 <a runat="server" href="~/HealthProfessional/PatientRecord">Patient Database</a>
                 <a runat="server" href="~/HealthProfessional/EquipmentServiceRequest">Equipment Service</a>
                 <a runat="server" href="~/HealthProfessional/LabServiceRequest">Lab Service</a>
-                <a runat="server" href="~/Management/ViewContracts">View Contract</a>
+                <a runat="server" href="~/Management/ViewContracts">Your Contracts</a>
                 <a runat="server" href="~/Login/Logout">Logout</a>
             </div>
         </div>

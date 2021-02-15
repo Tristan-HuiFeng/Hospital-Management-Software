@@ -376,18 +376,6 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPayrollBetweenDate", ReplyAction="http://tempuri.org/IService1/GetPayrollBetweenDateResponse")]
         System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
-        WCF_Service_Library.Entity.FeedbackList[] GetAllFeedback();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
-        System.Threading.Tasks.Task<WCF_Service_Library.Entity.FeedbackList[]> GetAllFeedbackAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
-        int CreateFeedback(string name, string email, string subject, string feedback);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
-        System.Threading.Tasks.Task<int> CreateFeedbackAsync(string name, string email, string subject, string feedback);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -875,22 +863,6 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate) {
             return base.Channel.GetPayrollBetweenDateAsync(firstDate, secondDate);
-        }
-        
-        public WCF_Service_Library.Entity.FeedbackList[] GetAllFeedback() {
-            return base.Channel.GetAllFeedback();
-        }
-        
-        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.FeedbackList[]> GetAllFeedbackAsync() {
-            return base.Channel.GetAllFeedbackAsync();
-        }
-        
-        public int CreateFeedback(string name, string email, string subject, string feedback) {
-            return base.Channel.CreateFeedback(name, email, subject, feedback);
-        }
-        
-        public System.Threading.Tasks.Task<int> CreateFeedbackAsync(string name, string email, string subject, string feedback) {
-            return base.Channel.CreateFeedbackAsync(name, email, subject, feedback);
         }
     }
 }

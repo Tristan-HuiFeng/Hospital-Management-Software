@@ -330,6 +330,24 @@ namespace Hospital_Management_Software.Management
         protected global::System.Web.UI.WebControls.Label Label27;
 
         /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+
+        /// <summary>
+        /// imgSignature control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgSignature;
+
+        /// <summary>
         /// btnRenew control.
         /// </summary>
         /// <remarks>

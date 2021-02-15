@@ -7,6 +7,8 @@
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col">
+                        <asp:Label ID="lbErrors" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                        <br />
                         <div class="card shadow mb-3">
                             <div class="card-header py-3">
                                 <p class="text-primary m-0 font-weight-bold">Payroll Details</p>
@@ -17,13 +19,13 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label1" runat="server" Text="Employee" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbEmployeeName" runat="server" placeholder="John Smith"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbEmployeeName" runat="server" placeholder="John Smith" required="required"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label2" runat="server" Text="NRIC of Employee" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbNric" runat="server" placeholder="T0000000D"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbNric" runat="server" placeholder="T0000000D" required="required"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -34,7 +36,8 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label6" runat="server" Text="Bank Name" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbBankName" runat="server" placeholder="POSB"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbBankName" runat="server" placeholder="POSB" required="required"></asp:TextBox>
+                                                <asp:CheckBox ID="cbNewBank" runat="server" Text="New Bank" />
                                             </div>
                                         </div>
                                     </div>
@@ -42,13 +45,13 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label12" runat="server" Text="Acc No." Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbAccountNumber" runat="server" placeholder="555-555"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbAccountNumber" runat="server" placeholder="555-555" required="required"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label13" runat="server" Text="Acc. Holder Name" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbAccountHolderName" runat="server" placeholder="John Smith's Dad"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbAccountHolderName" runat="server" placeholder="John Smith's Dad" required="required"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -56,13 +59,13 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label14" runat="server" Text="Salary" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbSalary" runat="server" placeholder="$3420"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbSalary" runat="server" placeholder="$3420" required="required"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label15" runat="server" Text="Bonus" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbBonus" runat="server" placeholder="$300"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbBonus" runat="server" placeholder="$300" required="required"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -85,20 +88,20 @@
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label8" runat="server" Text="Hours" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbOtHours" runat="server" placeholder="3"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbOtHours" runat="server" placeholder="3" required="required"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="col">
                                             <div class="form-group">
                                                 <asp:Label ID="Label9" runat="server" Text="Amount ($)" Font-Bold="True"></asp:Label>
-                                                <asp:TextBox class="form-control" ID="tbOtMoneyAmount" runat="server" placeholder="$18"></asp:TextBox>
+                                                <asp:TextBox class="form-control" ID="tbOtMoneyAmount" runat="server" placeholder="$18" required="required"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="col">
                                             <div class="form-group">
-                                                <asp:Button CssClass="btn btn-secondary btn-sm" ID="Button2" runat="server" Text="Add-Row" />
+                                                
                                             </div>
                                         </div>
                                         <%--<div class="col">

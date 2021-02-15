@@ -259,7 +259,7 @@
                                     <div class="form-row">
                                         <div class="col-md-6">
                                             <div class="form-group">
-                                                <asp:Label ID="Label4" runat="server" Text="Signature" Font-Bold="True"></asp:Label>
+                                                <asp:Label ID="Label4" runat="server" Text="Signature by Employee" Font-Bold="True"></asp:Label>
                                             </div>
                                         </div>
                                     </div>
@@ -272,8 +272,6 @@
                                     </div>
                                     <hr />
                                     <div class="form-group">
-                                        <asp:Button Style="float: right;" CssClass="btn btn-primary btn-sm mx-2" ID="btnRenew" runat="server" Text="Renew" OnClick="btnRenew_Click" />
-                                        <asp:Button Style="float: right;" OnClientClick="javascript:window.print();" CssClass="btn btn-primary btn-sm mx-2" ID="Button3" runat="server" Text="Print" OnClick="Button3_Click" />
                                         <%--<asp:Button Style="float: right;" CssClass="btn btn-danger btn-sm mx-2" ID="Button1" runat="server" Text="Terminate" />--%>
                                         <asp:Button CausesValidation="false" UseSubmitBehavior="false" Style="float:right;" CssClass="btn btn-secondary btn-sm mx-2" ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click"/>                                    
                                     </div>
@@ -294,7 +292,7 @@
         var signaturePad = new SignaturePad(canvas);
     </script>
 
-    <input type="button" id="btnSave" name="btnSave" value="Save the canvas to server" />
+    <input type="button" id="btnSave" name="btnSave" value="Sign" />
     <script type="text/javascript">
         // Send the canvas image to the server.
         $(function () {

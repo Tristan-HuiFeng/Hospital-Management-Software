@@ -114,7 +114,42 @@ namespace WCF_Service_Library.Entity
                 DataRow row = ds.Tables[0].Rows[i];  // Sql command returns only one record
                 id = row["Bank_Detail_ID"].ToString();
             }
+
             return id;
+        }
+
+        public List<BankRecord> SelectByBankID(int id)
+        {
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from App.config
+            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter object to retrieve data from the database table
+            string sqlStmt = "select * from Bank_Detail where Bank_Detail_ID = @paraID";
+            SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraID", id);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet to List
+            List<BankRecord> brList = new List<BankRecord>();
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < rec_cnt; i++)
+            {
+                DataRow row = ds.Tables[0].Rows[i];  // Sql command returns only one record
+                string bankName = row["Bank_Name"].ToString();
+                string bankAccountNumber = row["Bank_Account_Number"].ToString();
+                string bankHolderName = row["Bank_Holder_Name"].ToString();
+                int employeeID = int.Parse(row["Employee_ID"].ToString());
+                BankRecord obj = new BankRecord(bankName, bankAccountNumber, bankHolderName, employeeID);
+                brList.Add(obj);
+            }
+            return brList;
         }
     }
 }

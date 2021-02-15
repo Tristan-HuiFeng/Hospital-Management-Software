@@ -830,33 +830,4 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAllFeedback">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllFeedbackResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllFeedbackResult" nillable="true" type="q31:ArrayOfFeedbackList" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreateFeedback">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="feedback" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreateFeedbackResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CreateFeedbackResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
 </xs:schema>

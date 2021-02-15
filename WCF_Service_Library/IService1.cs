@@ -122,13 +122,13 @@ namespace WCF_Service_Library
         int CreateEmployee(string nric, string firstname, string lastname, string email,
             DateTime dob, char gender, string address, string department,
             string position, string nationality, string healthdeclaration,
-            string loginid, string password, string jobfunction, string image);
+            /*string loginid, string password, */string jobfunction, string image);
 
         [OperationContract]
         int UpdateEmployee(string nric, string firstname, string lastname, string email,
             DateTime dob, char gender, string address, string department,
             string position, string nationality, string healthdeclaration,
-            string loginid, string password, string jobfunction, string image);
+            /*string loginid, string password, */string jobfunction, string image);
 
         [OperationContract]
         string GetEmployeeID(string nric);
@@ -206,6 +206,29 @@ namespace WCF_Service_Library
         [OperationContract]
         List<PayrollRecord> GetPayrollBetweenDate(string firstDate, string secondDate);
 
+        [OperationContract]
+        List<BankRecord> GetBankRecordByBankID(int id);
+
+        [OperationContract]
+        int SetSignatureByID(string id, string signature);
+
+        [OperationContract]
+        List<ContractRecord> GetContractByID(string _id);
+
+        [OperationContract]
+        List<Employee> GetEmployeeByID(string id);
+
+        [OperationContract]
+        int CreateAttendance(string id, string date, string status, string reason);
+
+        [OperationContract]
+        List<AttendanceRecord> GetAttendanceByIDWithDate(string id, DateTime date);
+
+        [OperationContract]
+        int UpdateByIDWithDate(string id, DateTime _date, string status, string reason);
+
+        [OperationContract]
+        List<Employee> SelectByASPNETID(string id);
         /* Matt */
         [OperationContract]
         List<FeedbackList> GetAllFeedback();

@@ -7,21 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital_Management_Software
+namespace Hospital_Management_Software.Management
 {
 
 
-    public partial class Payrolls
+    public partial class ViewContracts
     {
-
-        /// <summary>
-        /// tbFirstDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFirstDate;
 
         /// <summary>
         /// Label1 control.
@@ -31,24 +22,6 @@ namespace Hospital_Management_Software
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// tbSecondDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbSecondDate;
-
-        /// <summary>
-        /// btnFilter control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFilter;
 
         /// <summary>
         /// HyperLink1 control.

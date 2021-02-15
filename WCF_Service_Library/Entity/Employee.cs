@@ -22,8 +22,8 @@ namespace WCF_Service_Library.Entity
         public string Position { get; set; }
         public string Nationality { get; set; }
         public string HealthDeclaration { get; set; }
-        public string LoginID { get; set; }
-        public string Password { get; set; }
+        //public string LoginID { get; set; }
+        //public string Password { get; set; }
         public string JobFunction { get; set; }
         public string Image { get; set; }
 
@@ -35,7 +35,7 @@ namespace WCF_Service_Library.Entity
         public Employee(string nric, string firstname, string lastname, string email, 
             DateTime dob, char gender, string address, string department, 
             string position, string nationality, string healthdeclaration, 
-            string loginid, string password, string jobfunction, string image)
+            /*string loginid, string password,*/ string jobfunction, string image)
         {
             Nric = nric;
             FirstName = firstname;
@@ -48,8 +48,8 @@ namespace WCF_Service_Library.Entity
             Position = position;
             Nationality = nationality;
             HealthDeclaration = healthdeclaration;
-            LoginID = loginid;
-            Password = password;
+            //LoginID = loginid;
+            //Password = password;
             JobFunction = jobfunction;
             Image = image;
         }
@@ -62,9 +62,11 @@ namespace WCF_Service_Library.Entity
             SqlConnection myConn = new SqlConnection(DBConnect);
 
             // Step 2 - Create a SqlCommand object to add record with INSERT statement
+
+            
             string sqlStmt = "INSERT INTO Employee " +
                 "VALUES (@paraNric, @paraFname, @paraLname, @paraEmail, @paraDOB, @paraGender, @paraAddress, @paraDepartment, " +
-                "@paraPosition, @paraNationality, @paraHealth, @paraLoginID, @paraPassword, @paraJobFunc, @paraImage)";
+                "@paraPosition, @paraNationality, @paraHealth, @paraASPNETID, @paraJobFunc, @paraImage)";
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
             // Step 3 : Add each parameterised variable with value
@@ -79,8 +81,9 @@ namespace WCF_Service_Library.Entity
             sqlCmd.Parameters.AddWithValue("@paraPosition", Position);
             sqlCmd.Parameters.AddWithValue("@paraNationality", Nationality);
             sqlCmd.Parameters.AddWithValue("@paraHealth", HealthDeclaration);
-            sqlCmd.Parameters.AddWithValue("@paraLoginID", LoginID);
-            sqlCmd.Parameters.AddWithValue("@paraPassword", Password);
+            sqlCmd.Parameters.AddWithValue("@paraASPNETID", DBNull.Value);
+            //sqlCmd.Parameters.AddWithValue("@paraLoginID", LoginID);
+            //sqlCmd.Parameters.AddWithValue("@paraPassword", Password);
             sqlCmd.Parameters.AddWithValue("@paraJobFunc", JobFunction);
             sqlCmd.Parameters.AddWithValue("@paraImage", Image);
 
@@ -134,7 +137,7 @@ namespace WCF_Service_Library.Entity
             string sqlStmt = "update employee " +
                 "set NRIC = @paraNric, First_Name = @paraFname, Last_Name = @paraLname, Email = @paraEmail, DOB = @paraDOB, Sex = @paraGender, " +
                 "Address = @paraAddress, Department = @paraDepartment, Position = @paraPosition, Nationality = @paraNationality, " +
-                "Health_Declaration = @paraHealth, Login_ID = @paraLoginID, Password = @paraPassword, Job_Function = @paraJobFunc, Profile_Image = @paraImage " +
+                "Health_Declaration = @paraHealth, Job_Function = @paraJobFunc, Profile_Image = @paraImage " +
                 "where NRIC = @paraNric";
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
@@ -150,8 +153,8 @@ namespace WCF_Service_Library.Entity
             sqlCmd.Parameters.AddWithValue("@paraPosition", Position);
             sqlCmd.Parameters.AddWithValue("@paraNationality", Nationality);
             sqlCmd.Parameters.AddWithValue("@paraHealth", HealthDeclaration);
-            sqlCmd.Parameters.AddWithValue("@paraLoginID", LoginID);
-            sqlCmd.Parameters.AddWithValue("@paraPassword", Password);
+            //sqlCmd.Parameters.AddWithValue("@paraLoginID", LoginID);
+            //sqlCmd.Parameters.AddWithValue("@paraPassword", Password);
             sqlCmd.Parameters.AddWithValue("@paraJobFunc", JobFunction);
             sqlCmd.Parameters.AddWithValue("@paraImage", Image);
 
@@ -199,12 +202,12 @@ namespace WCF_Service_Library.Entity
                 string position = row["Position"].ToString();
                 string nationality = row["Nationality"].ToString();
                 string healthdeclaration = row["Health_Declaration"].ToString();
-                string loginid = row["Login_ID"].ToString();
-                string password = row["Password"].ToString();
+                //string loginid = row["Login_ID"].ToString();
+                //string password = row["Password"].ToString();
                 string jobfunction = row["Job_Function"].ToString();
                 string image = row["Profile_Image"].ToString();
                 Employee obj = new Employee(nric, firstname, lastname, email, dob, gender,
-                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+                    address, department, position, nationality, healthdeclaration, /*loginid, password, */jobfunction, image);
                 empList.Add(obj);
             }
             return empList;
@@ -239,18 +242,64 @@ namespace WCF_Service_Library.Entity
                 string lastname = row["Last_Name"].ToString();
                 string email = row["Email"].ToString();
                 DateTime dob = Convert.ToDateTime(row["DOB"]);
-                char gender = (char)row["Sex"];
+                char gender = row["Sex"].ToString().ToCharArray()[0];
                 string address = row["Address"].ToString();
                 string department = row["Department"].ToString();
                 string position = row["Position"].ToString();
                 string nationality = row["Nationality"].ToString();
                 string healthdeclaration = row["Health_Declaration"].ToString();
-                string loginid = row["Login_ID"].ToString();
-                string password = row["Password"].ToString();
+                //string loginid = row["Login_ID"].ToString();
+                //string password = row["Password"].ToString();
                 string jobfunction = row["Job_Function"].ToString();
                 string image = row["Profile_Image"].ToString();
                 Employee obj = new Employee(nric, firstname, lastname, email, dob, gender,
-                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+                    address, department, position, nationality, healthdeclaration, /*loginid, password,*/ jobfunction, image);
+                empList.Add(obj);
+            }
+            return empList;
+        }
+
+        public List<Employee> SelectByASPNETID(string id)
+        {
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from App.config
+            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter object to retrieve data from the database table
+            string sqlStmt = "select * from Employee where ASPNET_ID = @paraASPNETID";
+            SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraASPNETID", id);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet to List
+            List<Employee> empList = new List<Employee>();
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < rec_cnt; i++)
+            {
+                DataRow row = ds.Tables[0].Rows[i];  // Sql command returns only one record
+                string nric = row["NRIC"].ToString();
+                string firstname = row["First_Name"].ToString();
+                string lastname = row["Last_Name"].ToString();
+                string email = row["Email"].ToString();
+                DateTime dob = Convert.ToDateTime(row["DOB"]);
+                char gender = row["Sex"].ToString().ToCharArray()[0];
+                string address = row["Address"].ToString();
+                string department = row["Department"].ToString();
+                string position = row["Position"].ToString();
+                string nationality = row["Nationality"].ToString();
+                string healthdeclaration = row["Health_Declaration"].ToString();
+                //string loginid = row["Login_ID"].ToString();
+                //string password = row["Password"].ToString();
+                string jobfunction = row["Job_Function"].ToString();
+                string image = row["Profile_Image"].ToString();
+                Employee obj = new Employee(nric, firstname, lastname, email, dob, gender,
+                    address, department, position, nationality, healthdeclaration, /*loginid, password,*/ jobfunction, image);
                 empList.Add(obj);
             }
             return empList;
@@ -291,12 +340,12 @@ namespace WCF_Service_Library.Entity
                 string position = row["Position"].ToString();
                 string nationality = row["Nationality"].ToString();
                 string healthdeclaration = row["Health_Declaration"].ToString();
-                string loginid = row["Login_ID"].ToString();
-                string password = row["Password"].ToString();
+                //string loginid = row["Login_ID"].ToString();
+                //string password = row["Password"].ToString();
                 string jobfunction = row["Job_Function"].ToString();
                 string image = row["Profile_Image"].ToString();
                 Employee obj = new Employee(nric, firstname, lastname, email, dob, gender,
-                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+                    address, department, position, nationality, healthdeclaration, /*loginid, password,*/ jobfunction, image);
                 empList.Add(obj);
             }
             return empList;
@@ -344,12 +393,12 @@ namespace WCF_Service_Library.Entity
                 string position = row["Position"].ToString();
                 string nationality = row["Nationality"].ToString();
                 string healthdeclaration = row["Health_Declaration"].ToString();
-                string loginid = row["Login_ID"].ToString();
-                string password = row["Password"].ToString();
+                //string loginid = row["Login_ID"].ToString();
+                //string password = row["Password"].ToString();
                 string jobfunction = row["Job_Function"].ToString();
                 string image = row["Profile_Image"].ToString();
                 Employee obj = new Employee(nric, firstname, lastname, email, dob, gender,
-                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+                    address, department, position, nationality, healthdeclaration, /*loginid, password, */jobfunction, image);
                 empList.Add(obj);
             }
             return empList;
@@ -398,18 +447,62 @@ namespace WCF_Service_Library.Entity
                 string position = row["Position"].ToString();
                 string nationality = row["Nationality"].ToString();
                 string healthdeclaration = row["Health_Declaration"].ToString();
-                string loginid = row["Login_ID"].ToString();
-                string password = row["Password"].ToString();
+                //string loginid = row["Login_ID"].ToString();
+                //string password = row["Password"].ToString();
                 string jobfunction = row["Job_Function"].ToString();
                 string image = row["Profile_Image"].ToString();
                 Employee obj = new Employee(nric, firstname, lastname, email, dob, gender,
-                    address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+                    address, department, position, nationality, healthdeclaration, /*loginid, password, */jobfunction, image);
                 empList.Add(obj);
             }
             return empList;
         }
 
-       
+        public List<Employee> SelectByID(string id)
+        {
+            //Step 1 -  Define a connection to the database by getting
+            //          the connection string from App.config
+            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            //Step 2 -  Create a DataAdapter object to retrieve data from the database table
+            string sqlStmt = "select * from Employee where Employee_ID = @paraID";
+            SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraID", id);
+
+            //Step 3 -  Create a DataSet to store the data to be retrieved
+            DataSet ds = new DataSet();
+
+            //Step 4 -  Use the DataAdapter to fill the DataSet with data retrieved
+            da.Fill(ds);
+
+            //Step 5 -  Read data from DataSet to List
+            List<Employee> empList = new List<Employee>();
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < rec_cnt; i++)
+            {
+                DataRow row = ds.Tables[0].Rows[i];  // Sql command returns only one record
+                string nric = row["NRIC"].ToString();
+                string firstname = row["First_Name"].ToString();
+                string lastname = row["Last_Name"].ToString();
+                string email = row["Email"].ToString();
+                DateTime dob = Convert.ToDateTime(row["DOB"]);
+                char gender = row["Sex"].ToString().ToCharArray()[0];
+                string address = row["Address"].ToString();
+                string department = row["Department"].ToString();
+                string position = row["Position"].ToString();
+                string nationality = row["Nationality"].ToString();
+                string healthdeclaration = row["Health_Declaration"].ToString();
+                //string loginid = row["Login_ID"].ToString();
+                //string password = row["Password"].ToString();
+                string jobfunction = row["Job_Function"].ToString();
+                string image = row["Profile_Image"].ToString();
+                Employee obj = new Employee(nric, firstname, lastname, email, dob, gender,
+                    address, department, position, nationality, healthdeclaration, /*loginid, password,*/ jobfunction, image);
+                empList.Add(obj);
+            }
+            return empList;
+        }
 
     }
 }
