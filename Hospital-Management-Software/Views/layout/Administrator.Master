@@ -17,7 +17,6 @@
         <!-- open side nav -->
         <div style="display: none" id="opened-side-nav">
             <div class="sidenav-links">
-                <a runat="server" href="#">Home</a>
                 <a runat="server" href="~/Administrator/Role">Role Management</a>
                 <a runat="server" href="~/Administrator/UserList">User Management</a>
                 <a runat="server" href="~/Administrator/NoAccountList">Account Creation</a>
