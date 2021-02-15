@@ -9,1685 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace Hospital_Management_Software.MyDBServiceReference {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EquipmentServiceRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class EquipmentServiceRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string descriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int employeeIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string locationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string serialNumberField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.descriptionField, value) != true)) {
-                    this.descriptionField = value;
-                    this.RaisePropertyChanged("description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employeeID {
-            get {
-                return this.employeeIDField;
-            }
-            set {
-                if ((this.employeeIDField.Equals(value) != true)) {
-                    this.employeeIDField = value;
-                    this.RaisePropertyChanged("employeeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string location {
-            get {
-                return this.locationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.locationField, value) != true)) {
-                    this.locationField = value;
-                    this.RaisePropertyChanged("location");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string serialNumber {
-            get {
-                return this.serialNumberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.serialNumberField, value) != true)) {
-                    this.serialNumberField = value;
-                    this.RaisePropertyChanged("serialNumber");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LabServiceRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class LabServiceRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int employeeIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int priorityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string remarksField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string testRequiredField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employeeID {
-            get {
-                return this.employeeIDField;
-            }
-            set {
-                if ((this.employeeIDField.Equals(value) != true)) {
-                    this.employeeIDField = value;
-                    this.RaisePropertyChanged("employeeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int priority {
-            get {
-                return this.priorityField;
-            }
-            set {
-                if ((this.priorityField.Equals(value) != true)) {
-                    this.priorityField = value;
-                    this.RaisePropertyChanged("priority");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string remarks {
-            get {
-                return this.remarksField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.remarksField, value) != true)) {
-                    this.remarksField = value;
-                    this.RaisePropertyChanged("remarks");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string testRequired {
-            get {
-                return this.testRequiredField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.testRequiredField, value) != true)) {
-                    this.testRequiredField = value;
-                    this.RaisePropertyChanged("testRequired");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MedicalRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class MedicalRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string bloodPressureField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string bodyTemperatureField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime consultationDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string diagnosisField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string doctorEmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int doctorIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string doctorNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int medicalRecordIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string patientContactField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int patientIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string patientNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string prescriptionsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string pulseRateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string remarksField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string respirationRateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string treatmentField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bloodPressure {
-            get {
-                return this.bloodPressureField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bloodPressureField, value) != true)) {
-                    this.bloodPressureField = value;
-                    this.RaisePropertyChanged("bloodPressure");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bodyTemperature {
-            get {
-                return this.bodyTemperatureField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bodyTemperatureField, value) != true)) {
-                    this.bodyTemperatureField = value;
-                    this.RaisePropertyChanged("bodyTemperature");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime consultationDate {
-            get {
-                return this.consultationDateField;
-            }
-            set {
-                if ((this.consultationDateField.Equals(value) != true)) {
-                    this.consultationDateField = value;
-                    this.RaisePropertyChanged("consultationDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string diagnosis {
-            get {
-                return this.diagnosisField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.diagnosisField, value) != true)) {
-                    this.diagnosisField = value;
-                    this.RaisePropertyChanged("diagnosis");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string doctorEmail {
-            get {
-                return this.doctorEmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.doctorEmailField, value) != true)) {
-                    this.doctorEmailField = value;
-                    this.RaisePropertyChanged("doctorEmail");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int doctorID {
-            get {
-                return this.doctorIDField;
-            }
-            set {
-                if ((this.doctorIDField.Equals(value) != true)) {
-                    this.doctorIDField = value;
-                    this.RaisePropertyChanged("doctorID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string doctorName {
-            get {
-                return this.doctorNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.doctorNameField, value) != true)) {
-                    this.doctorNameField = value;
-                    this.RaisePropertyChanged("doctorName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int medicalRecordID {
-            get {
-                return this.medicalRecordIDField;
-            }
-            set {
-                if ((this.medicalRecordIDField.Equals(value) != true)) {
-                    this.medicalRecordIDField = value;
-                    this.RaisePropertyChanged("medicalRecordID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string patientContact {
-            get {
-                return this.patientContactField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.patientContactField, value) != true)) {
-                    this.patientContactField = value;
-                    this.RaisePropertyChanged("patientContact");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int patientID {
-            get {
-                return this.patientIDField;
-            }
-            set {
-                if ((this.patientIDField.Equals(value) != true)) {
-                    this.patientIDField = value;
-                    this.RaisePropertyChanged("patientID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string patientName {
-            get {
-                return this.patientNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.patientNameField, value) != true)) {
-                    this.patientNameField = value;
-                    this.RaisePropertyChanged("patientName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string prescriptions {
-            get {
-                return this.prescriptionsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.prescriptionsField, value) != true)) {
-                    this.prescriptionsField = value;
-                    this.RaisePropertyChanged("prescriptions");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string pulseRate {
-            get {
-                return this.pulseRateField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.pulseRateField, value) != true)) {
-                    this.pulseRateField = value;
-                    this.RaisePropertyChanged("pulseRate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string remarks {
-            get {
-                return this.remarksField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.remarksField, value) != true)) {
-                    this.remarksField = value;
-                    this.RaisePropertyChanged("remarks");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string respirationRate {
-            get {
-                return this.respirationRateField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.respirationRateField, value) != true)) {
-                    this.respirationRateField = value;
-                    this.RaisePropertyChanged("respirationRate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string treatment {
-            get {
-                return this.treatmentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.treatmentField, value) != true)) {
-                    this.treatmentField = value;
-                    this.RaisePropertyChanged("treatment");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Role", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class Role : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IDField, value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="UserAccount", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class UserAccount : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string departmentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string positionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string role_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string role_nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string statusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string user_idField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string department {
-            get {
-                return this.departmentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.departmentField, value) != true)) {
-                    this.departmentField = value;
-                    this.RaisePropertyChanged("department");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string position {
-            get {
-                return this.positionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.positionField, value) != true)) {
-                    this.positionField = value;
-                    this.RaisePropertyChanged("position");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string role_id {
-            get {
-                return this.role_idField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.role_idField, value) != true)) {
-                    this.role_idField = value;
-                    this.RaisePropertyChanged("role_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string role_name {
-            get {
-                return this.role_nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.role_nameField, value) != true)) {
-                    this.role_nameField = value;
-                    this.RaisePropertyChanged("role_name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string status {
-            get {
-                return this.statusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.statusField, value) != true)) {
-                    this.statusField = value;
-                    this.RaisePropertyChanged("status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string user_id {
-            get {
-                return this.user_idField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.user_idField, value) != true)) {
-                    this.user_idField = value;
-                    this.RaisePropertyChanged("user_id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Employee", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class Employee : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AddressField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DOBField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DepartmentField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EmailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FirstNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private char GenderField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string HealthDeclarationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ImageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string JobFunctionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LastNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NationalityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NricField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PositionField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address {
-            get {
-                return this.AddressField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
-                    this.AddressField = value;
-                    this.RaisePropertyChanged("Address");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DOB {
-            get {
-                return this.DOBField;
-            }
-            set {
-                if ((this.DOBField.Equals(value) != true)) {
-                    this.DOBField = value;
-                    this.RaisePropertyChanged("DOB");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Department {
-            get {
-                return this.DepartmentField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DepartmentField, value) != true)) {
-                    this.DepartmentField = value;
-                    this.RaisePropertyChanged("Department");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email {
-            get {
-                return this.EmailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EmailField, value) != true)) {
-                    this.EmailField = value;
-                    this.RaisePropertyChanged("Email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FirstName {
-            get {
-                return this.FirstNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
-                    this.FirstNameField = value;
-                    this.RaisePropertyChanged("FirstName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public char Gender {
-            get {
-                return this.GenderField;
-            }
-            set {
-                if ((this.GenderField.Equals(value) != true)) {
-                    this.GenderField = value;
-                    this.RaisePropertyChanged("Gender");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string HealthDeclaration {
-            get {
-                return this.HealthDeclarationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.HealthDeclarationField, value) != true)) {
-                    this.HealthDeclarationField = value;
-                    this.RaisePropertyChanged("HealthDeclaration");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Image {
-            get {
-                return this.ImageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
-                    this.ImageField = value;
-                    this.RaisePropertyChanged("Image");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string JobFunction {
-            get {
-                return this.JobFunctionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.JobFunctionField, value) != true)) {
-                    this.JobFunctionField = value;
-                    this.RaisePropertyChanged("JobFunction");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LastName {
-            get {
-                return this.LastNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LastNameField, value) != true)) {
-                    this.LastNameField = value;
-                    this.RaisePropertyChanged("LastName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nationality {
-            get {
-                return this.NationalityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NationalityField, value) != true)) {
-                    this.NationalityField = value;
-                    this.RaisePropertyChanged("Nationality");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nric {
-            get {
-                return this.NricField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NricField, value) != true)) {
-                    this.NricField = value;
-                    this.RaisePropertyChanged("Nric");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Position {
-            get {
-                return this.PositionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PositionField, value) != true)) {
-                    this.PositionField = value;
-                    this.RaisePropertyChanged("Position");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ContractRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class ContractRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string benefitsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime create_dateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string employeeIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string holidaysField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string salaryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string signatureField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string vacationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string workingHoursField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string benefits {
-            get {
-                return this.benefitsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.benefitsField, value) != true)) {
-                    this.benefitsField = value;
-                    this.RaisePropertyChanged("benefits");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime create_date {
-            get {
-                return this.create_dateField;
-            }
-            set {
-                if ((this.create_dateField.Equals(value) != true)) {
-                    this.create_dateField = value;
-                    this.RaisePropertyChanged("create_date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string employeeID {
-            get {
-                return this.employeeIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.employeeIDField, value) != true)) {
-                    this.employeeIDField = value;
-                    this.RaisePropertyChanged("employeeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string holidays {
-            get {
-                return this.holidaysField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.holidaysField, value) != true)) {
-                    this.holidaysField = value;
-                    this.RaisePropertyChanged("holidays");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.idField, value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string salary {
-            get {
-                return this.salaryField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.salaryField, value) != true)) {
-                    this.salaryField = value;
-                    this.RaisePropertyChanged("salary");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string signature {
-            get {
-                return this.signatureField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.signatureField, value) != true)) {
-                    this.signatureField = value;
-                    this.RaisePropertyChanged("signature");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string vacation {
-            get {
-                return this.vacationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.vacationField, value) != true)) {
-                    this.vacationField = value;
-                    this.RaisePropertyChanged("vacation");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string workingHours {
-            get {
-                return this.workingHoursField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.workingHoursField, value) != true)) {
-                    this.workingHoursField = value;
-                    this.RaisePropertyChanged("workingHours");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="tempPatient", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class tempPatient : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string contactField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string emailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string contact {
-            get {
-                return this.contactField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.contactField, value) != true)) {
-                    this.contactField = value;
-                    this.RaisePropertyChanged("contact");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string email {
-            get {
-                return this.emailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.emailField, value) != true)) {
-                    this.emailField = value;
-                    this.RaisePropertyChanged("email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((this.idField.Equals(value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BankRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class BankRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string bankAccountNumberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string bankHolderNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string bankNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int employeeIDField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bankAccountNumber {
-            get {
-                return this.bankAccountNumberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bankAccountNumberField, value) != true)) {
-                    this.bankAccountNumberField = value;
-                    this.RaisePropertyChanged("bankAccountNumber");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bankHolderName {
-            get {
-                return this.bankHolderNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bankHolderNameField, value) != true)) {
-                    this.bankHolderNameField = value;
-                    this.RaisePropertyChanged("bankHolderName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string bankName {
-            get {
-                return this.bankNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.bankNameField, value) != true)) {
-                    this.bankNameField = value;
-                    this.RaisePropertyChanged("bankName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employeeID {
-            get {
-                return this.employeeIDField;
-            }
-            set {
-                if ((this.employeeIDField.Equals(value) != true)) {
-                    this.employeeIDField = value;
-                    this.RaisePropertyChanged("employeeID");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PayrollRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class PayrollRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int bankDetailIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal bonusAmountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime createdDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int employeeIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string employeeNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string employeePositionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string overtimeDetailsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string processedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string processedDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal salaryField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int bankDetailID {
-            get {
-                return this.bankDetailIDField;
-            }
-            set {
-                if ((this.bankDetailIDField.Equals(value) != true)) {
-                    this.bankDetailIDField = value;
-                    this.RaisePropertyChanged("bankDetailID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal bonusAmount {
-            get {
-                return this.bonusAmountField;
-            }
-            set {
-                if ((this.bonusAmountField.Equals(value) != true)) {
-                    this.bonusAmountField = value;
-                    this.RaisePropertyChanged("bonusAmount");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime createdDate {
-            get {
-                return this.createdDateField;
-            }
-            set {
-                if ((this.createdDateField.Equals(value) != true)) {
-                    this.createdDateField = value;
-                    this.RaisePropertyChanged("createdDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int employeeID {
-            get {
-                return this.employeeIDField;
-            }
-            set {
-                if ((this.employeeIDField.Equals(value) != true)) {
-                    this.employeeIDField = value;
-                    this.RaisePropertyChanged("employeeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string employeeName {
-            get {
-                return this.employeeNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.employeeNameField, value) != true)) {
-                    this.employeeNameField = value;
-                    this.RaisePropertyChanged("employeeName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string employeePosition {
-            get {
-                return this.employeePositionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.employeePositionField, value) != true)) {
-                    this.employeePositionField = value;
-                    this.RaisePropertyChanged("employeePosition");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.idField, value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string overtimeDetails {
-            get {
-                return this.overtimeDetailsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.overtimeDetailsField, value) != true)) {
-                    this.overtimeDetailsField = value;
-                    this.RaisePropertyChanged("overtimeDetails");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string processed {
-            get {
-                return this.processedField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.processedField, value) != true)) {
-                    this.processedField = value;
-                    this.RaisePropertyChanged("processed");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string processedDate {
-            get {
-                return this.processedDateField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.processedDateField, value) != true)) {
-                    this.processedDateField = value;
-                    this.RaisePropertyChanged("processedDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal salary {
-            get {
-                return this.salaryField;
-            }
-            set {
-                if ((this.salaryField.Equals(value) != true)) {
-                    this.salaryField = value;
-                    this.RaisePropertyChanged("salary");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AttendanceRecord", Namespace="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity")]
-    [System.SerializableAttribute()]
-    public partial class AttendanceRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string dateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string empIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string reasonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string statusField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string date {
-            get {
-                return this.dateField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.dateField, value) != true)) {
-                    this.dateField = value;
-                    this.RaisePropertyChanged("date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string empID {
-            get {
-                return this.empIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.empIDField, value) != true)) {
-                    this.empIDField = value;
-                    this.RaisePropertyChanged("empID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string reason {
-            get {
-                return this.reasonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.reasonField, value) != true)) {
-                    this.reasonField = value;
-                    this.RaisePropertyChanged("reason");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string status {
-            get {
-                return this.statusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.statusField, value) != true)) {
-                    this.statusField = value;
-                    this.RaisePropertyChanged("status");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MyDBServiceReference.IService1")]
@@ -1700,52 +22,52 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<string> GetDataAsync(int value);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        Hospital_Management_Software.MyDBServiceReference.CompositeType GetDataUsingDataContract(Hospital_Management_Software.MyDBServiceReference.CompositeType composite);
+        WCF_Service_Library.CompositeType GetDataUsingDataContract(WCF_Service_Library.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.CompositeType> GetDataUsingDataContractAsync(Hospital_Management_Software.MyDBServiceReference.CompositeType composite);
+        System.Threading.Tasks.Task<WCF_Service_Library.CompositeType> GetDataUsingDataContractAsync(WCF_Service_Library.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEquipmentServiceRecordById", ReplyAction="http://tempuri.org/IService1/GetEquipmentServiceRecordByIdResponse")]
-        Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord GetEquipmentServiceRecordById(int id);
+        WCF_Service_Library.Entity.EquipmentServiceRecord GetEquipmentServiceRecordById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEquipmentServiceRecordById", ReplyAction="http://tempuri.org/IService1/GetEquipmentServiceRecordByIdResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord> GetEquipmentServiceRecordByIdAsync(int id);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.EquipmentServiceRecord> GetEquipmentServiceRecordByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEquipmentServiceRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetEquipmentServiceRecordByEmployeeIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord[] GetEquipmentServiceRecordByEmployeeID(int empID);
+        WCF_Service_Library.Entity.EquipmentServiceRecord[] GetEquipmentServiceRecordByEmployeeID(int empID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEquipmentServiceRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetEquipmentServiceRecordByEmployeeIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord[]> GetEquipmentServiceRecordByEmployeeIDAsync(int empID);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.EquipmentServiceRecord[]> GetEquipmentServiceRecordByEmployeeIDAsync(int empID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetLabServiceRecordById", ReplyAction="http://tempuri.org/IService1/GetLabServiceRecordByIdResponse")]
-        Hospital_Management_Software.MyDBServiceReference.LabServiceRecord GetLabServiceRecordById(int id);
+        WCF_Service_Library.Entity.LabServiceRecord GetLabServiceRecordById(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetLabServiceRecordById", ReplyAction="http://tempuri.org/IService1/GetLabServiceRecordByIdResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.LabServiceRecord> GetLabServiceRecordByIdAsync(int id);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.LabServiceRecord> GetLabServiceRecordByIdAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetLabServiceRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetLabServiceRecordByEmployeeIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.LabServiceRecord[] GetLabServiceRecordByEmployeeID(int empID);
+        WCF_Service_Library.Entity.LabServiceRecord[] GetLabServiceRecordByEmployeeID(int empID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetLabServiceRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetLabServiceRecordByEmployeeIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.LabServiceRecord[]> GetLabServiceRecordByEmployeeIDAsync(int empID);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.LabServiceRecord[]> GetLabServiceRecordByEmployeeIDAsync(int empID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecordByEmployeeID(int empID);
+        WCF_Service_Library.Entity.MedicalRecord[] GetAllMedicalRecordByEmployeeID(int empID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordByEmployeeIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordByEmployeeIDAsync(int empID);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.MedicalRecord[]> GetAllMedicalRecordByEmployeeIDAsync(int empID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordByID", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordByIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.MedicalRecord GetMedicalRecordByID(int id);
+        WCF_Service_Library.Entity.MedicalRecord GetMedicalRecordByID(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordByID", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordByIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord> GetMedicalRecordByIDAsync(int id);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.MedicalRecord> GetMedicalRecordByIDAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
-        Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord();
+        WCF_Service_Library.Entity.MedicalRecord[] GetAllMedicalRecord();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllMedicalRecord", ReplyAction="http://tempuri.org/IService1/GetAllMedicalRecordResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync();
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.MedicalRecord[]> GetAllMedicalRecordAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
         System.Data.DataTable GetMedicalRecordTableView(int acc_id);
@@ -1766,16 +88,16 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<System.Data.DataTable> GetRoleUserListTableViewAsync(string role_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList", ReplyAction="http://tempuri.org/IService1/GetRoleListResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Role[] GetRoleList();
+        WCF_Service_Library.Entity.Role[] GetRoleList();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList", ReplyAction="http://tempuri.org/IService1/GetRoleListResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Role[]> GetRoleListAsync();
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role[]> GetRoleListAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList2", ReplyAction="http://tempuri.org/IService1/GetRoleList2Response")]
-        Hospital_Management_Software.MyDBServiceReference.Role[] GetRoleList2();
+        WCF_Service_Library.Entity.Role[] GetRoleList2();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList2", ReplyAction="http://tempuri.org/IService1/GetRoleList2Response")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Role[]> GetRoleList2Async();
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role[]> GetRoleList2Async();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList_TableView", ReplyAction="http://tempuri.org/IService1/GetRoleList_TableViewResponse")]
         System.Data.DataTable GetRoleList_TableView();
@@ -1784,16 +106,16 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<System.Data.DataTable> GetRoleList_TableViewAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleByID", ReplyAction="http://tempuri.org/IService1/GetRoleByIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Role GetRoleByID(string roleID);
+        WCF_Service_Library.Entity.Role GetRoleByID(string roleID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleByID", ReplyAction="http://tempuri.org/IService1/GetRoleByIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Role> GetRoleByIDAsync(string roleID);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role> GetRoleByIDAsync(string roleID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUserAccountByID", ReplyAction="http://tempuri.org/IService1/GetUserAccountByIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.UserAccount GetUserAccountByID(string user_id);
+        WCF_Service_Library.Entity.UserAccount GetUserAccountByID(string user_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUserAccountByID", ReplyAction="http://tempuri.org/IService1/GetUserAccountByIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.UserAccount> GetUserAccountByIDAsync(string user_id);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.UserAccount> GetUserAccountByIDAsync(string user_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/updateUserAccStatus", ReplyAction="http://tempuri.org/IService1/updateUserAccStatusResponse")]
         void updateUserAccStatus(string userID, bool isDisabled);
@@ -1838,46 +160,46 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<System.Data.DataTable> GetEmailListAsync(string target);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllEmployee", ReplyAction="http://tempuri.org/IService1/GetAllEmployeeResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Employee[] GetAllEmployee();
+        WCF_Service_Library.Entity.Employee[] GetAllEmployee();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllEmployee", ReplyAction="http://tempuri.org/IService1/GetAllEmployeeResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetAllEmployeeAsync();
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetAllEmployeeAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByName", ReplyAction="http://tempuri.org/IService1/GetEmployeeByNameResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByName(string name);
+        WCF_Service_Library.Entity.Employee[] GetEmployeeByName(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByName", ReplyAction="http://tempuri.org/IService1/GetEmployeeByNameResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByNameAsync(string name);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeByNameAsync(string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeSortedByDOB", ReplyAction="http://tempuri.org/IService1/GetEmployeeSortedByDOBResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeSortedByDOB(int order);
+        WCF_Service_Library.Entity.Employee[] GetEmployeeSortedByDOB(int order);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeSortedByDOB", ReplyAction="http://tempuri.org/IService1/GetEmployeeSortedByDOBResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeSortedByDOBAsync(int order);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeSortedByDOBAsync(int order);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeSortedByGender", ReplyAction="http://tempuri.org/IService1/GetEmployeeSortedByGenderResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeSortedByGender(int order);
+        WCF_Service_Library.Entity.Employee[] GetEmployeeSortedByGender(int order);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeSortedByGender", ReplyAction="http://tempuri.org/IService1/GetEmployeeSortedByGenderResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeSortedByGenderAsync(int order);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeSortedByGenderAsync(int order);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByNRIC", ReplyAction="http://tempuri.org/IService1/GetEmployeeByNRICResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByNRIC(string nric);
+        WCF_Service_Library.Entity.Employee[] GetEmployeeByNRIC(string nric);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByNRIC", ReplyAction="http://tempuri.org/IService1/GetEmployeeByNRICResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByNRICAsync(string nric);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeByNRICAsync(string nric);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateEmployee", ReplyAction="http://tempuri.org/IService1/CreateEmployeeResponse")]
-        int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image);
+        int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateEmployee", ReplyAction="http://tempuri.org/IService1/CreateEmployeeResponse")]
-        System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image);
+        System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateEmployee", ReplyAction="http://tempuri.org/IService1/UpdateEmployeeResponse")]
-        int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image);
+        int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateEmployee", ReplyAction="http://tempuri.org/IService1/UpdateEmployeeResponse")]
-        System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image);
+        System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeID", ReplyAction="http://tempuri.org/IService1/GetEmployeeIDResponse")]
         string GetEmployeeID(string nric);
@@ -1892,16 +214,16 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<int> CreateContractAsync(string salary, string benefits, string workingHours, string holidays, string vacation, System.DateTime create_date, string employeeID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetContractByEmployeeIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.ContractRecord[] GetContractByEmployeeID(string id);
+        WCF_Service_Library.Entity.ContractRecord[] GetContractByEmployeeID(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetContractByEmployeeIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.ContractRecord[]> GetContractByEmployeeIDAsync(string id);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.ContractRecord[]> GetContractByEmployeeIDAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientByID", ReplyAction="http://tempuri.org/IService1/GetPatientByIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.tempPatient GetPatientByID(string id);
+        WCF_Service_Library.Entity.tempPatient GetPatientByID(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientByID", ReplyAction="http://tempuri.org/IService1/GetPatientByIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.tempPatient> GetPatientByIDAsync(string id);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.tempPatient> GetPatientByIDAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMedicalRecord", ReplyAction="http://tempuri.org/IService1/CreateMedicalRecordResponse")]
         int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
@@ -2014,10 +336,10 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<int> CreateBankRecordAsync(string bankName, string bankAccountNumber, string bankHolderName, int employeeID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetBankRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetBankRecordByEmployeeIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.BankRecord[] GetBankRecordByEmployeeID(int id);
+        WCF_Service_Library.Entity.BankRecord[] GetBankRecordByEmployeeID(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetBankRecordByEmployeeID", ReplyAction="http://tempuri.org/IService1/GetBankRecordByEmployeeIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.BankRecord[]> GetBankRecordByEmployeeIDAsync(int id);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.BankRecord[]> GetBankRecordByEmployeeIDAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePayroll", ReplyAction="http://tempuri.org/IService1/CreatePayrollResponse")]
         int CreatePayroll(decimal salary, decimal bonusAmount, string processedDate, System.DateTime createdDate, int employeeID, int bankDetailID, string processed, string overtimeDetails);
@@ -2032,16 +354,16 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<string> GetBankDetailIDAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllPayroll", ReplyAction="http://tempuri.org/IService1/GetAllPayrollResponse")]
-        Hospital_Management_Software.MyDBServiceReference.PayrollRecord[] GetAllPayroll();
+        WCF_Service_Library.Entity.PayrollRecord[] GetAllPayroll();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllPayroll", ReplyAction="http://tempuri.org/IService1/GetAllPayrollResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.PayrollRecord[]> GetAllPayrollAsync();
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetAllPayrollAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPayrollByID", ReplyAction="http://tempuri.org/IService1/GetPayrollByIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.PayrollRecord[] GetPayrollByID(string id);
+        WCF_Service_Library.Entity.PayrollRecord[] GetPayrollByID(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPayrollByID", ReplyAction="http://tempuri.org/IService1/GetPayrollByIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.PayrollRecord[]> GetPayrollByIDAsync(string id);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollByIDAsync(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ProcessPayrollByID", ReplyAction="http://tempuri.org/IService1/ProcessPayrollByIDResponse")]
         int ProcessPayrollByID(string id, string process);
@@ -2050,74 +372,10 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<int> ProcessPayrollByIDAsync(string id, string process);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPayrollBetweenDate", ReplyAction="http://tempuri.org/IService1/GetPayrollBetweenDateResponse")]
-        Hospital_Management_Software.MyDBServiceReference.PayrollRecord[] GetPayrollBetweenDate(string firstDate, string secondDate);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPayrollBetweenDate", ReplyAction="http://tempuri.org/IService1/GetPayrollBetweenDateResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetBankRecordByBankID", ReplyAction="http://tempuri.org/IService1/GetBankRecordByBankIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.BankRecord[] GetBankRecordByBankID(int id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetBankRecordByBankID", ReplyAction="http://tempuri.org/IService1/GetBankRecordByBankIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.BankRecord[]> GetBankRecordByBankIDAsync(int id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetSignatureByID", ReplyAction="http://tempuri.org/IService1/SetSignatureByIDResponse")]
-        int SetSignatureByID(string id, string signature);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetSignatureByID", ReplyAction="http://tempuri.org/IService1/SetSignatureByIDResponse")]
-        System.Threading.Tasks.Task<int> SetSignatureByIDAsync(string id, string signature);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByID", ReplyAction="http://tempuri.org/IService1/GetContractByIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.ContractRecord[] GetContractByID(string _id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByID", ReplyAction="http://tempuri.org/IService1/GetContractByIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.ContractRecord[]> GetContractByIDAsync(string _id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByID", ReplyAction="http://tempuri.org/IService1/GetEmployeeByIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByID(string id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByID", ReplyAction="http://tempuri.org/IService1/GetEmployeeByIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByIDAsync(string id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateAttendance", ReplyAction="http://tempuri.org/IService1/CreateAttendanceResponse")]
-        int CreateAttendance(string id, string date, string status, string reason);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateAttendance", ReplyAction="http://tempuri.org/IService1/CreateAttendanceResponse")]
-        System.Threading.Tasks.Task<int> CreateAttendanceAsync(string id, string date, string status, string reason);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAttendanceByIDWithDate", ReplyAction="http://tempuri.org/IService1/GetAttendanceByIDWithDateResponse")]
-        Hospital_Management_Software.MyDBServiceReference.AttendanceRecord[] GetAttendanceByIDWithDate(string id, System.DateTime date);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAttendanceByIDWithDate", ReplyAction="http://tempuri.org/IService1/GetAttendanceByIDWithDateResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.AttendanceRecord[]> GetAttendanceByIDWithDateAsync(string id, System.DateTime date);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateByIDWithDate", ReplyAction="http://tempuri.org/IService1/UpdateByIDWithDateResponse")]
-        int UpdateByIDWithDate(string id, System.DateTime _date, string status, string reason);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateByIDWithDate", ReplyAction="http://tempuri.org/IService1/UpdateByIDWithDateResponse")]
-        System.Threading.Tasks.Task<int> UpdateByIDWithDateAsync(string id, System.DateTime _date, string status, string reason);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectByASPNETID", ReplyAction="http://tempuri.org/IService1/SelectByASPNETIDResponse")]
-        Hospital_Management_Software.MyDBServiceReference.Employee[] SelectByASPNETID(string id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectByASPNETID", ReplyAction="http://tempuri.org/IService1/SelectByASPNETIDResponse")]
-        System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> SelectByASPNETIDAsync(string id);
         WCF_Service_Library.Entity.PayrollRecord[] GetPayrollBetweenDate(string firstDate, string secondDate);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPayrollBetweenDate", ReplyAction="http://tempuri.org/IService1/GetPayrollBetweenDateResponse")]
         System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
-        WCF_Service_Library.Entity.FeedbackList[] GetAllFeedback();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
-        System.Threading.Tasks.Task<WCF_Service_Library.Entity.FeedbackList[]> GetAllFeedbackAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
-        int CreateFeedback(string name, string email, string subject, string feedback);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
-        System.Threading.Tasks.Task<int> CreateFeedbackAsync(string name, string email, string subject, string feedback);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2155,67 +413,67 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetDataAsync(value);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.CompositeType GetDataUsingDataContract(Hospital_Management_Software.MyDBServiceReference.CompositeType composite) {
+        public WCF_Service_Library.CompositeType GetDataUsingDataContract(WCF_Service_Library.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.CompositeType> GetDataUsingDataContractAsync(Hospital_Management_Software.MyDBServiceReference.CompositeType composite) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.CompositeType> GetDataUsingDataContractAsync(WCF_Service_Library.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord GetEquipmentServiceRecordById(int id) {
+        public WCF_Service_Library.Entity.EquipmentServiceRecord GetEquipmentServiceRecordById(int id) {
             return base.Channel.GetEquipmentServiceRecordById(id);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord> GetEquipmentServiceRecordByIdAsync(int id) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.EquipmentServiceRecord> GetEquipmentServiceRecordByIdAsync(int id) {
             return base.Channel.GetEquipmentServiceRecordByIdAsync(id);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord[] GetEquipmentServiceRecordByEmployeeID(int empID) {
+        public WCF_Service_Library.Entity.EquipmentServiceRecord[] GetEquipmentServiceRecordByEmployeeID(int empID) {
             return base.Channel.GetEquipmentServiceRecordByEmployeeID(empID);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.EquipmentServiceRecord[]> GetEquipmentServiceRecordByEmployeeIDAsync(int empID) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.EquipmentServiceRecord[]> GetEquipmentServiceRecordByEmployeeIDAsync(int empID) {
             return base.Channel.GetEquipmentServiceRecordByEmployeeIDAsync(empID);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.LabServiceRecord GetLabServiceRecordById(int id) {
+        public WCF_Service_Library.Entity.LabServiceRecord GetLabServiceRecordById(int id) {
             return base.Channel.GetLabServiceRecordById(id);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.LabServiceRecord> GetLabServiceRecordByIdAsync(int id) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.LabServiceRecord> GetLabServiceRecordByIdAsync(int id) {
             return base.Channel.GetLabServiceRecordByIdAsync(id);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.LabServiceRecord[] GetLabServiceRecordByEmployeeID(int empID) {
+        public WCF_Service_Library.Entity.LabServiceRecord[] GetLabServiceRecordByEmployeeID(int empID) {
             return base.Channel.GetLabServiceRecordByEmployeeID(empID);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.LabServiceRecord[]> GetLabServiceRecordByEmployeeIDAsync(int empID) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.LabServiceRecord[]> GetLabServiceRecordByEmployeeIDAsync(int empID) {
             return base.Channel.GetLabServiceRecordByEmployeeIDAsync(empID);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecordByEmployeeID(int empID) {
+        public WCF_Service_Library.Entity.MedicalRecord[] GetAllMedicalRecordByEmployeeID(int empID) {
             return base.Channel.GetAllMedicalRecordByEmployeeID(empID);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordByEmployeeIDAsync(int empID) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.MedicalRecord[]> GetAllMedicalRecordByEmployeeIDAsync(int empID) {
             return base.Channel.GetAllMedicalRecordByEmployeeIDAsync(empID);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.MedicalRecord GetMedicalRecordByID(int id) {
+        public WCF_Service_Library.Entity.MedicalRecord GetMedicalRecordByID(int id) {
             return base.Channel.GetMedicalRecordByID(id);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord> GetMedicalRecordByIDAsync(int id) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.MedicalRecord> GetMedicalRecordByIDAsync(int id) {
             return base.Channel.GetMedicalRecordByIDAsync(id);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.MedicalRecord[] GetAllMedicalRecord() {
+        public WCF_Service_Library.Entity.MedicalRecord[] GetAllMedicalRecord() {
             return base.Channel.GetAllMedicalRecord();
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync() {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.MedicalRecord[]> GetAllMedicalRecordAsync() {
             return base.Channel.GetAllMedicalRecordAsync();
         }
         
@@ -2243,19 +501,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetRoleUserListTableViewAsync(role_id);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Role[] GetRoleList() {
+        public WCF_Service_Library.Entity.Role[] GetRoleList() {
             return base.Channel.GetRoleList();
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Role[]> GetRoleListAsync() {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role[]> GetRoleListAsync() {
             return base.Channel.GetRoleListAsync();
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Role[] GetRoleList2() {
+        public WCF_Service_Library.Entity.Role[] GetRoleList2() {
             return base.Channel.GetRoleList2();
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Role[]> GetRoleList2Async() {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role[]> GetRoleList2Async() {
             return base.Channel.GetRoleList2Async();
         }
         
@@ -2267,19 +525,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetRoleList_TableViewAsync();
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Role GetRoleByID(string roleID) {
+        public WCF_Service_Library.Entity.Role GetRoleByID(string roleID) {
             return base.Channel.GetRoleByID(roleID);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Role> GetRoleByIDAsync(string roleID) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role> GetRoleByIDAsync(string roleID) {
             return base.Channel.GetRoleByIDAsync(roleID);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.UserAccount GetUserAccountByID(string user_id) {
+        public WCF_Service_Library.Entity.UserAccount GetUserAccountByID(string user_id) {
             return base.Channel.GetUserAccountByID(user_id);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.UserAccount> GetUserAccountByIDAsync(string user_id) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.UserAccount> GetUserAccountByIDAsync(string user_id) {
             return base.Channel.GetUserAccountByIDAsync(user_id);
         }
         
@@ -2339,60 +597,60 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetEmailListAsync(target);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetAllEmployee() {
+        public WCF_Service_Library.Entity.Employee[] GetAllEmployee() {
             return base.Channel.GetAllEmployee();
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetAllEmployeeAsync() {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetAllEmployeeAsync() {
             return base.Channel.GetAllEmployeeAsync();
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByName(string name) {
+        public WCF_Service_Library.Entity.Employee[] GetEmployeeByName(string name) {
             return base.Channel.GetEmployeeByName(name);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByNameAsync(string name) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeByNameAsync(string name) {
             return base.Channel.GetEmployeeByNameAsync(name);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeSortedByDOB(int order) {
+        public WCF_Service_Library.Entity.Employee[] GetEmployeeSortedByDOB(int order) {
             return base.Channel.GetEmployeeSortedByDOB(order);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeSortedByDOBAsync(int order) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeSortedByDOBAsync(int order) {
             return base.Channel.GetEmployeeSortedByDOBAsync(order);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeSortedByGender(int order) {
+        public WCF_Service_Library.Entity.Employee[] GetEmployeeSortedByGender(int order) {
             return base.Channel.GetEmployeeSortedByGender(order);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeSortedByGenderAsync(int order) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeSortedByGenderAsync(int order) {
             return base.Channel.GetEmployeeSortedByGenderAsync(order);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByNRIC(string nric) {
+        public WCF_Service_Library.Entity.Employee[] GetEmployeeByNRIC(string nric) {
             return base.Channel.GetEmployeeByNRIC(nric);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByNRICAsync(string nric) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeByNRICAsync(string nric) {
             return base.Channel.GetEmployeeByNRICAsync(nric);
         }
         
-        public int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image) {
-            return base.Channel.CreateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, jobfunction, image);
+        public int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
+            return base.Channel.CreateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
         }
         
-        public System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image) {
-            return base.Channel.CreateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, jobfunction, image);
+        public System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
+            return base.Channel.CreateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
         }
         
-        public int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image) {
-            return base.Channel.UpdateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, jobfunction, image);
+        public int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
+            return base.Channel.UpdateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
         }
         
-        public System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image) {
-            return base.Channel.UpdateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, jobfunction, image);
+        public System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
+            return base.Channel.UpdateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
         }
         
         public string GetEmployeeID(string nric) {
@@ -2411,19 +669,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.CreateContractAsync(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.ContractRecord[] GetContractByEmployeeID(string id) {
+        public WCF_Service_Library.Entity.ContractRecord[] GetContractByEmployeeID(string id) {
             return base.Channel.GetContractByEmployeeID(id);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.ContractRecord[]> GetContractByEmployeeIDAsync(string id) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.ContractRecord[]> GetContractByEmployeeIDAsync(string id) {
             return base.Channel.GetContractByEmployeeIDAsync(id);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.tempPatient GetPatientByID(string id) {
+        public WCF_Service_Library.Entity.tempPatient GetPatientByID(string id) {
             return base.Channel.GetPatientByID(id);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.tempPatient> GetPatientByIDAsync(string id) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.tempPatient> GetPatientByIDAsync(string id) {
             return base.Channel.GetPatientByIDAsync(id);
         }
         
@@ -2551,11 +809,11 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.CreateBankRecordAsync(bankName, bankAccountNumber, bankHolderName, employeeID);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.BankRecord[] GetBankRecordByEmployeeID(int id) {
+        public WCF_Service_Library.Entity.BankRecord[] GetBankRecordByEmployeeID(int id) {
             return base.Channel.GetBankRecordByEmployeeID(id);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.BankRecord[]> GetBankRecordByEmployeeIDAsync(int id) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.BankRecord[]> GetBankRecordByEmployeeIDAsync(int id) {
             return base.Channel.GetBankRecordByEmployeeIDAsync(id);
         }
         
@@ -2575,19 +833,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetBankDetailIDAsync(id);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.PayrollRecord[] GetAllPayroll() {
+        public WCF_Service_Library.Entity.PayrollRecord[] GetAllPayroll() {
             return base.Channel.GetAllPayroll();
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.PayrollRecord[]> GetAllPayrollAsync() {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetAllPayrollAsync() {
             return base.Channel.GetAllPayrollAsync();
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.PayrollRecord[] GetPayrollByID(string id) {
+        public WCF_Service_Library.Entity.PayrollRecord[] GetPayrollByID(string id) {
             return base.Channel.GetPayrollByID(id);
         }
         
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.PayrollRecord[]> GetPayrollByIDAsync(string id) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollByIDAsync(string id) {
             return base.Channel.GetPayrollByIDAsync(id);
         }
         
@@ -2599,98 +857,12 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.ProcessPayrollByIDAsync(id, process);
         }
         
-        public Hospital_Management_Software.MyDBServiceReference.PayrollRecord[] GetPayrollBetweenDate(string firstDate, string secondDate) {
-            return base.Channel.GetPayrollBetweenDate(firstDate, secondDate);
-        }
-        
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate) {
-            return base.Channel.GetPayrollBetweenDateAsync(firstDate, secondDate);
-        }
-        
-        public Hospital_Management_Software.MyDBServiceReference.BankRecord[] GetBankRecordByBankID(int id) {
-            return base.Channel.GetBankRecordByBankID(id);
-        }
-        
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.BankRecord[]> GetBankRecordByBankIDAsync(int id) {
-            return base.Channel.GetBankRecordByBankIDAsync(id);
-        }
-        
-        public int SetSignatureByID(string id, string signature) {
-            return base.Channel.SetSignatureByID(id, signature);
-        }
-        
-        public System.Threading.Tasks.Task<int> SetSignatureByIDAsync(string id, string signature) {
-            return base.Channel.SetSignatureByIDAsync(id, signature);
-        }
-        
-        public Hospital_Management_Software.MyDBServiceReference.ContractRecord[] GetContractByID(string _id) {
-            return base.Channel.GetContractByID(_id);
-        }
-        
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.ContractRecord[]> GetContractByIDAsync(string _id) {
-            return base.Channel.GetContractByIDAsync(_id);
-        }
-        
-        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetEmployeeByID(string id) {
-            return base.Channel.GetEmployeeByID(id);
-        }
-        
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> GetEmployeeByIDAsync(string id) {
-            return base.Channel.GetEmployeeByIDAsync(id);
-        }
-        
-        public int CreateAttendance(string id, string date, string status, string reason) {
-            return base.Channel.CreateAttendance(id, date, status, reason);
-        }
-        
-        public System.Threading.Tasks.Task<int> CreateAttendanceAsync(string id, string date, string status, string reason) {
-            return base.Channel.CreateAttendanceAsync(id, date, status, reason);
-        }
-        
-        public Hospital_Management_Software.MyDBServiceReference.AttendanceRecord[] GetAttendanceByIDWithDate(string id, System.DateTime date) {
-            return base.Channel.GetAttendanceByIDWithDate(id, date);
-        }
-        
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.AttendanceRecord[]> GetAttendanceByIDWithDateAsync(string id, System.DateTime date) {
-            return base.Channel.GetAttendanceByIDWithDateAsync(id, date);
-        }
-        
-        public int UpdateByIDWithDate(string id, System.DateTime _date, string status, string reason) {
-            return base.Channel.UpdateByIDWithDate(id, _date, status, reason);
-        }
-        
-        public System.Threading.Tasks.Task<int> UpdateByIDWithDateAsync(string id, System.DateTime _date, string status, string reason) {
-            return base.Channel.UpdateByIDWithDateAsync(id, _date, status, reason);
-        }
-        
-        public Hospital_Management_Software.MyDBServiceReference.Employee[] SelectByASPNETID(string id) {
-            return base.Channel.SelectByASPNETID(id);
-        }
-        
-        public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> SelectByASPNETIDAsync(string id) {
-            return base.Channel.SelectByASPNETIDAsync(id);
         public WCF_Service_Library.Entity.PayrollRecord[] GetPayrollBetweenDate(string firstDate, string secondDate) {
             return base.Channel.GetPayrollBetweenDate(firstDate, secondDate);
         }
         
         public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate) {
             return base.Channel.GetPayrollBetweenDateAsync(firstDate, secondDate);
-        }
-        
-        public WCF_Service_Library.Entity.FeedbackList[] GetAllFeedback() {
-            return base.Channel.GetAllFeedback();
-        }
-        
-        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.FeedbackList[]> GetAllFeedbackAsync() {
-            return base.Channel.GetAllFeedbackAsync();
-        }
-        
-        public int CreateFeedback(string name, string email, string subject, string feedback) {
-            return base.Channel.CreateFeedback(name, email, subject, feedback);
-        }
-        
-        public System.Threading.Tasks.Task<int> CreateFeedbackAsync(string name, string email, string subject, string feedback) {
-            return base.Channel.CreateFeedbackAsync(name, email, subject, feedback);
         }
     }
 }

@@ -480,6 +480,8 @@
         <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="healthdeclaration" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="jobfunction" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -506,6 +508,8 @@
         <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="healthdeclaration" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="jobfunction" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -604,172 +608,6 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateBankRecord">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="bankName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="bankAccountNumber" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="bankHolderName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreateBankRecordResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CreateBankRecordResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetBankRecordByEmployeeID">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetBankRecordByEmployeeIDResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetBankRecordByEmployeeIDResult" nillable="true" type="q25:ArrayOfBankRecord" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreatePayroll">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="salary" type="xs:decimal" />
-        <xs:element minOccurs="0" name="bonusAmount" type="xs:decimal" />
-        <xs:element minOccurs="0" name="processedDate" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
-        <xs:element minOccurs="0" name="bankDetailID" type="xs:int" />
-        <xs:element minOccurs="0" name="processed" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="overtimeDetails" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreatePayrollResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CreatePayrollResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetBankDetailID">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetBankDetailIDResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="GetBankDetailIDResult" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllPayroll">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllPayrollResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllPayrollResult" nillable="true" type="q26:ArrayOfPayrollRecord" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPayrollByID">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPayrollByIDResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollByIDResult" nillable="true" type="q27:ArrayOfPayrollRecord" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ProcessPayrollByID">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="process" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="ProcessPayrollByIDResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="ProcessPayrollByIDResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPayrollBetweenDate">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="firstDate" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="secondDate" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetPayrollBetweenDateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollBetweenDateResult" nillable="true" type="q28:ArrayOfPayrollRecord" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetBankRecordByBankID">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetBankRecordByBankIDResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetBankRecordByBankIDResult" nillable="true" type="q29:ArrayOfBankRecord" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SetSignatureByID">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="signature" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SetSignatureByIDResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="SetSignatureByIDResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetContractByID">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="_id" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetContractByIDResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetContractByIDResult" nillable="true" type="q30:ArrayOfContractRecord" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetEmployeeByID">
   <xs:element name="GetAllPatientRecords">
     <xs:complexType>
       <xs:sequence />
@@ -870,102 +708,125 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetEmployeeByIDResponse">
+  <xs:element name="CreateBankRecord">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeByIDResult" nillable="true" type="q31:ArrayOfEmployee" />
+        <xs:element minOccurs="0" name="bankName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bankAccountNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bankHolderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateAttendance">
+  <xs:element name="CreateBankRecordResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreateBankRecordResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateAttendanceResponse">
+  <xs:element name="GetBankRecordByEmployeeID">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CreateAttendanceResult" type="xs:int" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAttendanceByIDWithDate">
+  <xs:element name="GetBankRecordByEmployeeIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetBankRecordByEmployeeIDResult" nillable="true" type="q27:ArrayOfBankRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAttendanceByIDWithDateResponse">
+  <xs:element name="CreatePayroll">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAttendanceByIDWithDateResult" nillable="true" type="q32:ArrayOfAttendanceRecord" />
+        <xs:element minOccurs="0" name="salary" type="xs:decimal" />
+        <xs:element minOccurs="0" name="bonusAmount" type="xs:decimal" />
+        <xs:element minOccurs="0" name="processedDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+        <xs:element minOccurs="0" name="bankDetailID" type="xs:int" />
+        <xs:element minOccurs="0" name="processed" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="overtimeDetails" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateByIDWithDate">
+  <xs:element name="CreatePayrollResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="_date" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreatePayrollResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="UpdateByIDWithDateResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdateByIDWithDateResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SelectByASPNETID">
+  <xs:element name="GetBankDetailID">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SelectByASPNETIDResponse">
+  <xs:element name="GetBankDetailIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="SelectByASPNETIDResult" nillable="true" type="q33:ArrayOfEmployee" />
+        <xs:element minOccurs="0" name="GetBankDetailIDResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAllFeedback">
+  <xs:element name="GetAllPayroll">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetAllFeedbackResponse">
+  <xs:element name="GetAllPayrollResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllFeedbackResult" nillable="true" type="q31:ArrayOfFeedbackList" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllPayrollResult" nillable="true" type="q28:ArrayOfPayrollRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateFeedback">
+  <xs:element name="GetPayrollByID">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="feedback" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="CreateFeedbackResponse">
+  <xs:element name="GetPayrollByIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="CreateFeedbackResult" type="xs:int" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollByIDResult" nillable="true" type="q29:ArrayOfPayrollRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPayrollByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="process" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPayrollByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessPayrollByIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayrollBetweenDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="firstDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="secondDate" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPayrollBetweenDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollBetweenDateResult" nillable="true" type="q30:ArrayOfPayrollRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
