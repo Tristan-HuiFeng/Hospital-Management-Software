@@ -8,11 +8,11 @@
 
         <h3>User Account Information</h3>
         <hr />
-        <div>
+        <div class="mt-5 my-5">
             <asp:Label ID="lb_message" CssClass="alert alert-primary" runat="server" Text="Message to be displayed here"></asp:Label>
         </div>
 
-        <div>
+        <div class="mt-5 my-5">
             <asp:Label ID="lb_debugger" Style="background-color: #f8d7da" runat="server" Text="Message to be displayed here"></asp:Label>
         </div>
 
