@@ -93,7 +93,7 @@ namespace WCF_Service_Library
         {
 
             UserAccount ua = new UserAccount();
-            return ua.SelectAllRoleListTableView(role_id);
+            return ua.SelectRoleListTableViewByRoleID(role_id);
 
         }
 
@@ -158,6 +158,30 @@ namespace WCF_Service_Library
             ua.updateAccountCreationDetails(asp_id, emp_id);
         }
 
+        public DataTable getAccountList()
+        {
+            UserAccount ua = new UserAccount();
+            return ua.SelectAllUserListTableView();
+        }
+
+        public tempPatient GetPatientByID(string id)
+        {
+            tempPatient tp = new tempPatient();
+            return tp.SelectPatientById(id);
+        }
+
+        public int GetEmpIDByAccID(string accID)
+        {
+            UserAccount ua = new UserAccount();
+            return ua.getEmpIDusingAccID(accID);
+        }
+
+        public DataTable GetEmailList(string target)
+        {
+            tempPatient pa = new tempPatient();
+            return pa.getEmailList(target);
+        }
+
         /* Health Professional's stuffs */
 
         /*
@@ -180,6 +204,7 @@ namespace WCF_Service_Library
                 rl.updateRoleStatusById(roleID, isDisabled);
             }
          */
+
 
         /* End of Hui Feng's code */
 
@@ -206,12 +231,6 @@ namespace WCF_Service_Library
         {
             Employee emp = new Employee();
             return emp.SelectSortByGender(order);
-        }
-
-        public tempPatient GetPatientByID(string id)
-        {
-            tempPatient tp = new tempPatient();
-            return tp.SelectPatientById(id);
         }
 
 
@@ -257,7 +276,8 @@ namespace WCF_Service_Library
 
         public int CreateContract(string salary, string benefits, string workingHours, string holidays, string vacation, DateTime create_date, string employeeID)
         {
-            ContractRecord cr = new ContractRecord(salary, benefits, workingHours, holidays, vacation, create_date, employeeID);
+            string signature = "";
+            ContractRecord cr = new ContractRecord(salary, benefits, workingHours, holidays, vacation, create_date, employeeID, signature);
             return cr.Insert();
         }
 
@@ -265,6 +285,108 @@ namespace WCF_Service_Library
         {
             ContractRecord cr = new ContractRecord();
             return cr.SelectByEmployeeID(id);
+        }
+
+        //PR start
+        public List<PatientRecord> GetAllPatientRecords()
+        {
+            PatientRecord patients = new PatientRecord();
+            return patients.SelectAll();
+        }
+
+        public PatientRecord GetPatientRecordByID(int patientID)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.SelectPatientByID(patientID);
+        }
+
+        public int DisablePatientByID(int patientID)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.DisablePatientByID(patientID);
+        }
+
+        public int CreatePatientRecord(
+           int patientid,
+           string firstname, string lastname,
+           string NRIC, DateTime DOB, string sex,
+           string nationality, string citizenship,
+           string postalcode, string address,
+           string allergies, string medicalhistory, string phonenumber,
+           string homenumber, string email,
+           DateTime createdDate, DateTime updateDate, string recordDisabled)
+        {
+            PatientRecord patient = new PatientRecord(
+                patientid, firstname, lastname,
+                NRIC, DOB, sex,
+                nationality, citizenship,
+                postalcode, address,
+                allergies, medicalhistory,
+                phonenumber, homenumber, email,
+                createdDate, updateDate, recordDisabled);
+            return patient.Insert();
+        }
+
+        public int UpdatePatientByID(
+            int patientID, string fname, string lname,
+            string nric, string sex, DateTime dob,
+            string nationality, string citizenship,
+            string postalCode, string address, string allergies,
+            string medicalHistory,
+            string phoneNumber, string homeNumber,
+            string email, DateTime update_date)
+        {
+            PatientRecord patient = new PatientRecord();
+            return patient.UpdatePatientByID(patientID, fname, lname, nric, sex, dob, nationality, citizenship, postalCode, address, allergies, medicalHistory, phoneNumber, homeNumber, email, update_date);
+        }
+
+        //PR ends
+        public int CreateBankRecord(string bankName, string bankAccountNumber, string bankHolderName, int employeeID)
+        {
+            BankRecord br = new BankRecord(bankName, bankAccountNumber, bankHolderName, employeeID);
+            return br.Insert();
+        }
+
+        public List<BankRecord> GetBankRecordByEmployeeID(int employeeID)
+        {
+            BankRecord br = new BankRecord();
+            return br.SelectByEmployeeID(employeeID);
+        }
+
+        public int CreatePayroll(decimal salary, decimal bonusAmount, string processedDate, DateTime createdDate, int employeeID, int bankDetailID, string processed, string overtimeDetails)
+        {
+            PayrollRecord pr = new PayrollRecord(salary, bonusAmount, processedDate, createdDate, employeeID, bankDetailID, processed, overtimeDetails);
+            return pr.Insert();
+        }
+
+        public string GetBankDetailID(string id)
+        {
+            BankRecord br = new BankRecord();
+            return br.GetBankDetailID(id);
+        }
+
+        public List<PayrollRecord> GetAllPayroll()
+        {
+            PayrollRecord pr = new PayrollRecord();
+            return pr.SelectAll();
+        }
+
+        public List<PayrollRecord> GetPayrollByID(string id)
+        {
+            PayrollRecord pr = new PayrollRecord();
+            return pr.SelectByID(id);
+        }
+
+        public int ProcessPayrollByID(string id, string process)
+        {
+            PayrollRecord pr = new PayrollRecord();
+            return pr.ProcessPayrollByID(id, process);
+        }
+
+        public List<PayrollRecord> GetPayrollBetweenDate(string firstDate, string secondDate)
+        {
+            PayrollRecord pr = new PayrollRecord();
+            return pr.SelectPayrollBetweenDate(firstDate, secondDate);
         }
 
         /* Matt */

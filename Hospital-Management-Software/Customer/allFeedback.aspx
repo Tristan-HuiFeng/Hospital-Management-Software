@@ -10,5 +10,5 @@
             <asp:BoundField DataField="Feedback" HeaderText="Feedback" SortExpression="Feedback" />
         </Columns>
 </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:MyDB %>" SelectCommand="SELECT [Subject], [Name], [Feedback], [DateCreated] FROM [FEEDBACK]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [Subject], [Name], [Feedback], [DateCreated] FROM [FEEDBACK]"></asp:SqlDataSource>
 </asp:Content>

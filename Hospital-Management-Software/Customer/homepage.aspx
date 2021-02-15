@@ -10,7 +10,7 @@
                 <td style="text-align:center"><asp:Label ID="lbl_noAppt" runat="server" Text="You currently have no appointments!"></asp:Label></td>
             </tr>
             <tr>
-                                <td style="text-align:center"><asp:Label ID="lbl_Appt" Visible="false" runat="server" Text="You currently have 1 (or more) appointments!"></asp:Label></td>
+                                <td style="text-align:center"><asp:Label ID="lbl_Appt" Visible="false" runat="server" Text="You currently have an appointment made!"></asp:Label></td>
             </tr>
             <tr><td>&nbsp;</td></tr>
 <%--            <tr><td>
@@ -28,7 +28,7 @@
             <tr><td style="text-align:center"><asp:Label ID="lblAppointments" runat="server" Text="Label" Visible="false"></asp:Label></td></tr>
             <tr><td>&nbsp;</td></tr>
             <tr>
-                <td style="text-align:center"><asp:Button ID="btn_makeAppt" runat="server" Text="Make Appointment" onclick="MakeAppt"/>
+                <td style="text-align:center"><asp:Button ID="btn_makeAppt" runat="server" Text="Make / Edit Appointment" onclick="MakeAppt"/>
                     <asp:Button ID="btn_Logout" runat="server" Text="Logout" onclick="logout"/></td>
             </tr>
         </table>

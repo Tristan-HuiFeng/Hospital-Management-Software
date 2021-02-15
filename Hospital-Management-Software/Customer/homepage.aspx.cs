@@ -10,7 +10,7 @@ namespace Hospital_Management_Software.Customer
 {
     public partial class homepage : System.Web.UI.Page
     {
-        string MyDBConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+        string MyDBConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["LoggedIn"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
@@ -28,7 +28,7 @@ namespace Hospital_Management_Software.Customer
                         lbl_noAppt.Visible = false;
                         string apptTime = checkApptTime(userid).ToString();
                         string apptReason = checkApptReason(userid).ToString();
-                        lblAppointments.Text = "You have an appointment at " + apptTime + " for a " + apptReason;
+                        lblAppointments.Text = "You have an appointment at " + apptTime + ". Reason: " + apptReason;
                         lblAppointments.Visible = true;
                     }
                 }

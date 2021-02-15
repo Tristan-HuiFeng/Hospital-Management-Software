@@ -34,7 +34,7 @@ namespace WCF_Service_Library.Entity
             //Step 1 -  Define a connection to the database by getting
             //          the connection string from App.config
             // string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
-            SqlConnection myConn = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=C:\Users\roygo\source\repos\Hospital-Management-Software\Hospital-Management-Software\App_Data\EDP_DB.mdf;Initial Catalog=MyDB;Integrated Security=True");
+            SqlConnection myConn = new SqlConnection(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=C:\Users\roygo\Downloads\Hospital-Management-Software\Hospital-Management-Software\Hospital-Management-Software\App_Data\EDP_DB.mdf;Integrated Security=True");
 
             // Step 2 - Create a SqlCommand object to add record with INSERT statement
             string sqlStmt = "INSERT INTO FEEDBACK (name, email, subject, feedback, dateCreated) " +
@@ -62,7 +62,7 @@ namespace WCF_Service_Library.Entity
         {
             //Step 1 -  Define a connection to the database by getting
             //          the connection string from App.config
-            string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+            string DBConnect = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
             //Step 2 -  Create a DataAdapter object to retrieve data from the database table

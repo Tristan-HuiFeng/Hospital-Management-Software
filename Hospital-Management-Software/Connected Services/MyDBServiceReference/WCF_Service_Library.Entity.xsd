@@ -125,6 +125,7 @@
       <xs:element minOccurs="0" name="employeeID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="holidays" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="salary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="signature" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="vacation" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="workingHours" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -133,11 +134,78 @@
   <xs:complexType name="tempPatient">
     <xs:sequence>
       <xs:element minOccurs="0" name="contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="id" type="xs:int" />
       <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="tempPatient" nillable="true" type="tns:tempPatient" />
+  <xs:complexType name="ArrayOfPatientRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientRecord" nillable="true" type="tns:PatientRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientRecord" nillable="true" type="tns:ArrayOfPatientRecord" />
+  <xs:complexType name="PatientRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NRIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="allergies" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="citizenship" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="firstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="homeNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="medicalHistory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="patientID" type="xs:int" />
+      <xs:element minOccurs="0" name="phoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="postalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="recordDisabled" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sex" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="updatedDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PatientRecord" nillable="true" type="tns:PatientRecord" />
+  <xs:complexType name="ArrayOfBankRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankRecord" nillable="true" type="tns:BankRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBankRecord" nillable="true" type="tns:ArrayOfBankRecord" />
+  <xs:complexType name="BankRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankAccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bankHolderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bankName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BankRecord" nillable="true" type="tns:BankRecord" />
+  <xs:complexType name="ArrayOfPayrollRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PayrollRecord" nillable="true" type="tns:PayrollRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayrollRecord" nillable="true" type="tns:ArrayOfPayrollRecord" />
+  <xs:complexType name="PayrollRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankDetailID" type="xs:int" />
+      <xs:element minOccurs="0" name="bonusAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="createdDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="employeeID" type="xs:int" />
+      <xs:element minOccurs="0" name="employeeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="employeePosition" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="overtimeDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="processed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="processedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="salary" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PayrollRecord" nillable="true" type="tns:PayrollRecord" />
   <xs:complexType name="ArrayOfFeedbackList">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="FeedbackList" nillable="true" type="tns:FeedbackList" />

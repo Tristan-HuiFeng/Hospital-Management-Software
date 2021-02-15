@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Staff Login" Language="C#" MasterPageFile="~/Views/layout/Site_No_Footer.Master" AutoEventWireup="true" CodeBehind="StaffLogin.aspx.cs" Inherits="Hospital_Management_Software.Login.StaffLogin" %>
+﻿<%@ Page Title="Staff Login" Language="C#" MasterPageFile="~/Views/layout/Customer.Master" AutoEventWireup="true" CodeBehind="StaffLogin.aspx.cs" Inherits="Hospital_Management_Software.Login.StaffLogin" %>
 
 <asp:Content ID="Header1" ContentPlaceHolderID="head" runat="server">
      <link rel="stylesheet" href="../src/css/login.css" type="text/css" />

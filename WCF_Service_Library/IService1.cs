@@ -79,6 +79,15 @@ namespace WCF_Service_Library
         [OperationContract]
         void updateAccountCreationDetails(string asp_id, string emp_id);
 
+        [OperationContract]
+        DataTable getAccountList();
+
+        [OperationContract]
+        int GetEmpIDByAccID(string accID);
+
+        [OperationContract]
+        DataTable GetEmailList(string target);
+
         /* Health Professional's stuffs */
 
         /*
@@ -130,7 +139,7 @@ namespace WCF_Service_Library
         [OperationContract]
         List<ContractRecord> GetContractByEmployeeID(string id);
 
-        
+
 
         [OperationContract]
         tempPatient GetPatientByID(string id);
@@ -138,6 +147,64 @@ namespace WCF_Service_Library
         [OperationContract]
         int CreateMedicalRecord(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, 
             string treatment, DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
+
+        //PatientRecord start
+        [OperationContract]
+        List<PatientRecord> GetAllPatientRecords();
+
+        [OperationContract]
+        PatientRecord GetPatientRecordByID(int patientID);
+
+        [OperationContract]
+        int CreatePatientRecord(
+           int patientid, string firstname, string lastname,
+           string NRIC, DateTime DOB, string sex,
+           string nationality, string citizenship,
+           string postalcode, string address,
+           string allergies, string medicalhistory, string phonenumber,
+           string homenumber, string email,
+           DateTime createdDate, DateTime updateDate,
+           string recordDisabled);
+
+        [OperationContract]
+        int DisablePatientByID(int patientID);
+
+        [OperationContract]
+        int UpdatePatientByID(
+            int patientID, string fname, string lname,
+            string nric, string sex, DateTime dob,
+            string nationality, string citizenship,
+            string postalCode, string address, string allergies,
+            string medicalHistory,
+            string phoneNumber, string homeNumber,
+            string email, DateTime update_date);
+        //PR ends
+        [OperationContract]
+        int CreateBankRecord(string bankName, string bankAccountNumber, string bankHolderName, int employeeID);
+
+        [OperationContract]
+        List<BankRecord> GetBankRecordByEmployeeID(int id);
+
+        [OperationContract]
+        int CreatePayroll(decimal salary, decimal bonusAmount, string processedDate, DateTime createdDate, int employeeID, int bankDetailID, string processed, string overtimeDetails);
+
+        //[OperationContract]
+        //List<PayrollRecord> GetPayrollByEmployeeID(int id);
+
+        [OperationContract]
+        string GetBankDetailID(string id);
+
+        [OperationContract]
+        List<PayrollRecord> GetAllPayroll();
+
+        [OperationContract]
+        List<PayrollRecord> GetPayrollByID(string id);
+
+        [OperationContract]
+        int ProcessPayrollByID(string id, string process);
+
+        [OperationContract]
+        List<PayrollRecord> GetPayrollBetweenDate(string firstDate, string secondDate);
 
         /* Matt */
         [OperationContract]

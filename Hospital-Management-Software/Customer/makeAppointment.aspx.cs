@@ -11,7 +11,7 @@ namespace Hospital_Management_Software.Customer
 {
     public partial class makeAppointment : System.Web.UI.Page
     {
-        string MyDBConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
+        string MyDBConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["LoggedIn"] != null && Session["AuthToken"] != null && Request.Cookies["AuthToken"] != null)
@@ -49,17 +49,25 @@ namespace Hospital_Management_Software.Customer
 
         public void makeAppt(string userid)
         {
-            string s = null;
-            SqlConnection connection = new SqlConnection(MyDBConnectionString);
-            string sql = "UPDATE PATIENT SET Appt_Reason = @Appt_Reason, Appt_Time = @Appt_Time WHERE nric = @USERID";
-            SqlCommand command = new SqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@USERID", userid);
-            command.Parameters.AddWithValue("@Appt_Reason", DDL_reason.SelectedValue.ToString());
-            command.Parameters.AddWithValue("@Appt_Time", DDL_time.SelectedValue.ToString());
-            command.Connection = connection;
-            connection.Open();
-            command.ExecuteNonQuery();
-            connection.Close();
+            try
+            {
+                string s = null;
+                SqlConnection connection = new SqlConnection(MyDBConnectionString);
+                string sql = "UPDATE PATIENT SET Appt_Reason = @Appt_Reason, Appt_Time = @Appt_Time WHERE nric = @USERID";
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@USERID", userid);
+                command.Parameters.AddWithValue("@Appt_Reason", DDL_reason.SelectedValue.ToString());
+                command.Parameters.AddWithValue("@Appt_Time", DDL_time.SelectedValue.ToString());
+                command.Connection = connection;
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (SqlException)
+            {
+                lblError.Visible = true;
+                lblError.ForeColor = System.Drawing.Color.Red;
+            }
         }
     }
 }

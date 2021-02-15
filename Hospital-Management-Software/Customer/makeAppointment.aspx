@@ -7,7 +7,8 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div style="text-align:center"><asp:Label ID="Label3" runat="server" Text="Make an appointment!"></asp:Label></div>
+    <div style="text-align:center"><asp:Label ID="Label3" runat="server" Text="Make an appointment! If you would like to cancel your appointment, choose Cancel under reason."></asp:Label></div>
+    <br />
     <table style="width: 100%; text-align:center">
         <tr>
             <td class="auto-style1"><asp:Label ID="Label1" runat="server" Text="Reason: "></asp:Label></td>
@@ -17,6 +18,7 @@
                 <asp:ListItem Value="Specialist visit"></asp:ListItem>
                 <asp:ListItem Value="Medication Collection"></asp:ListItem>
                 <asp:ListItem Value="Others"></asp:ListItem>
+                <asp:ListItem Value="CANCELLED"></asp:ListItem>
                 </asp:DropDownList></td>
         </tr>
         <tr><td class="auto-style1">&nbsp;</td></tr>

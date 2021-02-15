@@ -51,24 +51,6 @@ namespace Hospital_Management_Software.Customer
         protected global::System.Web.UI.WebControls.TextBox tb_dob;
 
         /// <summary>
-        /// lblVerification control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVerification;
-
-        /// <summary>
-        /// lbllbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbllbl;
-
-        /// <summary>
         /// chkPublic control.
         /// </summary>
         /// <remarks>
@@ -94,5 +76,14 @@ namespace Hospital_Management_Software.Customer
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
+
+        /// <summary>
+        /// lblVerification control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVerification;
     }
 }
