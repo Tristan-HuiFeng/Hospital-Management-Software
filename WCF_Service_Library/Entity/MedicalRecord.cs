@@ -177,7 +177,7 @@ namespace WCF_Service_Library.Entity
             return medicalRecordList;
         }
 
-        public DataTable SelectAllTableView()
+        public DataTable SelectAllTableView(int doctor_id)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -186,8 +186,10 @@ namespace WCF_Service_Library.Entity
                 "from MEDICAL_RECORD AS MR " +
                 "Inner join PATIENT AS P on MR.Patient_ID = P.Patient_ID " +
                 "Inner join EMPLOYEE AS E on MR.Employee_ID = E.Employee_ID " +
+                "Where E.Employee_ID = @paraID " +
                 "Order by MR.Date DESC";
             SqlDataAdapter da = new SqlDataAdapter(sqlStmt, myConn);
+            da.SelectCommand.Parameters.AddWithValue("@paraID", doctor_id);
 
             DataTable dt = new DataTable();
             dt.TableName = "MedicalRecord";
