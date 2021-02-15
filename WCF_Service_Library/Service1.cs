@@ -77,10 +77,10 @@ namespace WCF_Service_Library
             MedicalRecord mr = new MedicalRecord();
             return mr.SelectAll();
         }
-        public DataTable GetMedicalRecordTableView()
+        public DataTable GetMedicalRecordTableView(int acc_id)
         {
             MedicalRecord mr = new MedicalRecord();
-            return mr.SelectAllTableView();
+            return mr.SelectAllTableView(acc_id);
         }
 
         public string[] GetAccountInformation(string LoginID)
