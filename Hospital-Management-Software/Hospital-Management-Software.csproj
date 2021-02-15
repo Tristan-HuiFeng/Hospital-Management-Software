@@ -319,7 +319,12 @@
     <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.UserAccount.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.BankRecord.datasource" />
+    <Content Include="Properties\DataSources\WCF_Service_Library.Entity.PatientRecord.datasource" />>
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.ContractRecord.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.tempPatient.datasource" />
     <Content Include="Properties\DataSources\WCF_Service_Library.Entity.Role.datasource" />
