@@ -1,4 +1,4 @@
-﻿using Hospital_Management_Software.MyDBServiceReference;
+﻿//using Hospital_Management_Software.MyDBServiceReference;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WCF_Service_Library.Entity;
 
 namespace Hospital_Management_Software.Management
 {

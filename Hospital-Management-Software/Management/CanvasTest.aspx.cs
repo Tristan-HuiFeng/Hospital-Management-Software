@@ -1,4 +1,4 @@
-using Hospital_Management_Software.MyDBServiceReference;
+//using Hospital_Management_Software.MyDBServiceReference;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +9,7 @@ using System.Web.Script.Services;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WCF_Service_Library.Entity;
 
 namespace Hospital_Management_Software.Management
 {
