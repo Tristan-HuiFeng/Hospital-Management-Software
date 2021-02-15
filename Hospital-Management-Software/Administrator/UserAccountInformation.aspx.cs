@@ -225,7 +225,6 @@ namespace Hospital_Management_Software.Administrator
                 {
                     lb_passwordResult.Text += error + "\n";
                 }
-
                 lb_passwordResult.ForeColor = Color.Red;
             }
         }

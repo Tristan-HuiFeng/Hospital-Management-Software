@@ -63,7 +63,7 @@ namespace Hospital_Management_Software.HealthProfessional
             var userManager = new UserManager<IdentityUser>(userStore);
             int doctor_id = client.GetEmpIDByAccID(userManager.FindByName(System.Web.HttpContext.Current.User.Identity.Name).Id);
             DataTable dt = client.GetMedicalRecordTableView(doctor_id);
-
+            
             gv_MedicalRecordList.DataSource = dt;
             gv_MedicalRecordList.DataBind();
         }

@@ -22,6 +22,8 @@
                 <a runat="server" href="~/Administrator/NoAccountList">Account Creation</a>
                 <a runat="server" href="~/Administrator/SendEmail">Announcement</a>
                 <a runat="server" href="~/Management/ViewContracts">View Contract</a>
+                <a runat="server" href="~/Customer/allFeedbackAdmin">Feedback Responses</a>
+                <a runat="server" href="~/Customer/ViewAllAppointments">Patient Information</a>
                 <a runat="server" href="~/Login/Logout">Logout</a>
             </div>
         </div>

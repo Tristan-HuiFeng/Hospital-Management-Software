@@ -205,6 +205,14 @@ namespace WCF_Service_Library
 
         [OperationContract]
         List<PayrollRecord> GetPayrollBetweenDate(string firstDate, string secondDate);
+
+        /* Matt */
+        [OperationContract]
+        List<FeedbackList> GetAllFeedback();
+
+        [OperationContract]
+        int CreateFeedback(string name, string email, string subject, string feedback);
+        /* Matt */
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.

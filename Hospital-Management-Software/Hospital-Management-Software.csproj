@@ -166,6 +166,7 @@
     <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -217,6 +218,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.html" />
     <Content Include="About.aspx" />
     <Content Include="Administrator\CreateAccount.aspx" />
     <Content Include="Administrator\NoAccountList.aspx" />
@@ -235,6 +237,15 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Customer\allFeedback.aspx" />
+    <Content Include="Customer\allFeedbackAdmin.aspx" />
+    <Content Include="Customer\feedback.aspx" />
+    <Content Include="Customer\homepage.aspx" />
+    <Content Include="Customer\login.aspx" />
+    <Content Include="Customer\makeAppointment.aspx" />
+    <Content Include="Customer\success.aspx" />
+    <Content Include="Customer\verification.aspx" />
+    <Content Include="Customer\ViewAllAppointments.aspx" />
     <Content Include="ErrorPage\BasicError.aspx" />
     <Content Include="ErrorPage\NoRoleError.aspx" />
     <Content Include="ErrorPage\PageNotFound.aspx" />
@@ -503,6 +514,69 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Controller\SendGrid.cs" />
+    <Compile Include="Customer\allFeedback.aspx.cs">
+      <DependentUpon>allFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\allFeedback.aspx.designer.cs">
+      <DependentUpon>allFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\allFeedbackAdmin.aspx.cs">
+      <DependentUpon>allFeedbackAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\allFeedbackAdmin.aspx.designer.cs">
+      <DependentUpon>allFeedbackAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\homepage.aspx.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\homepage.aspx.designer.cs">
+      <DependentUpon>homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\makeAppointment.aspx.cs">
+      <DependentUpon>makeAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\makeAppointment.aspx.designer.cs">
+      <DependentUpon>makeAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\success.aspx.cs">
+      <DependentUpon>success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\success.aspx.designer.cs">
+      <DependentUpon>success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\verification.aspx.cs">
+      <DependentUpon>verification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\verification.aspx.designer.cs">
+      <DependentUpon>verification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\ViewAllAppointments.aspx.cs">
+      <DependentUpon>ViewAllAppointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\ViewAllAppointments.aspx.designer.cs">
+      <DependentUpon>ViewAllAppointments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ErrorPage\BasicError.aspx.cs">
       <DependentUpon>BasicError.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -720,6 +794,13 @@
     <Compile Include="EPR\UpdateEPR.aspx.designer.cs">
       <DependentUpon>UpdateEPR.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\layout\Customer.Master.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\layout\Customer.Master.designer.cs">
+      <DependentUpon>Customer.Master</DependentUpon>
+    </Compile>
     <Compile Include="Views\layout\Site_No_Footer.Master.cs">
       <DependentUpon>Site_No_Footer.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -817,6 +898,7 @@
     <Content Include="Views\layout\Administrator.Master" />
     <Content Include="Views\layout\Site_No_Footer.Master" />
     <Content Include="Web.config" />
+    <Content Include="Views\layout\Customer.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

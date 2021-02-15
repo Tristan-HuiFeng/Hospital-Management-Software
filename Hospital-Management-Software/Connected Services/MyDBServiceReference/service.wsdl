@@ -304,6 +304,18 @@
   <wsdl:message name="IService1_GetPayrollBetweenDate_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetPayrollBetweenDateResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_GetAllFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateFeedback_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFeedback" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateFeedback_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFeedbackResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -500,6 +512,14 @@
     <wsdl:operation name="GetPayrollBetweenDate">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPayrollBetweenDate" message="tns:IService1_GetPayrollBetweenDate_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPayrollBetweenDateResponse" message="tns:IService1_GetPayrollBetweenDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFeedback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllFeedback" message="tns:IService1_GetAllFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllFeedbackResponse" message="tns:IService1_GetAllFeedback_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFeedback">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateFeedback" message="tns:IService1_CreateFeedback_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateFeedbackResponse" message="tns:IService1_CreateFeedback_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -938,6 +958,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetPayrollBetweenDate">
       <soap:operation soapAction="http://tempuri.org/IService1/GetPayrollBetweenDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFeedback">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllFeedback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFeedback">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateFeedback" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
