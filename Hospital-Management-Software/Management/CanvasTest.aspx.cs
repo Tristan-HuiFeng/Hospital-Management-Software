@@ -111,17 +111,7 @@ namespace Hospital_Management_Software.Management
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void Button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnRenew_Click(object sender, EventArgs e)
-        {
-
+            Response.Redirect("ViewContracts.aspx", false);
         }
     }
 }

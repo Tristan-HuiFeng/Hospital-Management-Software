@@ -1218,6 +1218,9 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         private string contactField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string emailField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1242,6 +1245,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
                 if ((object.ReferenceEquals(this.contactField, value) != true)) {
                     this.contactField = value;
                     this.RaisePropertyChanged("contact");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.emailField, value) != true)) {
+                    this.emailField = value;
+                    this.RaisePropertyChanged("email");
                 }
             }
         }
@@ -2209,7 +2225,7 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetEmailListAsync(target);
         }
         
-        public WCF_Service_Library.Entity.Employee[] GetAllEmployee() {
+        public Hospital_Management_Software.MyDBServiceReference.Employee[] GetAllEmployee() {
             return base.Channel.GetAllEmployee();
         }
         

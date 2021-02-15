@@ -17,7 +17,7 @@
                             </div>--%>
                         </div>
                         <br />
-                        <asp:GridView AutoGenerateColumns="False" runat="server" ID="GridView1" CssClass="Grid table table-condensed table-hover" AllowPaging="True" PageSize="9">
+                        <asp:GridView AutoGenerateColumns="False" runat="server" ID="GridView1" CssClass="Grid table table-condensed table-hover" AllowPaging="True" PageSize="11" OnPageIndexChanging="GridView1_PageIndexChanging">
                             <Columns>
                                 <asp:BoundField DataField="FirstName" HeaderText="Name" />
                                 <asp:TemplateField HeaderText=".">

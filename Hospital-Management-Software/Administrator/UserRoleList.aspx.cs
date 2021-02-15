@@ -14,7 +14,7 @@ namespace Hospital_Management_Software.Administrator
     public partial class RoleList : System.Web.UI.Page
     {
         private string role_id;
-        private WCF_Service_Library.Entity.Role myRole = new WCF_Service_Library.Entity.Role();
+        private Hospital_Management_Software.MyDBServiceReference.Role myRole = new Hospital_Management_Software.MyDBServiceReference.Role();
 
         protected void Page_Load(object sender, EventArgs e)
         {

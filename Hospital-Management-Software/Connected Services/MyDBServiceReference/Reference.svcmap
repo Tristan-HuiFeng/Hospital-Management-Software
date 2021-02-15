@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="61e41d09-f457-4a87-aa05-00498a20c953" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4281aac9-6754-4d53-8d66-56b27f704fa2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -27,6 +27,17 @@
       <ReferencedAssembly AssemblyName="Microsoft.AspNet.Web.Optimization.WebForms" />
       <ReferencedAssembly AssemblyName="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" />
       <ReferencedAssembly AssemblyName="Microsoft.CSharp" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.Configuration" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.Configuration.Abstractions" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.Configuration.Binder" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.DependencyInjection.Abstractions" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.Http" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.Logging" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.Logging.Abstractions" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.Options" />
+      <ReferencedAssembly AssemblyName="Microsoft.Extensions.Primitives" />
+      <ReferencedAssembly AssemblyName="Microsoft.IdentityModel.Logging" />
+      <ReferencedAssembly AssemblyName="Microsoft.IdentityModel.Tokens" />
       <ReferencedAssembly AssemblyName="Microsoft.Owin" />
       <ReferencedAssembly AssemblyName="Microsoft.Owin.Host.SystemWeb" />
       <ReferencedAssembly AssemblyName="Microsoft.Owin.Security" />
@@ -38,7 +49,10 @@
       <ReferencedAssembly AssemblyName="mscorlib" />
       <ReferencedAssembly AssemblyName="Newtonsoft.Json" />
       <ReferencedAssembly AssemblyName="Owin" />
+      <ReferencedAssembly AssemblyName="SendGrid" />
+      <ReferencedAssembly AssemblyName="StarkbankEcdsa" />
       <ReferencedAssembly AssemblyName="System" />
+      <ReferencedAssembly AssemblyName="System.Buffers" />
       <ReferencedAssembly AssemblyName="System.ComponentModel.DataAnnotations" />
       <ReferencedAssembly AssemblyName="System.Configuration" />
       <ReferencedAssembly AssemblyName="System.Core" />
@@ -46,6 +60,13 @@
       <ReferencedAssembly AssemblyName="System.Data.DataSetExtensions" />
       <ReferencedAssembly AssemblyName="System.Drawing" />
       <ReferencedAssembly AssemblyName="System.EnterpriseServices" />
+      <ReferencedAssembly AssemblyName="System.IdentityModel.Tokens.Jwt" />
+      <ReferencedAssembly AssemblyName="System.Memory" />
+      <ReferencedAssembly AssemblyName="System.Net" />
+      <ReferencedAssembly AssemblyName="System.Net.Http" />
+      <ReferencedAssembly AssemblyName="System.Numerics" />
+      <ReferencedAssembly AssemblyName="System.Numerics.Vectors" />
+      <ReferencedAssembly AssemblyName="System.Runtime.CompilerServices.Unsafe" />
       <ReferencedAssembly AssemblyName="System.Runtime.Serialization" />
       <ReferencedAssembly AssemblyName="System.ServiceModel" />
       <ReferencedAssembly AssemblyName="System.Web" />
@@ -53,8 +74,14 @@
       <ReferencedAssembly AssemblyName="System.Web.DynamicData" />
       <ReferencedAssembly AssemblyName="System.Web.Entity" />
       <ReferencedAssembly AssemblyName="System.Web.Extensions" />
+      <ReferencedAssembly AssemblyName="System.Web.Helpers" />
+      <ReferencedAssembly AssemblyName="System.Web.Mvc" />
       <ReferencedAssembly AssemblyName="System.Web.Optimization" />
+      <ReferencedAssembly AssemblyName="System.Web.Razor" />
       <ReferencedAssembly AssemblyName="System.Web.Services" />
+      <ReferencedAssembly AssemblyName="System.Web.WebPages" />
+      <ReferencedAssembly AssemblyName="System.Web.WebPages.Deployment" />
+      <ReferencedAssembly AssemblyName="System.Web.WebPages.Razor" />
       <ReferencedAssembly AssemblyName="System.Xml" />
       <ReferencedAssembly AssemblyName="System.Xml.Linq" />
       <ReferencedAssembly AssemblyName="WebGrease" />
@@ -66,13 +93,13 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="ffccee76-8a34-43c5-8239-3ecc5dc74c58" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="4d2eb770-c49b-4687-9c3d-63e40cdd3b19" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="326bd261-b134-4a99-94b8-89b0c7dd6ba5" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="WCF_Service_Library.xsd" MetadataType="Schema" ID="b920cee4-57f8-43f6-a954-87d87be49837" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="WCF_Service_Library.Entity.xsd" MetadataType="Schema" ID="594aec1b-2b4b-4293-b085-87322bbf3245" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="23f16645-0a05-4783-9009-29c55e2c67fe" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="c009670a-cee2-4b8b-9a96-911f5078fb0e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9d4e8ac2-7e84-4d8c-abda-b3cdfae3e989" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5ef2f7f3-0165-414d-8682-dff7d8190084" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="485f14ea-ff84-476c-953f-0d7976f7c52b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="WCF_Service_Library.xsd" MetadataType="Schema" ID="82a3291d-e886-4484-a5df-6993d8040dd3" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="WCF_Service_Library.Entity.xsd" MetadataType="Schema" ID="5e0e20f2-b07a-4cc1-b41a-a7039f3eee11" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="543a226d-aa42-4ce9-b81a-c53efd202d52" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="2d36287b-1924-4dc0-80d0-d9357da73aab" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WCF_Service_Library/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -147,5 +147,16 @@ namespace Hospital_Management_Software.Management
                 }
             }
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            List<Employee> eList = new List<Employee>();
+            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+            eList = client.GetAllEmployee().ToList<Employee>();
+            GridView1.Visible = true;
+            GridView1.DataSource = eList;
+            GridView1.DataBind();
+        }
     }
 }

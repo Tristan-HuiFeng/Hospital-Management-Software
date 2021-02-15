@@ -12,9 +12,9 @@ namespace Hospital_Management_Software.Management
 {
     public partial class ViewContracts : System.Web.UI.Page
     {
+        static string aspnetid = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            string aspnetid = "";
             Response.AppendHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP 1.1.
             Response.AppendHeader("Pragma", "no-cache"); // HTTP 1.0.
             Response.AppendHeader("Expires", "0"); // Proxies.
@@ -53,6 +53,19 @@ namespace Hospital_Management_Software.Management
         {
             LinkButton btn = (LinkButton)(sender);
             Response.Redirect("CanvasTest?id=" + btn.CommandArgument);
+        }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            List<ContractRecord> crList = new List<ContractRecord>();
+            List<Employee> eList = new List<Employee>();
+            MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+            eList = client.SelectByASPNETID(aspnetid).ToList<Employee>();
+            crList = client.GetContractByEmployeeID(client.GetEmployeeID(eList[0].Nric)).ToList<ContractRecord>();
+            GridView1.Visible = true;
+            GridView1.DataSource = crList;
+            GridView1.DataBind();
         }
     }
 }

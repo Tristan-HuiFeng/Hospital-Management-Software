@@ -35,10 +35,11 @@
 
         </div>--%>
     </div>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/HealthProfessional/Dashboard.aspx">Back</asp:HyperLink>
     <br />
     <div class="shadow rounded-corners">
-        <asp:GridView AutoGenerateColumns="false" runat="server" ID="GridView1" HorizontalAlign="Center" CssClass="Grid table table-condensed table-hover" AllowPaging="True" PageSize="5">
+        <asp:GridView AutoGenerateColumns="false" runat="server" ID="GridView1" HorizontalAlign="Center" CssClass="Grid table table-condensed table-hover" AllowPaging="True" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">
             <Columns>
                 <asp:BoundField DataField="create_date" HeaderText="Date Created" />
                 <asp:BoundField DataField="salary" HeaderText="Salary" />
