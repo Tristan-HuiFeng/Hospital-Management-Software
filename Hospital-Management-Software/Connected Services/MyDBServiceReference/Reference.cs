@@ -88,16 +88,16 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<System.Data.DataTable> GetRoleUserListTableViewAsync(string role_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList", ReplyAction="http://tempuri.org/IService1/GetRoleListResponse")]
-        WCF_Service_Library.Entity.Role[] GetRoleList();
+        WCF_Service_Library.Entity.RoleEntity[] GetRoleList();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList", ReplyAction="http://tempuri.org/IService1/GetRoleListResponse")]
-        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role[]> GetRoleListAsync();
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.RoleEntity[]> GetRoleListAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList2", ReplyAction="http://tempuri.org/IService1/GetRoleList2Response")]
-        WCF_Service_Library.Entity.Role[] GetRoleList2();
+        WCF_Service_Library.Entity.RoleEntity[] GetRoleList2();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList2", ReplyAction="http://tempuri.org/IService1/GetRoleList2Response")]
-        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role[]> GetRoleList2Async();
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.RoleEntity[]> GetRoleList2Async();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleList_TableView", ReplyAction="http://tempuri.org/IService1/GetRoleList_TableViewResponse")]
         System.Data.DataTable GetRoleList_TableView();
@@ -106,10 +106,10 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<System.Data.DataTable> GetRoleList_TableViewAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleByID", ReplyAction="http://tempuri.org/IService1/GetRoleByIDResponse")]
-        WCF_Service_Library.Entity.Role GetRoleByID(string roleID);
+        WCF_Service_Library.Entity.RoleEntity GetRoleByID(string roleID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoleByID", ReplyAction="http://tempuri.org/IService1/GetRoleByIDResponse")]
-        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role> GetRoleByIDAsync(string roleID);
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.RoleEntity> GetRoleByIDAsync(string roleID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUserAccountByID", ReplyAction="http://tempuri.org/IService1/GetUserAccountByIDResponse")]
         WCF_Service_Library.Entity.UserAccount GetUserAccountByID(string user_id);
@@ -190,16 +190,16 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeByNRICAsync(string nric);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateEmployee", ReplyAction="http://tempuri.org/IService1/CreateEmployeeResponse")]
-        int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
+        int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateEmployee", ReplyAction="http://tempuri.org/IService1/CreateEmployeeResponse")]
-        System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
+        System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateEmployee", ReplyAction="http://tempuri.org/IService1/UpdateEmployeeResponse")]
-        int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
+        int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateEmployee", ReplyAction="http://tempuri.org/IService1/UpdateEmployeeResponse")]
-        System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image);
+        System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeID", ReplyAction="http://tempuri.org/IService1/GetEmployeeIDResponse")]
         string GetEmployeeID(string nric);
@@ -376,6 +376,66 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPayrollBetweenDate", ReplyAction="http://tempuri.org/IService1/GetPayrollBetweenDateResponse")]
         System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetBankRecordByBankID", ReplyAction="http://tempuri.org/IService1/GetBankRecordByBankIDResponse")]
+        WCF_Service_Library.Entity.BankRecord[] GetBankRecordByBankID(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetBankRecordByBankID", ReplyAction="http://tempuri.org/IService1/GetBankRecordByBankIDResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.BankRecord[]> GetBankRecordByBankIDAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetSignatureByID", ReplyAction="http://tempuri.org/IService1/SetSignatureByIDResponse")]
+        int SetSignatureByID(string id, string signature);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SetSignatureByID", ReplyAction="http://tempuri.org/IService1/SetSignatureByIDResponse")]
+        System.Threading.Tasks.Task<int> SetSignatureByIDAsync(string id, string signature);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByID", ReplyAction="http://tempuri.org/IService1/GetContractByIDResponse")]
+        WCF_Service_Library.Entity.ContractRecord[] GetContractByID(string _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContractByID", ReplyAction="http://tempuri.org/IService1/GetContractByIDResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.ContractRecord[]> GetContractByIDAsync(string _id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByID", ReplyAction="http://tempuri.org/IService1/GetEmployeeByIDResponse")]
+        WCF_Service_Library.Entity.Employee[] GetEmployeeByID(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetEmployeeByID", ReplyAction="http://tempuri.org/IService1/GetEmployeeByIDResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeByIDAsync(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateAttendance", ReplyAction="http://tempuri.org/IService1/CreateAttendanceResponse")]
+        int CreateAttendance(string id, string date, string status, string reason);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateAttendance", ReplyAction="http://tempuri.org/IService1/CreateAttendanceResponse")]
+        System.Threading.Tasks.Task<int> CreateAttendanceAsync(string id, string date, string status, string reason);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAttendanceByIDWithDate", ReplyAction="http://tempuri.org/IService1/GetAttendanceByIDWithDateResponse")]
+        WCF_Service_Library.Entity.AttendanceRecord[] GetAttendanceByIDWithDate(string id, System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAttendanceByIDWithDate", ReplyAction="http://tempuri.org/IService1/GetAttendanceByIDWithDateResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.AttendanceRecord[]> GetAttendanceByIDWithDateAsync(string id, System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateByIDWithDate", ReplyAction="http://tempuri.org/IService1/UpdateByIDWithDateResponse")]
+        int UpdateByIDWithDate(string id, System.DateTime _date, string status, string reason);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateByIDWithDate", ReplyAction="http://tempuri.org/IService1/UpdateByIDWithDateResponse")]
+        System.Threading.Tasks.Task<int> UpdateByIDWithDateAsync(string id, System.DateTime _date, string status, string reason);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectByASPNETID", ReplyAction="http://tempuri.org/IService1/SelectByASPNETIDResponse")]
+        WCF_Service_Library.Entity.Employee[] SelectByASPNETID(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectByASPNETID", ReplyAction="http://tempuri.org/IService1/SelectByASPNETIDResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> SelectByASPNETIDAsync(string id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
+        WCF_Service_Library.Entity.FeedbackList[] GetAllFeedback();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.FeedbackList[]> GetAllFeedbackAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
+        int CreateFeedback(string name, string email, string subject, string feedback);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
+        System.Threading.Tasks.Task<int> CreateFeedbackAsync(string name, string email, string subject, string feedback);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -501,19 +561,19 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetRoleUserListTableViewAsync(role_id);
         }
         
-        public WCF_Service_Library.Entity.Role[] GetRoleList() {
+        public WCF_Service_Library.Entity.RoleEntity[] GetRoleList() {
             return base.Channel.GetRoleList();
         }
         
-        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role[]> GetRoleListAsync() {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.RoleEntity[]> GetRoleListAsync() {
             return base.Channel.GetRoleListAsync();
         }
         
-        public WCF_Service_Library.Entity.Role[] GetRoleList2() {
+        public WCF_Service_Library.Entity.RoleEntity[] GetRoleList2() {
             return base.Channel.GetRoleList2();
         }
         
-        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role[]> GetRoleList2Async() {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.RoleEntity[]> GetRoleList2Async() {
             return base.Channel.GetRoleList2Async();
         }
         
@@ -525,11 +585,11 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetRoleList_TableViewAsync();
         }
         
-        public WCF_Service_Library.Entity.Role GetRoleByID(string roleID) {
+        public WCF_Service_Library.Entity.RoleEntity GetRoleByID(string roleID) {
             return base.Channel.GetRoleByID(roleID);
         }
         
-        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Role> GetRoleByIDAsync(string roleID) {
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.RoleEntity> GetRoleByIDAsync(string roleID) {
             return base.Channel.GetRoleByIDAsync(roleID);
         }
         
@@ -637,20 +697,20 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetEmployeeByNRICAsync(nric);
         }
         
-        public int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
-            return base.Channel.CreateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+        public int CreateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image) {
+            return base.Channel.CreateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, jobfunction, image);
         }
         
-        public System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
-            return base.Channel.CreateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+        public System.Threading.Tasks.Task<int> CreateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image) {
+            return base.Channel.CreateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, jobfunction, image);
         }
         
-        public int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
-            return base.Channel.UpdateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+        public int UpdateEmployee(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image) {
+            return base.Channel.UpdateEmployee(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, jobfunction, image);
         }
         
-        public System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string loginid, string password, string jobfunction, string image) {
-            return base.Channel.UpdateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, loginid, password, jobfunction, image);
+        public System.Threading.Tasks.Task<int> UpdateEmployeeAsync(string nric, string firstname, string lastname, string email, System.DateTime dob, char gender, string address, string department, string position, string nationality, string healthdeclaration, string jobfunction, string image) {
+            return base.Channel.UpdateEmployeeAsync(nric, firstname, lastname, email, dob, gender, address, department, position, nationality, healthdeclaration, jobfunction, image);
         }
         
         public string GetEmployeeID(string nric) {
@@ -863,6 +923,86 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate) {
             return base.Channel.GetPayrollBetweenDateAsync(firstDate, secondDate);
+        }
+        
+        public WCF_Service_Library.Entity.BankRecord[] GetBankRecordByBankID(int id) {
+            return base.Channel.GetBankRecordByBankID(id);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.BankRecord[]> GetBankRecordByBankIDAsync(int id) {
+            return base.Channel.GetBankRecordByBankIDAsync(id);
+        }
+        
+        public int SetSignatureByID(string id, string signature) {
+            return base.Channel.SetSignatureByID(id, signature);
+        }
+        
+        public System.Threading.Tasks.Task<int> SetSignatureByIDAsync(string id, string signature) {
+            return base.Channel.SetSignatureByIDAsync(id, signature);
+        }
+        
+        public WCF_Service_Library.Entity.ContractRecord[] GetContractByID(string _id) {
+            return base.Channel.GetContractByID(_id);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.ContractRecord[]> GetContractByIDAsync(string _id) {
+            return base.Channel.GetContractByIDAsync(_id);
+        }
+        
+        public WCF_Service_Library.Entity.Employee[] GetEmployeeByID(string id) {
+            return base.Channel.GetEmployeeByID(id);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> GetEmployeeByIDAsync(string id) {
+            return base.Channel.GetEmployeeByIDAsync(id);
+        }
+        
+        public int CreateAttendance(string id, string date, string status, string reason) {
+            return base.Channel.CreateAttendance(id, date, status, reason);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateAttendanceAsync(string id, string date, string status, string reason) {
+            return base.Channel.CreateAttendanceAsync(id, date, status, reason);
+        }
+        
+        public WCF_Service_Library.Entity.AttendanceRecord[] GetAttendanceByIDWithDate(string id, System.DateTime date) {
+            return base.Channel.GetAttendanceByIDWithDate(id, date);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.AttendanceRecord[]> GetAttendanceByIDWithDateAsync(string id, System.DateTime date) {
+            return base.Channel.GetAttendanceByIDWithDateAsync(id, date);
+        }
+        
+        public int UpdateByIDWithDate(string id, System.DateTime _date, string status, string reason) {
+            return base.Channel.UpdateByIDWithDate(id, _date, status, reason);
+        }
+        
+        public System.Threading.Tasks.Task<int> UpdateByIDWithDateAsync(string id, System.DateTime _date, string status, string reason) {
+            return base.Channel.UpdateByIDWithDateAsync(id, _date, status, reason);
+        }
+        
+        public WCF_Service_Library.Entity.Employee[] SelectByASPNETID(string id) {
+            return base.Channel.SelectByASPNETID(id);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.Employee[]> SelectByASPNETIDAsync(string id) {
+            return base.Channel.SelectByASPNETIDAsync(id);
+        }
+        
+        public WCF_Service_Library.Entity.FeedbackList[] GetAllFeedback() {
+            return base.Channel.GetAllFeedback();
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.FeedbackList[]> GetAllFeedbackAsync() {
+            return base.Channel.GetAllFeedbackAsync();
+        }
+        
+        public int CreateFeedback(string name, string email, string subject, string feedback) {
+            return base.Channel.CreateFeedback(name, email, subject, feedback);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateFeedbackAsync(string name, string email, string subject, string feedback) {
+            return base.Channel.CreateFeedbackAsync(name, email, subject, feedback);
         }
     }
 }

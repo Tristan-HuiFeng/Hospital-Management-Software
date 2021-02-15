@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using WCF_Service_Library.Entity;
 
 namespace Hospital_Management_Software.Administrator
 {
@@ -55,8 +56,8 @@ namespace Hospital_Management_Software.Administrator
         {
 
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-            List<Role> myRoleList = new List<Role>();
-            myRoleList = client.GetRoleList2().ToList<Role>();
+            List<RoleEntity> myRoleList = new List<RoleEntity>();
+            myRoleList = client.GetRoleList2().ToList<RoleEntity>();
 
             foreach (var tempRole in myRoleList)
             {

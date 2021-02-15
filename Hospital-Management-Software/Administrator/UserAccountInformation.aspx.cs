@@ -82,8 +82,8 @@ namespace Hospital_Management_Software.Administrator
         {
 
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
-            List<Role> myRoleList = new List<Role>();
-            myRoleList = client.GetRoleList2().ToList<Role>();
+            List<RoleEntity> myRoleList = new List<RoleEntity>();
+            myRoleList = client.GetRoleList2().ToList<RoleEntity>();
 
             foreach (var tempRole in myRoleList)
             {

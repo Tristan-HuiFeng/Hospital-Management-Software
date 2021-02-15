@@ -9,20 +9,20 @@ using System.Data.SqlClient;
 
 namespace WCF_Service_Library.Entity
 {
-    public class Role
+    public class RoleEntity
     {
         public string ID { get; set; }
         public string name { get; set; }
 
-        public Role() { }
-        public Role(string id, string name)
+        public RoleEntity() { }
+        public RoleEntity(string id, string name)
         {
             this.ID = id;
             this.name = name;
         }
 
 
-        public List<Role> SelectAll()
+        public List<RoleEntity> SelectAll()
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -33,7 +33,7 @@ namespace WCF_Service_Library.Entity
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            List<Role> roleList = new List<Role>();
+            List<RoleEntity> roleList = new List<RoleEntity>();
             int rec_cnt = ds.Tables[0].Rows.Count;
 
             for (int i = 0; i < rec_cnt; i++)
@@ -43,13 +43,13 @@ namespace WCF_Service_Library.Entity
                 string obj_name = row["Name"].ToString();
                
 
-                Role obj = new Role(obj_id, obj_name);
+                RoleEntity obj = new RoleEntity(obj_id, obj_name);
                 roleList.Add(obj);
             }
             return roleList;
         }
 
-        public Role SelectRoleById(string roleID)
+        public RoleEntity SelectRoleById(string roleID)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -61,7 +61,7 @@ namespace WCF_Service_Library.Entity
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            Role role = new Role();
+            RoleEntity role = new RoleEntity();
             int rec_cnt = ds.Tables[0].Rows.Count;
 
             if (rec_cnt == 1)
@@ -70,7 +70,7 @@ namespace WCF_Service_Library.Entity
                 string obj_id = row["Id"].ToString();
                 string obj_name = row["Name"].ToString();
 
-                role = new Role(obj_id, obj_name);
+                role = new RoleEntity(obj_id, obj_name);
             }
             return role;
         }

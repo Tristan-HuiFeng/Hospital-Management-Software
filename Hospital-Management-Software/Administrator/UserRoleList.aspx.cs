@@ -14,7 +14,7 @@ namespace Hospital_Management_Software.Administrator
     public partial class RoleList : System.Web.UI.Page
     {
         private string role_id;
-        private Role myRole = new Role();
+        private RoleEntity myRole = new RoleEntity();
 
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -97,18 +97,18 @@ namespace WCF_Service_Library
 
         }
 
-        public List<Role> GetRoleList()
+        public List<RoleEntity> GetRoleList()
         {
 
-            Role rl = new Role();
+            RoleEntity rl = new RoleEntity();
             return rl.SelectAll();
 
         }
 
-        public List<Role> GetRoleList2()
+        public List<RoleEntity> GetRoleList2()
         {
 
-            Role rl = new Role();
+            RoleEntity rl = new RoleEntity();
             return rl.SelectAll();
 
         }
@@ -117,14 +117,14 @@ namespace WCF_Service_Library
         public DataTable GetRoleList_TableView()
         {
 
-            Role rl = new Role();
+            RoleEntity rl = new RoleEntity();
             return rl.SelectAllRoleTableView();
 
         }
 
-        public Role GetRoleByID(string roleID)
+        public RoleEntity GetRoleByID(string roleID)
         {
-            Role rl = new Role();
+            RoleEntity rl = new RoleEntity();
             return rl.SelectRoleById(roleID);
         }
 

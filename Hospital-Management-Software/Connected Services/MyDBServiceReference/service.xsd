@@ -202,7 +202,7 @@
   <xs:element name="GetRoleListResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetRoleListResult" nillable="true" type="q11:ArrayOfRole" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetRoleListResult" nillable="true" type="q11:ArrayOfRoleEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -214,7 +214,7 @@
   <xs:element name="GetRoleList2Response">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetRoleList2Result" nillable="true" type="q12:ArrayOfRole" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetRoleList2Result" nillable="true" type="q12:ArrayOfRoleEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -252,7 +252,7 @@
   <xs:element name="GetRoleByIDResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetRoleByIDResult" nillable="true" type="q13:Role" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetRoleByIDResult" nillable="true" type="q13:RoleEntity" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -480,8 +480,6 @@
         <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="healthdeclaration" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="loginid" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="jobfunction" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -508,8 +506,6 @@
         <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="healthdeclaration" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="loginid" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="jobfunction" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
       </xs:sequence>
@@ -827,6 +823,155 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetPayrollBetweenDateResult" nillable="true" type="q30:ArrayOfPayrollRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankRecordByBankID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankRecordByBankIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetBankRecordByBankIDResult" nillable="true" type="q31:ArrayOfBankRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSignatureByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="signature" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSignatureByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetSignatureByIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContractByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetContractByIDResult" nillable="true" type="q32:ArrayOfContractRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetEmployeeByIDResult" nillable="true" type="q33:ArrayOfEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAttendance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAttendanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAttendanceResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttendanceByIDWithDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttendanceByIDWithDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAttendanceByIDWithDateResult" nillable="true" type="q34:ArrayOfAttendanceRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateByIDWithDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateByIDWithDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateByIDWithDateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectByASPNETID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectByASPNETIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="SelectByASPNETIDResult" nillable="true" type="q35:ArrayOfEmployee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFeedback">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFeedbackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/WCF_Service_Library.Entity" minOccurs="0" name="GetAllFeedbackResult" nillable="true" type="q36:ArrayOfFeedbackList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFeedback">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="feedback" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFeedbackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateFeedbackResult" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

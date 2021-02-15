@@ -53,16 +53,16 @@ namespace WCF_Service_Library
         DataTable GetRoleUserListTableView(string role_id);
 
         [OperationContract]
-        List<Role> GetRoleList();
+        List<RoleEntity> GetRoleList();
 
         [OperationContract]
-        List<Role> GetRoleList2();
+        List<RoleEntity> GetRoleList2();
 
         [OperationContract]
         DataTable GetRoleList_TableView();
 
         [OperationContract]
-        Role GetRoleByID(string roleID);
+        RoleEntity GetRoleByID(string roleID);
 
         [OperationContract]
         UserAccount GetUserAccountByID(string user_id);
