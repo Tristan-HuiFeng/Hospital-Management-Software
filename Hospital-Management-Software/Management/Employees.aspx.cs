@@ -1,4 +1,4 @@
-﻿using Hospital_Management_Software.MyDBServiceReference;
+using Hospital_Management_Software.MyDBServiceReference;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;

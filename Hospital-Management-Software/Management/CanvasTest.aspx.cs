@@ -1,4 +1,4 @@
-﻿using Hospital_Management_Software.MyDBServiceReference;
+using Hospital_Management_Software.MyDBServiceReference;
 using System;
 using System.Collections.Generic;
 using System.IO;

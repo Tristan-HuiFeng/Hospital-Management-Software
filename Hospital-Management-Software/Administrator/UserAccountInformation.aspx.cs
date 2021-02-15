@@ -219,7 +219,12 @@ namespace Hospital_Management_Software.Administrator
             else
             {
                 lb_passwordResult.Visible = true;
-                lb_passwordResult.Text = changePasswordResult.Errors.ToString();
+                lb_passwordResult.Text = "";
+
+                foreach (string error in changePasswordResult.Errors)
+                {
+                    lb_passwordResult.Text += error + "\n";
+                }
                 lb_passwordResult.ForeColor = Color.Red;
             }
         }

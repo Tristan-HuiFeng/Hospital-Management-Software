@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Hospital_Management_Software.Views.EPR
+namespace Hospital_Management_Software.Customer
 {
-    public partial class Dashboard : System.Web.UI.Page
+    public partial class allFeedback : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

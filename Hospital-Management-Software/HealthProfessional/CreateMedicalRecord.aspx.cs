@@ -1,4 +1,4 @@
-﻿using Hospital_Management_Software.MyDBServiceReference;
+﻿//using Hospital_Management_Software.MyDBServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -102,7 +102,7 @@ namespace Hospital_Management_Software.HealthProfessional
                 else
                 {
 
-                    Response.Redirect("MedicalRecordList.aspx");
+                    //Response.Redirect("MedicalRecordList.aspx");
                     int result = client.CreateMedicalRecord(tb_bloodPressure.Text, tb_respirationRate.Text, tb_temperature.Text, tb_pulseRate.Text, tb_diagnosis.Text,
                     tb_treatment.Text, DateTime.Now, doctor_id, patient_id, tb_presecription.Text, tb_remarks.Text);
 

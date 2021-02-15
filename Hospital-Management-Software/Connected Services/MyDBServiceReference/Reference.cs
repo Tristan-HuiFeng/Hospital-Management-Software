@@ -1748,10 +1748,10 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.MedicalRecord[]> GetAllMedicalRecordAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
-        System.Data.DataTable GetMedicalRecordTableView();
+        System.Data.DataTable GetMedicalRecordTableView(int acc_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMedicalRecordTableView", ReplyAction="http://tempuri.org/IService1/GetMedicalRecordTableViewResponse")]
-        System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync();
+        System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync(int acc_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAccountInformation", ReplyAction="http://tempuri.org/IService1/GetAccountInformationResponse")]
         string[] GetAccountInformation(string LoginID);
@@ -1909,6 +1909,104 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateMedicalRecord", ReplyAction="http://tempuri.org/IService1/CreateMedicalRecordResponse")]
         System.Threading.Tasks.Task<int> CreateMedicalRecordAsync(string bloodPressure, string respirationRate, string bodyTemperature, string pulseRate, string diagnosis, string treatment, System.DateTime consultationDate, int doctorID, int patientID, string prescription, string remarks);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllPatientRecords", ReplyAction="http://tempuri.org/IService1/GetAllPatientRecordsResponse")]
+        WCF_Service_Library.Entity.PatientRecord[] GetAllPatientRecords();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllPatientRecords", ReplyAction="http://tempuri.org/IService1/GetAllPatientRecordsResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.PatientRecord[]> GetAllPatientRecordsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientRecordByID", ReplyAction="http://tempuri.org/IService1/GetPatientRecordByIDResponse")]
+        WCF_Service_Library.Entity.PatientRecord GetPatientRecordByID(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPatientRecordByID", ReplyAction="http://tempuri.org/IService1/GetPatientRecordByIDResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.PatientRecord> GetPatientRecordByIDAsync(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatientRecord", ReplyAction="http://tempuri.org/IService1/CreatePatientRecordResponse")]
+        int CreatePatientRecord(
+                    int patientid, 
+                    string firstname, 
+                    string lastname, 
+                    string NRIC, 
+                    System.DateTime DOB, 
+                    string sex, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalcode, 
+                    string address, 
+                    string allergies, 
+                    string medicalhistory, 
+                    string phonenumber, 
+                    string homenumber, 
+                    string email, 
+                    System.DateTime createdDate, 
+                    System.DateTime updateDate, 
+                    string recordDisabled);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreatePatientRecord", ReplyAction="http://tempuri.org/IService1/CreatePatientRecordResponse")]
+        System.Threading.Tasks.Task<int> CreatePatientRecordAsync(
+                    int patientid, 
+                    string firstname, 
+                    string lastname, 
+                    string NRIC, 
+                    System.DateTime DOB, 
+                    string sex, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalcode, 
+                    string address, 
+                    string allergies, 
+                    string medicalhistory, 
+                    string phonenumber, 
+                    string homenumber, 
+                    string email, 
+                    System.DateTime createdDate, 
+                    System.DateTime updateDate, 
+                    string recordDisabled);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DisablePatientByID", ReplyAction="http://tempuri.org/IService1/DisablePatientByIDResponse")]
+        int DisablePatientByID(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DisablePatientByID", ReplyAction="http://tempuri.org/IService1/DisablePatientByIDResponse")]
+        System.Threading.Tasks.Task<int> DisablePatientByIDAsync(int patientID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePatientByID", ReplyAction="http://tempuri.org/IService1/UpdatePatientByIDResponse")]
+        int UpdatePatientByID(
+                    int patientID, 
+                    string fname, 
+                    string lname, 
+                    string nric, 
+                    string sex, 
+                    System.DateTime dob, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalCode, 
+                    string address, 
+                    string allergies, 
+                    string medicalHistory, 
+                    string phoneNumber, 
+                    string homeNumber, 
+                    string email, 
+                    System.DateTime update_date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdatePatientByID", ReplyAction="http://tempuri.org/IService1/UpdatePatientByIDResponse")]
+        System.Threading.Tasks.Task<int> UpdatePatientByIDAsync(
+                    int patientID, 
+                    string fname, 
+                    string lname, 
+                    string nric, 
+                    string sex, 
+                    System.DateTime dob, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalCode, 
+                    string address, 
+                    string allergies, 
+                    string medicalHistory, 
+                    string phoneNumber, 
+                    string homeNumber, 
+                    string email, 
+                    System.DateTime update_date);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateBankRecord", ReplyAction="http://tempuri.org/IService1/CreateBankRecordResponse")]
         int CreateBankRecord(string bankName, string bankAccountNumber, string bankHolderName, int employeeID);
         
@@ -2004,6 +2102,22 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectByASPNETID", ReplyAction="http://tempuri.org/IService1/SelectByASPNETIDResponse")]
         System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> SelectByASPNETIDAsync(string id);
+        WCF_Service_Library.Entity.PayrollRecord[] GetPayrollBetweenDate(string firstDate, string secondDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPayrollBetweenDate", ReplyAction="http://tempuri.org/IService1/GetPayrollBetweenDateResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
+        WCF_Service_Library.Entity.FeedbackList[] GetAllFeedback();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAllFeedback", ReplyAction="http://tempuri.org/IService1/GetAllFeedbackResponse")]
+        System.Threading.Tasks.Task<WCF_Service_Library.Entity.FeedbackList[]> GetAllFeedbackAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
+        int CreateFeedback(string name, string email, string subject, string feedback);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateFeedback", ReplyAction="http://tempuri.org/IService1/CreateFeedbackResponse")]
+        System.Threading.Tasks.Task<int> CreateFeedbackAsync(string name, string email, string subject, string feedback);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2105,12 +2219,12 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.GetAllMedicalRecordAsync();
         }
         
-        public System.Data.DataTable GetMedicalRecordTableView() {
-            return base.Channel.GetMedicalRecordTableView();
+        public System.Data.DataTable GetMedicalRecordTableView(int acc_id) {
+            return base.Channel.GetMedicalRecordTableView(acc_id);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync() {
-            return base.Channel.GetMedicalRecordTableViewAsync();
+        public System.Threading.Tasks.Task<System.Data.DataTable> GetMedicalRecordTableViewAsync(int acc_id) {
+            return base.Channel.GetMedicalRecordTableViewAsync(acc_id);
         }
         
         public string[] GetAccountInformation(string LoginID) {
@@ -2321,6 +2435,114 @@ namespace Hospital_Management_Software.MyDBServiceReference {
             return base.Channel.CreateMedicalRecordAsync(bloodPressure, respirationRate, bodyTemperature, pulseRate, diagnosis, treatment, consultationDate, doctorID, patientID, prescription, remarks);
         }
         
+        public WCF_Service_Library.Entity.PatientRecord[] GetAllPatientRecords() {
+            return base.Channel.GetAllPatientRecords();
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PatientRecord[]> GetAllPatientRecordsAsync() {
+            return base.Channel.GetAllPatientRecordsAsync();
+        }
+        
+        public WCF_Service_Library.Entity.PatientRecord GetPatientRecordByID(int patientID) {
+            return base.Channel.GetPatientRecordByID(patientID);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PatientRecord> GetPatientRecordByIDAsync(int patientID) {
+            return base.Channel.GetPatientRecordByIDAsync(patientID);
+        }
+        
+        public int CreatePatientRecord(
+                    int patientid, 
+                    string firstname, 
+                    string lastname, 
+                    string NRIC, 
+                    System.DateTime DOB, 
+                    string sex, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalcode, 
+                    string address, 
+                    string allergies, 
+                    string medicalhistory, 
+                    string phonenumber, 
+                    string homenumber, 
+                    string email, 
+                    System.DateTime createdDate, 
+                    System.DateTime updateDate, 
+                    string recordDisabled) {
+            return base.Channel.CreatePatientRecord(patientid, firstname, lastname, NRIC, DOB, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updateDate, recordDisabled);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreatePatientRecordAsync(
+                    int patientid, 
+                    string firstname, 
+                    string lastname, 
+                    string NRIC, 
+                    System.DateTime DOB, 
+                    string sex, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalcode, 
+                    string address, 
+                    string allergies, 
+                    string medicalhistory, 
+                    string phonenumber, 
+                    string homenumber, 
+                    string email, 
+                    System.DateTime createdDate, 
+                    System.DateTime updateDate, 
+                    string recordDisabled) {
+            return base.Channel.CreatePatientRecordAsync(patientid, firstname, lastname, NRIC, DOB, sex, nationality, citizenship, postalcode, address, allergies, medicalhistory, phonenumber, homenumber, email, createdDate, updateDate, recordDisabled);
+        }
+        
+        public int DisablePatientByID(int patientID) {
+            return base.Channel.DisablePatientByID(patientID);
+        }
+        
+        public System.Threading.Tasks.Task<int> DisablePatientByIDAsync(int patientID) {
+            return base.Channel.DisablePatientByIDAsync(patientID);
+        }
+        
+        public int UpdatePatientByID(
+                    int patientID, 
+                    string fname, 
+                    string lname, 
+                    string nric, 
+                    string sex, 
+                    System.DateTime dob, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalCode, 
+                    string address, 
+                    string allergies, 
+                    string medicalHistory, 
+                    string phoneNumber, 
+                    string homeNumber, 
+                    string email, 
+                    System.DateTime update_date) {
+            return base.Channel.UpdatePatientByID(patientID, fname, lname, nric, sex, dob, nationality, citizenship, postalCode, address, allergies, medicalHistory, phoneNumber, homeNumber, email, update_date);
+        }
+        
+        public System.Threading.Tasks.Task<int> UpdatePatientByIDAsync(
+                    int patientID, 
+                    string fname, 
+                    string lname, 
+                    string nric, 
+                    string sex, 
+                    System.DateTime dob, 
+                    string nationality, 
+                    string citizenship, 
+                    string postalCode, 
+                    string address, 
+                    string allergies, 
+                    string medicalHistory, 
+                    string phoneNumber, 
+                    string homeNumber, 
+                    string email, 
+                    System.DateTime update_date) {
+            return base.Channel.UpdatePatientByIDAsync(patientID, fname, lname, nric, sex, dob, nationality, citizenship, postalCode, address, allergies, medicalHistory, phoneNumber, homeNumber, email, update_date);
+        }
+        
         public int CreateBankRecord(string bankName, string bankAccountNumber, string bankHolderName, int employeeID) {
             return base.Channel.CreateBankRecord(bankName, bankAccountNumber, bankHolderName, employeeID);
         }
@@ -2447,6 +2669,28 @@ namespace Hospital_Management_Software.MyDBServiceReference {
         
         public System.Threading.Tasks.Task<Hospital_Management_Software.MyDBServiceReference.Employee[]> SelectByASPNETIDAsync(string id) {
             return base.Channel.SelectByASPNETIDAsync(id);
+        public WCF_Service_Library.Entity.PayrollRecord[] GetPayrollBetweenDate(string firstDate, string secondDate) {
+            return base.Channel.GetPayrollBetweenDate(firstDate, secondDate);
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.PayrollRecord[]> GetPayrollBetweenDateAsync(string firstDate, string secondDate) {
+            return base.Channel.GetPayrollBetweenDateAsync(firstDate, secondDate);
+        }
+        
+        public WCF_Service_Library.Entity.FeedbackList[] GetAllFeedback() {
+            return base.Channel.GetAllFeedback();
+        }
+        
+        public System.Threading.Tasks.Task<WCF_Service_Library.Entity.FeedbackList[]> GetAllFeedbackAsync() {
+            return base.Channel.GetAllFeedbackAsync();
+        }
+        
+        public int CreateFeedback(string name, string email, string subject, string feedback) {
+            return base.Channel.CreateFeedback(name, email, subject, feedback);
+        }
+        
+        public System.Threading.Tasks.Task<int> CreateFeedbackAsync(string name, string email, string subject, string feedback) {
+            return base.Channel.CreateFeedbackAsync(name, email, subject, feedback);
         }
     }
 }

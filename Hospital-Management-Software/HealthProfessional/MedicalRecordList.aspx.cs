@@ -1,4 +1,4 @@
-﻿using Hospital_Management_Software.MyDBServiceReference;
+﻿//using Hospital_Management_Software.MyDBServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Hospital_Management_Software.HealthProfessional
 {
@@ -57,8 +59,11 @@ namespace Hospital_Management_Software.HealthProfessional
         {
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
 
-            DataTable dt = client.GetMedicalRecordTableView();
-
+            var userStore = new UserStore<IdentityUser>();
+            var userManager = new UserManager<IdentityUser>(userStore);
+            int doctor_id = client.GetEmpIDByAccID(userManager.FindByName(System.Web.HttpContext.Current.User.Identity.Name).Id);
+            DataTable dt = client.GetMedicalRecordTableView(doctor_id);
+            
             gv_MedicalRecordList.DataSource = dt;
             gv_MedicalRecordList.DataBind();
         }
@@ -78,8 +83,12 @@ namespace Hospital_Management_Software.HealthProfessional
         protected void gv_MedicalRecordList_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             MyDBServiceReference.Service1Client client = new MyDBServiceReference.Service1Client();
+            var userStore = new UserStore<IdentityUser>();
+            var userManager = new UserManager<IdentityUser>(userStore);
 
-            gv_MedicalRecordList.DataSource = client.GetMedicalRecordTableView();
+            int doctor_id = client.GetEmpIDByAccID(userManager.FindByName(System.Web.HttpContext.Current.User.Identity.Name).Id);
+
+            gv_MedicalRecordList.DataSource = client.GetMedicalRecordTableView(doctor_id);
             gv_MedicalRecordList.PageIndex = e.NewPageIndex;
             gv_MedicalRecordList.DataBind();
         }

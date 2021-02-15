@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Hospital_Management_Software.Views.EPR
+namespace Hospital_Management_Software.Views.layout
 {
-    public partial class UpdateEPR : System.Web.UI.Page
+    public partial class Customer : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
