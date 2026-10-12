@@ -1,31 +1,95 @@
-﻿/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-    /*padding-top: 50px;
-    padding-bottom: 20px; */
+﻿body {
+    background: #f4f7fb;
+    color: #1f2a37;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 2rem 0 3rem;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
+.dashboard-hero {
+    background: linear-gradient(135deg, #f0f8ff 0%, #dfeeff 100%);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    margin: 2rem 0 2.5rem;
+    box-shadow: 0 15px 35px rgba(31, 42, 55, 0.08);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2b6cb0;
+    margin-bottom: 0.75rem;
+}
+
+.dashboard-hero h1 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    max-width: 700px;
+}
+
+.lead {
+    font-size: 1.1rem;
+    max-width: 650px;
+    color: #46536b;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.feature-card {
+    background: #ffffff;
+    border: 1px solid #dfe8f5;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 24px rgba(31, 42, 55, 0.05);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: #1f2a37;
+}
+
+.feature-card p,
+.feature-card li {
+    color: #4a5a73;
+    line-height: 1.6;
+}
+
+.feature-card ul {
+    margin: 1rem 0 0;
+    padding-left: 1.1rem;
+}
+
 input,
 select,
 textarea {
     max-width: 280px;
 }
 
-
-/* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-    .jumbotron {
-        margin-top: 20px;
-    }
-
     .body-content {
-        padding: 0;
+        padding-top: 2.5rem;
     }
 }

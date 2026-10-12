@@ -1,42 +1,34 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Views/layout/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Hospital_Management_Software._Default" %>
+﻿<%@ Page Title="Hospital Home" Language="C#" MasterPageFile="~/Views/layout/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Hospital_Management_Software._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+    <div class="dashboard-hero">
+        <div>
+            <p class="eyebrow">Hospital Management Software</p>
+            <h1>Connected care for patients, staff and administrators.</h1>
+            <p class="lead">The platform brings appointments, patient information and operational workflows together in one place so hospital teams can move faster with less friction.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary btn-lg" href="~/About">About the system</a>
+                <a class="btn btn-outline-secondary btn-lg" href="~/Contact">Contact the team</a>
+            </div>
         </div>
     </div>
 
+    <div class="section-grid">
+        <asp:Repeater ID="SectionRepeater" runat="server" DataSource="<%# Sections %>">
+            <ItemTemplate>
+                <article class="feature-card">
+                    <div class="feature-icon"><%# Eval("Icon") %></div>
+                    <h2><%# Eval("Title") %></h2>
+                    <p><%# Eval("Description") %></p>
+                    <ul>
+                        <asp:Repeater ID="HighlightRepeater" runat="server" DataSource="<%# Eval("Highlights") %>">
+                            <ItemTemplate>
+                                <li><%# Container.DataItem %></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </article>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
 </asp:Content>
